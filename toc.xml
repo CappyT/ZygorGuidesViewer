@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Addon Author="Zygor" APIVersion="9" Name="ZygorGuidesViewer" Description="" Version="1.0.9886"><!-- version gets doctored.-->
+    <Script Name="Localization\Main.lua"/>
+    <Script Name="Localization\Core_US.lua"/>
+    <Form Name="ZygorGuidesViewer.xml"/>
+    <Script Name="ZygorGuidesViewer.lua"/>
+    <Script Name="ZygorLib.lua"/>
+    <Script Name="Functions.lua"/>
+    <Script Name="Parser.lua"/>
+    <Script Name="Options.lua"/>
+    <Form Name="Options.xml"/>
+    <Script Name="Pointer.lua"/>
+    <Form Name="Pointer.xml"/>
+    <Script Name="Viewer.lua"/>
+    <Script Name="Class.lua"/>
+    <Script Name="Quests.lua"/>
+    <Script Name="GuideHandling.lua"/>
+    <Script Name="Guide.lua"/>
+    <Script Name="Step.lua"/>
+    <Script Name="Goal.lua"/>
+    <Form Name="BugReport.xml"/>
+    <Script Name="BugReport.lua"/>
+    <Form Name="Tutorial.xml"/>
+    <Script Name="Tutorial.lua"/>
+
+    <!-- Guide files now loaded dynamically.
+
+    <Script Name="Guides\Dominion\Dominion_MASTER.lua"/>
+    <Script Name="Guides\Dominion\Dominion.lua"/>
+    <Script Name="Guides\Dominion\DominionTrial.lua"/>
+    <Script Name="Guides\Exiles\Exiles_MASTER.lua"/>
+    <Script Name="Guides\Exiles\Exiles.lua"/>
+    <Script Name="Guides\Exiles\ExilesTrial.lua"/>
+    <Script Name="Guides\Test\Test.lua"/>
+
+    -->
+
+    <Script Name="Log.lua"/>
+</Addon>

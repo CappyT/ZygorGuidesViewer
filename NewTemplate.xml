@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowTemplates>
+    <WindowTemplate Name="ZygorWindow" SingleBorderFrame="ZygorUI:BorderSquare" UseMargins="1" TopMargin="3" LeftMargin="3" RightMargin="3" BottomMargin="3"/>
+</WindowTemplates>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Forms>
+    <SpriteFile Name="GuideIcons-Big.xml"/>
+    <SpriteFile Name="titlebuttons.xml"/>
+    <SpriteFile Name="ZygorUI.xml"/>
+    <Form Class="Window" LAnchorPoint="0" LAnchorOffset="10" TAnchorPoint="0" TAnchorOffset="10" RAnchorPoint="0" RAnchorOffset="300" BAnchorPoint="0" BAnchorOffset="225" RelativeToClient="1" Font="Default" Text="" BGColor="ff7d7d7d" TextColor="UI_WindowTextDefault" Template="Default" TooltipType="OnCursor" Name="ZGVHelpFrame" Border="1" Picture="1" SwallowMouseClicks="1" Moveable="1" Escapable="1" Overlapped="1" TooltipColor="" Tooltip="" Sprite="BasicSprites:WhiteFill" DT_CENTER="0" DT_WORDBREAK="1">
+        <Control Class="Window" LAnchorPoint="0" LAnchorOffset="1" TAnchorPoint="0" TAnchorOffset="1" RAnchorPoint="1" RAnchorOffset="-1" BAnchorPoint="1" BAnchorOffset="-1" RelativeToClient="1" Font="Default" Text="" BGColor="ff000000" TextColor="UI_WindowTextDefault" Template="Default" TooltipType="OnCursor" Name="ZGVHelpContainer" TooltipColor="" Sprite="BasicSprites:WhiteFill" Picture="1" IgnoreMouse="1">
+            <Control Class="Window" LAnchorPoint="0" LAnchorOffset="86" TAnchorPoint="0" TAnchorOffset="9" RAnchorPoint="0" RAnchorOffset="342" BAnchorPoint="0" BAnchorOffset="73" RelativeToClient="1" Font="Default" Text="" BGColor="UI_WindowBGDefault" TextColor="UI_WindowTextDefault" Template="Default" TooltipType="OnCursor" Name="Logo" TooltipColor="" Sprite="ZygorUI:Logo" Picture="1" IgnoreMouse="1" Scale="0.4"/>
+            <Control Class="Button" Base="titlebuttons:CloseButton" Font="DefaultButton" ButtonType="PushButton" RadioGroup="" LAnchorPoint="1" LAnchorOffset="-23" TAnchorPoint="0" TAnchorOffset="3" RAnchorPoint="1" RAnchorOffset="7" BAnchorPoint="0" BAnchorOffset="33" DT_VCENTER="1" DT_CENTER="1" BGColor="UI_BtnBGDefault" TextColor="UI_BtnTextDefault" NormalTextColor="UI_BtnTextDefault" PressedTextColor="UI_BtnTextDefault" FlybyTextColor="UI_BtnTextDefault" PressedFlybyTextColor="UI_BtnTextDefault" DisabledTextColor="UI_BtnTextDefault" TooltipType="OnCursor" Name="ZGVCloseButton" TooltipColor="" Sprite="" Tooltip="" Picture="1" Text="" TextId="" Template="Default" Overlapped="0" TooltipId="Help" Scale="0.6">
+                <Event Name="ButtonSignal" Function="OnCancel"/>
+            </Control>
+            <Control Class="MLWindow" LAnchorPoint="0" LAnchorOffset="8" TAnchorPoint="0" TAnchorOffset="40" RAnchorPoint="1" RAnchorOffset="-8" BAnchorPoint="1" BAnchorOffset="-28" RelativeToClient="1" Font="Default" Text="" BGColor="UI_WindowBGDefault" TextColor="UI_WindowTextDefault" Template="Default" TooltipType="OnCursor" Name="TextBox" TooltipColor="" MultiLine="1" ReadOnly="1" ClearOnEscape="1" NoSelectOnFocus="1" LoseFocusOnExternalClick="1" SizeToFit="0" DT_WORDBREAK="1"/>
+            <Control Class="Button" Base="titlebuttons:PrevStepButton" Font="DefaultButton" ButtonType="PushButton" RadioGroup="" LAnchorPoint="1" LAnchorOffset="-40" TAnchorPoint="1" TAnchorOffset="-20" RAnchorPoint="1" RAnchorOffset="0" BAnchorPoint="1" BAnchorOffset="10" DT_VCENTER="1" DT_CENTER="1" BGColor="UI_BtnBGDefault" TextColor="UI_BtnTextDefault" NormalTextColor="UI_BtnTextDefault" PressedTextColor="UI_BtnTextDefault" FlybyTextColor="UI_BtnTextDefault" PressedFlybyTextColor="UI_BtnTextDefault" DisabledTextColor="UI_BtnTextDefault" TooltipType="OnCursor" Name="StepPrevButton" TooltipColor="" Template="CRB_Default" Scale="0.45" ProcessRightClick="1">
+                <Event Name="ButtonSignal" Function="PrevStep"/>
+            </Control>
+            <Control Class="Button" Base="titlebuttons:NextStepButton" Font="DefaultButton" ButtonType="PushButton" RadioGroup="" LAnchorPoint="1" LAnchorOffset="-20" TAnchorPoint="1" TAnchorOffset="-20" RAnchorPoint="1" RAnchorOffset="10" BAnchorPoint="1" BAnchorOffset="10" DT_VCENTER="1" DT_CENTER="1" BGColor="UI_BtnBGDefault" TextColor="UI_BtnTextDefault" NormalTextColor="UI_BtnTextDefault" PressedTextColor="UI_BtnTextDefault" FlybyTextColor="UI_BtnTextDefault" PressedFlybyTextColor="UI_BtnTextDefault" DisabledTextColor="UI_BtnTextDefault" TooltipType="OnCursor" Name="StepNextButton" TooltipColor="" Template="CRB_Default" Scale="0.45" ProcessRightClick="1">
+                <Event Name="ButtonSignal" Function="NextStep"/>
+            </Control>
+        </Control>
+    </Form>
+</Forms>

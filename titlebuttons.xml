@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Sprites>
+    <Sprite Name="HelpButton" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\Default\Stealth\titlebuttons.tga" x0="0" x1="0" x2="0" x3="0" x4="0" x5="32" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <AutoButton Name="HelpNormalButton" Texture="ZygorGuidesViewer\Skins\Default\Stealth\titlebuttons.tga" x0="0" x1="0" x2="0" x3="0" x4="0" x5="32" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" StateBits="19" Direction="Down"/>
+    <AutoButton Name="ResizeButton" Texture="ZygorGuidesViewer\Skins\Default\Stealth\titlebuttons.tga" x0="32" x1="32" x2="32" x3="32" x4="32" x5="64" y0="1" y1="1" y2="1" y3="1" y4="1" y5="33" StateBits="19" Direction="Down"/>
+    <AutoButton Name="UnlockButton" Texture="ZygorGuidesViewer\Skins\Default\Stealth\titlebuttons.tga" x0="64" x1="64" x2="64" x3="64" x4="64" x5="96" y0="2" y1="2" y2="2" y3="2" y4="2" y5="34" StateBits="19" Direction="Down"/>
+    <AutoButton Name="LockButton" Texture="ZygorGuidesViewer\Skins\Default\Stealth\titlebuttons.tga" x0="96" x1="96" x2="96" x3="96" x4="96" x5="128" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" StateBits="19" Direction="Down"/>
+    <AutoButton Name="ConfigButton" Texture="ZygorGuidesViewer\Skins\Default\Stealth\titlebuttons.tga" x0="128" x1="128" x2="128" x3="128" x4="128" x5="160" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" StateBits="19" Direction="Down"/>
+    <AutoButton Name="CloseButton" Texture="ZygorGuidesViewer\Skins\Default\Stealth\titlebuttons.tga" x0="160" x1="160" x2="160" x3="160" x4="160" x5="192" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" StateBits="19" Direction="Down"/>
+    <AutoButton Name="PrevStepButton" Texture="ZygorGuidesViewer\Skins\Default\Stealth\titlebuttons.tga" x0="256" x1="256" x2="256" x3="256" x4="256" x5="288" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" StateBits="19" Direction="Down"/>
+    <AutoButton Name="NextStepButton" Texture="ZygorGuidesViewer\Skins\Default\Stealth\titlebuttons.tga" x0="288" x1="288" x2="288" x3="288" x4="288" x5="320" y0="1" y1="1" y2="1" y3="1" y4="1" y5="33" StateBits="19" Direction="Down"/>
+    <AutoButton Name="OrangeDownButton" Texture="ZygorGuidesViewer\Skins\Default\Stealth\titlebuttons.tga" x0="320" x1="320" x2="320" x3="320" x4="320" x5="351" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" StateBits="19" Direction="Down"/>
+    <AutoButton Name="BangButton" Texture="ZygorGuidesViewer\Skins\Default\Stealth\titlebuttons.tga" x0="351" x1="351" x2="351" x3="351" x4="351" x5="384" y0="-1" y1="-1" y2="-1" y3="-1" y4="-1" y5="31" StateBits="19" Direction="Down"/>
+    <AutoButton Name="FancyLockedButton" Texture="ZygorGuidesViewer\Skins\Default\Stealth\titlebuttons.tga" x0="384" x1="384" x2="384" x3="384" x4="384" x5="416" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" StateBits="19" Direction="Down"/>
+    <AutoButton Name="FancyUnlockedButton" Texture="ZygorGuidesViewer\Skins\Default\Stealth\titlebuttons.tga" x0="416" x1="416" x2="416" x3="416" x4="416" x5="448" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" StateBits="19" Direction="Down"/>
+    <AutoButton Name="BugReportButton" Texture="ZygorGuidesViewer\Skins\Default\Stealth\titlebuttons.tga" x0="448" x1="448" x2="448" x3="448" x4="448" x5="480" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" StateBits="19" Direction="Down"/>
+    <AutoButton Name="ListViewButton" Texture="ZygorGuidesViewer\Skins\Default\Stealth\titlebuttons.tga" x0="480" x1="480" x2="480" x3="480" x4="480" x5="512" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" StateBits="19" Direction="Down"/>
+    <AutoButton Name="GraphViewButton" Texture="ZygorGuidesViewer\Skins\Default\Stealth\titlebuttons.tga" x0="512" x1="512" x2="512" x3="512" x4="512" x5="544" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" StateBits="19" Direction="Down"/>
+    <AutoButton Name="InformationButton" Texture="ZygorGuidesViewer\Skins\Default\Stealth\titlebuttons.tga" x0="544" x1="544" x2="544" x3="544" x4="544" x5="576" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" StateBits="19" Direction="Down"/>
+    <AutoButton Name="DownButton" Texture="ZygorGuidesViewer\Skins\Default\Stealth\titlebuttons.tga" x0="576" x1="576" x2="576" x3="576" x4="576" x5="608" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" StateBits="19" Direction="Down"/>
+    <AutoButton Name="DoubleDownButton" Texture="ZygorGuidesViewer\Skins\Default\Stealth\titlebuttons.tga" x0="608" x1="608" x2="608" x3="608" x4="608" x5="640" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" StateBits="19" Direction="Down"/>
+    <Sprite Name="NewSprite" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\Default\Stealth\stepicons.tga" x0="0" x1="0" x2="0" x3="0" x4="0" x5="0" y0="0" y1="0" y2="0" y3="0" y4="0" y5="0" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+</Sprites>

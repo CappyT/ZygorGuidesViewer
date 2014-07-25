@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Sprites>
+    <Sprite Name="SubStep" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\Default\Stealth\stepicons.tga" x0="0" x1="0" x2="0" x3="0" x4="0" x5="32" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="Step" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\Default\Stealth\stepicons.tga" x0="32" x1="32" x2="32" x3="32" x4="32" x5="64" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="FinishedStep" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\Default\Stealth\stepicons.tga" x0="64" x1="64" x2="64" x3="64" x4="64" x5="96" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="DisabledStep" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\Default\Stealth\stepicons.tga" x0="96" x1="96" x2="96" x3="96" x4="96" x5="128" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="Quest" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\Default\Stealth\stepicons.tga" x0="128" x1="128" x2="128" x3="128" x4="128" x5="160" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="TurnIn" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\Default\Stealth\stepicons.tga" x0="160" x1="160" x2="160" x3="160" x4="160" x5="192" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="Kill" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\Default\Stealth\stepicons.tga" x0="192" x1="192" x2="192" x3="192" x4="192" x5="224" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="ffffffff" EndColor="ffffffff"/>
+    </Sprite>
+    <Sprite Name="Loot" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\Default\Stealth\stepicons.tga" x0="224" x1="224" x2="224" x3="224" x4="224" x5="256" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="Star" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\Default\Stealth\stepicons.tga" x0="256" x1="256" x2="256" x3="256" x4="256" x5="288" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="Home" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\Default\Stealth\stepicons.tga" x0="288" x1="288" x2="288" x3="288" x4="288" x5="320" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="GreenQuest" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\Default\Stealth\stepicons.tga" x0="320" x1="320" x2="320" x3="320" x4="320" x5="352" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="Fly" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\Default\Stealth\stepicons.tga" x0="352" x1="352" x2="352" x3="352" x4="352" x5="384" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="TalkTo" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\Default\Stealth\stepicons.tga" x0="384" x1="384" x2="384" x3="384" x4="384" x5="416" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="NextGuide" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\Default\Stealth\stepicons.tga" x0="416" x1="416" x2="416" x3="416" x4="416" x5="448" y0="0" y1="0" y2="0" y3="0" y4="0" y5="32" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+</Sprites>

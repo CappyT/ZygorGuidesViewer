@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Sprites>
+    <Sprite Name="Leveling" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\guideicons-big.tga" x0="0" x1="0" x2="0" x3="0" x4="0" x5="64" y0="0" y1="0" y2="0" y3="0" y4="0" y5="64" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="Events" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\guideicons-big.tga" x0="64" x1="64" x2="64" x3="64" x4="64" x5="128" y0="0" y1="0" y2="0" y3="0" y4="0" y5="64" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="Dailies" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\guideicons-big.tga" x0="128" x1="128" x2="128" x3="128" x4="128" x5="192" y0="0" y1="0" y2="0" y3="0" y4="0" y5="64" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="Loremaster" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\guideicons-big.tga" x0="192" x1="192" x2="192" x3="192" x4="192" x5="256" y0="0" y1="0" y2="0" y3="0" y4="0" y5="64" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="Gold" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\guideicons-big.tga" x0="0" x1="0" x2="0" x3="0" x4="0" x5="64" y0="64" y1="64" y2="64" y3="64" y4="64" y5="128" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="Professions" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\guideicons-big.tga" x0="64" x1="64" x2="64" x3="64" x4="64" x5="128" y0="64" y1="64" y2="64" y3="64" y4="64" y5="128" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="PetsAndMounts" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\guideicons-big.tga" x0="128" x1="128" x2="128" x3="128" x4="128" x5="192" y0="64" y1="64" y2="64" y3="64" y4="64" y5="128" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="Achievements" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\guideicons-big.tga" x0="192" x1="192" x2="192" x3="192" x4="192" x5="256" y0="64" y1="64" y2="64" y3="64" y4="64" y5="128" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="Titles" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\guideicons-big.tga" x0="0" x1="0" x2="0" x3="0" x4="0" x5="64" y0="128" y1="128" y2="128" y3="128" y4="128" y5="189" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="Reputations" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\guideicons-big.tga" x0="64" x1="64" x2="64" x3="64" x4="64" x5="128" y0="128" y1="128" y2="128" y3="128" y4="128" y5="192" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="Macros" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\guideicons-big.tga" x0="128" x1="128" x2="128" x3="128" x4="128" x5="192" y0="128" y1="128" y2="128" y3="128" y4="128" y5="192" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="Dungeons" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\guideicons-big.tga" x0="192" x1="192" x2="192" x3="192" x4="192" x5="256" y0="128" y1="128" y2="128" y3="128" y4="128" y5="192" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="Gear" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\guideicons-big.tga" x0="0" x1="0" x2="0" x3="0" x4="0" x5="64" y0="187" y1="187" y2="187" y3="187" y4="187" y5="256" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+</Sprites>
