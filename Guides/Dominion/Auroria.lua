@@ -4,7 +4,8 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 	startlevel=15,
 	endlevel=23,
 	nextguide="Dominion\\Whitevale (23-29)",
-	description="Auroria is suited for characters level 15-23. "
+	image="ZygorUIGuides:Auroria", 
+	description="Auroria is a large prairie with sweeping winds located in central Olyssia. It is suited for characters level 15-23. "
 	},
 	[[
 	step
@@ -497,17 +498,17 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		.' Talk to the Junior Assistant Security Officer |q The Great Cubig Heist##3891/1 |goto -2049,-2074,-877
 	step
 		.' _Stay within the fenced area_ and avoid the white spotlights |goto Auroria -2047,-2093,-877
-		.click Cubig Alpha##518880 |goto -1953,-2057,-880 <10
+		.click Cubig Alpha##518880 |goto -1953,-2057,-880 < 10
 		.' Steal Cubig Alpha |q The Great Cubig Heist##3891/2 |goto -2057,-2076,-877
 	step
 		.' _Stay within the fenced area_ and avoid the white spotlights |goto Auroria -2047,-2093,-877
 		.' _Continue through_ the Cubig Pens |goto Auroria -1987,-2065,-878
-		.click Cubig Beta##523836 |goto -1977,-2006,-877 <10
+		.click Cubig Beta##523836 |goto -1977,-2006,-877 < 10
 		.' Steal Cubig Beta |q The Great Cubig Heist##3891/3 |goto -2057,-2075,-877
 	step
 		.' _Stay within the fenced area_ and avoid the white spotlights |goto Auroria -2047,-2093,-877
-		.' _Continue through_ the Cubig Pens |goto -1941,-2080,-882 <10
-		.click Cubig Gamma##523837 |goto -1866,-2105,-890 <10
+		.' _Continue through_ the Cubig Pens |goto -1941,-2080,-882 < 10
+		.click Cubig Gamma##523837 |goto -1866,-2105,-890 < 10
 		.' Steal Cubig Gamma |q The Great Cubig Heist##3891/4 |goto -2058,-2071,-877
 	step
 		.talk Livestock Theft Prevention Analyst##1480111
@@ -614,7 +615,7 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		.' Fire the Master Roboticist |q Pink Slips For Everyone##6011/3 |goto -1793,-1817,-901
 		.talk Protostar Quality Controller##1516321
 		.' Fire the Quality Controller |q Pink Slips For Everyone##6011/4 |goto -1790,-1791,-919
-		.' _Jump up_ the rocks here |goto Auroria -1842,-1828,-895 <10
+		.' _Jump up_ the rocks here |goto Auroria -1842,-1828,-895 < 10
 		.talk Protostar Supply Manager##276773
 		.' Fire the Supply Manager |q Pink Slips For Everyone##6011/2 |goto -1843,-1819,-882
 	step
@@ -1468,7 +1469,7 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		.' Destroy the third Voreth Chain |q Chain Sunderer##6822/4 |goto -1603,-338,-801
 	step
 		.click To the Eastern Tower##283019
-		.' Take the Pipe to Eastern Tower |goto -1538,-389,-801 <5
+		.' Take the Pipe to Eastern Tower |goto -1538,-389,-801 < 5
 		'As you travel along the top:
 		.kill Voreth Chainforger##1245410+
 		.click Voreth Chains##292892
@@ -1490,7 +1491,7 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		'Press _C_ to open your Communicator:
 		..turnin The Chainforgers##6713
 	step
-		.' _Follow_ this pathway |goto Auroria -1472,-39,-810 <10
+		.' _Follow_ this pathway |goto Auroria -1472,-39,-810 < 10
 		.kill 1 Voreth Flame##1975540
 		.' Destroy the Voreth Flame |q Fire in the Sky##6714/1 |goto -1474,-205,-798
 	step

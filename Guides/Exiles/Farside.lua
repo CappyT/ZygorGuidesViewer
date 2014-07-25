@@ -2,7 +2,9 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		{faction="Exiles",
 		nextguide="Exiles\\Wilderrun (35-41)",
 		image="ZygorUIGuides:Farside", 
-		description="Farside is a zone on the Halon moon orbiting Nexus in WildStar. It is a terraformed star, with a large moon base containing two bio-domes, one jungle, the other desert. Farside is the leveling zone for both The Exiles and The Dominion for levels 28-35."	
+		description="Farside is a zone on the Halon moon orbiting Nexus in WildStar. It is a terraformed star, with a large moon base containing two bio-domes, one jungle, the other desert. Farside is the leveling zone for both The Exiles and The Dominion for levels 28-35.",
+		startlevel=29,
+		endlevel=41,
 		},[[
 	step
 		.click Venture Board##275516

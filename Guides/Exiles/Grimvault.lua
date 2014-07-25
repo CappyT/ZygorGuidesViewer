@@ -1,7 +1,9 @@
 ZGV:RegisterGuide("Exiles\\Grimvault (46-50)",
 		{faction="Exiles",
 		image="ZygorUIGuides:Grimvault", 
-		description="Grimvault is a zone in central Isigrol in WildStar. It is a contested zone that has been almost entirely taken over by The Strain. It is intended for level 44-47. Southern Grimvault is north of Malgrave, and south of Western Grimvault."	
+		description="Grimvault is a zone in central Isigrol in WildStar. It is a contested zone that has been almost entirely taken over by The Strain. It is intended for level 44-47. Southern Grimvault is north of Malgrave, and south of Western Grimvault.",
+		startlevel=46,
+		endlevel=50,
 		},[[
 	step
 		.talk Deadeye Brightland##284334

@@ -4,7 +4,8 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 	startlevel=6,
 	endlevel=15,
 	nextguide="Dominion\\Auroria (15-23)",
-	description="Deradune is a rocky wasteland riddled with streams and caves. It is suited for characters level 6-15. "
+	image="ZygorUIGuides:Deradune", 
+	description="Deradune is a desert zone in westernOlyssia that has been taken over by The Dominion. Deradune serves as one of the starting zone for the Dominion, and is controlled mostly by Draken. Deradune is intended for characters level 6-15."
 	},
 	[[
 	step
@@ -127,18 +128,16 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 	step
 		.kill 1 Tamolo##976579 |q Tamolo's Necromojo##3304/Retrieve Tamolo's Necromojo Staff##2 |goto -5626,-1525,-944
 	step
-		.kill Deadwind Elder Witchdoctor##1002164+
-		.' Kill Deadwind Moodies |q Mojo Moodies##3302/Kill Deadwind Moodies##1
+		.kill 1 Deadwind Jackal##2966141+
+		.kill 1 Deadwind Elder Witchdoctor##3057409+
+		.' Kill Deadwind Moodies |q Mojo Moodies##3302/1 |goto Deradune -5596,-1494,-944
+	step
 		'Press _C_ to open your Communitcator:
 		..turnin Mojo Moodies##3302
 	step
 		.talk Apprentice Laveka##271909
 		..turnin Tamolo's Necromojo##3304 |goto Deradune -5488,-1089,-967
-		..accept Tracking Genetic Performance##5601 |goto Deradune -5488,-1089,-967
-	step
-		.talk Apprentice Laveka##271909
-		..turnin Tamolo's Necromojo##3304 |goto Deradune -5488,-1089,-967
-		..accept Tracking Genetic Performance##5601 |goto Deradune -5488,-1089,-967
+		..accept The Staff and the Shaman##5799 |goto Deradune -5488,-1087,-967
 	step
 		'Press the icon on the bottom right of your action bar to:
 		.' Recall - Transmat |goto Deradune -5599,-782,-983 < 100 |c |noway
@@ -235,7 +234,7 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		.talk Hologram of Engineer Giba##286515
 		..turnin Unstable Accelerite##6485 |goto -5633,-730,-978
 	step
-		' _Enter_ the large hut |goto Deradune -5668,-679,-971 <10
+		' _Enter_ the large hut |goto Deradune -5668,-679,-971 < 10
 		.talk Clanlord Makaza##271963
 		..turnin Clanlord Makaza##3370 |goto Deradune -5742,-727,-967
 		..accept Scout Jagged Rock##5943 |goto Deradune -5742,-727,-967
@@ -373,7 +372,7 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		.' Collect Venom Sacs off Hillscourge Terminite |q Venom Sacs##5751/Collect Venom Sacs off Hillscourge Terminite##1
 		.click Terminite Egg##1377983 
 		.' Detonate Terminite Eggs |q Breaking Eggs##5752/Detonate Terminite Eggs##1
-		.click Trapped Scanbot##1470089 
+		.click Trapped Scanbot##1470089
 		.' Free Trapped Scanbots around Hillscourge |q When the Gooing Gets Tough##5697/Free Trapped Scanbots around Hillscourge##1
 	step
 		'Press _C_ to open your Communicator:
@@ -387,12 +386,9 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 	step
 		.talk Analyst Bungo##292332
 		..accept Terminite Tissue Trial##5698 |goto -5030,-2011,-1006
-	step
-		.talk Analyst Bungo##292332
-		..accept Terminite Tissue Trial##5698 |goto -5030,-2011,-1006
 		..accept Turn Up the Heat##5714 |goto -5030,-2011,-1006
 	step
-		.' _Enter_ Exo-Lab 78 |goto -5038,-2020,-1004 < 10
+		.' _Step into_ the teleporter to enter Exo-Lab 79 |goto Deradune -5039,-2028,-1004 < 7
 		.' Look for Researcher Martinus |q Into the Lab Below##5693/Look for Researcher Martinus##1 |goto Deradune -5026,-1792,-1209
 	step
 		'Press _C_ to open your Communicator:
@@ -503,9 +499,9 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		..accept Cause and Defect##5632 |goto -4751,-1280,-916
 	step
 		.click Razortail Cage##269936
-		.' Open Razortail Cages to release testers |q Rogue Razortails##5627/1 |count 33 |goto Deradune -4780,-1366,-915 <10
+		.' Open Razortail Cages to release testers |q Rogue Razortails##5627/1 |count 33 |goto Deradune -4780,-1366,-915 < 10
 		.click Razortail Cage##269936
-		.' Open Razortail Cages to release testers |q Rogue Razortails##5627/1 |count 66 |goto Deradune -4733,-1388,-910 <10
+		.' Open Razortail Cages to release testers |q Rogue Razortails##5627/1 |count 66 |goto Deradune -4733,-1388,-910 < 10
 		.click Razortail Cage##269938
 		.' Open Razortail Cages to release testers |q Rogue Razortails##5627/1 |goto Deradune -4733,-1339,-916
 	step

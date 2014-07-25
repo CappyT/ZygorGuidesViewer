@@ -4,7 +4,8 @@ ZGV:RegisterGuide("Dominion\\Farside (29-35)",
 	startlevel=29,
 	endlevel=35,
 	nextguide="Dominion\\Wilderrun (35-41)",
-	description="Farside is suited for characters level 29-35. "
+	--image="ZygorUIGuides:Farside", 
+	description="Farside is a zone located on the moon, Halon, orbiting Nexus. It is suited for characters level 29-35. "
 	},
 	[[
 	step
@@ -21,7 +22,7 @@ ZGV:RegisterGuide("Dominion\\Farside (29-35)",
 		.talk Researcher Vibius##266215
 		..accept Onward to Alpha Complex##8107 |goto Farside 5362,-4521,-497
 	step
-		.' _Step into_ the teleporter |goto Farside 5361,-4510,-497 <10
+		.' _Step into_ the teleporter |goto Farside 5361,-4510,-497 < 10
 		.talk Researcher Ahnaris##263741
 		..turnin Onward to Alpha Complex##8107 |goto Farside 2961,-2058,-716
 		..accept The Journey Ahead##8792 |goto 2961,-2058,-716
@@ -39,7 +40,7 @@ ZGV:RegisterGuide("Dominion\\Farside (29-35)",
 		..turnin The Journey Ahead##8792 |goto Farside 2961,-2057,-716
 		..accept Discovering Bio-Dome 3##7853 |goto 2961,-2057,-716
 	step
-		.' _Step into_ the teleporter |goto 2546,-1932,-721 <10
+		.' _Step into_ the teleporter |goto 2546,-1932,-721 < 10
 		.talk Biologist Memydra##263743
 		..turnin Discovering Bio-Dome 3##7853 |goto 1902,-1897,-722
 		..accept Measuring Life##7857 |goto 1902,-1897,-722
@@ -571,7 +572,7 @@ ZGV:RegisterGuide("Dominion\\Farside (29-35)",
 		'Press _C_ to open your Communicator:
 		..turnin Spreading the Virus##8007
 	step
-		.' _Follow the stone_ path up and around |goto Farside 4384,-1546,-791 <10
+		.' _Follow the stone_ path up and around |goto Farside 4384,-1546,-791 < 10
 		.kill 1 High Priest Flame-Guardian##3104127 |q Eliminate the High Priest##8009/1 |goto 4314,-1560,-685 |tip He is at the very top of the mountain.
 	step
 		.click Flamewalker Console##263570
@@ -1068,7 +1069,7 @@ ZGV:RegisterGuide("Dominion\\Farside (29-35)",
 		|confirm |q 8870/3
 	step
 		.click Water and Air Transfer Control##268445 |goto DruseraWorldStoryInstance1 113,-57,-145 < 5
-		.' _Fight the mobs_ that spawn |goto 96,-57,-145 <10
+		.' _Fight the mobs_ that spawn |goto 96,-57,-145 < 10
 		.click Primal Life Transfer Control##268442 |goto 33,-75,-148 < 5
 		.kill 1 Pure Life Elemental##295010
 		.click Primal Logic Transfer Control##268443 |goto -34,-76,-148 < 5

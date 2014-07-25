@@ -307,7 +307,13 @@ GOALTYPES['_item'] = {
 
 GOALTYPES['count'] = {
 	parse = function(self,params)
-		self.count = tonumber(params)
+		local args = {split("/",params)}
+		if args[2] then
+			self.count = math.floor(tonumber(args[1])/tonumber(args[2])*100)
+		else
+			self.count = tonumber(params)
+		end
+		Print(params.." "..tostring(self.count))
 	end
 }
 -----------------------------------------

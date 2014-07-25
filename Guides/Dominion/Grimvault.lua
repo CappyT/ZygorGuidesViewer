@@ -3,15 +3,16 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 	faction="Dominion",
 	startlevel=46,
 	endlevel=50,
-	description="Grimvault is suited for characters level 46-50. "
+	--image="ZygorUIGuides:Grimvault", 
+	description="Grimvault is a zone in central Isigrol in WildStar. It is a contested zone that has been almost entirely taken over by The Strain. It is intended for level 46-50."
 	},
 	[[
 	step
 		'Press _C_ to use your communicator:
 		..accept An Unexpected Enemy##9069
 	step
-		.' _Cross_ the bridge |goto Malgrave 1645,2779,-837 <10
-		.' _Go up_ the staircase |goto 1869,2472,-804 <10
+		.' _Cross_ the bridge |goto Malgrave 1645,2779,-837 < 10
+		.' _Go up_ the staircase |goto 1869,2472,-804 < 10
 		.talk Corrigan Doon##289867
 		.' Meet Corrigan Doon |q An Unexpected Enemy##9069/1 |goto 1829,2473,-792
 		.' Press _Yes_ to enter Grimvault |q An Unexpected Enemy##9069/2 |goto 1829,2473,-792
@@ -52,7 +53,7 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		.click Splintered Handle##14569519
 		.' Acquire a suitable handle |q I Shall Call Her...##7668/1 |tip These randomly spawn around the crash site. You may have to search for one. |goto 2618,873,-872
 	step
-		.' _Follow_ the road east |goto Grimvault 2801,955,-883 <10
+		.' _Follow_ the road east |goto Grimvault 2801,955,-883 < 10
 		.talk Pilot Tiburteus##285261
 		..accept Not On My Watch##7667 |goto 3121,769,-965
 	step
@@ -247,7 +248,7 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		'Press _C_ to use your communicator:
 		..turnin Xenophobia##7896
 	step
-		.' _Follow_ the path around |goto Grimvault 2383,-1003,-1017 <10
+		.' _Follow_ the path around |goto Grimvault 2383,-1003,-1017 < 10
 		.' _Teleport_ to the Command Center |q Command Override##7899/1 |goto 2719,-947,-1013
 		.' Kill the Corrupted Command Construct |q Command Override##7899/2 |goto 2580,-1113,-832
 	step
@@ -265,8 +266,8 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		..turnin Big Badda Boom##7710
 		..accept The Equalizer##9413
 	step
-		.' _Go up_ the ramps |goto 2510,-904,-1017 <10
-		.' _Follow_ the road west |goto 1872,-1670,-987 <10
+		.' _Go up_ the ramps |goto 2510,-904,-1017 < 10
+		.' _Follow_ the road west |goto 1872,-1670,-987 < 10
 		.talk Commando Sykill##276234
 		..turnin The Equalizer##9413 |goto 1327,-1762,-980
 		..accept Death or Glory##9414 |goto 1327,-1762,-980
@@ -343,9 +344,9 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		..turnin Come Out and Play##7681 |goto WesternGrimvault 1530,-4270,-1531
 		..accept Saving Captain Sabes##8539 |goto 1530,-4270,-1531
 	step
-		.' _Jump onto_ the first launcher |goto 1505,-4208,-1534 <10
-		.' _Jump onto_ the second launcher |goto 1505,-4195,-1474 <10
-		.' _Reach_ the high platform |goto 1511,-4180,-1428 <10
+		.' _Jump onto_ the first launcher |goto 1505,-4208,-1534 < 10
+		.' _Jump onto_ the second launcher |goto 1505,-4195,-1474 < 10
+		.' _Reach_ the high platform |goto 1511,-4180,-1428 < 10
 		.talk Captain Sabes##287975
 		.' Talk to Captain Sabes |q Saving Captain Sabes##8539/1 |goto 1531,-4160,-1427
 	step
@@ -371,7 +372,7 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 	step
 		.click Power Circuit##284393
 		.' Repair the Power Circuits in the correct order |q Danger! High Voltage##7682/2 |count 1 |goto 1502,-4070,-1536
-		.' _Jump onto_ the lift |goto 1486,-4062,-1536 <10
+		.' _Jump onto_ the lift |goto 1486,-4062,-1536 < 10
 		.click Power Circuit##284392
 		.' Repair the Power Circuits in the correct order |q Danger! High Voltage##7682/2 |count 2 |goto 1494,-4053,-1488
 		.click Power Circuit##284390
@@ -408,16 +409,16 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		..accept Opposite Reaction##7684
 		..turnin Running with the Blight##9405
 	step
-		.' _Jump onto_ the lift |goto WesternGrimvault 1341,-4064,-1536 <10
+		.' _Jump onto_ the lift |goto WesternGrimvault 1341,-4064,-1536 < 10
 		.' Kill Kothacheyah, the Star Slayer |q Opposite Reaction##7684/1 |goto 1305,-4042,-1488
 	step
 		'Press _C_ to use your communicator:
 		..turnin Opposite Reaction##7684
 	step
-		.' _Jump onto_ the first lift |goto 1311,-4055,-1485 <10
-		.' _Jump onto_ the second lift |goto 1309,-4096,-1456 <10
-		.' _Land_ on the upper platform |goto 1287,-4148,-1427 <10
-		.' _Go through_ the doorway |goto 1273,-4158,-1426 <10
+		.' _Jump onto_ the first lift |goto 1311,-4055,-1485 < 10
+		.' _Jump onto_ the second lift |goto 1309,-4096,-1456 < 10
+		.' _Land_ on the upper platform |goto 1287,-4148,-1427 < 10
+		.' _Go through_ the doorway |goto 1273,-4158,-1426 < 10
 		.click Department YYZ Entry Console##279827
 		.' Click _Yes_ to enter Department YYZ |q Beneath, Between, and Behind##7688/1 |goto 1254,-4135,-1427
 	step
@@ -445,7 +446,7 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		'Press _C_ to use your communicator:
 		..turnin The Things That Should Not Be##9407
 	step
-		.' _Go up_ the stairs |goto 956,-3933,-1346 <10
+		.' _Go up_ the stairs |goto 956,-3933,-1346 < 10
 		.click Console X-1##284305
 		.' Use Console X-1 to activate the X-Periment |q Assume Control##7690/1 |goto 944,-3980,-1337
 	step
@@ -461,7 +462,7 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 	step
 		.click Department YYZ Exit Console##279833
 		.' Click _Yes_ to leave Department YYZ |goto WesternGrimvault 983,-3916,-1346
-		.' _Go through_ the door |goto 1272,-4158,-1426 <10
+		.' _Go through_ the door |goto 1272,-4158,-1426 < 10
 		.talk Captain Sabes##284310
 		.' Speak to Captain Sabes |q Blaze of Glory##7685/1 |goto 1406,-4190,-1531
 		.click Vacant Cryo Pod##279222
@@ -479,7 +480,7 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		'Press _C_ to use your communicator:
 		..turnin No Remorse##9409
 	step
-		.' _Follow_ this path north |goto WesternGrimvault 242,-3713,-937 <10
+		.' _Follow_ this path north |goto WesternGrimvault 242,-3713,-937 < 10
 		.click Biomech Facility Alpha Taxi Kiosk##274528
 		.' Get the _Bio-Mech Facility_ flight point |goto 220,-4038,-891
 		|confirm
@@ -515,7 +516,7 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		..turnin Pick Up the Pieces##8573
 		..accept We Built This Sentry##8574
 	step
-		.' Go back up the ramp |goto WesternGrimvault -748,-3447,-1038 <10
+		.' Go back up the ramp |goto WesternGrimvault -748,-3447,-1038 < 10
 		.click Heat Compensators Repair Point##275935
 		.' Protect Eldan Repair Constructs at the Heat Compensators Repair Point |q We Built This Sentry##8574/4 |goto WesternGrimvault -703,-3385,-953
 		.click Beam Modulation Repair Point##275931
@@ -583,13 +584,13 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		..turnin Power Corrupts##8600
 		..accept Down into the Phagelabs##8164
 	step
-		.' _Ride_ an elevator up |goto -1123,-4106,-832 <10
-		.' _Run across_ the platforms here when they form a bridge |goto WesternGrimvault -1052,-4070,-721 <10
+		.' _Ride_ an elevator up |goto -1123,-4106,-832 < 10
+		.' _Run across_ the platforms here when they form a bridge |goto WesternGrimvault -1052,-4070,-721 < 10
 		.' _Step into_ the teleporter |goto WesternGrimvault -896,-4149,-720
-		.' _Jump down_ here |goto -412,-4125,-953 <10
-		.' _Follow_ the ramp down |goto -397,-4097,-1042 <10
-		.' _Go down_ the next ramp |goto -743,-4259,-1119 <10
-		.' _Step into_ the teleporter |goto -1020,-4099,-1200 <10
+		.' _Jump down_ here |goto -412,-4125,-953 < 10
+		.' _Follow_ the ramp down |goto -397,-4097,-1042 < 10
+		.' _Go down_ the next ramp |goto -743,-4259,-1119 < 10
+		.' _Step into_ the teleporter |goto -1020,-4099,-1200 < 10
 		.' Enter the Phagelabs |q Down into the Phagelabs##8164/1 |goto -1261,-5370,-1020
 	step
 		'Press _C_ to use your communicator:
@@ -658,14 +659,14 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		.click Phagelab Panel##276087
 		.' Activate the Phagelab Panels |q Minutes to Madness##8158/2 |goto -447,-5334,-1040
 	step
-		.' _Go through_ the teleporter |goto -392,-5335,-1035 <10
+		.' _Go through_ the teleporter |goto -392,-5335,-1035 < 10
 		.talk The Caretaker##276207
 		..turnin Minutes to Madness##8158 |goto Grimvault -1164,-5334,-1039
 		..accept Face the Phage Lord##8159 |goto -1164,-5334,-1039
 	step
-		.' _Pass through_ the doorway |goto -1142,-5303,-1035 <10
-		.' _Ride_ the elevator down |goto -1128,-5260,-1036 <10
-		.' _Go through_ the teleporter |goto -1135,-5245,-1072 <10
+		.' _Pass through_ the doorway |goto -1142,-5303,-1035 < 10
+		.' _Ride_ the elevator down |goto -1128,-5260,-1036 < 10
+		.' _Go through_ the teleporter |goto -1135,-5245,-1072 < 10
 		.' Click and activate all _12 Exanite Lanters_ in this room to lure Vorion out |goto WesternGrimvault -948,-4094,-1900
 		|confirm
 	step
@@ -775,17 +776,17 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		.talk Drusera##262288
 		..turnin With Great Power##8357 |goto GrimvaultCore -77,-2,-694
 	step
-		.' Use your Recall ability to teleport back to _Legion's Landing_ |goto WesternGrimvault 339,-4059,-890 <10
+		.' Use your Recall ability to teleport back to _Legion's Landing_ |goto WesternGrimvault 339,-4059,-890 < 10
 		.click Bounty Board##276695
 		..accept Freedom of Information##8585 |goto WesternGrimvault 276,-3992,-886
 	step
-		.' Follow the ramp down |goto WesternGrimvault 50,-4061,-871 <10
-		.' Step into the teleporter |goto WesternGrimvault -649,-4027,-952 <10
+		.' Follow the ramp down |goto WesternGrimvault 50,-4061,-871 < 10
+		.' Step into the teleporter |goto WesternGrimvault -649,-4027,-952 < 10
 		.click External Interface Terminal##276472
 		.' Hack External Interface Terminals |q Freedom of Information##8585/1 |count 1 |goto -1056,-4032,-721
 		.click External Interface Terminal##276471
 		.' Hack External Interface Terminals |q Freedom of Information##8585/1 |count 2 |goto -1089,-4064,-721
-		.' Run across the bridge when the platforms come down |goto -1052,-4069,-721 <10
+		.' Run across the bridge when the platforms come down |goto -1052,-4069,-721 < 10
 		.click External Interface Terminal##276473
 		.' Hack External Interface Terminals |q Freedom of Information##8585/1 |count 3 |goto -991,-4161,-721
 		.click External Interface Terminal##276470

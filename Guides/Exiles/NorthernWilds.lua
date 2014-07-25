@@ -2,7 +2,10 @@ ZGV:RegisterGuide("Exiles\\Northern Wilds (3-6)",
 		{faction="Exiles",
 		nextguide="Exiles\\Algoroc (6-15)",
 		image="ZygorUIGuides:NorthernWilds", 
-		description="Northern Wilds is a zone in northern Alizar in WildStar. Northern Wilds is a beginner zone for The Exiles, and is suited for characters level 3-6. "},[[
+		description="Northern Wilds is a zone in northern Alizar in WildStar. Northern Wilds is a beginner zone for The Exiles, and is suited for characters level 3-6. ",
+		startlevel=3,
+		endlevel=6,
+		},[[
 	step
 		.talk Scout Frostfield##263025
 		..turnin Never Thayd Away##6760 |goto NorthernWilds 3843,-5279,-677

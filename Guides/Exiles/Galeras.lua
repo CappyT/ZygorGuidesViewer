@@ -2,7 +2,9 @@ ZGV:RegisterGuide("Exiles\\Galeras (15-23)",
 		{faction="Exiles",
 		image="ZygorUIGuides:Galeras", 
 		nextguide="Exiles\\Whitevale (23-29)",
-		description="Galeras is a zone in northeastern Alizar in WildStar. It is a massive wind-swept prairie, and is home to The Exiles' capital, Thayd. Galeras is also a region suited for levels 14-25."	
+		description="Galeras is a zone in northeastern Alizar in WildStar. It is a massive wind-swept prairie, and is home to The Exiles' capital, Thayd. Galeras is also a region suited for levels 14-25.",
+		startlevel=15,
+		endlevel=23,
 		},[[
 	step
 		'Press _C_ to use your communicator:

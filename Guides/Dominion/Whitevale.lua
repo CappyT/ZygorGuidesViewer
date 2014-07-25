@@ -4,7 +4,8 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 	startlevel=23,
 	endlevel=29,
 	nextguide="Dominion\\Farside (29-35)",
-	description="Whitevale is suited for characters level 23-29. "
+	image="ZygorUIGuides:Whitevale", 
+	description="Whitevale is a zone in central Alizar in WildStar. It is a a frozen wasteland that is under the influence of strange weather-altering technology. Whitevale is also a region suited for levels 23-29."
 	},
 	[[
 	step
@@ -950,7 +951,7 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		..turnin Minimizing Losses##5834 |goto Whitevale 3096,776,-1032
 		..accept Creative Marketing##5835 |goto 3096,776,-1032
 	step
-		.click Protostar B.L.I.M.P.##1263078 |goto Whitevale 3010,714,-1030 <10
+		.click Protostar B.L.I.M.P.##1263078 |goto Whitevale 3010,714,-1030 < 10
 		.' Press _1_ to throw promotional supplies at Soulcore enemies on the ground as you fly |q Creative Marketing##5835/1 |goto Whitevale 2364,675,-1018
 	step
 		.talk Prime Executive##278101
@@ -1252,7 +1253,7 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		..turnin Meeting with Metal Maw Prime##5827 |goto 2005,409,-972
 		..accept Return to Illium##8768 |goto 2005,409,-972
 	step
-		.' Take the _elevator down_ |goto Whitevale 1917,456,-971 <10
+		.' Take the _elevator down_ |goto Whitevale 1917,456,-971 < 10
 		.' Find the Nexonian Analyzation Unit |q Original Modifications##5935/2 |goto 1864,504,-1015
 	step
 		.click Nexonian Analyzation Unit##274299

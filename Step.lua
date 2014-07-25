@@ -113,6 +113,9 @@ function Step:IsComplete(cache)
 		if goal.action=="confirm" and status=="complete" then
 			completable = true
 		end
+		if goal.action=="nextguide" and status=="complete" then
+			completable = true
+		end
 	end
 
 	if complete and completable then

@@ -4,7 +4,8 @@ ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 	startlevel=3,
 	endlevel=6,
 	nextguide="Dominion\\Deradune (6-15)",
-	description="Crimson Isle is a flat island zone to the west of Olyssia, and is suited for characters level 3-6. "
+	image="ZygorUIGuides:CrimsonIsle", 
+	description="The Crimson Isle is island zone west of Olyssia in WildStar. It is a flat island currently under investigation by The Dominion. The Crimson Isle is intended for players levels 3-6."
 	},
 	[[
 //HUMAN BEGINS CRIMSON ISLE
@@ -291,8 +292,8 @@ ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 		.talk Mondo Zax##262288
 		..turnin Dreg Mutations##5610 |goto -7489,-830,-981
 	step
-		.' Follow this _road up_ the hill |goto -7317,-1132,-973 <10
-		.' _Continue up_ the wooden ramp |goto -7383,-1108,-945 <10
+		.' Follow this _road up_ the hill |goto -7317,-1132,-973 < 10
+		.' _Continue up_ the wooden ramp |goto -7383,-1108,-945 < 10
 		.click Exile Anti-Air Cannon##263442 
 		.' Destroy the Exile Anti-Air Cannon |q Tactical Demolitions ##5604/Destroy the Exile Anti-Air Cannons##1 |count 33 |goto -7349,-1085,-937
 		.click Exile Anti-Air Cannon##263442 

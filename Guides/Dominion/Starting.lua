@@ -4,6 +4,7 @@ ZGV:RegisterGuide("Dominion\\Starting Area (1-3)",
 	startlevel=1,
 	endlevel=3,
 	nextguide="Dominion\\Crimson Isle (3-6)",
+	image="ZygorUIGuides:TutorialExiles", 
 	description="The Dominion Ark Ship starting area is where players begin their adventure through Nexus. It is suited for characters level 1-3. "
 	},
 	[[

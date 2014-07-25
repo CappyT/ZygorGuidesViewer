@@ -4,13 +4,14 @@ ZGV:RegisterGuide("Dominion\\Wilderrun (35-41)",
 	startlevel=35,
 	endlevel=41,
 	nextguide="Dominion\\Malgrave (41-46)",
-	description="Wilderrun is suited for characters level 35-41. "
+	image="ZygorUIGuides:Wilderrun", 
+	description="Wilderrun is a dense jungle zone infused with primal life energy, and home to the legendary Everpool. It is best suited for characters level 35-41. "
 	},
 	[[
 	step
 		.click Fort Vigilance Taxi Kiosk##271171
 		.' Get the _Fort Vigilance_ taxi point |goto Wilderrun 1120,-2010,-713
-		|confirm
+		|confirm |q 8852
 	step
 		.talk Toric Antevian##272962
 		..turnin Journey to Wilderrun##8852 |goto Wilderrun 1269,-2027,-718
@@ -19,7 +20,7 @@ ZGV:RegisterGuide("Dominion\\Wilderrun (35-41)",
 	step
 		.click Transmat Terminal##272208
 		.' Click _Yes_ to set _Fort Vigilance_ as your Recall point |goto Wilderrun 1262,-2067,-722
-		|confirm
+		|confirm |q 6400
 	step
 		.talk Vigilant Priest Aelius##272866
 		..accept Trial of Devotion##6342 |goto Wilderrun 1265,-1916,-722
@@ -606,8 +607,8 @@ ZGV:RegisterGuide("Dominion\\Wilderrun (35-41)",
 		'Press _C_ to open your Communicator:
 		..turnin Is That All You've Got?##7903
 	step
-		.' Go up the huge staircase |goto 3125,-4163,-803 <10
-		.' Follow this platform around |goto 3415,-4195,-656 <10
+		.' Go up the huge staircase |goto 3125,-4163,-803 < 10
+		.' Follow this platform around |goto 3415,-4195,-656 < 10
 		.click Andro's Cage##270201
 		.' Free Shinequester Andro from his Cage |q Unchained##7905/1 |goto 3381,-4255,-661
 	step
@@ -626,7 +627,7 @@ ZGV:RegisterGuide("Dominion\\Wilderrun (35-41)",
 		.click Kel Ulgar Cage##270214
 		.' Free Captives from Kel Ulgar Cages |q Unchained##7905/2 |goto 3316,-4241,-661
 	step
-		.' Jump off here to the platform below |goto 3256,-4183,-656 <10
+		.' Jump off here to the platform below |goto 3256,-4183,-656 < 10
 		.talk Adventurer Kiyai##266407
 		..turnin Soulrot Survivor##7907 |goto 3256,-4161,-707
 		..accept Strange Brew##7908 |goto 3256,-4161,-707
@@ -666,9 +667,9 @@ ZGV:RegisterGuide("Dominion\\Wilderrun (35-41)",
 		'Press _C_ to use your communicator:
 		..turnin Strange Brew##7908
 	step
-		.' Follow the _stairs down_ to this spot |goto Wilderrun 3449,-4164,-661 <10
+		.' Follow the _stairs down_ to this spot |goto Wilderrun 3449,-4164,-661 < 10
 		.' _Follow this platform_ around |goto Wilderrun 3423,-4138,-656 < 10
-		.' _Jump down_ here to the platform below |goto 3402,-4020,-663 <10
+		.' _Jump down_ here to the platform below |goto 3402,-4020,-663 < 10
 		..accept All Along the Watchtowers##7912 |goto 3433,-3995,-719
 	step
 		.' Follow this path _atop the wall_ as you kill Tower Guards |goto 3447,-3971,-721
@@ -820,7 +821,7 @@ ZGV:RegisterGuide("Dominion\\Wilderrun (35-41)",
 		.' Kill Lifecaller Celes |q The Corrupting Influence##7784/1 |goto 1611,-4152,-757
 		.kill 1 Strain Corruptor##673974
 		.' Kill the Strain Corruptor |q The Corrupting Influence##7784/2 |goto 1614,-4153,-757
-		.get 1 Deathbringer Ehel's Lost Amulet##41816
+		.collect 1 Deathbringer Ehel's Lost Amulet##41816
 		.use Deathbringer Ehel's Lost Amulet##41816
 		..accept Ehel's Lost Amulet##7786
 	step
@@ -833,9 +834,9 @@ ZGV:RegisterGuide("Dominion\\Wilderrun (35-41)",
 		..accept Culling Weeds##7788 |goto 1949,-4209,-761
 		..accept Those Who Fell##7793 |goto 1949,-4209,-761
 	step
-		.kill Corrupted Doomroot##679284
-		.kill Corrupted Taproot##683783
-		.kill Corrupted Sporeling##714676
+		.kill Corrupted Doomroot##679284+
+		.kill Corrupted Taproot##683783+
+		.kill Corrupted Sporeling##714676+
 		.' Kill corrupted rootbrutes and stumpkins  |q Culling Weeds##7788/2 |goto 1817,-4236,-764
 	step
 		.click Lost Torine Sword##269758
@@ -851,7 +852,7 @@ ZGV:RegisterGuide("Dominion\\Wilderrun (35-41)",
 		.' Collect Lost Torine Swords |q A Sister's Legacy##7787/1 |goto 1424,-4166,-703
 		.click Fallen Defender##700233
 		.' Burn Fallen Defenders |q Those Who Fell##7793/1 |goto 1422,-4163,-703
-		.kill Corrupted Bloom##721261
+		.kill Corrupted Bloom##721261+
 		.' Kill corrupted stemdragons  |q Culling Weeds##7788/1 |goto 1387,-4117,-703
 	step
 		'Press _C_ to use your communicator:
@@ -867,13 +868,14 @@ ZGV:RegisterGuide("Dominion\\Wilderrun (35-41)",
 		.' Press _C_ to use your communicator
 		..accept The Corruptors##7791 |goto 1510,-4139,-694
 	step
-		.' Go up the stairs |goto 1283,-4216,-703
-		.kill Strainpod##727496 |tip More of these can be found up the stairs to the north.
+		.' Go _up the stairs_ |goto 1283,-4216,-703 < 10
+		.' Found all around this upper section of Vitara's Refuge:
+		.kill Strainpod##727496+ |tip More of these can be found up the stairs to the north.
 		.' Destroy Strainpods |q Clearing the Air##7790/1 |goto 1139,-4171,-652
-		.kill Strain Peeper##733513 |tip More of these can be found up the stairs to the north.
+		.kill Strain Peeper##733513+ |tip More of these can be found up the stairs to the north.
 		.' Kill Strain Peepers and Strain Watchers |q The Corruptors##7791/1 |goto 1136,-4172,-651
-		.kill Greater Strain Corruptor##768838
-		.kill Strain Corruptor##751995
+		.kill Greater Strain Corruptor##768838+
+		.kill Strain Corruptor##751995+
 		.' Kill Strain Corruptors |q The Corruptors##7791/2 |goto 1077,-4250,-631
 	step
 		'Press _C_ to use your communicator:
@@ -883,17 +885,15 @@ ZGV:RegisterGuide("Dominion\\Wilderrun (35-41)",
 	step
 		.click Shrine of the Sacred Sword##269801
 		.' Visit the Shrine of the Sacred Sword |q In Her Footsteps##7789/3 |goto 1098,-4410,-630
-		.' Follow the stairs up |goto 959,-4220,-579
+		.' _Follow the stairs_ up |goto 959,-4220,-579 < 15
 		.click Shrine of the Accord##269800
 		.' Visit the Shrine of the Accord  |q In Her Footsteps##7789/4 |goto 972,-4068,-587
 	step
 		'Press _C_ to use your communicator:
 		..turnin In Her Footsteps##7789
 	step
-		.kill 1 Puslek the Corruptor##720176
-		.kill 1 Corrupted Life##720031
-		.' Kill Puslek the Corruptor |q Darkness and Life##7792/1 |goto 1048,-3970,-578
-		.' Kill Corrupted Life |q Darkness and Life##7792/2 |goto 1048,-3971,-578
+		.kill 1 Puslek the Corruptor##720176 |q Darkness and Life##7792/1 |goto 1048,-3970,-578
+		.kill 1 Corrupted Life##720031 |q Darkness and Life##7792/2 |goto 1048,-3971,-578
 	step
 		.talk Wounded Lifecaller##277547
 		..accept Seed of Hope##7795 |goto 1000,-4119,-588
@@ -907,11 +907,7 @@ ZGV:RegisterGuide("Dominion\\Wilderrun (35-41)",
 		..accept Eight-Legged Freaks##7773 |goto Wilderrun 1561,-3885,-748
 	step
 		.' All around this area:
-		.kill Duskfang Stalker##756083+
-		.kill Duskfang Stalker##756244+
-		.kill Duskfang Hunter##697967+
-		.kill Duskfang Widow##765415+
-		.kill Duskfang Recluse ##776173+
+		.kill Duskfang Stalker##756083+, Duskfang Stalker##756244+, Duskfang Hunter##697967+, Duskfang Widow##765415+, Duskfang Recluse##776173+
 		.' Kill Duskfang spiders |q Eight-Legged Freaks##7773/1 |goto 1572,-3826,-742
 	step
 		'Press _C_ to use your communicator:
@@ -948,15 +944,17 @@ ZGV:RegisterGuide("Dominion\\Wilderrun (35-41)",
 		.' Insert the Cerebral Core into the Secondary Complex Charger |q The Gatekeeper##7760/2 |goto 1677,-3660,-657
 	step
 		.click Hybridization Complex Access Node##269675
-		.' Repair the Hybridization Complex Access Nodes |q The Gatekeeper##7760/3 |count 1 |goto 1537,-3619,-674
+		.' Repair the Hybridization Complex Access Nodes |q The Gatekeeper##7760/3 |count 25 |goto Wilderrun 1543,-3616,-673
 		.click Hybridization Complex Access Node##277472
-		.' Repair the Hybridization Complex Access Nodes |q The Gatekeeper##7760/3 |count 2 |goto 1462,-3640,-675
+		.' Repair the Hybridization Complex Access Nodes |q The Gatekeeper##7760/3 |count 50 |goto 1462,-3640,-675
 		.click Hybridization Complex Access Node##269676
-		.' Repair the Hybridization Complex Access Nodes |q The Gatekeeper##7760/3 |count 3 |goto 1477,-3698,-674
+		.' Repair the Hybridization Complex Access Nodes |q The Gatekeeper##7760/3 |count 75 |goto 1477,-3698,-674
 		.click Hybridization Complex Access Node##269674
 		.' Repair the Hybridization Complex Access Nodes |q aThe Gatekeeper##7760/3 |goto 1549,-3687,-675
 	step
-		.' Step through the teleporter to enter the Luminai Hybridization Complex |goto 1639,-3625,-990 <10
+		.' _Step through the teleporter_ to enter the Luminai Hybridization Complex |goto Wilderrun 1503,-3657,-672 < 7
+		.' Enter the Luminai Hybridization Complex |q The Gatekeeper##7760/4 |goto Wilderrun 1644,-3718,-994
+	step
 		.talk The Caretaker##269634
 		..turnin The Gatekeeper##7760 |goto Wilderrun 1639,-3734,-991
 		..accept An Ideal Specimen##7761 |goto 1639,-3734,-991
@@ -970,8 +968,8 @@ ZGV:RegisterGuide("Dominion\\Wilderrun (35-41)",
 		.click Contaminated Corpse##492729
 		.' Press _T_ to burn Contaminated Corpses |q An Ideal Specimen##7761/1 |goto 1545,-3687,-991
 	step
-		.kill Hybridization Drone##531239
-		.kill Hybridization Sentry##499575
+		.kill Hybridization Drone##531239+
+		.kill Hybridization Sentry##499575+
 		.' Destroy hostile constructs |q Insecurity State##7762/1 |goto Wilderrun 1636,-3680,-994
 		.' Collect Eldan Power Sources from Eldan constructs |q Enhancement Offline##7765/1 |goto 1635,-3680,-994
 	step
@@ -1032,22 +1030,23 @@ ZGV:RegisterGuide("Dominion\\Wilderrun (35-41)",
 		.' Run into Freebot Miners to free them
 		.' Rescue cycloned Freebot Miners |q Calming the Storm##7771/2 |goto Wilderrun 2401,-4855,-772
 	step
-		.' _Go across_ the first bridge |goto 2509,-5022,-764
+		.' _Go across_ the first bridge |goto 2509,-5022,-764 < 10
 		.' _Cross the bridges_ to the Deepfall Spires |q The Path of Destruction##7767/2 |goto Wilderrun 2580,-5113,-767
-		.' _Head across_ the second bridge |goto 2595,-5100,-767
-		.' _Walk across_ this bridge |goto 2685,-4979,-774
-		.' _Go down_ the path and across the bridge |goto 2712,-4816,-774
+		.' _Head across_ the second bridge |goto 2595,-5100,-767 < 10
+		.' _Walk across_ this bridge |goto 2685,-4979,-774 < 10
+		.' _Go down_ the path and across the bridge |goto 2712,-4816,-774 < 10
 		.' _Walk up_ the pile of bones and jump into the Primal Air Anomaly
 		.' Collect a Heart of Air from the Primal Air Anomaly |q Heartbreaker##7770/3 |goto 2793,-4992,-791
 	step
 		.' Around this area and along the previous bridges:
-		.kill Restless Echo##608711
+		.kill Restless Echo##608711+
+		.kill Restless Tempest##3446634+
 		.' Kill Air Elementals |q Calming the Storm##7771/1 |goto 2730,-4887,-794
 	step
 		'Press _C_ to use your communicator:
 		..turnin Calming the Storm##7771
 	step
-		.' Cross the last bridge |goto 2861,-4948,-799
+		.' Cross the _last bridge_ |goto 2861,-4948,-799 < 10
 		.' Press _C_ to use your communicator
 		..accept A Firm Foundation##7772 |goto Wilderrun 2985,-4851,-803
 	step
@@ -1060,18 +1059,18 @@ ZGV:RegisterGuide("Dominion\\Wilderrun (35-41)",
 		.kill 1 Pyrolos the Inferno##620314
 		.' Collect a Heart of Fire from Pyrolos the Inferno |q Heartbreaker##7770/1 |goto 3055,-4644,-797
 	step
-		.kill Spirevale Inferno ##608944
-		.kill Spirevale Scorcher##609421
-		.kill Spirevale Firenova##608047
+		.kill Spirevale Inferno##608944+
+		.kill Spirevale Scorcher##609421+
+		.kill Spirevale Firenova##608047+
 		.' Defeat Fire Elementals |q Firestorm##7774/1 |goto 2986,-4621,-801
 	step
 		'Press _C_ to use your communicator:
 		..turnin Firestorm##7774
 	step
-		.' _Follow_ the path back around |goto Wilderrun 2971,-4835,-803 <10
-		.' _Enter_ the cave |goto 3168,-5018,-803 <10
+		.' _Follow_ the path back around |goto Wilderrun 2971,-4835,-803 < 10
+		.' _Enter_ the cave |goto 3168,-5018,-803 < 10
 		.' Press _C_ to use your communicator
-		..accept Clamoring for Crimson Ore##7769
+		..accept Clamoring for Crimson Ore##7769 |goto 3199,-4975,-809
 	step
 		.kill 1 Stonelord Sklor##633417
 		.' Collect a Heart of Earth from Stonelord Sklor |q Heartbreaker##7770/2 |goto Wilderrun 3457,-4702,-875
@@ -1088,15 +1087,15 @@ ZGV:RegisterGuide("Dominion\\Wilderrun (35-41)",
 		..turnin A Firm Foundation##7772
 		..turnin Clamoring for Crimson Ore##7769
 	step
-		.' _Cross_ the first bridge |goto 2958,-4842,-803 <10
-		.' _Go across_ the second bridge |goto 2807,-4967,-799 <10
-		.' _Cross_ the last bridge |goto 2666,-4797,-768 <10
+		.' _Cross_ the first bridge |goto 2958,-4842,-803 < 10
+		.' _Go across_ the second bridge |goto 2807,-4967,-799 < 10
+		.' _Cross_ the last bridge |goto 2666,-4797,-768 < 10
 		.talk Depot Agent Sakiro##266335
 		..turnin Heartbreaker##7770 |goto Wilderrun 2463,-4797,-774
 		..accept The Megadroids##7768 |goto 2463,-4797,-774
 	step
-		.' _Enter_ the cave |goto Wilderrun 2372,-5101,-749 <10
-		.' _Step into_ the teleporter |goto Wilderrun 2358,-5160,-767 <10
+		.' _Enter_ the cave |goto Wilderrun 2372,-5101,-749 < 10
+		.' _Step into_ the teleporter |goto Wilderrun 2358,-5160,-767 < 10
 		.' Enter Primal Kinesis Lab 9 |q The Megadroids##7768/1 |goto 3395,-5073,-1008
 		.' _Go through_ the door way |goto Wilderrun 3348,-4977,-1008
 		.click Aerokinetic Regulator##276975
@@ -1111,7 +1110,8 @@ ZGV:RegisterGuide("Dominion\\Wilderrun (35-41)",
 		.click Megadroid Interface##271225
 		.' Deactivate the Megadroid Interface |q The Megadroids##7768/6 |goto Wilderrun 3324,-4857,-1023
 	step
-		.' _Step into_ the teleporter to leave the Primal Kinesis Lab |goto Wilderrun 3394,-5087,-1007 <10
+		.' _Head back_ through the doorway |goto Wilderrun 3226,-4875,-1024 < 10
+		.' _Step into_ the teleporter to leave the Primal Kinesis Lab |goto Wilderrun 3395,-5090,-1007 < 10
 		.talk Depot Agent Sakiro##266335
 		..turnin The Megadroids##7768 |goto Wilderrun 2463,-4796,-774
 		..accept Crimson Ore Shipment##9467 |goto 2463,-4796,-774

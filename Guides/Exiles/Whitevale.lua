@@ -2,6 +2,8 @@ ZGV:RegisterGuide("Exiles\\Whitevale (23-29)",
 		{faction="Exiles",
 		nextguide="Exiles\\Farside (29-35)",
 		image="ZygorUIGuides:Whitevale", 
+		startlevel=23,
+		endlevel=29,
 		description="Whitevale is a zone in central Alizar in WildStar. It is a a frozen wasteland that is under the influence of strange weather-altering technology. Whitevale is also a region suited for levels 25-33."	
 		},[[
 	step
@@ -1001,8 +1003,6 @@ ZGV:RegisterGuide("Exiles\\Whitevale (23-29)",
 		.' All around Prosperity Junction:
 		.talk Protostar Employee##1258544
 		.' Fire Protostar Employees |q You're Fired!##5836/1 |goto 3105,697,-1025
-		.talk Protostar Employee##1196112
-		.' Fire Protostar Employees |q You're Fired!##5836/1 |goto 3014,701,-1028
 	step
 		.talk Prime Executive##277965
 		..turnin You're Fired!##5836 |goto 3095,775,-1032
