@@ -121,20 +121,14 @@ function ZGV:SkipStep(fast)
 		--if self.CurrentStep.num == #self.CurrentGuide.steps then  -- never mind! assuming loss of next step = end of guide. Wondering if this is safe... ~sinus 2011-08-16
 			self.pause = true
 			self.fastforward = false
-			if self.CurrentGuide.next then
-				self:SetGuide(self.CurrentGuide.next,1)
+			if self.CurrentGuide.extra.nextguide then
+				self:SetGuide(self.CurrentGuide.extra.nextguide)
+				self.PopupAutoacceptTimer = ApolloTimer.Create(6, true, "HideAutoacceptPopup", self)
+				self:ShowAutoacceptPopup("Loaded next guide:")
+				self:ShowAutoacceptPopup(self.CurrentGuide.title_short)
 				return
 			elseif self.CurrentGuide.steps and #self.CurrentGuide.steps>1 then
-				-- TODO: Full popup, temporary we will show guide selector
-
-				if self.CurrentGuide.extra.nextguide then
-					self:SetGuide(self.CurrentGuide.extra.nextguide)
-					self.PopupAutoacceptTimer = ApolloTimer.Create(6, true, "HideAutoacceptPopup", self)
-					self:ShowAutoacceptPopup("Loaded next guide:")
-					self:ShowAutoacceptPopup(self.CurrentGuide.title_short)
-				else
-					ZygorGuidesViewer:ShowGuideSelect()
-				end
+				ZygorGuidesViewer:ShowGuideSelect()
 
 				--[[
 				if not self.EndGuidePopup then
@@ -355,6 +349,18 @@ function ZGV:TryToCompleteStep(force)
 			confirmfound = true
 			if goal.status == "complete" then confirmcompleted = true end
 		end
+
+		if goal.action == "nextguide" then
+			confirmfound = true
+			if goal.status == "complete" then 
+				confirmcompleted = true 
+				if goal.nextguide then
+					ZGV.CurrentGuide.extra.nextguide = goal.nextguide
+				end
+			end
+		end
+	
+	
 	end
 	if confirmfound and not confirmcompleted then completing = false end
 
@@ -738,6 +744,7 @@ function ZGV:LoadGuideFiles()
 		self:ScheduleLoadGuideFile("Exiles\\Dailies")
 	end
 	self:ScheduleLoadGuideFile("Test\\Test")
+	self:ScheduleLoadGuideFile("DominionTest\\LevianBay")
 	self:Debug("Loading of guide files scheduled: "..#ZGV.ScheduledLoads.." guides queued.")
 	self.ScheduledLoadsTotal = #self.ScheduledLoads
 	self.ScheduledLoadsSuccessful = 0

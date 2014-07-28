@@ -11,17 +11,15 @@ ZGV:RegisterGuide("Exiles\\Tutorial Area (1-3)",
 		.talk Deadeye Brightland##770555
 		..accept Cryo Crisis##6735 |goto ExileArkShipTutorial 1510,819,80
 	step
-		.' Follow Deadeye Brightland |q Cryo Crisis##6735/1 |goto ExileArkShipTutorial 1510,772,71
-	step
+		.' Follow Deadeye Brightland |q Cryo Crisis##6735/1 |goto ExileArkShipTutorial 1510,772,71 < 10
 		.click 1 Main Power Generator Console##312773
 		.' Activate the Main Power Generator  |q Cryo Crisis##6735/2 |goto 1514,749,72
 	step
 		.click 1 Cryo Controls##312761
 		.' Activate the Cryo Controls  |q Cryo Crisis##6735/3 |goto 1424,745,71
 	step
-		.' Cross the bridge again here |tip Be careful to avoid the red circles on the ground. |goto 1440,742,71
-		.' Go to the tram |goto 1543,670,87
-		.' Ride the tram |q Cryo Crisis##6735/4 |goto ExileArkShipTutorial 1553,-98,88
+		'_Run up_ the stairs |goto ExileArkShipTutorial 1510,707,77 < 10 |tip Try to avoid the red circles on the ground.
+		.' Ride the tram |q Cryo Crisis##6735/4 |goto 1543,670,87 
 	step
 		.talk Victor Lazarin##313516
 		..turnin Cryo Crisis##6735 |goto ExileArkShipTutorial 1443,-107,85
@@ -37,8 +35,8 @@ ZGV:RegisterGuide("Exiles\\Tutorial Area (1-3)",
 		.kill 2 Malfunctioning Medbot##912578
 		.' Collect Cryosickness Serum from Malfunctioning Medbot |q Medbay Mayhem##6832/Collect Cryosickness Serum from Malfunctioning Medbots##4 |goto 1351,-108,85
 	step
-		.' _Go back_ through the doorway |goto 1372,-107,86
-		.' _Pass through_ the second doorway here |goto 1395,-125,86
+		.' _Go back_ through the doorway |goto 1372,-107,86 < 10
+		.' _Pass through_ the second doorway here |goto 1395,-125,86 < 10
 		.click Sadie Brightland##313576
 		.' Heal Sadie Brightland |q Medbay Mayhem##6832/Heal Sadie Brightland##5 |goto 1446,-137,85
 	step
@@ -47,8 +45,7 @@ ZGV:RegisterGuide("Exiles\\Tutorial Area (1-3)",
 		..accept Have a Drink on Me##8887 |goto 1447,-135,85
 //Soldier Opening Quest
 	 step
-		.' _Exit the side_ room through the doorway |goto 1439,-125,86
-		.' _Proceed into_ the next room |goto 1493,-107,86
+		.' _Proceed into_ the next room |goto 1493,-107,86 < 10
 		.' _Go up_ the large staircase |goto ExileArkShipTutorial 1525,-124,88
 		'Press _C_ to open your Communicator
 		..accept Free Companies of Nexus##8867
@@ -59,8 +56,7 @@ ZGV:RegisterGuide("Exiles\\Tutorial Area (1-3)",
 		|only Soldier
 //Explorer Opening Quest
 	step
-		.' _Exit the side_ room through the doorway |goto 1439,-125,86
-		.' _Proceed into_ the next room |goto 1493,-107,86
+		.' _Proceed into_ the next room |goto 1493,-107,86 < 10
 		.' _Go up_ the large staircase |goto ExileArkShipTutorial 1525,-124,88
 		'Press _C_ to use your Communicator
 		..accept Explorers Union##8864
@@ -71,8 +67,7 @@ ZGV:RegisterGuide("Exiles\\Tutorial Area (1-3)",
 		|only Explorer
 //Settler Opening Quest
 	step
-		.' _Exit the side_ room through the doorway |goto 1439,-125,86
-		.' _Proceed into_ the next room |goto 1493,-107,86
+		.' _Proceed into_ the next room |goto 1493,-107,86 < 10
 		.' _Go up_ the large staircase |goto ExileArkShipTutorial 1525,-124,88
 		'Press _C_ to use your Communicator
 		..accept The Pioneering League##8866
@@ -83,14 +78,13 @@ ZGV:RegisterGuide("Exiles\\Tutorial Area (1-3)",
 		|only Settler
 //Scientist Opening Quest
 	step
-		.' _Exit the side_ room through the doorway |goto 1439,-125,86
-		.' _Proceed into_ the next room |goto 1493,-107,86
-		.' _Go up_ the large staircase |goto ExileArkShipTutorial 1525,-124,88
+		.' _Proceed into_ the next room |goto 1493,-107,86 < 10
 		'Press _C_ to use your Communicator
-		..accept Exile Academy of Science##8865
+		..accept Exile Academy of Science##8865 |goto 1525,-108,85
 		|only Scientist
 	step
 		.talk Scientist Mikael##262560
+		.' _Go up_ the large staircase |goto 1527,-145,96 < 10
 		..turnin Exile Academy of Science##8865 |goto ExileArkShipTutorial 1619,-123,106 
 		|only Scientist
 	step
@@ -114,7 +108,7 @@ ZGV:RegisterGuide("Exiles\\Tutorial Area (1-3)",
 	step
 		.' Press _I_ to open your inventory and right click your shield to equip it |q Deck Sweeper##6758/Right-click your new shield found in your inventory##1
 	step
-		.' Go down the ramp to the lower floor |goto -1356,-83,335 <10
+		'_Go down the ramp_ to the lower floor |goto -1356,-83,335 <10
 		.kill 3 Draken Berserker##911030
 		.' Kill Draken Berserkers |q Deck Sweeper##6758/Kill Draken Berserkers##2 |goto -1409,-72,318
 	step
@@ -131,16 +125,16 @@ ZGV:RegisterGuide("Exiles\\Tutorial Area (1-3)",
 		..turnin Walker's Aid##8979 |goto ExileArkShipTutorial -262,-24,-2
 		..accept Relic Raid##6854 |goto ExileArkShipTutorial -262,-24,-2
 	step
-		.' _Go up_ the stairs |goto -279,-24,-1
+		.' _Go up_ the stairs |goto ExileArkShipTutorial -293,-24,6 < 10
 		.click Bomb Detonator##312725
 		.' Deactivate the Bomb Detonator |q Relic Raid##6854/Deactivate the Bomb Detonator##1 |goto -300,-48,7
 	step
-		.' _Jump across_ the small gap and continue along the upper level of the room. |goto -282,-72,7 <10
+		.' _Jump across_ the small gap and continue along the upper level of the room. |goto -282,-72,7 < 10
 		.click Bombs##313410
 		.' Defuse the Bombs |q Relic Raid##6854/Defuse the Bombs##2 |goto -254,-81,8
 	step
 		.' _Jump across_ the small gap |goto -235,-77,7
-		.' _Jump across_ the second gap |goto -225,-60,8
+		.' _Jump across_ the second gap |goto -225,-60,8 < 10
 		.' _Carefully jump across_ the suspended bridge to get to the far platform |goto -234,-48,9
 		.click Primal F-Bomb Controls##313407
 		.' Disarm the F-Bomb Controls |q Relic Raid##6854/Disarm the Primal F-Bomb Controls##3 |goto -251,-49,12
@@ -179,7 +173,7 @@ ZGV:RegisterGuide("Exiles\\Tutorial Area (1-3)",
 		.click Seared Celery##934442
 		.click Terrified Taproot##937169
 		.' Gather 5 vegetables from around this area |tip You can easily see how many you have by your buffs above your character frame. |goto -879,-1340,-36
-		|confirm
+		|confirm |q 6742/2
 	step
 		.' Lead the vegetables to safety |q Green Thumb##6742/Lead veggies to a safe planter##3 |goto -803,-1328,-31
 	step

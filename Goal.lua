@@ -155,7 +155,6 @@ GOALTYPES['nextguide'] = {
 	end,
 	click = function(self)
 		self.clicked = true	
-		ZGV.CurrentGuide.extra.nextguide = self.nextguide
 	end,
 }
 
@@ -313,7 +312,6 @@ GOALTYPES['count'] = {
 		else
 			self.count = tonumber(params)
 		end
-		Print(params.." "..tostring(self.count))
 	end
 }
 -----------------------------------------

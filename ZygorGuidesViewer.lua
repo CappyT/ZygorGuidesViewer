@@ -162,9 +162,42 @@ end
 -- Define general functions here
 
 -- on SlashCommand "/zgwriter"
-function ZygorGuidesViewer:ZygorCommand()
-	self.Viewer.Frame:Show(true) -- show the window
-	ZGV.db.char.guide_show = true
+function ZygorGuidesViewer:ZygorCommand(strCmd,strArg)
+	if strArg == "show" then
+		self.Viewer.Frame:Show(true) -- show the window
+		ZGV.db.char.guide_show = true
+		return
+	end
+
+	if strArg == "toggle" then
+		if ZGV.db.char.guide_show then
+			self.Viewer.Frame:Show(false) -- hide the window
+			ZGV.db.char.guide_show = false
+		else 
+			self.Viewer.Frame:Show(true) -- show the window
+			ZGV.db.char.guide_show = true
+		end
+		return
+	end
+
+	if strArg == "show arrow" then ZGV.db.char.arrow_show = true return end
+	if strArg == "toggle arrow" then ZGV.db.char.arrow_show = not ZGV.db.char.arrow_show return end
+
+	if strArg == "options" then self.Options:OnConfigure() return end
+	if strArg == "guides" then ZygorGuidesViewer:ShowGuideSelect() return end
+	if strArg == "debug" then ZGV.BugReport:OpenBugWindow() return end
+
+	ChatSystemLib.PostOnChannel(ChatSystemLib.ChatChannel_Command, "Arguments for /zygor", "Zygor Guides Viewer")		
+	ChatSystemLib.PostOnChannel(ChatSystemLib.ChatChannel_Command, "- show - shows viewer window")		
+	ChatSystemLib.PostOnChannel(ChatSystemLib.ChatChannel_Command, "- toggle - toggles visibility of viewer window")		
+
+	ChatSystemLib.PostOnChannel(ChatSystemLib.ChatChannel_Command, "- show arrow - shows waypoint arrow")		
+	ChatSystemLib.PostOnChannel(ChatSystemLib.ChatChannel_Command, "- toggle arrow - toggles visibility of waypoint arrow")		
+
+	ChatSystemLib.PostOnChannel(ChatSystemLib.ChatChannel_Command, "- options - shows options window")		
+	ChatSystemLib.PostOnChannel(ChatSystemLib.ChatChannel_Command, "- guides - shows guide selection window")		
+	ChatSystemLib.PostOnChannel(ChatSystemLib.ChatChannel_Command, "- debug - creates a debug report")		
+
 end
 
 function ZygorGuidesViewer:CloseGuideWindow( wndHandler, wndControl, eMouseButton )

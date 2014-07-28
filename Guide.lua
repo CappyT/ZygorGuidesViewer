@@ -131,8 +131,7 @@ function Guide:Parse(fully)
 			step.finish = true
 			local goal = ZGV.GoalProto:New()
 			goal.action = "confirm"
-			goal.text = "This guide is now complete."
-
+			goal.text = "This guide is now complete. Click here to load next guide."
 			step:AddGoal(goal)
 			self:AddStep(step)
 		end

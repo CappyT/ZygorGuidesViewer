@@ -30,7 +30,7 @@ ZGV:RegisterGuide("Dominion\\Starting Area (1-3)",
 		.click Scan Console##262881
 		.' Scan Suspicious Citizen using the Scan Console |q Rise and Shine##6992/Scan Suspicious Citizen using the Scan Console##6 |goto 708,-77,71
 	step
-		.talk Emperor Myrcalus##263494
+		.talk Emperor Myrcalus##263494 
 		..turnin Rise and Shine##6992 |goto 769,-152,82
 		..accept Dominion Devotion##6993 |goto 769,-152,82
 	step
@@ -135,20 +135,20 @@ ZGV:RegisterGuide("Dominion\\Starting Area (1-3)",
 		..turnin The Imperial Museum##7008 |goto DominionArkShipTutorialCryogenics -256,-25,-2
 		..accept Knowledge is Everywhere##7009 |goto DominionArkShipTutorialCryogenics -256,-25,-2
 	step
-		.' _Run up_ the stairs |goto -281,-17,-1 < 5
+		.' _Run up_ the stairs |goto -281,-17,-1 < 10
 		.' _Jump_ to the glass roof here |goto -308,-29,6 < 5
 		.click TALES: Embrace Your Destiny!##262815
-		.' Compile a collection of TALES FROM BEYOND THE FRINGE! |q Knowledge is Everywhere##7009/Compile a collection of TALES FROM BEYOND THE FRINGE!##1 |count 25 |goto -310,-38,6
+		.' Compile a collection of TALES FROM BEYOND THE FRINGE! |q Knowledge is Everywhere##7009/1 |count 1 |goto -310,-38,6
 	step
 		.' _Jump_ to the platform |goto -288,-53,6 < 5
 		.click TALES: Embrace Your Destiny!##262814
-		.' Compile a collection of TALES FROM BEYOND THE FRINGE! |q Knowledge is Everywhere##7009/Compile a collection of TALES FROM BEYOND THE FRINGE!##1 |count 50 |goto -282,-89,7
+		.' Compile a collection of TALES FROM BEYOND THE FRINGE! |q Knowledge is Everywhere##7009/1 |count 2 |goto -282,-89,7
 	step
 		.click TALES: Embrace Your Destiny!##262816 
-		.' Compile a collection of TALES FROM BEYOND THE FRINGE! |q Knowledge is Everywhere##7009/Compile a collection of TALES FROM BEYOND THE FRINGE!##1 |count 75 |goto -257,-108,6
+		.' Compile a collection of TALES FROM BEYOND THE FRINGE! |q Knowledge is Everywhere##7009/1 |count 3 |goto -257,-108,6
 	step
 		.click Galactic Explorer's Handbook##262817 
-		.' Find the Galactic Explorer's Handbook |q Knowledge is Everywhere##7009/Find the Galactic Explorer's Handbook##2 |goto -248,-109,6
+		.' Find the Galactic Explorer's Handbook |q Knowledge is Everywhere##7009/2 |goto -248,-109,6
 	step
 		.click DATACUBE: Data Dispersion##263461 
 		.' Inspect the Datacube |q Knowledge is Everywhere##7009/Inspect the Datacube##3 |goto -257,-34,-2
@@ -251,5 +251,56 @@ ZGV:RegisterGuide("Dominion\\Starting Area (1-3)",
 	step
 		.talk Axis Pheydra##262658
 		..turnin Embarkation##7019 |goto DominionArkShipTutorialCryogenics -756,767,81
-		..accept Mysteries of the Eldan##9556 |goto DominionArkShipTutorialCryogenics -756,767,81
+		..accept Mysteries of the Eldan##9556 |goto DominionArkShipTutorialCryogenics -756,767,81 |only Mechari, human
+		..accept Mysteries of the Eldan##9557 |goto DominionArkShipTutorialCryogenics -754,768,81 |only chua, draken
+//MECHARI - HUMAN
+	step
+		.talk Chancellor Juro Takigurian##262653 
+		.' Speak to the hologram of Chancellor Juro Takigurian |q Mysteries of the Eldan##9556/Speak to the hologram of Chancellor Juro Takigurian##1 |goto DominionArkShipTutorialCryogenics -809,649,81
+		|only Mechari, Human
+	step
+		.click Hologram Control Panel##262650
+		.' Activate the Hologram Control Panel |q Mysteries of the Eldan##9556/2 |goto DominionArkShipTutorialCryogenics -808,637,81
+		|only Mechari, Human
+	step
+		'Press _C_ to open your Communitcator:
+		..turnin Mysteries of the Eldan##9556
+		..accept Jagged Cove##7058 |only Mechari
+		..accept Called to Stormcaller Landing##7057 |only Human
+		|only Mechari, Human
+	step
+		.talk Agent Lex##262658
+		.' Speak with Agent Lex |q Jagged Cove##7058/1 |goto DominionArkShipTutorialCryogenics -706,590,81
+		|only Mechari
+	step
+		.talk Artemis Zin##262657
+		.' Speak with Artemis Zin |q Called to Stormcaller Landing##7057/1 |goto -708,694,81
+		|only Human
+//CHUA - DRAKEN
+	step
+		.talk Chancellor Juro Takigurian##262653 
+		.' Speak to the hologram of Chancellor Juro Takigurian |q Mysteries of the Eldan##9557/1 |goto DominionArkShipTutorialCryogenics -809,886,82
+		|only Chua, Draken
+	step
+		.click Hologram Control Panel##266177 
+		.' Activate the Hologram Control Panel |q Mysteries of the Eldan##9557/2 |goto -809,898,81
+		|only Chua, Draken
+	step
+		'Press _C_ to open your Communitcator:
+		..turnin Mysteries of the Eldan##9557
+		..accept Mondo's Beachhead##7059 |only chua
+		..accept Savage Coast Savagery##7060 |only draken
+		|only Chua, Draken
+	step
+		.talk Mondo Zax##266184 |q Mondo's Beachhead##7059/1 |goto DominionArkShipTutorialCryogenics -704,840,81
+		|only Chua
+	step
+		.talk Kezrek Warbringer##262655
+		.' Speak with Kezrek Warbringer |q Savage Coast Savagery##7060/1 |goto DominionArkShipTutorialCryogenics -704,945,81
+		|only Draken
+//	step
+//		.' You will be able to continue your adventure in two locations from this point on:
+//		.' Click here if you wish to continue to _Crimson Isle_ |nextguide Dominion\\Crimson Isle (3-6)
+//		.' _Or_
+//		.' Click here if you wish to continue to _Levian Bay_ |nextguide DominionTest\\LevianBay (3-6)
 ]])

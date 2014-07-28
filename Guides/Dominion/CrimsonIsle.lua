@@ -4,29 +4,12 @@ ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 	startlevel=3,
 	endlevel=6,
 	nextguide="Dominion\\Deradune (6-15)",
-	image="ZygorUIGuides:CrimsonIsle", 
-	description="The Crimson Isle is island zone west of Olyssia in WildStar. It is a flat island currently under investigation by The Dominion. The Crimson Isle is intended for players levels 3-6."
 	},
 	[[
-//HUMAN BEGINS CRIMSON ISLE
-	step
-		.talk Chancellor Juro Takigurian##262654
-		.' Speak to the hologram of Chancellor Juro Takigurian |q Mysteries of the Eldan##9556/1 |goto DominionArkShipTutorialCryogenics -808,649,81
-		|only Human
-	step
-		.click Hologram Control Panel##262649
-		.' Activate the Hologram Control Panel |q Mysteries of the Eldan##9556/2 |goto -808,637,81
-		'Press _C_ to open your Communicator:
-		..turnin Mysteries of the Eldan##9556
-		..accept Called to Stormcaller Landing##7057
-		|only Human
-	step
-		.talk Artemis Zin##262657
-		.' Speak with Artemis Zin |q Called to Stormcaller Landing##7057/1 |goto -708,695,81
-		|only Human
+//HUMAN
 	step
 		.click Departures Terminal: Mondo's Beachhead##262433
-		.' Travel to Nexus - Crimson Isle |q Called to Stormcaller Landing##7057/3 |goto -691,841,81
+		.' Travel to Nexus - Crimson Isle |q Called to Stormcaller Landing##7057/3 |goto DominionArkShipTutorialCryogenics -691,841,81
 		|only Human
 	step
 		.talk Lieutenant Ticus##262272
@@ -38,27 +21,10 @@ ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 		..turnin Welcome to Crimson Isle##9127 |goto CrimsonIsle -8231,-231,-994
 		|only Human
 
-//DRAKEN BEGINS CRIMSON ISLE
+//DRAKEN
 	step
-		.talk Chancellor Juro Takigurian##266181 
-		.' Speak to the hologram of Chancellor Juro Takigurian |q Mysteries of the Eldan##9557/Speak to the hologram of Chancellor Juro Takigurian##1 |goto DominionArkShipTutorialCryogenics -809,886,82
-		|only Draken
-	step
-		.click Hologram Control Panel##262648 
-		.' Activate the Hologram Control Panel |q Mysteries of the Eldan##9556/Activate the Hologram Control Panel##2 |goto -808,637,81
-		|only Draken
-	step
-		'Press _C_ to open your Communitcator:
-		..turnin Mysteries of the Eldan##9556
-		..accept Called to Stormcaller Landing##7057
-		|only Draken
-	step
-		.talk Artemis Zin##262656 |q Called to Stormcaller Landing##7057/Speak with Artemis Zin##1 |goto DominionArkShipTutorialCryogenics -708,694,81
-		|only Draken
-	step
-		.click Departures Terminal: Savage Coast##262430 
-		.' Travel to Nexus - Crimson Isle |q Savage Coast Savagery##7060/Travel to Nexus - Crimson Isle##2 |goto DominionArkShipTutorialCryogenics -690,958,81
-		|only Draken
+		.click Departures Terminal: Savage Coast##262429
+		.' Travel to Nexus - Crimson Isle |q Savage Coast Savagery##7060/2 |goto DominionArkShipTutorialCryogenics -690,958,81
 	step
 		.talk Scout Naharra##262269
 		..turnin Savage Coast Savagery##7060 |goto CrimsonIsle -7663,46,-993
@@ -109,26 +75,10 @@ ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 		..accept Forward March##5814
 		|only Draken
 
-//CHUA BEGINS CRIMSON ISLE
-	step
-		.talk Chancellor Juro Takigurian##262653 
-		.' Speak to the hologram of Chancellor Juro Takigurian |q Mysteries of the Eldan##9556/Speak to the hologram of Chancellor Juro Takigurian##1 |goto DominionArkShipTutorialCryogenics -809,649,81
-		|only Chua
-	step
-		.click Hologram Control Panel##266177 
-		.' Activate the Hologram Control Panel |q Mysteries of the Eldan##9557/Activate the Hologram Control Panel##2 |goto -809,898,81
-		|only Chua
-	step
-		'Press _C_ to open your Communitcator:
-		..turnin Mysteries of the Eldan##9557
-		..accept Mondo's Beachhead##7059
-		|only Chua
-	step
-		.talk Mondo Zax##266184 |q Mondo's Beachhead##7059/Speak with Mondo Zax##1 |goto DominionArkShipTutorialCryogenics -704,840,81
-		|only Chua
+//CHUA
 	step
 		.click Departures Terminal: Mondo's Beachhead##265961 
-		.' Travel to Nexus - Crimson Isle |q Mondo's Beachhead##7059/Travel to Nexus - Crimson Isle##2 |goto -691,841,81
+		.' Travel to Nexus - Crimson Isle |q Mondo's Beachhead##7059/Travel to Nexus - Crimson Isle##2 |goto DominionArkShipTutorialCryogenics -691,841,81
 		|only Chua
 	step
 		.talk Engineer Zric##262270
@@ -175,8 +125,7 @@ ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 		.click Power Regulator##262872 
 		.' Disable the Power Regulators |q Powering Down##5573/Disable the Power Regulators##2 |goto CrimsonIsle -7709,-400,-944
 		|only Chua, Human
-
-//MECHARI BEGINS CRIMSON ISLE
+//MECHARI
 	step
 		.talk Chancellor Juro Takigurian##262653 
 		.' Speak to the hologram of Chancellor Juro Takigurian |q Mysteries of the Eldan##9556/Speak to the hologram of Chancellor Juro Takigurian##1 |goto DominionArkShipTutorialCryogenics -809,649,81
