@@ -120,7 +120,9 @@ function ZygorGuidesViewer:OnDocLoaded()
 
 		if self.db.char.windowpos then  
 			p1, p2, p3, p4 = unpack(self.db.char.windowpos)
-			ZGV.Viewer.Frame:SetAnchorOffsets(p1, p2, p1+320, p2)
+			if p1 < 0 and p2 < 0 then 
+				ZGV.Viewer.Frame:SetAnchorOffsets(p1, p2, p1+320, p2)
+			end
 		end
 
 		if self.db.char.guide_opacity then ZGV.Viewer.Frame:SetOpacity(self.db.char.guide_opacity)  end

@@ -269,7 +269,12 @@ function Pointer:SetUpArrow()
 			return
 		end
 		self.wndArrow:Show(false)
-		if ZGV.db.char.arrowpos then self.wndArrow:SetAnchorOffsets(unpack(ZGV.db.char.arrowpos)) end
+		if ZGV.db.char.arrowpos then 
+			p1, p2, p3, p4 = unpack(ZGV.db.char.arrowpos)
+			if p1 < 0 and p2 < 0 then 
+				self.wndArrow:SetAnchorOffsets(p1, p2, p3, p4) 
+			end
+		end
 		ZGV.Pointer.wndArrow:SetStyle("Moveable", not ZGV.db.char.arrow_lock)
 	end
 end
