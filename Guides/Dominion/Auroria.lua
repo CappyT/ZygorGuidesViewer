@@ -230,7 +230,7 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		.' Kill Vandarin Farmhands |q The Evil Within##5674/1 |goto -2563,-1312,-930
 		.click Kidnapped Lowborn##1299269
 		.' Rescue Kidnapped Lowborn |q The Evil Within##5674/2 |goto -2563,-1312,-930
-		.get 1 Vandarin Family Crest##14201
+		.collect 1 Vandarin Family Crest##14201
 		.' Use the Vandarin Family Crest in your bags |use Vandarin Family Crest##14201
 		..accept Vandarin Infamy##5678
 	step

@@ -123,9 +123,12 @@ function ZGV:SkipStep(fast)
 			self.fastforward = false
 			if self.CurrentGuide.extra.nextguide then
 				self:SetGuide(self.CurrentGuide.extra.nextguide)
+				self:SendToChat("Loaded next guide: " .. self.CurrentGuide.title_short)
+				--[[
 				self.PopupAutoacceptTimer = ApolloTimer.Create(6, true, "HideAutoacceptPopup", self)
 				self:ShowAutoacceptPopup("Loaded next guide:")
 				self:ShowAutoacceptPopup(self.CurrentGuide.title_short)
+				]]--
 				return
 			elseif self.CurrentGuide.steps and #self.CurrentGuide.steps>1 then
 				ZygorGuidesViewer:ShowGuideSelect()
@@ -724,7 +727,9 @@ function ZGV:LoadGuideFiles()
 	if ZGV.Utils:IsFaction("Dominion") then
 		self:ScheduleLoadGuideFile("Dominion\\Starting")
 		self:ScheduleLoadGuideFile("Dominion\\CrimsonIsle")
+		self:ScheduleLoadGuideFile("Dominion\\LevianBay")
 		self:ScheduleLoadGuideFile("Dominion\\Deradune")
+		self:ScheduleLoadGuideFile("Dominion\\Ellevar")
 		self:ScheduleLoadGuideFile("Dominion\\Auroria")
 		self:ScheduleLoadGuideFile("Dominion\\Whitevale")
 		self:ScheduleLoadGuideFile("Dominion\\Farside")
@@ -734,7 +739,9 @@ function ZGV:LoadGuideFiles()
 	elseif ZGV.Utils:IsFaction("Exiles") then
 		self:ScheduleLoadGuideFile("Exiles\\Tutorial")
 		self:ScheduleLoadGuideFile("Exiles\\NorthernWilds")
+		self:ScheduleLoadGuideFile("Exiles\\Everstar")
 		self:ScheduleLoadGuideFile("Exiles\\Algoroc")
+		self:ScheduleLoadGuideFile("Exiles\\Celestion")
 		self:ScheduleLoadGuideFile("Exiles\\Galeras")
 		self:ScheduleLoadGuideFile("Exiles\\Whitevale")
 		self:ScheduleLoadGuideFile("Exiles\\Farside")
@@ -745,6 +752,7 @@ function ZGV:LoadGuideFiles()
 	end
 	self:ScheduleLoadGuideFile("Test\\Test")
 	self:ScheduleLoadGuideFile("DominionTest\\LevianBay")
+	self:ScheduleLoadGuideFile("DominionTest\\Elevar")
 	self:Debug("Loading of guide files scheduled: "..#ZGV.ScheduledLoads.." guides queued.")
 	self.ScheduledLoadsTotal = #self.ScheduledLoads
 	self.ScheduledLoadsSuccessful = 0

@@ -1,3 +1,5 @@
+if not ZGV then return end
+
 ZGV:RegisterGuide("Exiles\\Northern Wilds (3-6)",
 		{faction="Exiles",
 		nextguide="Exiles\\Algoroc (6-15)",
@@ -6,6 +8,34 @@ ZGV:RegisterGuide("Exiles\\Northern Wilds (3-6)",
 		startlevel=3,
 		endlevel=6,
 		},[[
+	step
+		.' _Go through_ the doorway |goto ExileArkShipTutorial -960,590,83
+		.' _Go through_ the doorway into the long hall |goto ExileArkShipTutorial -998,719,83 < 10
+		.' _Go through_ the doorway into Departures Alpha |goto ExileArkShipTutorial -998,818,83 < 10
+		.' _Go through_ the doorway |goto ExileArkShipTutorial -960,841,83 < 10 
+		.' _Follow the bridge_ to the ship |goto -916,821,84 < 10
+		.click Departures Terminal: Thayd##312450 |tip It looks like a touchscreen workstation.
+		.' Click _Yes_ to travel to the Northern Wilds on Nexus |q The Ravenous Grove##6762/3 |goto ExileArkShipTutorial -855,810,78
+		|only Mordesh
+	step
+		.' _Go through_ the doorway |goto ExileArkShipTutorial -959,694,83
+		.' _Go through_ the doorway into the long hall |goto ExileArkShipTutorial -998,719,83 < 10
+		.' _Go through_ the doorway into Departures Alpha |goto ExileArkShipTutorial -998,818,83 < 10 
+		.' _Go through_ the doorway |goto ExileArkShipTutorial -960,841,83 < 10 
+		.' _Follow the bridge_ to the ship |goto -916,821,84 < 10
+		.click Departures Terminal: Thayd##312450 |tip It looks like a touchscreen workstation.
+		.' Click _Yes_ to travel to the Northern Wilds on Nexus |q Everstar Grove##6761/3 |goto -855,810,78 |only Aurin
+		|only Aurin
+	step
+		.' _Follow the bridge_ to the ship |goto -916,821,84 < 10
+		.click Departures Terminal: Thayd##312450 |tip It looks like a touchscreen workstation.
+		.' Click _Yes_ to travel to the Northern Wilds on Nexus |nextguide Exiles\\Northern Wilds (3-6) |q Never Thayd Away##6760/2 |goto -854,810,78
+		|only Human
+	step
+		.click Departures Terminal: Hammer of Gnox##262602
+		.' Travel to the Northern Wilds on Nexus  |q Base Drop##6759/2 |goto ExileArkShipTutorial -925,935,85
+		|only Granok
+//NEW^^
 	step
 		.talk Scout Frostfield##263025
 		..turnin Never Thayd Away##6760 |goto NorthernWilds 3843,-5279,-677

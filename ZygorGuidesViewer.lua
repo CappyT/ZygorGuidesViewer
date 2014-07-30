@@ -187,6 +187,13 @@ function ZygorGuidesViewer:ZygorCommand(strCmd,strArg)
 	if strArg == "guides" then ZygorGuidesViewer:ShowGuideSelect() return end
 	if strArg == "debug" then ZGV.BugReport:OpenBugWindow() return end
 
+	if strArg == "reset guide" then 
+		ZGV.db.char.stephistory = {}
+		ZGV.db.char.guidename = false
+		RequestReloadUI()
+	return end
+
+
 	ChatSystemLib.PostOnChannel(ChatSystemLib.ChatChannel_Command, "Arguments for /zygor", "Zygor Guides Viewer")		
 	ChatSystemLib.PostOnChannel(ChatSystemLib.ChatChannel_Command, "- show - shows viewer window")		
 	ChatSystemLib.PostOnChannel(ChatSystemLib.ChatChannel_Command, "- toggle - toggles visibility of viewer window")		
@@ -196,6 +203,7 @@ function ZygorGuidesViewer:ZygorCommand(strCmd,strArg)
 
 	ChatSystemLib.PostOnChannel(ChatSystemLib.ChatChannel_Command, "- options - shows options window")		
 	ChatSystemLib.PostOnChannel(ChatSystemLib.ChatChannel_Command, "- guides - shows guide selection window")		
+	ChatSystemLib.PostOnChannel(ChatSystemLib.ChatChannel_Command, "- reset guide - reset selected guide and step")		
 	ChatSystemLib.PostOnChannel(ChatSystemLib.ChatChannel_Command, "- debug - creates a debug report")		
 
 end
@@ -647,6 +655,12 @@ function ZygorGuidesViewer:HideAutoacceptPopup()
 	ZGV.PopupAutoacceptTimer:Stop()
 end
 
+function ZygorGuidesViewer:SendToChat(text,source)
+	if not source then source = "Zygor" end
+	ChatSystemLib.PostOnChannel(ChatSystemLib.ChatChannel_Command, text, source)		
+end
+
+
 function ZygorGuidesViewer:OnDialog_ShowState(nState, nQuest)
 	-- if shift is pressed, skip any magic
 	if Apollo.IsShiftKeyDown() then return end
@@ -672,13 +686,16 @@ function ZygorGuidesViewer:OnDialog_ShowState(nState, nQuest)
 	if nQuest then 
 		nQuestId = nQuest:GetId()
 		-- if player abandoned the quest or is ignoring it, do not autoaccept
-		if nQuest:GetState() == 6 or nQuest:GetState() == 7 then return end 
+		if nQuest:GetState() == Quest.QuestState_Ignored then 
+			if ZGV.db.char.guide_notify then self:SendToChat("Quest ignored, not autoaccepting") end
+			return
+		end 
 	else 
 		nQuestId = 0
 	end
 
 	if blacklistedQuests[nQuestId] then
-		self:Debug("Autoaccept - quest blacklisted, skipping")
+		if ZGV.db.char.guide_notify then self:SendToChat("Autoaccept - quest blacklisted, skipping") end
 		return
 	end
 	
@@ -725,34 +742,34 @@ function ZygorGuidesViewer:OnDialog_ShowState(nState, nQuest)
 		if responseAcceptCount == 1 then
 			-- accept quest
 			tResponseList[responseAccept]:Select()
-			self:ShowAutoacceptPopup("Accepted quest '" .. nQuest:GetTitle() .. "'",nil)
+			if ZGV.db.char.guide_notify then self:SendToChat("Accepted quest '" .. nQuest:GetTitle() .. "'") end
 		end
 	elseif responseComplete and self.db.char.guide_autocomplete then
 		if ZGV.Frame:FindChild("HiddenBagWindow"):GetTotalEmptyBagSlots() < 0 then
 --			if not Apollo.GetAddon("Inventory").wndMain:IsVisible() then
 --				ShowInventory() -- carbine system call
 --			end
-			self:ShowAutoacceptPopup("No space in inventory, cannot autoselect reward",nil)
+			if ZGV.db.char.guide_notify then self:SendToChat("No space in inventory, cannot autoselect reward") end
 		elseif responseCompleteCount == 1 then
 			tResponseList[responseComplete]:Select()
 			local rewardName = tResponseList[responseComplete]:GetText()
 
 			if nQuest then 
-				self:ShowAutoacceptPopup("Autoselected '"..rewardName.."' as reward for '" .. nQuest:GetTitle() .. "'", nil, true)
+				if ZGV.db.char.guide_notify then self:SendToChat("Autoselected '"..rewardName.."' as reward for '" .. nQuest:GetTitle() .. "'") end
 			else
-				self:ShowAutoacceptPopup("Autoselected '"..rewardName.."' as reward", nil, true)
+				if ZGV.db.char.guide_notify then self:SendToChat("Autoselected '"..rewardName.."' as reward") end
 			end
 		else 
-			self:ShowAutoacceptPopup("Please select quest reward",nil, true)
+			if ZGV.db.char.guide_notify then self:SendToChat("Please select quest reward") end
 		end
 	elseif responseReady and self.db.char.guide_autocomplete then 
 		if responseReadyCount == 1 then
 			tResponseList[responseReady]:Select()
 			if nQuest then 
-				self:ShowAutoacceptPopup("Turned in quest '" .. nQuest:GetTitle() .. "'",nil)
+				if ZGV.db.char.guide_notify then self:SendToChat("Turned in quest '" .. nQuest:GetTitle() .. "'") end
 			end
 		else
-			self:ShowAutoacceptPopup("Please select quest to turn in",nil, true)
+			if ZGV.db.char.guide_notify then self:SendToChat("Please select quest to turn in") end
 		end
 	end
 end

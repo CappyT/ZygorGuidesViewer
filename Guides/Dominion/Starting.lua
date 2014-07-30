@@ -298,9 +298,9 @@ ZGV:RegisterGuide("Dominion\\Starting Area (1-3)",
 		.talk Kezrek Warbringer##262655
 		.' Speak with Kezrek Warbringer |q Savage Coast Savagery##7060/1 |goto DominionArkShipTutorialCryogenics -704,945,81
 		|only Draken
-//	step
-//		.' You will be able to continue your adventure in two locations from this point on:
-//		.' Click here if you wish to continue to _Crimson Isle_ |nextguide Dominion\\Crimson Isle (3-6)
-//		.' _Or_
-//		.' Click here if you wish to continue to _Levian Bay_ |nextguide DominionTest\\LevianBay (3-6)
+	step
+		.' You will be able to continue your adventure in two locations from this point on:
+		.' Click here if you wish to continue to _Crimson Isle_ |nextguide Dominion\\Crimson Isle (3-6)
+		.' _Or_
+		.' Click here if you wish to continue to _Levian Bay_ |nextguide Dominion\\LevianBay (3-6)
 ]])

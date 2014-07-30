@@ -43,17 +43,17 @@ function Pointer:SetWaypoint (c,x,z,y,data,arrow)
 			c = currentMap
 		end
 	end
+
+	way.c = c
 		
 	local displayMapContinent = ""
-	if c ~= currentMap then
+--	if c ~= currentMap then
 		local _, mapName, continentId, continentName = ZGV.Lib:GetZone(c)
-		if continentId ~= self.currentContinent then
-			way.distanceOverride = "<T TextColor=\"ffffcccc\">Go to "..continentName.." - "..mapName.."\n</T>"
-		end
+		way.distanceFullText = "<T TextColor=\"ffffcccc\">Go to "..continentName.." - "..mapName.."\n</T>"
 		if mapName == 0 then -- do not display if we do not know the map (old style coordinates parse)	
 			displayMapContinent = ""
 		end
-	end
+--	end
 
 	way.x,way.z,way.y = x,z,y
 	
@@ -279,44 +279,17 @@ function Pointer:ShowArrow(way)
 	--ZGV:Print("Would show arrow: %d %d %d",way.x or 0,way.z or 0,way.y or 0)
 	self.current_waypoint = way
 	if not self.wndArrow then self:SetUpArrow() end
-
---	self.wndArrow:Show(true)
-
-	local ptext = self.wndArrow:FindChild("PointerText")
-	ptext:SetText('<p Font = "DefaultButton">'..way.title..'</p>')
-	
-
-	-- HORRIBLE centering.
-	-- Set it to wide, so that long texts fit...
-	local nLeft, nTop, nRight, nBottom = ptext:GetAnchorOffsets()
-	ptext:SetAnchorOffsets(48-200, nTop, 48+200, nTop + 50)
-	-- How big did it end up?
-	local wid,hei = ptext:SetHeightToContentHeight()
-	-- Set some better space for it.
-	local nLeft, nTop, nRight, nBottom = ptext:GetAnchorOffsets()
-	ptext:SetAnchorOffsets(48-wid/2, nTop, 48+wid/2 + 5, nTop + 50)
-
-	if self.current_waypoint.distanceOverride then
-		-- HORRIBLE centering strikes back
-		self.wndArrow:FindChild("ArrowNormal"):SetSpriteRate(100)
-		self.wndArrow:FindChild("ArrowSpecular"):SetSpriteRate(100)
-		self.wndArrow:FindChild("ArrowArrivalNormal"):Show(false)
-		local dtext = self.wndArrow:FindChild("DistanceText")
-		dtext :SetText(self.current_waypoint.distanceOverride)
-		local nLeft, nTop, nRight, nBottom = dtext :GetAnchorOffsets()
-		dtext :SetAnchorOffsets(48-200, nTop, 48+200, nTop + 50)
-		local wid,hei = dtext :SetHeightToContentHeight()
-		local nLeft, nTop, nRight, nBottom = dtext :GetAnchorOffsets()
-		dtext :SetAnchorOffsets(48-wid/2, nTop, 48+wid/2 + 5, nTop + 50)		
-	else 		
-		self.wndArrow:FindChild("ArrowNormal"):SetSpriteRate(1/self.spriteRate)
-		self.wndArrow:FindChild("ArrowSpecular"):SetSpriteRate(1/self.spriteRate)
-		local dtext = self.wndArrow:FindChild("DistanceText")
-		dtext :SetAnchorOffsets(30, 62, 30, 0)		
-	end
 end
 
 function Pointer:OnArrowTimer()
+	local function alignString(object)
+		local nLeft, nTop, nRight, nBottom = object :GetAnchorOffsets()
+		object :SetAnchorOffsets(48-400, nTop, 48+400, nTop + 50)
+		local wid,hei = object :SetHeightToContentHeight()
+		local nLeft, nTop, nRight, nBottom = object :GetAnchorOffsets()
+		object :SetAnchorOffsets(48-wid/2, nTop, 48+wid/2 + 5, nTop + 50)	
+	end
+
 	if not self.current_waypoint then self.wndArrow:Show(false) return end
 	if ZGV.db.char.arrow_show == false then self.wndArrow:Show(false) return end
 	if ZGV.db.char.arrow_hide and ZGV.Viewer.Frame:IsVisible() == false then self.wndArrow:Show(false) return end
@@ -324,15 +297,49 @@ function Pointer:OnArrowTimer()
 	
 	self.wndArrow:Show(true) 
 
-	if self.current_waypoint.distanceOverride then return end		
+	
+	local step = ZGV.CurrentGuide:GetCurStep()
+	local goaltext = step.goals[ZGV.Pointer.current_waypoint.goalnum]:GetText()
 
-		
+	local czm = GameLib.GetCurrentZoneMap()
+	if czm~=nil then 
+		local _, mapName, continentId, continentName = ZGV.Lib:GetZone(self.current_waypoint.c)
+		self.current_waypoint.showdistanceOverride = (continentId ~= czm["continentId"])
+ 	end
+	
+
+	local ptext = self.wndArrow:FindChild("PointerText")
+	local dtext = self.wndArrow:FindChild("DistanceText")
+
+	ptext:SetText('<p Font = "DefaultButton">'..goaltext..'</p>')
+	alignString(ptext)
+
+	
+	if self.current_waypoint.showdistanceOverride then
+		self.wndArrow:FindChild("ArrowNormal"):SetSpriteRate(100)
+		self.wndArrow:FindChild("ArrowSpecular"):SetSpriteRate(100)
+		self.wndArrow:FindChild("ArrowArrivalNormal"):Show(false)
+		dtext :SetAML(self.current_waypoint.distanceFullText)
+		alignString(dtext)
+		return
+	else 		
+		self.wndArrow:FindChild("ArrowNormal"):SetSpriteRate(1/self.spriteRate)
+		self.wndArrow:FindChild("ArrowSpecular"):SetSpriteRate(1/self.spriteRate)
+	end
+
+	local distance = ZGV.Lib:GetDistanceTo(self.current_waypoint.x,self.current_waypoint.z,self.current_waypoint.y)
+	if distance < 3 then
+		dtext:SetAML("<p Align='center'></p>")
+	else
+		dtext:SetAML("<p Align='center'>"..distance.."m</p>")
+		alignString(dtext)
+	end
+
 	local distance = ZGV.Lib:GetDistanceTo(self.current_waypoint.x,self.current_waypoint.z,self.current_waypoint.y)
 
 	if distance < 3 then
 		self.wndArrow:FindChild("ArrowSpecular"):Show(false)
 		self.wndArrow:FindChild("ArrowNormal"):Show(false)
-		self.wndArrow:FindChild("DistanceText"):SetText("")
 		self.wndArrow:FindChild("ArrowArrivalNormal"):Show(true)
 	
 	else 
@@ -356,7 +363,6 @@ function Pointer:OnArrowTimer()
 			
 		self.wndArrow:FindChild("ArrowNormal"):SetSpriteTime(spriteTime)
 		self.wndArrow:FindChild("ArrowSpecular"):SetSpriteTime(spriteTime)
-		self.wndArrow:FindChild("DistanceText"):SetAML("<p Align='center'>"..distance.."m</p>")
 	end
 end
 

@@ -33,6 +33,7 @@ Options.settings = {
 
 	{ name="guide_autoaccept", scope="char", ui="checkbox", default=false },
 	{ name="guide_autocomplete", scope="char", ui="checkbox", default=false },
+	{ name="guide_notify", scope="char", ui="checkbox", default=true },
 
 	{ name="arrow_show", scope="char", ui="checkbox", default=true },
 	{ name="arrow_hide", scope="char", ui="checkbox", default=true },
@@ -140,8 +141,19 @@ function Options:OnConfigure() -- called by wildstar on "configure" button in ad
 			return
 		end
 		
-				
 		self.wndConfig:AddEventHandler("WindowClosed", "OnClose", self)	
+
+		local winw, winh = Apollo.GetScreenSize()
+		local op1, op2, op3, op4 = self.wndConfig:GetAnchorOffsets()
+		local opw = op3 - op1 -10
+		local oph = op4 - op2
+
+		local op_top = math.max(winh/2 - oph/2,0)
+		local op_left = math.max(winw/2 - opw/2,0)
+		local op_bottom = math.min(winh/2 + oph/2,winh)
+		local op_right = math.min(winw/2 + opw/2,winw)
+
+		self.wndConfig:SetAnchorOffsets(op_left, op_top, op_right, op_bottom)		
 	else
 		if self.wndConfig:IsShown() and not self.wndGuidesWindow:IsShown() then self.wndConfig:Show(false) return end
 		-- has to be here, otherwise it'd hide the window immediately after creating it
@@ -403,6 +415,10 @@ function Options:guide_autoaccept( wndHandler, wndControl, eMouseButton )
 end
 
 function Options:guide_autocomplete( wndHandler, wndControl, eMouseButton )
+	self:UpdateState(wndHandler)
+end
+
+function Options:guide_notify( wndHandler, wndControl, eMouseButton )
 	self:UpdateState(wndHandler)
 end
 

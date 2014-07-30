@@ -25,6 +25,7 @@ ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 	step
 		.click Departures Terminal: Savage Coast##262429
 		.' Travel to Nexus - Crimson Isle |q Savage Coast Savagery##7060/2 |goto DominionArkShipTutorialCryogenics -690,958,81
+		|only Draken
 	step
 		.talk Scout Naharra##262269
 		..turnin Savage Coast Savagery##7060 |goto CrimsonIsle -7663,46,-993

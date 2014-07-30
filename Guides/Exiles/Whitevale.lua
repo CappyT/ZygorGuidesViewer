@@ -1051,6 +1051,7 @@ ZGV:RegisterGuide("Exiles\\Whitevale (23-29)",
 	step
 		.' Press _T_ to summon the Extractorbot
 		.' Jump into the blue floating crystals that the bot uncovers |q Into the Undertow##5887/1 |goto Whitevale 3872,884,-932
+		.' Collect Crystallized Primal Water samples |q Into the Undertow##5887/3 |goto Whitevale 3872,884,-932
 	step
 		' Press _C_ to use your communicator:
 		..turnin Into the Undertow##5887

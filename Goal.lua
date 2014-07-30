@@ -886,9 +886,12 @@ function Goal:GetText()
 
 	if progtext then
 
-		if complete then	progtext = " " .. progtext
-		elseif ext then		progtext = " <T TextColor=\"ffffbbbb\">"..progtext.."</T>"
-		else		progtext = " <T TextColor=\"ffaaaaaa\">"..progtext.."</T>"
+		if complete then
+			progtext = ""-- .. progtext -- was showing 0% on previously completed goals
+		elseif ext then
+			progtext = " <T TextColor=\"ffffbbbb\">"..progtext.."</T>"
+		else
+			progtext = " <T TextColor=\"ffaaaaaa\">"..progtext.."</T>"
 		end
 
 		text = text .. progtext

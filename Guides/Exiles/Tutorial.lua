@@ -267,18 +267,7 @@ ZGV:RegisterGuide("Exiles\\Tutorial Area (1-3)",
 		|only Aurin
 //To Northern Wilds (3-6)
 	step
-	label next
-		.' _Go through_ the doorway |goto ExileArkShipTutorial -960,590,83 |only Mordesh
-		.' _Go through_ the doorway |goto ExileArkShipTutorial -959,694,83 |only Aurin
-		.' _Go through_ the doorway into the long hall |goto ExileArkShipTutorial -998,719,83 < 10 |only Aurin, Mordesh
-		.' _Go through_ the doorway into Departures Alpha |goto ExileArkShipTutorial -998,818,83 < 10 |only Aurin, Mordesh
-		.' _Go through_ the doorway |goto ExileArkShipTutorial -960,841,83 < 10 |only Aurin, Mordesh
-		//
-		//
-		.' _Follow the bridge_ to the ship |goto -916,821,84 < 10
-		.click Departures Terminal: Thayd##312450 |tip It looks like a touchscreen workstation.
-		.' Click _Yes_ to travel to the Northern Wilds on Nexus |q Never Thayd Away##6760/2 |goto -854,810,78 |only Human
-		.' Click _Yes_ to travel to the Northern Wilds on Nexus |q Everstar Grove##6761/3 |goto -855,810,78 |only Aurin
-		.' Click _Yes_ to travel to the Northern Wilds on Nexus |q The Ravenous Grove##6762/3 |goto ExileArkShipTutorial -855,810,78 |only Mordesh
-		|only Human, Aurin, Mordesh
+		.' You will be able to continue your adventure in two locations from this point on:
+		.' Click here if you wish to continue to the _Northern Wilds_ |nextguide Exiles\\Northern Wilds (3-6)
+		.' Click here if you wish to continue to the _Everstar Groove_ |nextguide Exiles\\Everstar Grove (3-6)
 ]])
