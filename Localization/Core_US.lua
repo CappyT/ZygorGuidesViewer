@@ -183,6 +183,10 @@ ZygorGuidesViewer_L("Main", "enUS", function() local f = {
 	["stepgoal_kill_done"] = "Killed %s",
 	["stepgoal_lorebook"] = "Read lore book: \"%s\"",
 	["stepgoal_achieve"] = "Earn achievement: \"%s\"",
+
+	["stepgoal_discovermission"] = "Discover mission: \"%s\"",
+	["stepgoal_startmission"] = "Start mission: \"%s\"",
+	["stepgoal_mission"] = "Complete mission: \"%s\"",
 	
 	-- WAYPOINTER
 	["dist_km"] = "%.1f km",
@@ -214,12 +218,16 @@ ZygorGuidesViewer_L("Main", "enUS", function() local f = {
 	['static_profile'] = "Switch to profile %s?",
 	['static_deleteprofile'] = "Delete profile %s?",
 	['static_reset_profile'] = "Reset profile %s?",
-	['static_newprofile'] = "Select a name for a new profile.",			['static_newprofile_error'] = "|cff0000Name can only contain letters, numbers, and spaces.",
+	['static_newprofile'] = "Select a name for a new profile.",
+	['static_newprofile_error'] = "|cff0000Name can only contain letters, numbers, and spaces.",
 
 
 
 	-- MINIMAP BUTTON
 	["minimap_tooltip"] = COLOR_TIP_MOUSE.."Click|r to toggle guide window\n"..COLOR_TIP_MOUSE.."Right-click|r to configure\n",
+
+	-- MISSIONS
+	["mission_disable"] = "(disabled)",
 
 
 	}

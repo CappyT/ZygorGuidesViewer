@@ -29,4 +29,13 @@
     </Sprite>
     <AutoIconButton Name="OrangeCheckbox" NormalUnderIcon="Box1" NormalIcon="Box3" NormalOverIcon="Box1" PressedUnderIcon="Box1" PressedIcon="Box3" PressedOverIcon="Box6" FlybyUnderIcon="Box1" FlybyIcon="Box3" FlybyOverIcon="Box1" PressedFlybyUnderIcon="Box1" PressedFlybyIcon="Box3" PressedFlybyOverIcon="Box6" DisabledUnderIcon="Box1" DisabledIcon="Box3" DisabledOverIcon="Box5"/>
     <AutoIconButton Name="OrangeScrollbar" NormalUnderIcon="Box1" NormalIcon="Box6" NormalOverIcon="" PressedUnderIcon="Box1" PressedIcon="Box6" PressedOverIcon="" FlybyUnderIcon="Box1" FlybyIcon="Box6" FlybyOverIcon="" PressedFlybyUnderIcon="Box1" PressedFlybyIcon="Box6" PressedFlybyOverIcon="" DisabledUnderIcon="Box1" DisabledIcon="Box6" DisabledOverIcon=""/>
+    <Sprite Name="Folder" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\guideicons-small.tga" x0="0" x1="36" x2="36" x3="36" x4="36" x5="36" y0="0" y1="29" y2="29" y3="29" y4="29" y5="29" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="File" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\guideicons-small.tga" x0="32" x1="64" x2="64" x3="64" x4="64" x5="64" y0="0" y1="29" y2="29" y3="29" y4="29" y5="29" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="Star" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Skins\guideicons-small.tga" x0="0" x1="36" x2="36" x3="36" x4="36" x5="36" y0="34" y1="64" y2="64" y3="64" y4="64" y5="64" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
 </Sprites>

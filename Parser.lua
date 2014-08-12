@@ -70,17 +70,13 @@ local ConditionEnv = {
 	end,
 
 	-- independent data feeds
-	completedquest = function(id,stage) --stage can be omitted
-		do return false,false end --TODO
-		local _  if type(id)=="string" then _,id,_,obj=Parser.ParseQuest(id) end
-		return ZGV.Quests:IsQuestStageComplete(id,obj)
+	completedquest = function(id)
+		local qstatus = ZGV.Lib:GetQuestStatus(id)
+		return qstatus==Quest.QuestState_Completed
 	end,
-	havequest = function(id,stage)
-		do return false,false end --TODO
-		local _  if type(id)=="string" then _,id,_,stage=Parser.ParseQuest(id) end
-		local q=ZGV.Quests[id]
-		if stage then return q and (q:GetCurrentStageNum()==stage) end
-		return q
+	havequest = function(id)
+		local qstatus = ZGV.Lib:GetQuestStatus(id)
+		return qstatus==Quest.QuestState_Accepted or qstatus==Quest.QuestState_Achieved
 	end,
 	queststage = function(id)
 		do return false,false end --TODO
@@ -526,6 +522,24 @@ function Parser.ParseQuest(text)
 	-- Support for those is kept just for consistency's sake.
 end
 
+function Parser.ParseMission(text) -- better clone it instead of calling ParseQuest(), since ParseQuest can change in future
+	if not text then return end
+	local quest,obj = text:match("^(.*)/(.*)$")
+	if not obj then   quest=text  end
+
+	local questtxt,questid = Parser.ParseId(quest)
+	local objtxt,objnum = Parser.ParseId(obj)
+
+	questid = tonumber(questid)
+	objnum = tonumber(objnum)
+
+	return questtxt,questid, objtxt,objnum
+
+	-- stagetxt and steptxt should rarely occur, if at all, and definitely not combined.
+	-- Support for those is kept just for consistency's sake.
+end
+
+
 -- Name##id
 function Parser.ParseId(text)
 	if not text then return end
@@ -538,6 +552,8 @@ function Parser.ParseId(text)
 	if not (name or id) then name=text end
 	return name, id
 end
+
+
 
 function Parser:ParseIncludes(text)
 	local safety=0

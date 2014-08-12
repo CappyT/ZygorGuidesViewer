@@ -45,6 +45,7 @@ local empty_table={}
 local ParseMapXYDist = ZGV.Parser.ParseMapXYDist
 local MakeCondition = ZGV.Parser.MakeCondition
 local ParseQuest = ZGV.Parser.ParseQuest
+local ParseMission = ZGV.Parser.ParseMission
 local ParseId = ZGV.Parser.ParseId
 
 local INDENT = "  "
@@ -240,11 +241,44 @@ LOGIC:
 
 GOALTYPES['q'] = {
 	parse = function(self,params,step,data)
-		self.	uest,self.questid, self.questobjtxt,self.questobjnum = ParseQuest(params)
+		self.quest,self.questid, self.questobjtxt,self.questobjnum = ParseQuest(params)
 		if not self.questid then return "no questid in parameter" end
 	end,
 	icon = "StepIcons:Step",
 }
+
+GOALTYPES['mission'] = {
+	parse = function(self,params,step,data)
+		self.mission,self.missionid, self.missionobjtxt,self.missionobjnum = ParseMission(params)
+		if not self.missionid then return "no missionid in parameter" end
+	end,
+	icon = "StepIcons:Step",
+}
+
+GOALTYPES['discovermission'] = {
+	parse = function(self,params,step,data)
+		self.mission,self.missionid, self.missionobjtxt,self.missionobjnum = ParseMission(params)
+		if not self.missionid then return "no missionid in parameter" end
+	end,
+	iscomplete = function(self)
+		local mstatus = ZGV.Lib:GetMissionStatus(self.missionid)
+		return mstatus~="unknown" or mstatus == "completed"
+	end,
+	icon = "StepIcons:Step",
+}
+
+GOALTYPES['startmission'] = {
+	parse = function(self,params,step,data)
+		self.mission,self.missionid, self.missionobjtxt,self.missionobjnum = ParseMission(params)
+		if not self.missionid then return "no missionid in parameter" end
+	end,
+	iscomplete = function(self)
+		local mstatus = ZGV.Lib:GetMissionStatus(self.missionid)
+		return mstatus=="started" or mstatus == "completed"
+	end,
+	icon = "StepIcons:Step",
+}
+
 
 GOALTYPES['_item'] = {
 	parse = function(self,params)
@@ -400,6 +434,27 @@ GOALTYPES['get'] = GOALTYPES['collect']
 GOALTYPES['buy'] = GOALTYPES['collect']
 GOALTYPES['gather'] = GOALTYPES['collect']
 
+GOALTYPES['tradeget'] = {
+	parse = GOALTYPES['_item'].parse,
+	iscomplete = function(self)
+		local player = GameLib.GetPlayerUnit()
+		if not player then return false,true,nil,"no player" end
+		local items = player:GetSupplySatchelItems()["Settler Resources"]
+		if not items then items = {} end
+
+		for k,item in pairs(items) do
+			if item["itemMaterial"]:GetItemId() == self.targetid then
+				return (item.nCount>=self.count),true,math.min(math.floor(item.nCount/self.count*100),100), "got "..item.nCount
+			end
+		end
+
+		return false, true, nil, "no items found"
+	end,
+}
+
+
+
+
 GOALTYPES['kill'] = {
 	parse = GOALTYPES['_item'].parse,
 	icon = "StepIcons:Kill",
@@ -519,6 +574,7 @@ GOALTYPES['use'] = {
 	end,
 }
 
+GOALTYPES['tradeuse'] = GOALTYPES['use']
 
 
 GOALTYPES['confirm'] = {
@@ -677,6 +733,42 @@ function Goal:GetQuestGoalCounts()
 	return goalcountnow,goalcountneeded,remaining , goalcountnow>=goalcountneeded, math.floor(goalcountnow/goalcountneeded*100)
 end
 
+function Goal:GetMissionGoalCounts()
+	if not self.missionid then return end
+
+	local mission = ZGV.Lib.knownMissions[self.missionid]
+
+	if not mission then return end
+
+	local curv=mission:GetNumCompleted()
+	local maxv=mission:GetNumNeeded()
+
+	local holdout = mission:GetSoldierHoldout()
+	if holdout then
+		maxv = holdout:GetWaveCount()
+		curv = holdout:GetWavesReleased() - 1 -- GetWavesReleased shows us current wave, we need to get # of completed ones, so -1
+		if mission:GetSoldierHoldout():GetState() ~= PathMission.PlayerPathSoldierEventMode_Active then
+			curv = 0
+		end
+	end
+	
+	local goalcountnow,goalcountneeded,remaining
+
+	goalcountnow = curv or 0
+	goalcountneeded = min(self.count or 9999,maxv or 9999)	-- If limit is < maxvalue then prefer that to allow guide to dictate only collecting a certain number in a single area.
+	remaining = goalcountneeded-goalcountnow
+
+	if remaining<=0 then remaining=goalcountneeded end
+	if goalcountneeded == 1 then remaining = nil end		-- If we only need 1 then don't need to explictly show a number. Nil this out to not show a num
+
+--	return comp>=need,need>0,"completion",comp,need
+	if goalcountneeded == 0 then
+		return 0,0,0,false,0 -- soldier missions have current/max 0, so they break the universe. it should be overwritten by holdout part, nut just to be safe let's add clean exit
+	else
+		return goalcountnow,goalcountneeded,remaining , goalcountnow>=goalcountneeded, math.floor(goalcountnow/goalcountneeded*100)
+	end
+end
+
 function Goal:GetText()
 	local GOALTYPE=GOALTYPES[self.action]
 	local text = "?"
@@ -805,6 +897,17 @@ function Goal:GetText()
 		base = L["stepgoal_wayshrine".._done]
 		data = COLOR_NPC(self.wayshrine)
 
+	elseif self.action=="discovermission" then
+		base = L["stepgoal_discovermission".._done]
+		data = COLOR_QUEST(L["questtitle"]:format(self.mission or "?mission?"))
+	elseif self.action=="startmission" then
+		base = L["stepgoal_startmission".._done]
+		data = COLOR_QUEST(L["questtitle"]:format(self.mission or "?mission?"))
+	elseif self.action=="mission" then
+		base = L["stepgoal_mission".._done]
+		data = COLOR_QUEST(L["questtitle"]:format(self.mission or "?mission?"))
+
+
 	elseif self.action=="goto" then
 		--local curZone = GetMapName()
 		--local mapname = ZGV.Pointer.Zones[self.map] and ZGV.Pointer.Zones[self.map].name or self.map or curZone.."(?)"
@@ -855,6 +958,11 @@ function Goal:GetText()
 		end
 	end
 
+	if not ZGV.db.char.guide_showmission and self.missionid then
+		text = L['mission_disable'] .." ".. text
+	end
+
+
 	if text=="?" and GOALTYPE.gettext then
 		text = GOALTYPE.gettext(self)
 	end
@@ -883,6 +991,7 @@ function Goal:GetText()
 	if goalcountnow and goalcountneeded and goalcountneeded>1 then
 		progtext=L["completion_goal"]:format(goalcountnow)
 	end
+
 
 	if progtext then
 
@@ -1019,9 +1128,8 @@ function Goal:IsCompleteCheck()
 		local qstatus = ZGV.Lib:GetQuestStatus(self.questid)
 
 		if qstatus==Quest.QuestState_Unknown then -- we do not know this quest. are we from future?
-			if self.future then
-				return false, true, nil,"quest state unknown"
-			end
+			if self.future then break end
+			return false,false, nil,"quest state unknown"
 		end
 		if qstatus==Quest.QuestState_Completed then return true,true,nil,"quest completed" end
 		if qstatus==Quest.QuestState_Achieved then
@@ -1054,6 +1162,42 @@ function Goal:IsCompleteCheck()
 	until true
 	end
 
+
+	if self.missionid and self.action~="discovermission" and self.action~="startmission" then
+	repeat
+
+		local mstatus = ZGV.Lib:GetMissionStatus(self.missionid)
+
+		if mstatus=="completed" then return true,true,nil,"mission completed" end
+
+		if not ZGV.db.char.guide_showmission == true then
+			return false,false, nil,"missions disabled"
+		end
+
+		if mstatus=="unknown" then 
+			if self.future then break end
+			return false,false, nil,"mission state unknown"
+		end
+		if mstatus=="available" then return false,true,nil,"mission available" end
+		if mstatus~="started" then return false,false,nil,"mission not started" end
+
+
+		local mission = ZGV.Lib.knownMissions[self.missionid]		
+		if not mission then return false,false,nil,"mission not known?" end
+
+		local _,_,_,objComplete,percent = self:GetMissionGoalCounts()
+		
+		if objComplete then
+			return objComplete, true, percent/100, "objective complete"
+		else 
+			iscomplete, ispossible = false, true
+		end
+		
+		break -- whatever you are, let the goal completion handle you, out of the "loop" with you
+	until true
+	end
+
+
 	if self.achieve_id then
 		iscomplete,ispossible = GOALTYPES['achieve'].iscomplete(self)
 		if iscomplete then return true,true end
@@ -1076,7 +1220,7 @@ function Goal:IsCompleteCheck()
 		gdesc = gdesc or "fallback to "..self.action
 	end
 
-	return giscomplete or iscomplete,gispossible or ispossible, gprogress or progress,gdesc or "final fallback"
+	return giscomplete or iscomplete,gispossible or ispossible, gprogress or progress,gdesc or "final fallback from "..self.action
 end
 
 function Goal:IsPeripheral()
@@ -1095,7 +1239,7 @@ function Goal:IsCompletable(by_type)
 	if self.condition_complete then return true end  -- we have a script, so obey
 
 	if not by_type and self.action~="goto" then
-		if self.questid or self.lorebook or self.achieve_id then 
+		if self.questid or self.lorebook or self.achieve_id or self.missionid then 
 			return true 
 		end	-- there is a quest/lore/achieve associated with this goal so can be completed. Unless it's a goto. These are only completed by |c.
 	end

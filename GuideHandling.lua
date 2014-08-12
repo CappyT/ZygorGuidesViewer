@@ -23,7 +23,7 @@ local Viewer
 
 local LONG_STEP_INTERVAL = 1
 local SHORT_STEP_INTERVAL = .1
-local completeionInterval = LONG_STEP_INTERVAL
+local completionInterval = LONG_STEP_INTERVAL
 
 -----------------------------------------
 -- SAVED REFERENCES
@@ -325,7 +325,7 @@ function ZGV:TryToCompleteStep(force)
 	self.lastStepComplete = t
 
 	self.completionelapsed = (self.completionelapsed or 0) + elapsed
-	if self.completionelapsed < completeionInterval and not force then return end	-- throttle updating
+	if self.completionelapsed < completionInterval and not force then return end	-- throttle updating
 	self.completionelapsed = 0
 
 	stepcomplete,steppossible = self.CurrentStep:IsComplete()
@@ -342,17 +342,17 @@ function ZGV:TryToCompleteStep(force)
 	--]]
 
 	if not completing then
-		completeionInterval = LONG_STEP_INTERVAL
+		completionInterval = LONG_STEP_INTERVAL
 		self.pause = nil
 	end
 	
 	-- Is one of the goals a confirm that is not completed?
 	for i,goal in ipairs(self.CurrentStep.goals) do
-		if goal.action == "confirm" and goal.always then
+		if goal.action == "confirm" --[[and goal.always]] then
 			confirmfound = true
 			if goal.status == "complete" then confirmcompleted = true end
 		end
-
+		
 		if goal.action == "nextguide" then
 			confirmfound = true
 			if goal.status == "complete" then 
@@ -368,7 +368,7 @@ function ZGV:TryToCompleteStep(force)
 	if confirmfound and not confirmcompleted then completing = false end
 
 	if self.pause then
-		completeionInterval = LONG_STEP_INTERVAL
+		completionInterval = LONG_STEP_INTERVAL
 		self.LastSkip = 1
 	else
 		if completing then
@@ -398,9 +398,9 @@ function ZGV:TryToCompleteStep(force)
 			end
 			self.fastforward=true
 
-			completeionInterval = completeionInterval * 0.8
-			if completeionInterval < SHORT_STEP_INTERVAL then
-				completeionInterval = SHORT_STEP_INTERVAL
+			completionInterval = completionInterval * 0.8
+			if completionInterval < SHORT_STEP_INTERVAL then
+				completionInterval = SHORT_STEP_INTERVAL
 			end
 
 			Sound.Play(Sound.PlayUI07SelectTabPhysical) --API
@@ -408,7 +408,7 @@ function ZGV:TryToCompleteStep(force)
 			-- A step was completed, update the ProgressBar
 			self.Viewer:UpdateProgressBar()
 		else
-			completeionInterval = LONG_STEP_INTERVAL
+			completionInterval = LONG_STEP_INTERVAL
 			self.pause=nil
 			self.fastforward=nil
 			self.LastSkip = 1
@@ -617,6 +617,8 @@ function ZGV:SetGuide(name,step)
 
 		guide:Parse(true)		-- Make sure this is parsed
 
+		if guide.steps and step > #guide.steps then step = 1 end -- in case the number of steps in guide changed and we are out of bounds
+
 		if guide.steps and #guide.steps > 0
 		and not guide.parse_failed
 		then
@@ -725,34 +727,39 @@ ZGV.ScheduledLoads={}
 function ZGV:LoadGuideFiles()
 	self:Debug("Loading guide files...")
 	if ZGV.Utils:IsFaction("Dominion") then
-		self:ScheduleLoadGuideFile("Dominion\\Starting")
-		self:ScheduleLoadGuideFile("Dominion\\CrimsonIsle")
-		self:ScheduleLoadGuideFile("Dominion\\LevianBay")
-		self:ScheduleLoadGuideFile("Dominion\\Deradune")
-		self:ScheduleLoadGuideFile("Dominion\\Ellevar")
-		self:ScheduleLoadGuideFile("Dominion\\Auroria")
-		self:ScheduleLoadGuideFile("Dominion\\Whitevale")
-		self:ScheduleLoadGuideFile("Dominion\\Farside")
-		self:ScheduleLoadGuideFile("Dominion\\Wilderrun")
-		self:ScheduleLoadGuideFile("Dominion\\Malgrave")
-		self:ScheduleLoadGuideFile("Dominion\\Grimvault")
+		self:ScheduleLoadGuideFile("Leveling\\Dominion\\Starting")
+		self:ScheduleLoadGuideFile("Leveling\\Dominion\\CrimsonIsle")
+		self:ScheduleLoadGuideFile("Leveling\\Dominion\\LevianBay")
+		self:ScheduleLoadGuideFile("Leveling\\Dominion\\Deradune")
+		self:ScheduleLoadGuideFile("Leveling\\Dominion\\Ellevar")
+		self:ScheduleLoadGuideFile("Leveling\\Dominion\\Auroria")
+		self:ScheduleLoadGuideFile("Leveling\\Dominion\\Whitevale")
+		self:ScheduleLoadGuideFile("Leveling\\Dominion\\Farside")
+		self:ScheduleLoadGuideFile("Leveling\\Dominion\\Wilderrun")
+		self:ScheduleLoadGuideFile("Leveling\\Dominion\\Malgrave")
+		self:ScheduleLoadGuideFile("Leveling\\Dominion\\Grimvault")
+		self:ScheduleLoadGuideFile("Dailies\\DominionDailies")
+
+		self:ScheduleLoadGuideFile("Test\\Dominion")
 	elseif ZGV.Utils:IsFaction("Exiles") then
-		self:ScheduleLoadGuideFile("Exiles\\Tutorial")
-		self:ScheduleLoadGuideFile("Exiles\\NorthernWilds")
-		self:ScheduleLoadGuideFile("Exiles\\Everstar")
-		self:ScheduleLoadGuideFile("Exiles\\Algoroc")
-		self:ScheduleLoadGuideFile("Exiles\\Celestion")
-		self:ScheduleLoadGuideFile("Exiles\\Galeras")
-		self:ScheduleLoadGuideFile("Exiles\\Whitevale")
-		self:ScheduleLoadGuideFile("Exiles\\Farside")
-		self:ScheduleLoadGuideFile("Exiles\\Wilderrun")
-		self:ScheduleLoadGuideFile("Exiles\\Malgrave")
-		self:ScheduleLoadGuideFile("Exiles\\Grimvault")
-		self:ScheduleLoadGuideFile("Exiles\\Dailies")
+		self:ScheduleLoadGuideFile("Leveling\\Exiles\\Tutorial")
+		self:ScheduleLoadGuideFile("Leveling\\Exiles\\NorthernWilds")
+		self:ScheduleLoadGuideFile("Leveling\\Exiles\\Everstar")
+		self:ScheduleLoadGuideFile("Leveling\\Exiles\\Algoroc")
+		self:ScheduleLoadGuideFile("Leveling\\Exiles\\Celestion")
+		self:ScheduleLoadGuideFile("Leveling\\Exiles\\Galeras")
+		self:ScheduleLoadGuideFile("Leveling\\Exiles\\Whitevale")
+		self:ScheduleLoadGuideFile("Leveling\\Exiles\\Farside")
+		self:ScheduleLoadGuideFile("Leveling\\Exiles\\Wilderrun")
+		self:ScheduleLoadGuideFile("Leveling\\Exiles\\Malgrave")
+		self:ScheduleLoadGuideFile("Leveling\\Exiles\\Grimvault")
+		self:ScheduleLoadGuideFile("Leveling\\Exiles\\Dailies")
+		self:ScheduleLoadGuideFile("Dailies\\ExilesDailies")
+
+		self:ScheduleLoadGuideFile("Test\\Exile")
 	end
 	self:ScheduleLoadGuideFile("Test\\Test")
-	self:ScheduleLoadGuideFile("DominionTest\\LevianBay")
-	self:ScheduleLoadGuideFile("DominionTest\\Elevar")
+
 	self:Debug("Loading of guide files scheduled: "..#ZGV.ScheduledLoads.." guides queued.")
 	self.ScheduledLoadsTotal = #self.ScheduledLoads
 	self.ScheduledLoadsSuccessful = 0

@@ -79,7 +79,7 @@ function ZygorLib:GetKnownMissions()
 	for key, episode in pairs(episodes) do
 		local missions = episode:GetMissions()
 		for key, mission in pairs(missions) do
-			knownMissions[mission:GetId()] = mission
+			self.knownMissions[mission:GetId()] = mission
 --				ZgWriter:Write('[' .. quest:GetId() .. '] = '.. episodeId .. ', -- ' .. quest:GetTitle())
 		end
 	end
@@ -88,22 +88,14 @@ end
 function ZygorLib:GetMissionStatus(qId) 
 --[[ missions do not have a full state enums like quests,
      nor the GetState() method. Instead they have IsComplete, isStarted
-     that returns true/false.
-     To keep returns in line with GetQuestStatus we 
-     translate to enums of quest type ]]--
-	if knownMissions[qId] == nil then
-		return 0 -- QuestState_Unknown 
-	end
-	
-	if knownMissions[qId]:IsComplete() then
-		return 3 -- QuestState_Completed 
-	end
-	
-	if knownMissions[qId]:IsStarted() then
-		return 1 -- QuestState_Accepted 
-	end
+     that returns true/false. ]]--
+	self:GetKnownMissions() --TODO: optimize? call less often, maybe?
 
-	return 0 -- QuestState_Unknown - we cannot check for other states, so we acknowledge we do not know anything about it
+	if self.knownMissions[qId] == nil then return "unknown" end
+	if self.knownMissions[qId]:GetName() == "" then return "unknown" end -- lack of name means we have not found this mission yet
+	if self.knownMissions[qId]:IsComplete() then return "completed" end
+	if self.knownMissions[qId]:IsStarted() then return "started" end
+	return "available"
 end
 
 function ZygorLib:GetObjectiveStatus(qId,oId) -- oId is ZERO-BASED. Remember to adjust it!!!
@@ -197,6 +189,10 @@ function ZygorLib:GetItemCount(iId) --
 	
 	return counter	
 end
+
+
+
+
 
 function ZygorLib:RegisterGetKnownZones()
 	if not self.RegisterGetKnownZonesTimer then
