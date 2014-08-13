@@ -17,15 +17,12 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		..turnin A Daring Escape##5866 |goto -2587,-3590,-789
 		..accept First Impressions##6602 |goto -2587,-3590,-789
 	step
-		'Run to the Taxi here
 		.' Find the Lightreach Taxi Kiosk |q The Amenities of Lightreach##9165/2 |goto Ellevar -2599,-3595,-790
-	step
-		'Run to the Transmat Terminal here
 		.' Find the Transmat Terminal |q The Amenities of Lightreach##9165/3 |goto Ellevar -2530,-3421,-765
 	step
 		.click Transmat Terminal##287176
 		.' Click _Yes_ to set _Lightreach Mission_ as your Recall point |goto Ellevar -2529,-3420,-765
-		|confirm |q 6883
+		|confirm |q 9165
 	step
 		'_Enter_ the buidling |goto Ellevar -2482,-3469,-762 < 10
 		.talk Pyrius Octavian##278837
@@ -44,14 +41,11 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.talk Artemis Zin##287081
 		..accept Mysteries from the Lake##6609 |goto Ellevar -2486,-3659,-803
 	step
-		.click Eldan Artifact##493012
-		.' Collect an Eldan Artifact |q Mysteries from the Lake##6609/1 |goto Ellevar -2426,-3716,-824
-	step
-		.talk Kevo##287082
-		..turnin Mysteries from the Lake##6609 |goto Ellevar -2486,-3657,-803
-	step
 		.talk Woodworker Lucus##276525
 		..accept Building Up the Mission##6608 |goto Ellevar -2536,-3687,-803
+	step
+		.click Eldan Artifact##493012 |tip It is in the water.
+		.' Collect an Eldan Artifact |q Mysteries from the Lake##6609/1 |goto Ellevar -2426,-3716,-824
 	step
 		.click Dominion Supplies##486496
 		.' Pick up Dominion Supplies |q All In Good Faith##6587/1 |goto Ellevar -2547,-3757,-801
@@ -76,6 +70,11 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.talk Guardian Villos##276527
 		..turnin Heightened Security##6607 |goto Ellevar -2506,-3639,-800
 		.' Help Guardian Villos |q Lightreach Mission##6603/1 |goto -2506,-3639,-800
+	step
+		.talk Kevo##287082
+		..turnin Mysteries from the Lake##6609 |goto Ellevar -2486,-3657,-803
+	step
+		.talk Guardian Villos##276667
 		..turnin Lightreach Mission##6603 |goto Ellevar -2506,-3639,-800
 		..accept Vigilance##6604 |goto Ellevar -2506,-3639,-800
 	step
@@ -83,7 +82,6 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.click Toric's Schedule##287177
 		.' Inspect Toric's schedule |q Vigilance##6604/2 |goto Ellevar -2408,-3524,-781
 	step
-		'Run to this spot
 		.' Find and speak with Artemis Zin |q Vigilance##6604/3 |goto Ellevar -2499,-3653,-803
 	step
 		.' Search The Emperor's Blessing |q Vigilance##6604/4 |goto Ellevar -2365,-3514,-774
@@ -129,10 +127,10 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.' Speak to Watti Mozz |q No Refunds##6779/1 |goto -2611,-3733,-798
 	step
 		'Press _T_ while targeting the red glowing target
-		.' Use Prototype Veggie Cannon 2.0 on the Target |q No Refunds##6779/2 |goto -2612,-3735,-798
-		.' Use Prototype Veggie Cannon 3.0 on the Target |q No Refunds##6779/3
-		.' Use Prototype Veggie Cannon 4.0 on the Target |q No Refunds##6779/4
-		.' Use Prototype Veggie Cannon 5.0 on the Target |q No Refunds##6779/5
+		.' Use Prototype Veggie Cannon 2.0 on the Target |q No Refunds##6779/2 |goto Ellevar -2621,-3723,-799
+		.' Use Prototype Veggie Cannon 3.0 on the Target |q No Refunds##6779/3 |goto Ellevar -2621,-3723,-799
+		.' Use Prototype Veggie Cannon 4.0 on the Target |q No Refunds##6779/4 |goto Ellevar -2621,-3723,-799
+		.' Use Prototype Veggie Cannon 5.0 on the Target |q No Refunds##6779/5 |goto Ellevar -2621,-3723,-799
 	step
 		.talk Utsah the Curious##286935
 		..turnin No Refunds##6779 |goto -2618,-3777,-793
@@ -145,7 +143,7 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/1 |goto -2473,-3896,-774
 	step
 		'Press _T_ while targeting the red glowing target
-		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/1 |goto Ellevar -2515,-3872,-785
+		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/2 |goto Ellevar -2515,-3872,-785
 	step
 		'Press _T_ while targeting the red glowing target
 		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/3 |goto -2552,-3844,-785
@@ -207,7 +205,7 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.' Gain the trust of the Elder Brood-Mother |q All In Good Faith##6587/5
 	step
 		.talk Elder Mist-Dancer##278833
-		..accept Mouths To Feed ##6592 |goto Ellevar -2954,-3506,-821
+		..accept Mouths To Feed##6592 |goto Ellevar -2954,-3506,-821
 	step
 		.talk Elder Wave-Caller##289092
 		..accept Spirits To Tend##6593 |goto -2995,-3472,-817
@@ -220,10 +218,10 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 	step
 		.kill Highland Broadwing##606929+
 		.kill Highland Gribbon##607380+
-		.' Hunt Highland birds |q Mouths To Feed ##6592/1 |goto Ellevar -3011,-3731,-817
+		.' Hunt Highland birds |q Mouths To Feed##6592/1 |goto Ellevar -3011,-3731,-817
 	step
 		.talk Elder Mist-Dancer##278833
-		..turnin Mouths To Feed ##6592 |goto -2954,-3505,-822
+		..turnin Mouths To Feed##6592 |goto -2954,-3505,-822
 		.' Gain the trust of the Elder Mist-Dancer |q All In Good Faith##6587/4 |goto -2954,-3505,-822
 	step
 		.talk Elder Spirit-Walker##289053
@@ -238,9 +236,8 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		..accept Treacherous Territory##6589 |goto -2543,-3750,-802
 	step
 		.talk Poisoned Spirit-Walker##461709
+		.' Defeat the enemies that attack in waves
 		.' Find the Poisoned Spirit-Walker |q Treacherous Territory##6589/1 |goto Ellevar -2948,-3662,-819
-		.' Stay around the yellow cirlce and fight off the enemies
-		.kill Poisoned Spirit-Walker##461709+, Stormseeker Hydroguard##656120+, Stormseeker Mist-Dancer##655893+
 	step
 		.talk Poisoned Spirit-Walker##461709
 		..turnin Treacherous Territory##6589 |goto Ellevar -2949,-3663,-819
@@ -271,17 +268,18 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 	step
 		.talk Toric Antevian##689788
 		..turnin The Face of Justice##6591 |goto Ellevar -2471,-3444,-762
+	step
 		.' Press _C_ to open your Communicator:
 		..accept A Healing Hand##6575 |goto -2471,-3444,-762
 	step
-		'_Cross_ the bridge and follow the road to the left |goto Ellevar -2544,-3761,-801 < 20
+		'_Cross_ the bridge and follow the road west |goto Ellevar -2544,-3761,-801 < 15
 		.' Approach Guardian Zelcon |q A Healing Hand##6575/1 |goto Ellevar -3175,-3671,-794
 	step
 		.talk Guardian Zelcon##276156
 		..accept Dangerous Highlands##6582 |goto -3175,-3671,-794
 	step
 		.talk Tani Bril##276154
-		..accept The Tooth that Bites Last ##6583 |goto Ellevar -3163,-3676,-794
+		..accept The Tooth that Bites Last##6583 |goto Ellevar -3163,-3676,-794
 	step
 		.talk Priestess Trania Lavus##286779
 		..accept Better Than This##6581 |goto -3174,-3690,-793
@@ -297,7 +295,7 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 	step
 		.click Larallen Slank##487805
 		'Press _T_ to:
-		.' Use De-Toothing Beam on Larallen Slanks |q The Tooth that Bites Last ##6583/1 |goto Ellevar -3283,-3761,-791
+		.' Use De-Toothing Beam on Larallen Slanks |q The Tooth that Bites Last##6583/1 |goto Ellevar -3283,-3761,-791
 		.click Injured Radiant Guard##567969
 		.' Heal Injured Radiant Guards  |q A Healing Hand##6575/2 |goto Ellevar -3273,-3730,-794
 		.click Terrestrial Aquashroom##538184
@@ -315,7 +313,7 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		..turnin Dangerous Highlands##6582
 	step
 		.talk Tani Bril##276154
-		..turnin The Tooth that Bites Last ##6583 |goto Ellevar -3162,-3676,-794
+		..turnin The Tooth that Bites Last##6583 |goto Ellevar -3162,-3676,-794
 	step
 		.talk Guardian Zelcon##276156
 		..turnin A Healing Hand##6575 |goto -3176,-3671,-794
@@ -327,6 +325,9 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 	step
 		.talk Priestess Trania Lavus##286779
 		..accept Fragments are Better than Nothing##6579 |goto -3174,-3690,-793
+	step
+		.talk Shrine of the Masters##276421
+		..accept Shrine of the Masters##6599 |goto Ellevar -3141,-3396,-817
 	step
 		.click Primal Phylax Jar##683894
 		.' Destroy Primal Phylax Jars |q More than Clay Jars##6580/1 |goto Ellevar -3361,-3653,-793
@@ -345,14 +346,14 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 	step
 		'Press _C_ to open your Communicator:
 		..turnin The Storm's Power##6576
-		..accept The Shaman's Rage##6578
+		..accept The Wrath of the High Priest##6578
 	step
-		'_Go up_ the dirt hill here |goto Ellevar -3609,-3231,-744 < 20
+		'_Go up_ the dirt hill here |goto Ellevar -3609,-3231,-744 < 10
 		.kill 1 Stormseeker High-Priest##694198
-		.' Kill the Stormseeker High-Priest |q The Shaman's Rage##6578/1 |goto Ellevar -3440,-3429,-760
+		.' Kill the Stormseeker High-Priest |q The Wrath of the High Priest##6578/1 |goto Ellevar -3440,-3429,-760
 	step
 		'Press _C_ to open your Communicator:
-		..turnin The Shaman's Rage##6578
+		..turnin The Wrath of the High Priest##6578
 		..accept Priority One Distress Call##7110
 	step
 		'Press the icon on the bottom right of your action bar to:
@@ -453,16 +454,29 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.' Press _T_ to Catch 5 Ravenok |goto Ellevar -2498,-3081,-798 < 20 |tip Watch the buff above your health bar until you have 5 Ravenok Wrangled.
 		.' Catch and return Escaped Ravenok |q Raving Ravenok##6597/1 |goto Ellevar -2482,-2948,-764
 	step
-		.click Bait Rock##275893
-		.kill Goldy##889230+
+		.click Bait Rock##275893 |goto Ellevar -2336,-2976,-746
+		.kill Goldy##889230
 		.' Find and subdue Goldy |q Raving Ravenok##6597/2
 	step
 		.talk Dio##286466
 		..turnin Raving Ravenok##6597 |goto -2480,-2939,-764
 	step
+		.talk Lowland Chick##286277
+		..accept Unnatural Selection##6575 |goto -2913,-3051,-815
+	step
+		.' Kill Snoglugs |q Unnatural Selection##6918/1 |goto Ellevar -2910,-3055,-817
+		.' Collect Spotted Splorg |q Unnatural Selection##6918/2 |goto -2746,-2992,-789
+		.' Speak with Calliope Rose |q Unnatural Selection##6918/3 |goto -2954,-2829,-766
+		.' Press _T_ to:
+		.' Feed Chick Veggie Mash |q Unnatural Selection##6918/4 |goto -2910,-3055,-817
+		.' Feed Chick Snoglugs |q Unnatural Selection##6918/5 |goto -2910,-3055,-817
+		.' Feed Chick Splotted Splorg |q Unnatural Selection##6918/6 |goto -2910,-3055,-817
+	step
+		..turnin Unnatural Selection##6918 |goto Ellevar -2912,-3050,-816
+	step
 		.kill Mistymurk Slimer##772281+
 		.kill Murkshore Snoglug##771419+
-		.' Collect Ellevarian Eldan Remnant |q A Bad Snog##6598/1 |goto Ellevar -2508,-3081,-798
+		.' Collect Ellevarian Eldan Remnant |q A Bad Snog##6598/1 |goto Ellevar -2716,-3022,-798
 	step
 		.talk Agent Varac##276010
 		..turnin A Bad Snog##6598 |goto Ellevar -2513,-2971,-762
@@ -785,6 +799,7 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.talk Ellie the Unhinged##290689
 		.' Speak with Ellie the Unhinged |q Copperworth Village##6644/5 |goto -1762,-4031,-707
 	step
+		.' Kill a mob in this area
 		'Press _C_ to open your Communicator:
 		..accept An Act of Aggression##6737 |goto Ellevar -1876,-4080,-686
 	step
@@ -1017,7 +1032,7 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.' Meet Professor Cornelius at his camp |q The Antidote##6653/2 |goto Ellevar -1925,-3227,-718
 	step	
 		'_Make sure to pick up the potion before you leave the tent_
-		.click Combustive Potion##1807508 |goto Ellevar -1927,-3231,-718
+		.click Combustive Potion##1807508 |goto Ellevar -1927,-3231,-718 |c
 		.talk Doctor Matrine Flovus##290427
 		.' Give Professor Cornelius' Cure to Doctor Matrine Flovus |q The Antidote##6653/3 |goto -2253,-3256,-744
 	step

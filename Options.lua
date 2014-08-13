@@ -247,7 +247,7 @@ function Options:ShowViewerWindow()
 end
 
 function Options:ShowGuidesWindow(disptype)
-	if not disptype then disptype = ZGV.CurrentGuide.type end
+	if not disptype then disptype = ZGV.CurrentGuide and ZGV.CurrentGuide.type or "LEVELING" end
 
 	local function showGuideDetails(i)
 		local displayTitle = ZGV.registeredguides[i].title_short or ""

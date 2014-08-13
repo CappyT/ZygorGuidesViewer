@@ -95,12 +95,16 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		..turnin Endemic Eradication##7662 |goto 2731,379,-1003
 		..accept Hot Drop Soldiers##7663 |goto 2731,379,-1003
 	step
+		.click Vigilant Incursion Taxi Kiosk##279357
+		.' Get the _Vigilant Incursion_ taxi point |goto Grimvault 2743,422,-1008
+		|confirm |q 7669
+	step
 		.' Head to the drop location |q Hot Drop Soldiers##7663/1 |goto Grimvault 3086,386,-952
 	step
 		.click Drop Spot##285144
-		.' Call in Skydrop Specialists and defend the landing zone |q Hot Drop Soldiers##7663/2 |count 1 |goto Grimvault 3117,444,-954
+		.' Call in Skydrop Specialists and defend the landing zone |q Hot Drop Soldiers##7663/2 |count 33 |goto Grimvault 3117,444,-954
 		.click Drop Spot##285143
-		.' Call in Skydrop Specialists and defend the landing zone |q Hot Drop Soldiers##7663/2 |count 2 |goto Grimvault 3201,400,-953
+		.' Call in Skydrop Specialists and defend the landing zone |q Hot Drop Soldiers##7663/2 |count 66 |goto Grimvault 3201,400,-953
 		.click Drop Spot##285145
 		.' Call in Skydrop Specialists and defend the landing zone |q Hot Drop Soldiers##7663/2 |goto Grimvault 3243,460,-955
 	step
@@ -119,8 +123,8 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		.click Flank Tank##285106
 		.' Ride the Flank Tank |q Gates of Fire##7664/1 |goto 3087,262,-941
 	step
-		.' Secure the Flank Points |q Gates of Fire##7664/2 |count 1 |goto 2858,170,-947
-		.' Secure the Flank Points |q Gates of Fire##7664/2 |count 2 |goto 2726,195,-963
+		.' Secure the Flank Points |q Gates of Fire##7664/2 |count 33 |goto 2858,170,-947
+		.' Secure the Flank Points |q Gates of Fire##7664/2 |count 66 |goto 2726,195,-963
 		.' Secure the Flank Points |q Gates of Fire##7664/2 |goto 2668,151,-970
 		.' Kill the Monolith Mauler |q Gates of Fire##7664/3 |goto 2678,-8,-972
 	step
@@ -216,12 +220,12 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		.' _Go up_ the ramps |goto Grimvault 2379,-1155,-1017
 		.' _Take this elevator_ up |goto 2352,-999,-947
 		.click Timed Explosive Marker##281462
-		.' Overload the Corrupted Generators |q Cutting the Power##7898/1 |count 1 |goto 2315,-980,-894
+		.' Overload the Corrupted Generators |q Cutting the Power##7898/1 |count 12 |goto 2315,-980,-894
 	step
 		.click Installation Panel##277815 |goto Grimvault 2330,-963,-896
 		.' Ride the new platform to the next Generator |goto 2336,-958,-895
 		.click Timed Explosive Marker##281465
-		.' Overload the Corrupted Generators |q Cutting the Power##7898/1 |count 2 |goto 2471,-830,-894
+		.' Overload the Corrupted Generators |q Cutting the Power##7898/1 |count 25 |goto 2471,-830,-894
 	step
 		.' Continue riding platforms and planting explosives on Generators around the perimeter of the Corrupted Installation
 		.click Timed Explosive Marker##281465
@@ -259,7 +263,8 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		.talk Fractured Caretaker##284590
 		.' Talk to the Red Fractured Caretaker |goto 2568,-1031,-832
 		.' Click the Control Panels in the following order:
-		.' 2, 4, 3, 1, 2, 4
+		.' _2, 4, 3, 1, 2, 4_
+		.' Activate Control Panels in sequence |q Big Badda Boom##7710/1 |goto Grimvault 2584,-1066,-832
 		.' Teleport out |q Big Badda Boom##7710/6 |goto Grimvault 2591,-1138,-832
 	step
 		'Press _C_ to use your communicator:
@@ -274,6 +279,10 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 	step
 		.click Discarded Holoprojector##276179
 		..accept Minefields and Mischief##8939 |goto 1333,-1758,-980
+	step
+		.click Boiling Depot Taxi Kiosk##279352
+		.' Get the _Boiling Depot_ taxi point |goto 1302,-1749,-985
+		|confirm |q 8939
 	step
 		.kill Kesselbug Larva##390190+
 		.kill Kesselbug Burrower##394053+
@@ -310,7 +319,7 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		..accept My Only Hope##8353
 	step
 		'Press _C_ to use your communicator:
-		..accept Cryoship Down##7887
+		..accept Cryoship Down##7887 |goto WesternGrimvault 284,-3628,-954
 	step
 		'Press _C_ to use your communicator:
 		..accept Egg Hunt##8026 |goto WesternGrimvault 667,-4019,-1037
@@ -335,7 +344,6 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		..accept Running with the Blight##9405 |goto 1528,-4273,-1531
 		..accept No Remorse##9409 |goto 1528,-4273,-1531
 	step
-		.click Luring Flare##280711
 		.click Luring Flare##284395
 		.' Ignite Luring Flare |q Come Out and Play##7681/1 |goto WesternGrimvault 1501,-4263,-1530
 		.' Survive Strain Ambush |q Come Out and Play##7681/2 |goto 1999,-4263,-1530
@@ -371,20 +379,20 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		.' Activate the Auxiliary Power Generator |q Danger! High Voltage##7682/1 |goto 1506,-4081,-1535
 	step
 		.click Power Circuit##284393
-		.' Repair the Power Circuits in the correct order |q Danger! High Voltage##7682/2 |count 1 |goto 1502,-4070,-1536
+		.' Repair the Power Circuits in the correct order |q Danger! High Voltage##7682/2 |count 16 |goto 1502,-4070,-1536
 		.' _Jump onto_ the lift |goto 1486,-4062,-1536 < 10
 		.click Power Circuit##284392
-		.' Repair the Power Circuits in the correct order |q Danger! High Voltage##7682/2 |count 2 |goto 1494,-4053,-1488
+		.' Repair the Power Circuits in the correct order |q Danger! High Voltage##7682/2 |count 33 |goto 1494,-4053,-1488
 		.click Power Circuit##284390
-		.' Repair the Power Circuits in the correct order |q Danger! High Voltage##7682/2 |count 3 |goto 1478,-4037,-1488
+		.' Repair the Power Circuits in the correct order |q Danger! High Voltage##7682/2 |count 50 |goto 1478,-4037,-1488
 	step
 		.click Power Circuit##284394
-		.' Repair the Power Circuits in the correct order |q Danger! High Voltage##7682/2 |count 4 |goto 1482,-4024,-1488
+		.' Repair the Power Circuits in the correct order |q Danger! High Voltage##7682/2 |count 66 |goto 1482,-4024,-1488
 		.click Power Circuit##284389
-		.' Repair the Power Circuits in the correct order |q Danger! High Voltage##7682/2 |count 5 |goto 1493,-4021,-1488
+		.' Repair the Power Circuits in the correct order |q Danger! High Voltage##7682/2 |count 83 |goto 1493,-4021,-1488
+	step
 		.click Power Circuit##284391
 		.' Repair the Power Circuits in the correct order |q Danger! High Voltage##7682/2 |goto 1453,-4025,-1488
-	step
 		.click Master Circuit Breaker##284386
 		.' Reset the Master Circuit Breaker |q Danger! High Voltage##7682/3 |goto WesternGrimvault 1447,-4008,-1488
 	step
@@ -428,15 +436,15 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		..accept The Things That Should Not Be##9407
 	step
 		.click Security Control Board##280538 |tip Try to avoid the white spot lights.
-		.' Hack the Security Control Boards |q Limelight##7689/1 |count 1 |goto WesternGrimvault 977,-3949,-1347
+		.' Hack the Security Control Boards |q Limelight##7689/1 |count 33 |goto WesternGrimvault 977,-3949,-1347
 		.click Security Control Board##280541 |tip Try to avoid the white spot lights.
-		.' Hack the Security Control Boards |q Limelight##7689/1 |count 2 |goto 934,-3956,-1346
+		.' Hack the Security Control Boards |q Limelight##7689/1 |count 66 |goto 934,-3956,-1346
 		.click Security Control Board##280537 |tip Try to avoid the white spot lights.
 		.' Hack the Security Control Boards |q Limelight##7689/1 |goto 1024,-3954,-1346
 	step
 		'Press _C_ to use your communicator:
 		..turnin Limelight##7689
-		..accept Assume Control##7690
+		..accept Assume Control##7690 |tip You must be at least level 48 to continue this quest chain.
 	step
 		.kill Reconfigured Ravenok##4366033+
 		.kill Reprogrammed Razortail##5804710+
@@ -466,7 +474,7 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		.talk Captain Sabes##284310
 		.' Speak to Captain Sabes |q Blaze of Glory##7685/1 |goto 1406,-4190,-1531
 		.click Vacant Cryo Pod##279222
-		.' Use the Fist of Azrion Exit Console |q Blaze of Glory##7685/2 |goto 1530,-4278,-1531
+		.' Enter Vacant Cryo Pod |q Blaze of Glory##7685/3 |goto 1530,-4278,-1531
 	step
 		'Press _C_ to use your communicator:
 		..turnin Blaze of Glory##7685
@@ -483,11 +491,11 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		.' _Follow_ this path north |goto WesternGrimvault 242,-3713,-937 < 10
 		.click Biomech Facility Alpha Taxi Kiosk##274528
 		.' Get the _Bio-Mech Facility_ flight point |goto 220,-4038,-891
-		|confirm
+		|confirm |q 8353
 	step
 		.click Transmat Terminal##274920
-		.' Set _Legion's Landing_ as your Recall |goto WesternGrimvault 337,-4058,-890
-		|confirm
+		.' Set _Legion's Landing_ as your Recall point |goto WesternGrimvault 337,-4058,-890
+		|confirm |q 8353
 	step
 		.talk The Caretaker##276407
 		..turnin My Only Hope##8353 |goto Grimvault 71,-4097,-865
@@ -516,7 +524,7 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		..turnin Pick Up the Pieces##8573
 		..accept We Built This Sentry##8574
 	step
-		.' Go back up the ramp |goto WesternGrimvault -748,-3447,-1038 < 10
+		.' Go back _up the ramp_ |goto WesternGrimvault -748,-3447,-1038 < 10
 		.click Heat Compensators Repair Point##275935
 		.' Protect Eldan Repair Constructs at the Heat Compensators Repair Point |q We Built This Sentry##8574/4 |goto WesternGrimvault -703,-3385,-953
 		.click Beam Modulation Repair Point##275931
@@ -533,14 +541,14 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		..turnin We Built This Sentry##8574
 		..accept On the Loose##8581
 	step
-		.' Jump down here |goto WesternGrimvault -743,-3552,-953
-		.' Follow the ramp down |goto -712,-3556,-1041
+		.' _Jump down_ here |goto WesternGrimvault -743,-3552,-953
+		.' Follow the _ramp down_ |goto -712,-3556,-1041
 		.' Kill Augmented Skeledroids |q The Wonderful One-Hundred##9411/4 |goto WesternGrimvault -739,-3880,-1119 |tip These are found inside the underground section of Bio-Mech Facility.
 	step
 		'Press _C_ to use your communicator:
 		..turnin The Wonderful One-Hundred##9411
 	step
-		.' Follow one of the ramps back up to the normal level |goto WesternGrimvault -810,-3725,-1111
+		.' _Follow one of the ramps_ back up to the normal level |goto WesternGrimvault -810,-3725,-1111
 		.kill 1 Clone of Stormtalon##6239836
 		.' Destroy Clone of Stormtalon |q On the Loose##8581/1 |goto Grimvault -600,-4097,-948
 	step
@@ -548,7 +556,7 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		..turnin On the Loose##8581 |goto WesternGrimvault -638,-4020,-955
 		..accept On Through the Light##8598 |goto WesternGrimvault -638,-4020,-955
 	step
-		.' Teleport to the Spire |q On Through the Light##8598/1 |goto WesternGrimvault -645,-4036,-953
+		.' Teleport to the Spire |q On Through the Light##8598/1 |goto WesternGrimvault -650,-4029,-952
 	step
 		'Press _C_ to use your communicator:
 		..turnin On Through the Light##8598
@@ -558,7 +566,7 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		.click Initializing Socket Panel##275901
 		.' Activate the Initializing Socket Panel |q Clean Reboot##8599/1 |goto WesternGrimvault -1095,-4009,-724
 	step
-		.' Ride an elevator down |goto WesternGrimvault -1022,-4011,-722
+		.' _Ride an elevator_ down |goto WesternGrimvault -1022,-4011,-722
 		.click System Core Console##275892
 		.' Activate the System Core Console |q Clean Reboot##8599/2 |goto -1015,-4087,-832
 	step
@@ -601,7 +609,7 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		.' If your Corrupted level goes beyond 50, some enemies will no longer be aggressive, but your damage will be reduced
 		.' Once your Corruption level reaches 100 you start taking damage
 		.' Remove your Corruption by standing near _Exanite Lanters_, which are part of the next quest
-		|confirm
+		|confirm |q 8155
 	step
 		'Press _C_ to use your communicator:
 		..accept Shadows Over Eldan##8156 |goto Grimvault -768,-5391,-1032
@@ -643,7 +651,7 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		'Press _C_ to use your communicator:
 		..turnin All in the Dosage##8161
 	step
-		.' _Step into_ the teleporter |goto WesternGrimvault -931,-5520,-1030
+		.' _Step into_ the teleporter |goto WesternGrimvault -934,-5520,-1030
 		.' Let your _Corruption_ level rise to 50, corrupting you and allowing you to use Phagelab Exhaust Vents
 		.click Phagelab Exhaust Vent##276101 |tip These are bulging sacs and are easily spotted by their large circular AoE.
 		.' Destroy the Phagelab Exhaust Vents |q Clear the Air##8157/1 |goto Grimvault -296,-5479,-1022
@@ -659,7 +667,7 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		.click Phagelab Panel##276087
 		.' Activate the Phagelab Panels |q Minutes to Madness##8158/2 |goto -447,-5334,-1040
 	step
-		.' _Go through_ the teleporter |goto -392,-5335,-1035 < 10
+		.' _Go through_ the teleporter |goto WesternGrimvault -380,-5336,-1035 < 10
 		.talk The Caretaker##276207
 		..turnin Minutes to Madness##8158 |goto Grimvault -1164,-5334,-1039
 		..accept Face the Phage Lord##8159 |goto -1164,-5334,-1039
@@ -668,7 +676,7 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		.' _Ride_ the elevator down |goto -1128,-5260,-1036 < 10
 		.' _Go through_ the teleporter |goto -1135,-5245,-1072 < 10
 		.' Click and activate all _12 Exanite Lanters_ in this room to lure Vorion out |goto WesternGrimvault -948,-4094,-1900
-		|confirm
+		|confirm |q 8159
 	step
 		.kill 1 Vorion the Corruptor##6404456
 		.' Defeat Vorion the Corruptor |q Face the Phage Lord##8159/1 |goto Grimvault -1025,-4094,-1899
@@ -720,10 +728,12 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		.' Collect Essence of Life from the Shade of Life |q Shades of the Entity##8354/4 |goto WesternGrimvault 429,-5520,-1037
 	step
 		.' _Step into_ the teleporter |goto WesternGrimvault 381,-5491,-1033
-		.' _Go through_ the first puzzle teleporter |goto 49,-5063,-1017
-		.' _Go through_ the second puzzle teleporter |goto 16,-5031,-1017
-		.' _Go through_ the third puzzle teleporter |goto 50,-5002,-1017
-		.' _Go through_ the final puzzle teleporter |goto 14,-5030,-1017
+		.' Go through the _first_ puzzle teleporter |goto 49,-5063,-1017
+		.' Go through the _second_ puzzle teleporter |goto 16,-5031,-1017
+		.' Go through the _third_ puzzle teleporter |goto 50,-5002,-1017
+		.' Go through the _final_ puzzle teleporter |goto 14,-5030,-1017
+		|confirm |q 8354
+	step
 		.' _Step into_ the teleporter |goto -169,-5033,-769
 		.kill 1 Shade of Air##616005
 		.' Collect Essence of Air from the Shade of Air |q Shades of the Entity##8354/6 |goto 171,-4622,-1080
@@ -740,16 +750,16 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		.' Enter the Core |q Breaching the Core##8356/1 |goto 171,-4808,-1082
 	step
 		.click Defiled Console##262232
-		.' Cleanse the Defiled Consoles |q Breaching the Core##8356/2 |count 1 |goto GrimvaultCore -67,35,-694
+		.' Cleanse the Defiled Consoles |q Breaching the Core##8356/2 |count 16 |goto GrimvaultCore -67,35,-694
 		.click Defiled Console##262233
-		.' Cleanse the Defiled Consoles |q Breaching the Core##8356/2 |count 2 |goto GrimvaultCore -2,73,-694
+		.' Cleanse the Defiled Consoles |q Breaching the Core##8356/2 |count 33 |goto GrimvaultCore -2,73,-694
 		.click Defiled Console##262231
-		.' Cleanse the Defiled Consoles |q Breaching the Core##8356/2 |count 3 |goto 64,35,-694
+		.' Cleanse the Defiled Consoles |q Breaching the Core##8356/2 |count 50 |goto 64,35,-694
 	step
 		.click Defiled Console##262230
-		.' Cleanse the Defiled Consoles |q Breaching the Core##8356/2 |count 4 |goto 64,-41,-694
+		.' Cleanse the Defiled Consoles |q Breaching the Core##8356/2 |count 66 |goto 64,-41,-694
 		.click Defiled Console##262234
-		.' Cleanse the Defiled Consoles |q Breaching the Core##8356/2 |count 5 |goto -1,-78,-694
+		.' Cleanse the Defiled Consoles |q Breaching the Core##8356/2 |count 83 |goto -1,-78,-694
 		.click Defiled Console##262229
 		.' Cleanse the Defiled Consoles |q Breaching the Core##8356/2 |goto -67,-41,-694
 	step
@@ -765,13 +775,13 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		.' Primal Element Blast: _1_. Deals damage to the boss. Deals more damage the longer you let it channel without moving
 		.' Ethreal Displacement: _2_. AoE that kills all adds near you
 		.' Prime Restoration: _3_. Fully heals you. Has a 3 second cast and 30 second cooldown time
-		|confirm
+		|confirm |q 8357
 	step
 		.click Drusera's Portal to the Bio-Mech Facility##262233
 		.' Click the portal to engage the Defiled World Destroyer |q With Great Power##8357/1 |goto -79,-10,-694
 	step
 		.kill 1 Defiled World Destroyer##276194
-		.' Damage the Defiled World Destroyer with Drusera's abilities |q With Great Power##8357/2 |goto -567,-4390,-915
+		.' Damage the Defiled World Destroyer with Drusera's abilities |q With Great Power##8357/2
 	step
 		.talk Drusera##262288
 		..turnin With Great Power##8357 |goto GrimvaultCore -77,-2,-694
@@ -780,15 +790,15 @@ ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
 		.click Bounty Board##276695
 		..accept Freedom of Information##8585 |goto WesternGrimvault 276,-3992,-886
 	step
-		.' Follow the ramp down |goto WesternGrimvault 50,-4061,-871 < 10
-		.' Step into the teleporter |goto WesternGrimvault -649,-4027,-952 < 10
+		.' _Follow the ramp_ down |goto WesternGrimvault 50,-4061,-871 < 10
+		.' _Step into_ the teleporter |goto WesternGrimvault -649,-4027,-952 < 10
 		.click External Interface Terminal##276472
-		.' Hack External Interface Terminals |q Freedom of Information##8585/1 |count 1 |goto -1056,-4032,-721
+		.' Hack External Interface Terminals |q Freedom of Information##8585/1 |count 25 |goto -1056,-4032,-721
 		.click External Interface Terminal##276471
-		.' Hack External Interface Terminals |q Freedom of Information##8585/1 |count 2 |goto -1089,-4064,-721
-		.' Run across the bridge when the platforms come down |goto -1052,-4069,-721 < 10
+		.' Hack External Interface Terminals |q Freedom of Information##8585/1 |count 50 |goto -1089,-4064,-721
+		.' _Run across the bridge_ when the platforms come down |goto -1052,-4069,-721 < 10
 		.click External Interface Terminal##276473
-		.' Hack External Interface Terminals |q Freedom of Information##8585/1 |count 3 |goto -991,-4161,-721
+		.' Hack External Interface Terminals |q Freedom of Information##8585/1 |count 75 |goto -991,-4161,-721
 		.click External Interface Terminal##276470
 		.' Hack External Interface Terminals |q Freedom of Information##8585/1 |goto -960,-4129,-721
 	step

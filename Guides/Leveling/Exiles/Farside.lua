@@ -10,15 +10,14 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		.click Venture Board##275516
 		..accept Venture into Farside!##9462 |goto Thayd 3976,-2348,-789
 	step
-		.talk Transportation Expert Conner##274532
-		.' Talk to Transportation Expert Conner |q Venture into Farside!##9462/1 |goto 3913,-2376,-777
-		.' Click _Yes_ to travel to Farside |goto Farside 5924,-4966,-493 <10
+		.talk Transportation Expert Conner##274532 |q Venture into Farside!##9462/1 |goto 3913,-2376,-777
+		.' Click _Yes_ to travel to Farside |goto Farside 5924,-4966,-493 < 10
 	step
 		.talk Researcher Dunfield##266298
 		..turnin Venture into Farside!##9462 |goto 5898,-4913,-497
 		..accept Onward to Alpha Complex##7937 |goto 5898,-4913,-497
 	step
-		.' Step into the teleporter |goto 5898,-4897,-496 <10
+		.' Step into the teleporter |goto 5898,-4897,-496 < 10
 		.talk Dorian Walker##263842
 		..turnin Onward to Alpha Complex##7937 |goto Farside 2976,-1054,-716
 		..accept The Journey Ahead##8791 |goto 2976,-1054,-716
@@ -33,7 +32,7 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		..turnin The Journey Ahead##8791 |goto 2974,-1055,-716
 		..accept The Secrets of Bio-Dome 3##7852 |goto 2974,-1055,-716
 	step
-		.' Step into the teleporter |goto 2547,-1142,-722 <10
+		.' _Step into_ the teleporter |goto 2547,-1142,-722 < 10
 		..turnin The Secrets of Bio-Dome 3##7852 |goto Farside 1901,-1180,-729
 		..accept Glimmers of Life##7856 |goto 1901,-1180,-729
 	step
@@ -43,9 +42,6 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		.talk The Caretaker##265310
 		..accept Touring Bio-Dome 3##8787 |goto 1872,-1120,-728
 	step
-		.talk Sergeant Zarok##263841
-		..accept Elemental Eradication##7923 |goto Farside 1796,-1219,-930
-	step
 		.click Bio-Dome 3 Expedition Panel##265311
 		.' Click _Yes_ to tour Bio-Dome 3
 		.' Ride the Bio-Dome 3 Observation Platform |q Touring Bio-Dome 3##8787/1 |goto 1795,-1032,-727
@@ -53,9 +49,11 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		'Press _C_ to use your communicator:
 		..turnin Touring Bio-Dome 3##8787
 	step
-		.kill Embodiment of Might##2642201
-		.kill Embodiment of Strength##2649114
-		.kill Embodiment of Vitality##2692962
+		'_Enter_ the green portal |goto Farside 2017,-1204,-720 < 10
+		.talk Sergeant Zarok##263841
+		..accept Elemental Eradication##7923 |goto Farside 1796,-1219,-930
+	step
+		.kill Embodiment of Might##2642201+, Embodiment of Strength##2649114+, Embodiment of Vitality##2692962+
 		.' Destroy elemental Embodiments |q Elemental Eradication##7923/1 |goto Farside 1640,-1151,-930
 	step
 		'Press _C_ to use your communicator:
@@ -65,10 +63,7 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		.' Use the teleporter |q Glimmers of Life##7856/1 |goto 2019,-1204,-719
 		.click Concentrated Primal Life##2618046
 		.' Measure energy levels of Concentrated Primal Life |q Glimmers of Life##7856/2 |goto Farside 1942,-1280,-932
-		.kill Wildwood Entangler##2631733
-		.kill Woodland Wildcat##2633187
-		.kill Woodland Saberclaw##2655403
-		.kill Timber Raven##2630644
+		.kill Wildwood Entangler##2631733+, Woodland Wildcat##2633187+, Woodland Saberclaw##2655403+, Timber Raven##2630644+
 		.' Collect Life Essences from animals |q Alchemical Potential##7854/1 |goto 1938,-1282,-932
 	step
 		'Press _C_ to use your communicator:
@@ -81,7 +76,7 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		.click Marker Flare##263363 |tip These may be markeed as cogs on your minimap.
 		.' Install Primal Energy Containment Devices at Marker Flares |q Containing Life##7860/1 |goto 1960,-1483,-913
 		.click Primal Ragethorn##2676697
-		.' Press _T_ to spray Primal Ragethorn to free Sciencebots |q Overgrowth##7858/1 |goto 2015,-1408,-912
+		.' Press _T_ to spray Primal Ragethorn to free Sciencebots |q Overgrowth##7858/1 |goto 2015,-1408,-912 |tip These look like green vines with thorns on them.
 	step
 		'Press _C_ to use your communicator:
 		..turnin Overgrowth##7858
@@ -102,14 +97,14 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		.kill 1 Banespore##2585326
 		.' Kill Banespore |q Primal Vengeance##7864/2 |goto 2111,-1781,-930
 	step
-		.' Step into the teleporter |goto 1990,-1232,-936 <10
+		'_Step_ into the teleporter |goto 1990,-1232,-936 < 10
 		.talk Alchemist Vossak##263464
 		..turnin Primal Vengeance##7864 |goto Farside 1897,-1175,-729
 	step
 		.talk Researcher Goldspring##263463
 		..accept Ancient Eldan Experimentation##7917 |goto 1902,-1180,-729
 	step
-		.' Step into the teleporter |goto 2016,-1203,-720 <10
+		'_Step_ into the teleporter |goto 2016,-1203,-720 < 10
 		.talk Belle Walker##263843
 		..turnin Ancient Eldan Experimentation##7917 |goto Farside 1795,-1213,-930
 		..accept Geo-Analysis##7918 |goto 1795,-1213,-930
@@ -171,7 +166,7 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		..turnin Hydro-Analysis##7921
 		..accept Defeat the Custodian##7922
 	step
-		.' Climb up the rocks here |goto 1483,-1057,-926 <10
+		.' _Climb up_ the rocks here |goto 1483,-1057,-926 < 10
 		.talk Explorer Cliffbreeze##263840
 		..accept The Observation Platform##7927 |goto 1509,-1082,-908
 	step
@@ -184,7 +179,7 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		'Press _C_ to use your communicator:
 		..turnin The Observation Platform##7927
 	step
-		.' Step into the teleporter |q Defeat the Custodian##7922/1 |goto 1306,-1197,-932
+		'_Step into_ the teleporter |goto 1306,-1197,-932 < 10
 		.kill 1 Bio-Dome 3 Custodian##2781679
 		.' Destroy the Bio-Dome 3 Custodian |q Defeat the Custodian##7922/1 |goto Farside 1458,-1516,-1062
 		.click Matrix Defense Console E##263941
@@ -194,7 +189,7 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		..turnin Defeat the Custodian##7922
 		..accept Skeech in Space##7716
 	step
-		.' Step into the teleporter |goto 1458,-1493,-1060 <10
+		'_Step into_ the teleporter |goto 1458,-1493,-1060 < 10
 		.click Destroyed Scanbot##263839
 		..accept Field Repairs##7926 |goto Farside 1281,-1134,-916
 	step
@@ -231,7 +226,7 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		'Press _C_ to use your communicator:
 		..turnin Power Denied##7728
 	step
-		.' Follow the stone path up |goto 1059,-1332,-963 <10
+		.' Follow the stone path up |goto 1059,-1332,-963 < 10
 		.' Return to the Cascade Cliffs |q Strange Skeech##7720/2 |goto Farside 1106,-1306,-919
 		.click Operating Table##263261
 		.' Reassemble the Skeech Remains |q Strange Skeech##7720/4 |goto 1102,-1264,-921
@@ -278,12 +273,11 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		..turnin It's Not Too Late##7724
 		..accept He's Lost It##7726
 	step
-		.' Follow the winding stone path around |goto 1167,-1685,-962 <10
-		.' Cross the stone bridge |goto 1184,-1642,-921 <10
+		.' Follow the _winding stone path_ up and around |goto 1167,-1685,-962 < 10
+		.' _Cross_ the stone bridge |goto 1184,-1642,-921 < 10
 		.' Find the path to Progenitor's Hideaway |q He's Lost It##7726/1 |goto 1248,-1557,-907
 		.' Meet Lucent |q He's Lost It##7726/2 |goto Farside 1504,-1540,-893
-		.kill 1 Lucent##2751124
-		.' Kill Lucent |q He's Lost It##7726/3 |goto 1553,-1540,-893
+		.kill 1 Lucent##2751124 |q He's Lost It##7726/3 |goto 1553,-1540,-893
 		.' Find a spot to bury Lucent |q He's Lost It##7726/4 |goto 1801,-1527,-867
 		.click Burial Plot##263227
 		.' Bury Lucent |q He's Lost It##7726/5 |goto 1800,-1527,-868
@@ -292,11 +286,12 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		..turnin He's Lost It##7726
 		..accept Bio-Dome 4##7736
 	step
-		.' Step into the teleporter |goto Farside 1930,-1138,-722
+		.' Use the teleporter to _return to Camp Woodview_ |goto Farside 1986,-1235,-937 < 10
+		.' Step into the teleporter |goto Farside 1930,-1138,-722 < 7
 		.talk Dorian Walker##263842
 		.' Speak with Dorian Walker |q Bio-Dome 4##7736/1 |goto Farside 2975,-1055,-716
-		.' Step into the teleporter |goto 3421,-1157,-722
 	step
+		.' _Step into_ the teleporter |goto 3421,-1157,-722
 		.talk Explorer Tanoga##262866
 		..turnin Bio-Dome 4##7736 |goto Farside 4076,-1187,-725
 		..accept Extreme Adaptations##7738 |goto 4076,-1187,-725
@@ -314,6 +309,7 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		'Press _C_ to use your communicator:
 		..turnin Touring Bio-Dome 4##8789
 	step
+		.' _Step into_ the teleporter |goto Farside 3943,-1222,-717 < 10
 		.click Blackrock Pelter##2984662
 		.' Press _T_ to scan a Blackrock Pummeler or Pelter |q Extreme Adaptations##7738/1 |goto Farside 4095,-1305,-929
 		.click Sandhoof Bull##2934003
@@ -394,9 +390,9 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		'Press _C_ to use your communicator:
 		..turnin Rocket Rescue##7880
 	step
-		.' Jump into the big _tornado_ while _unmounted_ |goto 4322,-1044,-927 <10
-		.' Jump into the big _tornado_ while _unmounted_ |goto 4409,-1128,-851 <10
-		.' Jump into the big _tornado_ while _unmounted_ |goto 4418,-1196,-834 <10
+		.' Jump into the big _tornado_ while _unmounted_ |goto 4322,-1044,-927 < 10
+		.' Jump into the big _tornado_ while _unmounted_ |goto 4409,-1128,-851 < 10
+		.' Jump into the big _tornado_ while _unmounted_ |goto 4418,-1196,-834 < 10
 		.kill 1 Stormfury##542108
 		.' Destroy Stormfury |q Primal Overlord##7884/1 |goto 4340,-1192,-804
 	step
@@ -435,9 +431,31 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		'Press _C_ to use your communicator:
 		..turnin Lost Relics##7878
 	step
+		.click Rogue Caretaker Node##263700
+		.' Deactivate Rogue Caretaker Nodes |q Fighting the System##7939/1 |count 14 |goto Farside 4671,-1257,-953
+	step
+		.kill 1 Flamewalker Inciter##654382
+		'Press _C_ to open your communicator:
+		..accept No More Pellementals##7940 |goto 4785,-1311,-983
+	step
+		.click Rogue Caretaker Node##263700
+		.' Deactivate Rogue Caretaker Nodes |q Fighting the System##7939/1 |count 28 |goto Farside 4737,-1228,-976
+		.click Rogue Caretaker Node##263700
+		.' Deactivate Rogue Caretaker Nodes |q Fighting the System##7939/1 |count 42 |goto 4714,-1298,-974
+		.click Rogue Caretaker Node##263700
+		.' Deactivate Rogue Caretaker Nodes |q Fighting the System##7939/1 |count 57 |goto 4809,-1256,-981
+	step
+		.click Rogue Caretaker Node##263700
+		.' Deactivate Rogue Caretaker Nodes |q Fighting the System##7939/1 |count 71 |goto Farside 4808,-1280,-981
+		.click Rogue Caretaker Node##263700
+		.' Deactivate Rogue Caretaker Nodes |q Fighting the System##7939/1 |count 85 |goto 4755,-1370,-968
+		.click Rogue Caretaker Node##263700
+		.' Deactivate Rogue Caretaker Nodes |q Fighting the System##7939/1 |goto 4872,-1299,-988
+	step
+		'Press _C_ to use your Communicator:
+		..turnin Fighting the System##7939
+	step
 		.' All around this area:
-		.click Rogue Caretaker Node##263693
-		.' Deactivate Rogue Caretaker Nodes |q Fighting the System##7939/1 |goto Farside 4722,-1295,-975
 		.kill Flamewalker Inciter##591953
 		.kill Flamewalker Cinder##580126
 		.kill Flamewalker Pyro##581252
@@ -446,12 +464,8 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		.click Charging Flamewalker Servitor##587271
 		.' Press _T_ to destroy Charging Flamewalker Servitors |q Pesky Probes##7945/1 |goto 4713,-1308,-975
 	step
-		'Press _C_ to use your communicator:
-		..accept No More Pellementals##7940 |goto 4786,-1334,-985
-	step
-		'Press _C_ to use your communicator:
+		'Press _C_ to use your Communicator:
 		..turnin Pesky Probes##7945
-		..turnin Fighting the System##7939
 		..turnin Stop the Flamewalkers##7944
 	step
 		.kill Flamewalker Ritualist##609077
@@ -464,9 +478,9 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		..accept Fiery Distractions##7942
 	step
 		.kill 1 Acolyte Ember-Walker##625514
-		.' Kill Acolyte Ember-Walker |q Fiery Distractions##7942/3 |goto 4869,-1522,-984
+		.' Kill Acolyte Ember-Walker |q Fiery Distractions##7942/3 |goto Farside 4869,-1522,-984
 		.kill 1 Flamewalker Cinder##618104
-		.' Collect a Volatile Cinder from a Flamewalker Cinder |q Fiery Distractions##7942/1 |goto 4849,-1564,-985
+		.' Collect a Volatile Cinder from a Flamewalker Cinder |q Fiery Distractions##7942/1 |goto 4773,-1457,-986
 		.click Pell Barrel##263593
 		.' Use the Volatile Cinder on Pell Barrels |q Fiery Distractions##7942/2 |goto 4769,-1478,-985
 		.kill 1 Acolyte Flame-Binder##622400
@@ -476,7 +490,7 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		..turnin Fiery Distractions##7942
 		..accept Viral Countermeasures##7941
 	step
-		.' Follow the dirt path and stairs up |goto 4637,-1386,-932 <10
+		.' Follow the _dirt path and stairs_ up |goto 4637,-1386,-932 < 10
 		.' Press _C_ to use your communicator
 		..accept Fall of the High Priest##7943 |goto 4523,-1522,-832
 		.click Pell Control Point##263673 |tip These can be found around this big central structure.
@@ -485,7 +499,7 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		'Press _C_ to use your communicator:
 		..turnin Viral Countermeasures##7941
 	step
-		.' Continue up the stone path |goto 4398,-1589,-806 <10
+		.' _Continue up_ the stone path |goto 4398,-1589,-806 < 10
 		.kill 1 High Priest Flame-Guardian##558846
 		.' Kill High Priest Flame-Guardian |q Fall of the High Priest##7943/1 |goto Farside 4331,-1551,-684
 		.click Flamewalker Console##263569
@@ -495,8 +509,9 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		..turnin Fall of the High Priest##7943
 		..accept Touchdown Site Bravo##7946
 	step
-		.' Step into the teleporter |goto Farside 4047,-1161,-720 <10
-		.' Step through the second teleporter |goto Farside 3003,-1045,-712 <10
+		.' Use the teleporter to _return to Shady Ledge_ |goto 3995,-1254,-936
+		.' _Step into_ the next teleporter |goto Farside 4047,-1161,-720 < 10
+		.' _Step through_ the final teleporter |goto Farside 3003,-1045,-712 < 10
 		.click Ship to Touchdown Site Bravo##269375
 		.' Click _Yes_ to travel to Site Bravo |q Touchdown Site Bravo##7946/3 |goto 5895,-4948,-496
 	step
@@ -508,18 +523,21 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 	step
 		.click Transmat Terminal##270552 |goto 4349,-5619,-709
 		.' Click _Yes_ to set your Recall to Touchdown Site Bravo
-		|confirm
+		|confirm |q 6178
 	step
 		.' Look for Spigo's ship |q Into the Void##6178/1 |goto Farside 4036,-5520,-727
 	step
 		.kill 1 Cobalt Titan##652475
-		..accept Aggressive Aliens##6183
+		'Press _C_ to use your communicator:
+		..accept Aggressive Aliens##6183 |goto Farside 4062,-5475,-733
 	step
 		.' All around this area:
 		.click Dustrunner Debris##658517
 		.' Search Dustrunner Debris for clues |q Into the Void##6178/2 |goto 3962,-5549,-720
-		.kill 1 Banded Rootbrute##663809
-		.kill 1 Cobalt Titan##632793
+		.kill 1 Banded Rootbrute##663809+
+		.kill 1 Cobalt Titan##632793+
+		.kill 1 Azurecrowned Rootbrute##284067+
+		.kill 1 Craterclaw Slasher##703396+
 		.' Kill space critters |q Aggressive Aliens##6183/1 |goto 3985,-5549,-722
 	step
 		'Press _C_ to use your communicator:
@@ -532,7 +550,7 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		.click Dustrunner Hull Door##269265
 		.' Click _Yes_ to enter Spigo's crashed ship |q Element of Surprise##6179/2 |goto 3460,-5795,-757
 		.click SHIPMENT: 018J##269269
-		.' Enter Spigo's code, 60191 |q Element of Surprise##6179/3 |goto Farside 3527,-5937,-845
+		.' Enter Spigo's code, _60191_ |q Element of Surprise##6179/3 |goto Farside 3527,-5937,-845
 		.' Defend against the Darkspur Cartel's ambush |q Element of Surprise##6179/4 |goto 3527,-5937,-845
 	step
 		'Press _C_ to use your communicator:
@@ -587,7 +605,7 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		..turnin Light the Sky##6181 |goto 3968,-6093,-748
 		..accept Bringing Back the Bounty##6182 |goto 3968,-6093,-748
 	step
-		.' Follow Vlogg as he walks. Use the temporary skill to _Smack_ him when he stops.
+		.' _Follow Vlogg_ as he walks. Use the temporary skill to _Smack_ him when he stops. |tip You will need to fight the enemies and avoid traps as you go.
 		.kill 1 Darkspur Destroyerbot##762674
 		.' Defeat the Darkspur Destroyerbot |q Bringing Back the Bounty##6182/2 |goto Farside 4226,-5957,-736
 		.' Turn Vicious Vlogg over to Spigo |q Bringing Back the Bounty##6182/3 |goto 4254,-5963,-736
@@ -599,12 +617,12 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		..accept Meet the Team##6149
 	step
 		.' Deliver the package |q Overnight Delivery##6431/1 |goto Farside 3691,-6193,-729
-		.' Press _T_ to set off a signal flare |q Overnight Delivery##6431/2 |goto 3677,-6209,-729
+		.' Press _T_ to set off a signal flare |q Overnight Delivery##6431/2 |goto 3668,-6210,-729
 	step
 		'Press _C_ to use your communicator:
 		..turnin Overnight Delivery##6431
 	step
-		.' Follow the stone pathway up and around |goto Farside 4051,-6336,-720 <10
+		.' Follow the _stone pathway_ up and around |goto Farside 4061,-6358,-727 < 10
 		.talk Corporal Harlock##828625
 		.' Speak with Corporal Harlock |q Meet the Team##6149/3 |goto 4007,-6407,-660
 		.talk Specialist Smallgrove##828563
@@ -617,16 +635,28 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		..accept Generating Clues##6150 |goto 4003,-6409,-660
 		..accept Securing Base Camp##6158 |goto 4003,-6409,-660
 	step
-		.' At Arcanus Base:
+		.click Expedition Generator##269127
+		.' Reactivate the Expedition Generators |q Generating Clues##6150/1 |count 1 |goto Farside 4045,-6435,-659
+		.click Expedition Generator##269109
+		.' Reactivate the Expedition Generators |q Generating Clues##6150/1 |count 2 |goto 4005,-6462,-660
+		.click Expedition Generator##269109
+		.' Reactivate the Expedition Generators |q Generating Clues##6150/1 |count 3 |goto 3944,-6427,-659
+		.click Expedition Generator##269109
+		.' Reactivate the Expedition Generators |q Generating Clues##6150/1 |count 4 |goto 3868,-6443,-660
+		.click Expedition Generator##269109
+		.' Reactivate the Expedition Generators |q Generating Clues##6150/1 |goto 3841,-6598,-665
+	step
+		'Press _C_ to open your Communicator:
+		..turnin Generating Clues##6150
+	step
+		.' All around Arcanus Base:
 		.click Expedition Turret##822432
-		.' Reactivate Expedition Turrets |q Securing Base Camp##6158/1 |goto 4013,-6402,-660
-		.click Expedition Generator##269128
-		.' Reactivate the Expedition Generators |q Generating Clues##6150/1 |goto 3942,-6426,-660
-		.kill Ravenous Frizlet##415692
-		.' Kill Ravenous aliens |q Securing Base Camp##6158/2 |goto Farside 4189,-6549,-669
+		.' Reactivate Expedition Turrets |q Securing Base Camp##6158/1 |goto Farside 3858,-6507,-660
+	step
+		.kill Ravenous Frizlet##415692+
+		.' Kill Ravenous aliens |q Securing Base Camp##6158/2 |goto Farside 4209,-6507,-687
 	step
 		'Press _C_ to use your communicator:
-		..turnin Generating Clues##6150
 		..turnin Securing Base Camp##6158
 	step
 		.' Standing next to you in Arcanus Base:
@@ -651,15 +681,15 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 	step
 		.click Expedition Supplies##832943
 		.' Collect Expedition Supplies |q Picking Up the Pieces##6155/1 |goto 4596,-7213,-601
-		.kill Moonfell Walker##842561
-		.kill Ravenous Frizlet##837147
-		.kill Lunarfin Stalker##816521
+		.kill Moonfell Walker##842561+
+		.kill Ravenous Frizlet##837147+
+		.kill Lunarfin Stalker##816521+
 		.' Kill alien creatures |q A Preemptive Strike##6154/1 |goto 4596,-7213,-601
 	step
 		'Press _C_ to use your communicator:
 		..turnin A Preemptive Strike##6154
 	step
-		.' Step into the teleporter |goto 4456,-7207,-596 <10
+		.' _Step into_ the teleporter |goto 4456,-7207,-596 < 10
 		.kill 1 Derelict Squirg##875722
 		..accept Decontamination Protocol: Sterilize##6157 |goto Farside 5592,-11964,-460
 	step
@@ -671,26 +701,27 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		'Press _C_ to use your communicator:
 		..accept Decontamination Protocol: Exterminate##6156 |goto 5733,-11980,-460
 	step
+		.click Expedition Datapad##268978 |tip Found around this area. They are marked with orange cogs on your minimap.
+		.' Find Expedition Datapads |q Secondhand Research##6152/1 |goto 5612,-11966,-460
+	step
 		.kill Derelict Squirg##815313
 		.' Kill Derelict Squirg |q Decontamination Protocol: Exterminate##6156/1 |goto 5746,-11980,-460
 	step
 		'Press _C_ to use your communicator:
 		..turnin Decontamination Protocol: Exterminate##6156
 	step
-		.click Expedition Datapad##268978 |tip Found around this area. They are marked with orange cogs on your minimap.
-		.' Find Expedition Datapads |q Secondhand Research##6152/1 |goto 5612,-11966,-460
-	step
-		.' Use the elevator |goto 5611,-11923,-460 <10
-		.kill Derelict Augmentor DS-01##531710
-		.kill Derelict Maintenance Construct##698641
-		.kill Derelict Command Construct##808269
+		.' Use the _elevator_ |goto 5611,-11923,-460 < 10
+		.kill Derelict Augmentor DS-01##531710+
+		.kill Derelict Maintenance Construct##698641+
+		.kill Derelict Command Construct##808269+
 		.' Destroy Derelict constructs |q Secondhand Research##6152/3 |goto 5591,-11827,-432
+	step
 		.click Eldan Research Samples##269031
-		.' Collect Eldan Research Samples |q Secondhand Research##6152/2 |goto 5676,-11594,-415
+		.' Collect Eldan Research Samples |q Secondhand Research##6152/2 |count 1 |goto 5676,-11594,-415
 		.click Eldan Research Samples##269032
-		.' Collect Eldan Research Samples |q Secondhand Research##6152/2 |goto 5676,-11465,-415
+		.' Collect Eldan Research Samples |q Secondhand Research##6152/2 |count 2 |goto 5676,-11465,-415
 		.click Eldan Research Samples##269030
-		.' Collect Eldan Research Samples |q Secondhand Research##6152/2 |goto 5478,-11464,-415
+		.' Collect Eldan Research Samples |q Secondhand Research##6152/2 |count 3 |goto 5478,-11464,-415
 		.click Eldan Research Samples##269033
 		.' Collect Eldan Research Samples |q Secondhand Research##6152/2 |goto 5476,-11594,-415
 	step
@@ -701,8 +732,8 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		'Press _C_ to use your communicator:
 		..accept Trouble at Base Camp##6153
 	step
-		.' Use your Recall ability to quickly leave the cave.
-		|confirm
+		.' Use your Recall ability to quickly leave the cave
+		|confirm |q 6153
 	step
 		.talk Sergeant Redfall##269135
 		..turnin Trouble at Base Camp##6153 |goto Farside 4003,-6408,-660
@@ -739,8 +770,16 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		.talk Meloll Goldglade##268057
 		..turnin Best Safecracker This Side of Nearside##6167 |goto 3460,-5521,-740
 	step
-		.click Repellent Emitter##268053 |tip These are spread throughout this area. They're marked with an orange cog on your minimap. Most can be found north of this spot.
-		.' Activate Repellent Emitters |q Clearing the Airwaves##6479/1 |goto Farside 3412,-5456,-727
+		.click Repellent Emitter##268050
+		.' Activate Repellent Emitters |q Clearing the Airwaves##6479/1 |count 1 |goto 3489,-5688,-729
+		.click Repellent Emitter##268047
+		.' Activate Repellent Emitters |q Clearing the Airwaves##6479/1 |count 2 |goto 3661,-5615,-728
+		.click Repellent Emitter##268051
+		.' Activate Repellent Emitters |q Clearing the Airwaves##6479/1 |count 3 |goto 3619,-5775,-722
+		.click Repellent Emitter##268052
+		.' Activate Repellent Emitters |q Clearing the Airwaves##6479/1 |count 4 |goto 3614,-5895,-727
+		.click Repellent Emitter##268049
+		.' Activate Repellent Emitters |q Clearing the Airwaves##6479/1 |goto 3535,-5985,-723
 	step
 		'Press _C_ to use your communicator:
 		..turnin Clearing the Airwaves##6479
@@ -751,18 +790,18 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 	step
 		.' Jump through and collect spilled Loftite Crystals |q Denser than Diamonds##6184/1 |goto 3437,-5771,-724
 	step
-		.kill Darktide Enforcer##869847
-		.kill Darktide Obstructer##872258
-		.kill Darktide Engulfer##854614
+		.kill Darktide Enforcer##869847+
+		.kill Darktide Obstructer##872258+
+		.kill Darktide Engulfer##854614+
 		.' Kill Darktide Ikthians |q Against the Current##6160/1 |goto Farside 3383,-5291,-731
 	step
 		.' You may have looted a quest item while doing the previous quest
 		.' Press _I_ to open your inventory and right click the _Ikthian Weapon Charging Cell_
 		..accept Batteries Found Near Me##6166
 	step
-		.kill Darktide Enforcer##869847
-		.kill Darktide Obstructer##872258
-		.kill Darktide Engulfer##854614
+		.kill Darktide Enforcer##869847+
+		.kill Darktide Obstructer##872258+
+		.kill Darktide Engulfer##854614+
 		.' Collect Charging Cells from Darktide Ikthians |q Batteries Found Near Me##6166/1 |goto 3374,-5222,-731
 	step
 		'Press _C_ to use your communicator:
@@ -778,9 +817,9 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		.click Exile Battle Suit##954516
 		.' Pilot the Exile Battle Suit |q Suits Me Just Fine##6161/1 |goto 3129,-5396,-681
 	step
-		.kill Darktide Razorfin##935313
-		.kill Darktide Sicklegill##933034
-		.kill Darktide Piercer##934842
+		.kill Darktide Razorfin##935313+
+		.kill Darktide Sicklegill##933034+
+		.kill Darktide Piercer##934842+
 		.' Kill Darktide forces with the Exile Battle Suit |q Suits Me Just Fine##6161/2 |goto 3051,-5487,-683
 	step
 		.' Go to Checkpoint Bravo |q Suits Me Just Fine##6161/3 |goto 2976,-5637,-682
@@ -789,8 +828,8 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		..turnin Suits Me Just Fine##6161
 		..accept Word from the Inside##6162
 	step
-		.kill Equalizer Security Probe##963860
-		.kill Equalizer Protector##964291 |tip Look for yellow dots on your minimap.
+		.kill Equalizer Security Probe##963860+
+		.kill Equalizer Protector##964291+ |tip Look for yellow dots on your minimap.
 		.' Destroy Equalizer constructs |q Observe and Report##6168/1 |goto Farside 2990,-5789,-684
 	step
 		'Press _C_ to use your communicator:
@@ -803,26 +842,27 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		..turnin Word from the Inside##6162
 		..accept Tell Us Everything##6163
 	step
-		.' Go up the elevator |goto Farside 2977,-5875,-685 <10
+		.' _Go up_ the elevator |goto Farside 2977,-5875,-685 < 10
 		.click Darktide Satellite Uplink##268065
 		.' Hack the 1st Darktide Satellite Uplink |q Tell Us Everything##6163/1 |goto 2986,-5940,-662
 		.click Darktide Satellite Uplink##268064
 		.' Hack the 2nd Darktide Satellite Uplink |q Tell Us Everything##6163/2 |goto 2979,-6047,-662
 		.click Darktide Satellite Uplink##268063
 		.' Hack the 3rd Darktide Satellite Uplink |q Tell Us Everything##6163/3 |goto 3010,-6128,-661
-		.' Go up the elevator |goto 3079,-6200,-661 <10
+		.' _Go up_ the elevator |goto 3079,-6200,-661 < 10
 		.' Find Commander Durek |q Tell Us Everything##6163/4 |goto Farside 3073,-6258,-583
 	step
 		.talk Commander Durek##267987
 		..turnin Tell Us Everything##6163 |goto 3065,-6260,-583
 		..accept The Anti-Gravity of the Situation##8668 |goto 3065,-6260,-583
 	step
-		.kill Darktide Finripper##2018838
-		.kill Darktide Dorsalcutter##2029052
-		.kill Darktide Needlefin##1908501
+		.kill Darktide Finripper##2018838+
+		.kill Darktide Dorsalcutter##2029052+
+		.kill Darktide Needlefin##1908501+
 		.' Kill Darktide Finrippers, Dorsalecutters, and Needlefins |q The Anti-Gravity of the Situation##8668/2 |goto 3202,-6267,-583
-		.kill Darktide Dragoon##2019661
+		.kill Darktide Dragoon##2019661+
 		.' Kill Darktide warbots |q The Anti-Gravity of the Situation##8668/1 |goto 3202,-6267,-583
+	step
 		.' Regroup at the rally point |q The Anti-Gravity of the Situation##8668/3 |goto 2918,-6413,-575
 	step
 		.talk Commander Durek##268062
@@ -854,6 +894,9 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		'Press _C_ to use your communicator:
 		..turnin Off the Scales##6481
 	step
+		.' Use your Recall ability to quickly return to _Touchdown Site Bravo_
+		|confirm |q 6184
+	step
 		.talk Spigo##269147
 		..turnin Denser than Diamonds##6184 |goto Farside 4256,-5963,-736
 	step
@@ -862,5 +905,5 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 		..accept Opening Doors##8869
 	step
 		.click Ship to Walker's Landing##270550
-		.' Click _Yes_ to travel via Flight Master Amos |q Thayd Into You##6537/2 |goto 4435,-5663,-713
+		.' Click _Yes_ to return to Thayd |q Thayd Into You##6537/2 |goto 4435,-5663,-713
 ]])

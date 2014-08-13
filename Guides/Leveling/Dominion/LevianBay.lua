@@ -92,7 +92,7 @@ ZGV:RegisterGuide("Dominion\\LevianBay (3-6)",
 		.' Light the Signal Flares |q Lighting the Way##6780/2 |goto LevianBay -3568,-6166,-984 |tip They are all along this path.
 		.kill Seaspine Girrok##263006+
 		.kill Seaspine Dagun##263134+ 
-		.' Kill Seaspine or Stomrcaller beasts |q Lighting the Way##6780/1 |goto LevianBay -3665,-6260,-980
+		.' Kill Seaspine or Stomrcaller beasts |q Lighting the Way##6780/1 |goto LevianBay -3580,-6126,-976
 		|only chua, draken, human
 	step
 		'Press _C_ to open your Communicator:
@@ -108,6 +108,9 @@ ZGV:RegisterGuide("Dominion\\LevianBay (3-6)",
 		'_Enter_ the small cave |goto LevianBay -3315,-5957,-968 < 10
 		.click Cambot Z-1n##263763
 		.' Retrieve Cambot Z-1n |q Find Artemis Zin##5856/2 |goto -3263,-5965,-961 |tip Kill Malverine's as you do this quest.
+	step
+		.click Slain Exile Agent##263633
+		..accept What Is Dead May Never Spy##6142 |goto LevianBay -3242,-5901,-969
 	step
 		'_Exit_ the cave |goto LevianBay -3311,-5954,-966 < 10
 		.click Blood-Spattered Crate##263765
@@ -126,11 +129,18 @@ ZGV:RegisterGuide("Dominion\\LevianBay (3-6)",
 		..turnin Find Artemis Zin##5856 |goto LevianBay -3011,-6070,-961
 		..accept Eldan Insecurity##5857 |goto -3011,-6070,-961
 	step
+		.talk Analyst Spector##263651
+		..turnin What Is Dead May Never Spy##6142 |goto LevianBay -3012,-6082,-961
+	step
 		.click Eldan Terminal##263831
 		.' Use the Eldan Terminal |q Eldan Insecurity##5857/1 |goto LevianBay -2721,-5941,-1025
 	step
 		'Press _C_ to open your Communicator:
 		..accept Eldan Insecurity##5857 |goto -2770,-5997,-1068
+	step
+		.kill 1 Eldan Defender##298968
+		.' Press _C_ to open your Communicator:
+		..accept Rerouting Power##5867 |goto LevianBay -2728,-6010,-1068
 	step
 		.' Jump through the first Eldan Power Pod |q Rerouting Power##5867/1 |goto -2730,-6024,-1067
 	step
@@ -141,7 +151,7 @@ ZGV:RegisterGuide("Dominion\\LevianBay (3-6)",
 		.click Power Core##263749
 		.kill Malfunctioning Scout Drone##268854+
 		.kill Eldan Defender##281756+
-		.' Collect Power Core Fragments |q Eldan Insecurity##5857/2 |goto -2770,-5997,-1068
+		.' Collect Power Core Fragments |q Eldan Insecurity##5857/2 |goto LevianBay -2825,-5793,-1068
 	step
 		'Press _C_ to open your Communicator:
 		..turnin Rerouting Power##5867
@@ -172,6 +182,9 @@ ZGV:RegisterGuide("Dominion\\LevianBay (3-6)",
 		.click Eldan Control Panel##263607
 		.' Release the fourth Repair Construct |q Automated Repairs##5860/4 |goto -1930,-5893,-1062
 	step
+		.click Eldan Security Node##263754
+		.' Repair the western Eldan Security Node |q Seizing Control##5859/4 |goto -1951,-5986,-1062
+	step
 		'_Head back_ through the corridor |goto LevianBay -1917,-5985,-1062 < 10
 		.' _Continue_ into the round hallway |goto -1684,-5986,-1053 < 10
 		.' Release the first Repair Construct |q Automated Repairs##5860/1 |goto -1577,-5921,-1062
@@ -184,13 +197,7 @@ ZGV:RegisterGuide("Dominion\\LevianBay (3-6)",
 		.click Eldan Security Node##263755
 		.' Repair the eastern Eldan Security Node |q Seizing Control##5859/3 |goto LevianBay -1583,-5984,-1062
 	step
-		'_Head back _ though the corridor |goto LevianBay -1624,-5985,-1062 < 10
-		.'_Continue_ into the round hallway |goto -1848,-5986,-1053 < 10
-		.click Eldan Security Node##263754
-		.' Repair the western Eldan Security Node |q Seizing Control##5859/4 |goto -1951,-5986,-1062
-	step
-		'_Head back_ through the corridor |goto LevianBay -1908,-5986,-1061 < 10
-		.'_Continue_ into the round hallway |goto -1768,-5925,-1053 < 10
+		.'_Continue_ into the southern hallway |goto -1768,-5925,-1053 < 10
 		.' Repair the Eldan Primary Access Hub |q Seizing Control##5859/5 |goto -1766,-5818,-1045
 	step
 		.' Use the Eldan Teleporter to return to the Elder Vault |q Seizing Control##5859/6 |goto LevianBay -1767,-6019,-1048
@@ -203,22 +210,32 @@ ZGV:RegisterGuide("Dominion\\LevianBay (3-6)",
 		.' Take the Eldan Teleporter to Engineering Sublevel Theta |q The Key to Power##5959/1 |goto LevianBay -2826,-5955,-1322
 	step
 		'Press _C_ to open your Communicator:
-		..accept Skeech Incursion ##5960 |goto LevianBay -1765,-6241,-954
+		..accept Skeech Incursion##5960 |goto LevianBay -1765,-6241,-954
 	step
+		.' _Jump down_ here |goto LevianBay -1849,-6216,-954 < 10
 		.click Eldan Chest##263732 |tip Jump down to the path between the cliffs.
 		.' Retrieve the Human Access Key |q The Key to Power##5959/2 |goto LevianBay -1868,-6226,-989
 	step
+		.kill 1 Skeech Hag##270263 |goto LevianBay -1955,-6194,-1005
+		.collect Skeech Hag's Head##15028
+		
+		.' Use the Skeech Hag's Head in your inventory |use Skeech Hag's Head##15028
+		..accept Getting a Head##5863
+	step
 		.click Skeech Burrow##263717
-		.' Collapse Skeech Burrows |q Skeech Incursion ##5960/2 |goto -1837,-6238,-957
+		.' Collapse Skeech Burrows |q Skeech Incursion##5960/2 |goto -1837,-6238,-957
 		.kill Skeech Brawler##262852+, Skeech Shaman##262860+
-		.' Kill Skeech |q Skeech Incursion ##5960/1 |goto -1837,-6238,-957
+		.' Kill Skeech |q Skeech Incursion##5960/1 |goto -1837,-6238,-957
 		.click Eldan Access Key Fragment##263724
 		.' Collect Access Key Fragments |q The Key to Power##5959/3 |goto -1837,-6238,-957
 	step
 		'Press _C_ to open your Communicator:
-		..turnin Skeech Incursion ##5960
+		..turnin Skeech Incursion##5960
 	step
 		.' Use the Eldan Teleporter to return to the Elder Vault |q The Key to Power##5959/4 |goto LevianBay -1771,-6241,-954
+	step
+		.talk Analyst Spector##263652
+		..turnin Getting a Head##5863 |goto LevianBay -2723,-5950,-1327
 	step
 		.talk The Caretaker##263636
 		..turnin The Key to Power##5959 |goto LevianBay -2704,-5990,-1327
@@ -261,6 +278,10 @@ ZGV:RegisterGuide("Dominion\\LevianBay (3-6)",
 	step
 		.kill 1 Exile Warbot##262833
 		.' Defeat the Exile Warbot |q A Daring Escape##5866/1 |goto LevianBay -2422,-4918,-975
+	step
+		.' Follow the _path around_ |goto -2367,-5040,-981 < 10
+		.click Girrok Vomit##262777
+		..accept Girrok Ate My Status Report##8964 |goto -2336,-4952,-953
 	step
 		.click Navigation Controls##263668
 		.' Choose _Yes_ to leave Levian Bay behind

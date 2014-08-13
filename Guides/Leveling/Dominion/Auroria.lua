@@ -454,16 +454,19 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		..turnin Denial of Resources##5619 |goto -2107,-1615,-1003
 	step
 		'Press the icon on the bottom right of your action bar to:
-		.' Recall to Hycrest Point - Transmat |goto -4388,-607,-968 < 100 |c |noway |q 5515
-	step
+		.' Recall to Hycrest Point - Transmat |goto -4388,-607,-968 < 100 |c |noway |q 5621
+	step  //May need tuning
 		.talk Governor Aluviel##286691
 		.' Speak with Governor Aluviel |q Forever Honored##5621/1 |goto -2479,-1840,-879
 		..turnin Forever Honored##5621
-		..accept Production Problems##3899 |goto -2479,-1840,-879
-	step
+		..accept Production Problems##3899 |goto -2479,-1840,-879 |or
+		..accept Production Problems##8147 |goto -2479,-1840,-879 |or
+	step  //May need tuning
 		'_Exit Hycrest_ through the stone walls |goto -2304,-1980,-870 < 10
 		.talk Production Facility Manager##277280
-		..turnin Production Problems##3899 |goto -2089,-2044,-875
+		..turnin Production Problems##3899 |goto -2089,-2044,-875 |or
+		..turnin Production Problems##3899 |goto -2089,-2044,-875 |or
+
 		..accept The Red Tape of Courage##5955 |goto -2089,-2044,-875
 	step
 		.talk Hot Beverage Requisitions##277385

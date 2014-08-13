@@ -780,7 +780,8 @@ function ZGV:RunScheduledGuideLoad()
 end
 
 function ZGV:LoadGuideFileSet(basefile)
-	return self:LoadGuideFile(basefile.."_MASTER") or self:LoadGuideFile(basefile) or self:LoadGuideFile(basefile.."Trial")
+	local success = self:LoadGuideFile(basefile.."_MASTER") or self:LoadGuideFile(basefile) or self:LoadGuideFile(basefile.."Trial")
+	if success then self:Debug("At least one of "..basefile.." loaded, good.") else self:Debug("NONE of "..basefile.." loaded!!") end
 end
 
 function ZGV:LoadGuideFile(file)
@@ -788,7 +789,13 @@ function ZGV:LoadGuideFile(file)
 	file = ZGV.INFO.assetfolder.."\\Guides\\"..file..".lua"
 	self:Debug("Loading "..file)
 	local fun,err = loadfile(file)
-	if fun then fun() return true else self:Debug("ERROR: "..err) end
+	if fun then
+		fun()
+		return true
+	else
+		if err:find("Result too large") then err="(file not found)" end
+		self:Debug("ERROR: "..err)
+	end
 end
 
 -----------------------------------------

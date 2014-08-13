@@ -144,6 +144,7 @@ ZGV:RegisterGuide("Dominion\\Malgrave (41-46)",
 		..turnin These Old Bones##7214 |goto Malgrave 1886,3889,-956
 		..accept Bret's Lackeys##7215 |goto 1887,3888,-956
 	step
+		//Sweet, Sweet Cactus Apples popped, but I was unable to find any inside of the town
 		.kill 1 Hard-Drinkin' Eberhart##971065
 		.' Destroy the ghost of Hard-Drinkin' Eberhart |q Bret's Lackeys##7215/2 |goto Malgrave 1827,3865,-954
 		.kill 1 Coal-Lung Carl##938463
@@ -335,12 +336,12 @@ ZGV:RegisterGuide("Dominion\\Malgrave (41-46)",
 		.click Data Module##280601
 		.' Activate Data Modules |q Boring But Vital Data##7219/1 |goto 2024,4125,-932
 	step
-		'Press _C_ to use your communicator:
+		.' Press _C_ to use your communicator:
 		..turnin Boring But Vital Data##7219
 		..turnin Scrab Menace##7218
 	step
 		.kill 1 Orius the Scrab King##10925803
-		.get 1 Orius's Stinger##19306
+		.collect Orius's Stinger##19306 |q Giant Enemy Scrab##7220 |future
 		.use Orius's Stinger##19306
 		..accept Giant Enemy Scrab##7220 |goto Malgrave 2072,4146,-932
 	step
@@ -616,8 +617,8 @@ ZGV:RegisterGuide("Dominion\\Malgrave (41-46)",
 		.' Fix the Loftite-Tipped Rockgrinder |q Checks and Measures##7420/1 |goto 1648,2960,-814
 	step
 		.click Transmat Terminal##280531
-		.' Set _Area 77_ Transmat Terminal as your Recall |goto 1647,2945,-815
-		|confirm
+		.' Set _Area 77_ Transmat Terminal as your Recall point |goto 1647,2945,-815
+		|confirm |q 7420
 	step
 		.talk Safety and Security Supervisor##265241
 		..turnin Checks and Measures##7420 |goto 1647,2882,-820
@@ -628,9 +629,9 @@ ZGV:RegisterGuide("Dominion\\Malgrave (41-46)",
 	step
 		.click Area 77 Taxi Kiosk##280558
 		.' Get the _taxi_ flight point |goto Malgrave 1687,2833,-820
-		|confirm
+		|confirm |q 8562
 	step
-		.' Cross the bridge |goto 1643,2770,-838
+		.' _Cross_ the bridge |goto 1643,2770,-838
 		.talk Product Research Assistant##284362
 		..turnin A Deadly Demographic##8562 |goto Malgrave 1644,2630,-838
 		..accept Captured Clones##7395 |goto 1644,2630,-838
@@ -658,7 +659,7 @@ ZGV:RegisterGuide("Dominion\\Malgrave (41-46)",
 		..turnin The Eyes Have It!##7396 |goto 1645,2629,-838
 		..turnin Natural Predators##7397 |goto 1645,2629,-838
 		..turnin Bringing Home the Beacon##7387 |goto 1645,2629,-838
-		..accept Spider Surveillance ##7386 |goto 1645,2629,-838
+		..accept Spider Surveillance##7386 |goto 1645,2629,-838
 		..accept Daddy Long Legs##7398 |goto 1645,2629,-838
 	step
 		.click Protostar Surveillancebot##263099
@@ -684,7 +685,7 @@ ZGV:RegisterGuide("Dominion\\Malgrave (41-46)",
 		.talk PSPN Associate Producer##286266
 		..turnin Prepping the Broadcast##7422 |goto Malgrave 1407,2443,-831
 	step
-		.' Go up the dirt path |goto Malgrave 1460,2894,-904
+		.' _Go up_ the dirt path |goto Malgrave 1460,2894,-904
 		.talk Shardspire Foreman##265495
 		..turnin A Hiccup in Harvesting##7421 |goto Malgrave 1433,2955,-890
 		..accept Labor Issues##7423 |goto 1433,2955,-890
@@ -714,7 +715,7 @@ ZGV:RegisterGuide("Dominion\\Malgrave (41-46)",
 		..turnin Labor Issues##7423 |goto Malgrave 1463,2975,-883
 		..accept Rescuing the Chief Mineralogist##7426 |goto 1463,2975,-883
 	step
-		.' Use the Maintenance Lift |q Rescuing the Chief Mineralogist##7426/1 |goto Malgrave 1450,3002,-882
+		.' Use the _Maintenance Lift_ |q Rescuing the Chief Mineralogist##7426/1 |goto Malgrave 1450,3002,-882
 		.talk Shardspire Security Officer##265469
 		.' Speak to the Shardspire Security Officer |q Rescuing the Chief Mineralogist##7426/2 |goto 1484,3033,-965
 		.click Chief Mineralogist##1872455
@@ -760,17 +761,16 @@ ZGV:RegisterGuide("Dominion\\Malgrave (41-46)",
 		..turnin Workers' Compensation##7433
 		..accept Upstairs Management##7432
 	step
-		.' Follow the path back around |goto 1403,3166,-968
-		.' Take the ramps up |goto 1434,3096,-967
-		.' Jump into one of the floating blue crystals in this area
+		.' _Take the ramps_ up |goto 1434,3096,-967 < 10
+		.' _Jump into_ one of the floating blue crystals in this area
 		'Press _C_ to use your communicator:
 		..accept A Purer Form##7434 |goto 1533,3236,-946
 	step
-		.' _Jump_ into a _blue loftite crystal_ to gain the _Loftite Aura_ jumping buff
-		.' _Jump up_ onto the first platform |goto 1529,3243,-946
+		.' _Jump_ into a _blue loftite crystal_ to gain the _Loftite Aura_ jumping buff |tip Jump while unmounted or you won't get the height bonus.
+		.' _Jump up_ onto the first platform |goto Malgrave 1529,3240,-922
 		.' _Jump_ to the second platform |goto 1534,3242,-899
 		.' _Continue up_ to the third platform |goto 1538,3214,-882
-		.' _Double-jump straight up_ to get to the fourth platform goto 1549,3210,-854
+		.' _Double-jump straight up_ to get to the fourth platform |goto 1549,3210,-854
 		.' _Jump up_ to the last platform |goto 1559,3190,-835
 		.' Use loftite crystals to reach the floating rock plateau |q Upstairs Management##7432/1 |goto 1582,3144,-822
 	step
@@ -781,8 +781,8 @@ ZGV:RegisterGuide("Dominion\\Malgrave (41-46)",
 		'Press _C_ to use your communicator:
 		..turnin A Purer Form##7434
 	step
-		.' Jump into one of the floating blue loftite crystals and then jump off this high platform
-		|confirm
+		.' Jump into one of the floating blue loftite crystals to get the _Loftite Aura_ buff and then jump off this high platform
+		|confirm |q 7432
 	step
 		.talk Chief Mineralogist##265460
 		..turnin Upstairs Management##7432 |goto Malgrave 1365,3088,-967
@@ -858,7 +858,7 @@ ZGV:RegisterGuide("Dominion\\Malgrave (41-46)",
 		..accept Casual Desecration##7410 |goto 2086,3232,-760
 	step
 		.' Click and replace Scourwind Banners as you follow this path |goto 2104,3256,-763
-		.' Continue following the path around to get to the very top of Scourwind Peak
+		.' _Continue following the path_ around to get to the very top of Scourwind Peak
 		.' Ride Dust Devil tornadoes as you go |q Windy Things##7652/2 |goto 1812,3381,-775
 	step
 		.' Found all around Scourwind Peak:
@@ -885,8 +885,8 @@ ZGV:RegisterGuide("Dominion\\Malgrave (41-46)",
 		..turnin The Sound of Judgment##7412
 		..accept A Strange Old Pell##8548
 	step
-		.' Follow this path to the top of Scourwind Peak |goto 1942,3219,-670 < 10
-		.' Continue up this dirt path |goto Malgrave 1790,3260,-604 < 10
+		.' _Follow this path_ to the top of Scourwind Peak |goto 1942,3219,-670 < 10
+		.' _Continue up_ this dirt path |goto Malgrave 1790,3260,-604 < 10
 		.' Reach the summit of Scourwind Peak |q A Windy Ascent##7408/1 |goto 1837,3154,-384
 	step
 		'Press _C_ to use your communicator:
@@ -948,11 +948,11 @@ ZGV:RegisterGuide("Dominion\\Malgrave (41-46)",
 		..accept Illumination and Epiphany##8567 |goto 3057,3382,-828
 	step
 		.click Sacred Fire##290659
-		.' Stare into the Sacred Fires |q Illumination and Epiphany##8567/1 |count 1 |goto 2953,3502,-851
+		.' Stare into the Sacred Fires |q Illumination and Epiphany##8567/1 |count 25 |goto 2953,3502,-851
 		.click Sacred Fire##290660
-		.' Stare into the Sacred Fires |q Illumination and Epiphany##8567/1 |count 2 |goto 2865,3495,-849
+		.' Stare into the Sacred Fires |q Illumination and Epiphany##8567/1 |count 50 |goto 2865,3495,-849
 		.click Sacred Fire##290665
-		.' Stare into the Sacred Fires |q Illumination and Epiphany##8567/1 |count 3 |goto 2842,3559,-851
+		.' Stare into the Sacred Fires |q Illumination and Epiphany##8567/1 |count 75 |goto 2842,3559,-851
 		.click Sacred Fire##290664
 		.' Stare into the Sacred Fires |q Illumination and Epiphany##8567/1 |goto 2895,3627,-852
 	step
@@ -968,6 +968,7 @@ ZGV:RegisterGuide("Dominion\\Malgrave (41-46)",
 		..turnin Heresy Cubed##8568
 		..accept Divine Retribution##8569
 	step
+		.kill 1 Flamedancer War-Blazer##7762049
 		'Press _C_ to use your communicator:
 		..accept Combing the Archives##8549 |goto 2953,3670,-847
 	step

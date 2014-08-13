@@ -229,7 +229,7 @@ ZGV:RegisterGuide("Exiles\\Whitevale (23-29)",
 	step
 		.click Transmat Terminal##270833 |goto Whitevale 5195,-41,-972
 		.' Click _Yes_ to set your Recall to Snowfade Grounds
-		|confirm
+		|confirm |q 5067
 	step
 		.click Frozen Plant##6383697
 		.' Gather Tundra Tubers from Frozen Plants |q Hunter and Gatherer##5067/2 |goto Whitevale 5183,100,-971
@@ -599,7 +599,7 @@ ZGV:RegisterGuide("Exiles\\Whitevale (23-29)",
 	step
 		.click Transmat Terminal##279281
 		.' Click _Yes_ to set your Recall to Snowsoft Woods |goto Whitevale 3449,-400,-942
-		|confirm
+		|confirm |q 5572
 	step
 		.click Redmoon Chest##291889
 		.' Search Redmoon Chests |q Charting the Course##5572/2 |goto 3620,-350,-937
@@ -966,11 +966,11 @@ ZGV:RegisterGuide("Exiles\\Whitevale (23-29)",
 	step
 		.click Transmat Terminal##272810
 		.' Click _Yes_ to set your Recall ability to Prosperity Junction |goto 3049,725,-1028
-		|confirm
+		|confirm |q 5833
 	step
 		.kill 1 Silverscale Abductor##1194331
 		.' Press _C_ to use your communicator
-		..accept Calculated Hostility##6025
+		..accept Calculated Hostility##6025 |goto 3128,1104,-1054
 	step
 		.' All around this area:
 		.' Jump through abducted Protostar Employees |q Abduction Junction##5833/1 |goto Whitevale 3117,1170,-1053
@@ -1059,11 +1059,7 @@ ZGV:RegisterGuide("Exiles\\Whitevale (23-29)",
 		..accept Splitting the Spatial Sea##5893
 	step
 		.' Around this area:
-		.kill Silverscale Taskmaster##1730743
-		.kill Silverscale Overseer##1589587
-		.kill Silverscale Hydrocrawler##1733808
-		.kill Silverscale Spinelancer##1681903
-		.kill Silverscale Aquabionicist##1742005
+		.kill Silverscale Taskmaster##1730743+, Silverscale Overseer##1589587+, Silverscale Hydrocrawler##1733808+, Silverscale Spinelancer##1681903+, Silverscale Aquabionicist##1742005+
 		.' Kill Silverscale Ikthians |q Tempest Tides##5889/1 |goto Whitevale 3920,892,-929
 	step
 		'Press _C_ to use your communicator:
@@ -1086,18 +1082,18 @@ ZGV:RegisterGuide("Exiles\\Whitevale (23-29)",
 	step
 		'Press _C_ to open your Communicator:
 		..turnin Primal Powers and Triton's Dread##5895 |goto 4353,1391,-813
-		..accept Stirring Interstellar Waves##5898 |goto 4353,1391,-813
+		..accept Stirring Interstellar Waves##5897 |goto 4353,1391,-813
 	step
 		.click Cortex Analyzer##273418
 		.' Choose _Yes_, Restore the Focus of Water to its proper balance
-		.' Access the Cortex Analyzer |q Stirring Interstellar Waves##5898/1 |goto 4397,1256,-817
+		.' Access the Cortex Analyzer |q Stirring Interstellar Waves##5897/1 |goto 4397,1256,-817
 	step
 		'Press _C_ to open your Communicator:
-		..turnin Stirring Interstellar Waves##5898
-		..accept Pathway to Pell##5900 |goto 4397,1256,-817
+		..turnin Stirring Interstellar Waves##5897
+		..accept Pathway to Pell##5899 |goto 4397,1256,-817
 	step
 		.talk High Priest Rain-Caller##273281
-		..turnin Pathway to Pell##5900 |goto Whitevale 2662,1211,-1070
+		..turnin Pathway to Pell##5899 |goto Whitevale 2662,1211,-1070
 	step
 		.talk Silverscale Cetacean##523559
 		..accept Changing of the Tides##5849 |goto Whitevale 2662,1210,-1070
@@ -1118,7 +1114,11 @@ ZGV:RegisterGuide("Exiles\\Whitevale (23-29)",
 		..accept Leaking Propaganda##5850
 	step
 		.kill 1 Doomtide Storm-Striker##1951224
+		.' Press _C_ to open your Communicator:
 		..accept Converted Casualties##5882 |goto 2280,1407,-1026
+	step
+		.click The Eye of Hydris##268951
+		..accept The Eye of Hydris##9140 |goto Whitevale 2262,1543,-1012
 	step
 		.click Soulcore Propaganda Machine##273262
 		.' Deactivate Soulcore Propaganda Machines |q Leaking Propaganda##5850/1 |goto 2224,1382,-1026
@@ -1180,21 +1180,25 @@ ZGV:RegisterGuide("Exiles\\Whitevale (23-29)",
 		..turnin Troubled Waters##5947 |goto 2443,431,-1038
 		..accept Into Augment Facility X426##5823 |goto 2443,431,-1038
 	step
-		.kill Soulcore Defender##2149079
-		.kill Soulcore Vindicator##1969808
-		.kill Soulcore Disciple##2031901
-		.kill Modified X426 Probe##2167603
-		.' Kill Soulcore forces |q Into Augment Facility X426##5823/1 |goto 2291,462,-1030
 		.click Caretaker's Panel Gamma##274067
 		.' Activate Caretaker's Panel Gamma |q Into Augment Facility X426##5823/2 |goto 2291,462,-1030
 	step
-		.click Beckoning Hand##274150
-		.accept The Beckoning Hand ---- Needs quest ID
-	step
 		.talk The Caretaker##274046
-		..turnin Into Augment Facility X426##5823 |goto 2291,463,-1030
 		..accept Indoctrination Denied##5824 |goto 2293,462,-1030
 		..accept The Rending of Belle##5932 |goto 2293,462,-1030
+	step
+		.click Beckoning Hand##274150
+		.accept The Beckoning Hand##5934
+	step
+		.collect 1 X-D12 Origin Data##14771
+		.' Use the X-D12 Origin Data in your bags |use X-D12 Origin Data##14771
+		..accept Original Modifications##5935 |goto 2330,426,-1030
+	step
+		.kill Modified X426 Probe##2930119+
+		.' Collect X-D12 Origin Data from X426 Probes |q Original Modifications##5935/1 |goto Whitevale 2315,464,-1030 |tip This quest has been bugged for a while. It is completable if you kill the Probes LAST. Stand with the probes behind you and kill the humanoid mob first, then turn around and kill the probes. They should then drop the Origin Data for the quest.
+	step
+		.kill Soulcore Defender##2149079+, Soulcore Vindicator##1969808+, Soulcore Disciple##2031901+, Modified X426 Probe##2167603
+		.' Kill Soulcore forces |q Into Augment Facility X426##5823/1 |goto 2291,462,-1030
 	step
 		.click Electro Chains##2283632
 		.' Destroy Electro Chains to free Subjugated captives |q Indoctrination Denied##5824/1 |goto 2334,671,-1041
@@ -1204,6 +1208,7 @@ ZGV:RegisterGuide("Exiles\\Whitevale (23-29)",
 		.' Destroy Rusty's Electro Chains |q The Rending of Belle##5932/1 |goto 2389,693,-1040
 	step
 		.talk The Caretaker##274044
+		..turnin Into Augment Facility X426##5823 |goto 2291,463,-1030
 		..turnin Indoctrination Denied##5824 |goto 2344,747,-1040
 		..accept Destroying Corrupting Tools##5825 |goto 2344,747,-1040
 	step
@@ -1241,7 +1246,7 @@ ZGV:RegisterGuide("Exiles\\Whitevale (23-29)",
 		..turnin The Fall of the Ascendancy##5826 |goto 2162,316,-1014
 		..accept Meeting with Metal Maw Prime##5827 |goto 2162,316,-1014
 	step
-		.' Go up the elevator |goto 2062,412,-1009 <10
+		.' _Go up_ the elevator |goto 2062,412,-1009 < 10
 		.' Take the elevator to Deepfreeze Containment |q Meeting with Metal Maw Prime##5827/1 |goto 2046,404,-971
 		.' Investigate the Dome Controls |q Meeting with Metal Maw Prime##5827/2 |goto 2009,414,-971
 	step

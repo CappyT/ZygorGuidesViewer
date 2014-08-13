@@ -98,6 +98,14 @@ ZGV:RegisterGuide("Dominion\\Starting Area (1-3)",
 	step
 		.talk Settler Decima##262490
 		..turnin The Settlement Authority##8931 |goto DominionArkShipTutorialCryogenics 835,-1019,87
+		.' Start EXPANSION: Songs of Worship |startmission EXPANSION: Songs of Worship##1825
+		|only Settler
+	step
+		.click Participation Card##264975+
+		.talk Vigilant Congregant##264898+
+		.' Collect 4 Cards |tradeget 4 Participation Card##33263 |goto DominionArkShipTutorialCryogenics 826,-1042,86 |mission 1825
+		.click Cathedral of Light - Settler Depot##262600 |tip This is where you build Expansions.
+		.' Click the Vigilant Choir to add time |mission EXPANSION: Songs of Worship##1825 |goto DominionArkShipTutorialCryogenics 789,-1051,86
 		|only Settler
 	step
 		'Press _C_ to use your Communicator:

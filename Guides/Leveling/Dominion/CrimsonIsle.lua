@@ -20,7 +20,6 @@ ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 		.talk Mondo Zax##262276
 		..turnin Welcome to Crimson Isle##9127 |goto CrimsonIsle -8231,-231,-994
 		|only Human
-
 //DRAKEN
 	step
 		.click Departures Terminal: Savage Coast##262429
@@ -52,9 +51,9 @@ ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 		|only Draken
 	step
 		.click Megatech Battlebot##362868 
-		.' Disable the Power Regulators |q Seizing Power##5575/Disable the Power Regulators##2 |count 33 |goto -7742,-325,-948
+		.' Disable the Power Regulators |q Seizing Power##5575/Disable the Power Regulators##2 |count 1 |goto -7742,-325,-948
 		.click Power Regulator##263134 
-		.' Disable the Power Regulators |q Seizing Power##5575/Disable the Power Regulators##2 |count 66 |goto -7835,-373,-945
+		.' Disable the Power Regulators |q Seizing Power##5575/Disable the Power Regulators##2 |count 2 |goto -7835,-373,-945
 		.click Power Regulator##262872 
 		.' Disable the Power Regulators |q Seizing Power##5575/Disable the Power Regulators##2 |goto -7709,-400,-944
 		|only Draken
@@ -75,7 +74,6 @@ ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 		..turnin Introduction to the Zax##7036
 		..accept Forward March##5814
 		|only Draken
-
 //CHUA
 	step
 		.click Departures Terminal: Mondo's Beachhead##265961 
@@ -120,9 +118,9 @@ ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 		|only Chua, Human
 	step
 		.click Power Regulator##262805 
-		.' Disable the Power Regulators |q Powering Down##5573/Disable the Power Regulators##2 |count 33 |goto CrimsonIsle -7835,-373,-945
+		.' Disable the Power Regulators |q Powering Down##5573/Disable the Power Regulators##2 |count 1 |goto CrimsonIsle -7835,-373,-945
 		.click Power Regulator##263134 
-		.' Disable the Power Regulators |q Powering Down##5573/Disable the Power Regulators##2 |count 66 |goto CrimsonIsle -7743,-325,-948
+		.' Disable the Power Regulators |q Powering Down##5573/Disable the Power Regulators##2 |count 2 |goto CrimsonIsle -7743,-325,-948
 		.click Power Regulator##262872 
 		.' Disable the Power Regulators |q Powering Down##5573/Disable the Power Regulators##2 |goto CrimsonIsle -7709,-400,-944
 		|only Chua, Human
@@ -172,15 +170,35 @@ ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 
 //ALL RACE CONTINUES CRIMSON ISLE
 	step
+		.' Find the Megatech Shield Generator |q Powering Down##5573/1 |goto -7924,-288,-961
+	step
+		'Press _C_ to open your Communitcator:
+		..accept Stasis, Interrupted##8855 |goto CrimsonIsle -7924,-287,-962
+	step
+		.click Dominion Soldier##263242
+		.' Free Dominion Soldiers in this area by jumping into them |q Stasis, Interrupted##8855/1 |goto -7854,-349,-947
+	step
+		.click Power Regulator##262874
+		.' Disable the Power Regulators |q Powering Down##5573/2 |count 1 |goto -7834,-372,-945
+		.click Power Regulator##262807
+		.' Disable the Power Regulators |q Powering Down##5573/2 |count 2 |goto -7743,-325,-948
+		.click Power Regulator##263136
+		.' Disable the Power Regulators |q Powering Down##5573/2 |goto -7709,-401,-943
+	step
 		'Press _C_ to open your Communitcator:
 		..turnin Powering Down##5573
+	step
+		.kill 1 Megatech Battlebot##262601
+		.' Destroy Megatech Battlebots |q Stasis, Interrupted##8855/2 |goto CrimsonIsle -7704,-363,-946
+	step
+		'Press _C_ to open your Communitcator:
+		..turnin Stasis, Interrupted##8855
 		..accept Forward March##5814
 	step
 		.click Strange Dirt Pile##263281
 		..accept Spatial Anomaly##5684 |goto CrimsonIsle -7663,-456,-942
 	step
-		.' _Run into_ the Green Glowing Orb |goto -7709,-508,-932 < 5
-		|tip This will enable you to jump very high.
+		.' _Run into_ the Green Glowing Orb |goto -7709,-508,-932 < 5 |tip This will enable you to jump very high.
 		.' _Jump up_ the rocks to this point |goto -7690,-602,-864 < 10
 		.talk Researcher Zum##263279
 		..turnin Spatial Anomaly ##5684 |goto -7690,-602,-864
@@ -200,7 +218,7 @@ ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 		.kill 1 Venombite Spider Queen##340773
 		.collect 1 Spider Queen's Mandibles##14241
 		.' Use the Spider Queen's Mandible in your inventory |use Spider Queen's Mandibles##14241
-		..accept The Royal Maw##5728
+		..accept The Royal Maw##5728 |goto CrimsonIsle -7277,-446,-992
 	step
 		.talk Arachnologist Borango##262296
 		..turnin Venomous Intent##5584 |goto CrimsonIsle -7343,-628,-996
@@ -228,11 +246,10 @@ ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 		'Press _C_ to open your Communitcator:
 		..turnin Dregs and Thieves##5597	
 		..turnin Fire and Brimstone##5609
-		..accept Tactical Demolitions ##5604
+		..accept Tactical Demolitions##5604
 	step
 		.click Bloated Oxian Corpse##263264
-		.' Turn in It Smells Worse on the Inside |goto CrimsonIsle -7476,-842,-985
-		|confirm
+		..accept It Smells Worse on the Inside##6232 |goto CrimsonIsle -7476,-842,-985
 	step
 		.kill 1 Dreg Abomination##289616
 		.collect Abomination's Skull##14007
@@ -245,16 +262,16 @@ ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 		.' Follow this _road up_ the hill |goto -7317,-1132,-973 < 10
 		.' _Continue up_ the wooden ramp |goto -7383,-1108,-945 < 10
 		.click Exile Anti-Air Cannon##263442 
-		.' Destroy the Exile Anti-Air Cannon |q Tactical Demolitions ##5604/Destroy the Exile Anti-Air Cannons##1 |count 33 |goto -7349,-1085,-937
+		.' Destroy the Exile Anti-Air Cannon |q Tactical Demolitions##5604/Destroy the Exile Anti-Air Cannons##1 |count 33 |goto -7349,-1085,-937
 		.click Exile Anti-Air Cannon##263442 
-		.' Destroy the Exile Anti-Air Cannon |q Tactical Demolitions ##5604/Destroy the Exile Anti-Air Cannons##1 |count 66 |goto -7442,-1077,-955
+		.' Destroy the Exile Anti-Air Cannon |q Tactical Demolitions##5604/Destroy the Exile Anti-Air Cannons##1 |count 66 |goto -7442,-1077,-955
 	step
 		.' _Go up_ the wooden ramp |goto -7404,-1155,-948
 		.click Exile Anti-Air Cannon##263307 
-		.' Destroy the Exile Anti-Air Cannon |q Tactical Demolitions ##5604/Destroy the Exile Anti-Air Cannons##1 |goto -7380,-1147,-932
+		.' Destroy the Exile Anti-Air Cannon |q Tactical Demolitions##5604/Destroy the Exile Anti-Air Cannons##1 |goto -7380,-1147,-932
 	step
 		'Press _C_ to open your Communitcator:
-		..turnin Tactical Demolitions ##5604
+		..turnin Tactical Demolitions##5604
 		..accept Moving Up##5623
 	step
 		.click Megatech Tactical Interface##263355
@@ -276,10 +293,10 @@ ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 		..accept Heavy Armor##5583 |goto -7588,-1301,-955
 	step
 		.' Follow the _ramp up_ |goto -7616,-1368,-954
-		.' Sabotage the Tower Controls |q Enforced Radio Silence##5580/Sabotage the Tower Controls##1 |count 50 |goto -7597,-1357,-942
+		.' Sabotage the Tower Controls |q Enforced Radio Silence##5580/Sabotage the Tower Controls##1 |count 1 |goto -7597,-1357,-942
 	step
 		.click Vindicator Tank##299901 
-		.' Sabotage Exile Tanks |q Heavy Armor##5583/Sabotage Exile Tanks##1 |count 50 |goto -7647,-1387,-956
+		.' Sabotage Exile Tanks |q Heavy Armor##5583/Sabotage Exile Tanks##1 |count 1 |goto -7647,-1387,-956
 	step
 		.' _Run up_ the ramp |goto CrimsonIsle -7709,-1391,-948
 		.click Tower Controls##263470 
@@ -293,6 +310,7 @@ ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 	step
 		.kill Megatech Scientist##337342+
 		.kill Megatech Gunner##337343+
+		.kill Megatech Trooper##262610+
 		.' Kill Megatech Troopers and Bots |q Heavy Armor##5583/2 |goto CrimsonIsle -7750,-1345,-951
 	step
 		'Press _C_ to open your Communitcator:

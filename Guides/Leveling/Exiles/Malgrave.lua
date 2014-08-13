@@ -10,8 +10,12 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		'Press _C_ to use your communicator:
 		..accept Journey to Malgrave##8972
 	step
+		'Press the icon on the bottom right of your action bar to:
+		.' Recall to _Fool's Hope_
+		|confirm |q 8972
+	step
 		.click Ship to Thayd##271200
-		.' Click _Yes_ to travel to Thayd |q Journey to Malgrave##8972/1 -- |goto Malgrave 2070,-1647,-844
+		.' Click _Yes_ to travel to Thayd |q Journey to Malgrave##8972/1 |goto Wilderrun 2070,-1647,-844
 	step
 		.talk Lulu Blackbush##274852
 		..turnin Crimson Ore Shipment##9468 |goto Thayd 4033,-2379,-800
@@ -28,6 +32,14 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		.talk Sally Kettleshaw##280506
 		..turnin Settler's Woe##7342 |goto Malgrave 1877,4165,-945
 		..accept Meet and Greet##7204 |goto 1877,4165,-945
+	step
+		.click Shinysand Oasis Taxi Kiosk##280627
+		.' Get the _Shinysand Oasis_ taxi point |goto Malgrave 1592,4142,-971
+		|confirm |q 7204
+	step
+		.click Transmat Terminal##281483
+		.' Set your Recall to _Shinysand Oasis_ |goto Malgrave 1674,4217,-963
+		|confirm |q 7204
 	step
 		.talk Sheriff Steambolt##280543
 		.' Speak to Sheriff Steambolt |q Meet and Greet##7204/3 |goto Malgrave 1624,4214,-979
@@ -50,9 +62,9 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		..turnin Meet and Greet##7204
 	step
 		.' All along the beach:
-		.kill Shinysand Digger##751054
-		.kill Shinysand Burrower##751052
-		.kill Shinysand Tunneler##752431
+		.kill Shinysand Digger##751054+
+		.kill Shinysand Burrower##751052+
+		.kill Shinysand Tunneler##752431+
 		.' Kill Shinysand spikehordes |q Clear the Beach##7207/1 |goto 1600,4361,-999
 		.' Collect Shinysand Spikehorde Mandibles from Shinysand spikehordes |q Deep-Fry Everything##7205/2 |goto 1621,4367,-999
 		.kill 1 Pelagic the Tidebreaker##852422 |tip He walks up and down the beach, you may need to look for him. He is big and green and looks similar to a crab.
@@ -64,10 +76,10 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		..accept Automated Security##7211 |tip This quest may take a few seconds to appear.
 	step
 		.' Approach the Wreck of the Novus |q A Shiny Harvest##7210/1 |goto 1522,4402,-1000
-		.' Dive underwater and swim down
+		.' _Dive underwater_ and swim down
 		.click Control Panel##277071
 		.' Click _Yes_ to enter the Novus wreckage |goto 1543,4440,-1030
-		|confirm
+		|confirm |q 7210
 	step
 		.' All around the inside of the Novus wreckage:
 		.click Shiny Scrap##861068
@@ -82,7 +94,7 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 	step
 		.click Security Terminal Alpha##278335
 		.' Deactivate Security Terminal Alpha |q Artificial Mastermind##7212/1 |goto 1907,4008,-1040
-		' Go up the ramp |goto 1925,3976,-1040
+		' Go _up the ramp_ |goto 1925,3976,-1040
 		.click Security Terminal Beta##278324
 		.' Deactivate Security Terminal Beta |q Artificial Mastermind##7212/2 |goto 1963,4002,-1032
 		.click Security Terminal Delta##278305
@@ -95,10 +107,10 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 	step
 		.click Control Panel##277865
 		.' Leave the Novus wreckage |goto Malgrave 1916,3919,-1033
-		.' Go up the path here |goto Malgrave 1655,4263,-970
-		.kill Sandwisp Creeper##848603
-		.kill Sandwisp Venom Spitter##852662
-		.kill Sandwisp Crawler##530510
+		.' _Go up the path_ here |goto Malgrave 1655,4263,-970
+		.kill Sandwisp Creeper##848603+
+		.kill Sandwisp Venom Spitter##852662+
+		.kill Sandwisp Crawler##530510+
 		.' Collect Sandwisp Spider Legs from Sandwisp spiders |q Deep-Fry Everything##7205/1 |goto Malgrave 1773,4412,-945
 	step
 		.kill 1 Mr. Chitters##923500
@@ -120,10 +132,10 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		.' All around Gravestone South Gate:
 		.click Bone Pile##277183
 		.' Bury Bone Piles |q These Old Bones##7214/1 |goto Malgrave 1874,3859,-956
-		.kill Spectral Pillager##961898
-		.kill Spectral Crackshot##958791
-		.kill Spectral Raider##957763
-		.kill Spectral Brigand##966328
+		.kill Spectral Pillager##961898+
+		.kill Spectral Crackshot##958791+
+		.kill Spectral Raider##957763+
+		.kill Spectral Brigand##966328+
 		.' Destroy Spectral bandits |q Lousy Deadbeats##7223/1 |goto Malgrave 1869,3858,-956
 	step
 		.talk Ma Higgins##280631
@@ -165,7 +177,7 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 	step
 		.talk Deputy G0M3R##263519
 		.' Speak with Deputy G0M3R |q Checking on the Marshal##7142/1 |goto Malgrave 1387,4230,-974
-		.' Follow the path around |goto 1337,4292,-979
+		.' _Follow the path_ around |goto 1337,4292,-979
 		.talk Deputy Bingsocket##265474
 		.' Speak with Deputy Bingsocket |q Checking on the Marshal##7142/2 |goto 1154,4184,-969
 	step
@@ -173,11 +185,11 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		..accept So, Robo-Cultists are a Thing Now##7170 |goto Malgrave 1159,4175,-969
 		..accept Desanctification##7171 |goto 1159,4175,-969
 	step
-		.' Enter the cave |goto 1199,4097,-982
+		.' _Enter_ the cave |goto 1199,4097,-982
 		.' Inside this cave:
-		.kill Robo-Cultist Initiate##999350
-		.kill Robo-Cultist Acolyte##1003752
-		.kill Robo-Cultist Fanatic##981996
+		.kill Robo-Cultist Initiate##999350+
+		.kill Robo-Cultist Acolyte##1003752+
+		.kill Robo-Cultist Fanatic##981996+
 		.' Destroy Robo-Cultists |q So, Robo-Cultists are a Thing Now##7170/1 |goto Malgrave 1249,4017,-1002
 		.click Robocult Propagandatron##284077
 		.' Destroy Robocult Propagandatrons |q Desanctification##7171/1 |goto 1246,4002,-1005
@@ -208,15 +220,15 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		.talk Assistant Jr. Field Marketing Agent##1024551
 		.' Protect the Assistant Jr. Field Marketing Agent from canimid |q Hazard Pay##7166/1 |goto 954,3914,-964
 	step
-		.kill Witherdust Yearling##800897
-		.kill Witherdust Burrower##1072879
-		.kill Witherdust Tunneler##1031095
+		.kill Witherdust Yearling##800897+
+		.kill Witherdust Burrower##1072879+
+		.kill Witherdust Tunneler##1031095+
 		.' Kill Witherdust canimid |q Canimid Nuisance##7165/1 |goto 973,4016,-972
 	step
-		.kill Foulflesh Windshaman##961501
-		.kill Foulflesh Boneclaw##958526
-		.kill Foulflesh Grappler##961365
-		.kill Foulflesh Brute##1086405
+		.kill Foulflesh Windshaman##961501+
+		.kill Foulflesh Boneclaw##958526+
+		.kill Foulflesh Grappler##961365+
+		.kill Foulflesh Brute##1086405+
 		.' Kill Foulflesh Dreg |q Dragging Down the Dreg##7160/1 |goto Malgrave 822,3734,-948
 		.click Prisoner Sack##265109
 		.click Prisoner Pit##265061
@@ -227,8 +239,7 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		..turnin Dragging Down the Dreg##7160
 		..accept Loppfoot's Justice##7161
 	step
-		.kill 1 Pitboss Loppfoot##1107642
-		.' Kill Pitboss Loppfoot |q Loppfoot's Justice##7161/1 |goto Malgrave 541,3768,-974
+		.kill 1 Pitboss Loppfoot##1107642 |q Loppfoot's Justice##7161/1 |goto Malgrave 541,3768,-974
 	step
 		.talk Marshal Yatish##280615
 		..turnin Loppfoot's Justice##7161 |goto Malgrave 733,3922,-979
@@ -263,9 +274,9 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		.' Kill Fleshrender |q Shinysand Savior##7164/1 |goto 454,4090,-973
 	step
 		.' All around Fleshfouler Village:
-		.kill Foulflesh Brute##1163541
-		.kill Foulflesh Boneclaw##1153353
-		.kill Foulflesh Grappler##1035284
+		.kill Foulflesh Brute##1163541+
+		.kill Foulflesh Boneclaw##1153353+
+		.kill Foulflesh Grappler##1035284+
 		.' Collect Dreg Feet |q Foot for a Foot##7163/1 |goto 528,4143,-974
 	step
 		'Press _C_ to use your communicator:
@@ -276,7 +287,7 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 	step
 		'Press _C_ to use your communicator:
 		..accept Surprise Prohibition##7179 |goto 1225,3958,-939
-		..accept Burn Them Out##7162 |goto 1225,3958,-939
+		..accept Run 'Em off##7177 |goto 1225,3958,-939
 		..accept Rescuing the Advance Scouts##7178 |goto 1225,3958,-939
 	step
 		.click Scout Lockwood##277785
@@ -285,11 +296,11 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		.' Rescue Scout Millden |q Rescuing the Advance Scouts##7178/3 |goto 1307,4191,-915
 	step
 		.' All around Slushstill Plateau:
-		.kill Gargleblast Irongut##1190892
-		.kill Gargleblast Shooter##1229665
-		.kill Gargleblast Striker##1230060
-		.kill Gargleblast Scrapper##1220783
-		.kill Gargleblast Manipulator##1023626
+		.kill Gargleblast Irongut##1190892+
+		.kill Gargleblast Shooter##1229665+
+		.kill Gargleblast Striker##1230060+
+		.kill Gargleblast Scrapper##1220783+
+		.kill Gargleblast Manipulator##1023626+
 		.' Kill Gargleblast Marauders |q Run 'Em off##7177/1 |goto 1321,4167,-915
 		.click Slush Still##1203019
 		.' Detonate Slush Stills |q Surprise Prohibition##7179/1 |goto 1321,4167,-915
@@ -308,11 +319,11 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		.talk Marshal Yatish##280608
 		..turnin Shinysand Savior##7164 |goto Malgrave 1601,4217,-979
 	step
-		.' Jump up the rocks here |goto Malgrave 1482,4089,-950
-		.' Follow the narrow path up |goto Malgrave 1455,4090,-934
+		.' _Jump up_ the rocks here |goto Malgrave 1482,4089,-950 < 10
+		.' Follow the _narrow path up_ |goto Malgrave 1455,4090,-934 < 10
 		.click Secret Rock##277502
 		.' Activate the Secret Rock |q Revenge on the Rocks##7180/1 |goto 1288,4265,-920
-		.' Jump across the newly-formed rock bridge |goto Malgrave 1280,4281,-928
+		.' _Jump across_ the newly-formed rock bridge |goto Malgrave 1280,4281,-928 < 10
 		.kill 1 Merciless Mek##1770125
 		.' Kill Merciless Mek |q Revenge on the Rocks##7180/2 |goto 1244,4372,-946
 	step
@@ -323,9 +334,9 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		..accept Boring But Vital Data##7219 |goto Malgrave 1961,4166,-938
 		..accept Scrab Menace##7218 |goto 1961,4166,-938
 	step
-		.kill Sandsnapper Vermin##1674134
-		.kill Sandsnapper Stinger##1679839
-		.kill Orius the Scrab King##1678488
+		.kill Sandsnapper Vermin##1674134+
+		.kill Sandsnapper Stinger##1679839+
+		.kill Orius the Scrab King##1678488+
 		.' Kill Scrab |q Scrab Menace##7218/1 |goto 2002,4143,-930
 		.click Data Module##280601
 		.' Activate Data Modules |q Boring But Vital Data##7219/1 |goto 2024,4125,-932
@@ -335,7 +346,9 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		..turnin Scrab Menace##7218
 	step
 		.kill 1 Red Shaleback Bull##1717153
-		..accept Shaleback Hooves##7186
+		.kill 1 Red Shaleback##283654
+		'Press _C_ to use your communicator:
+		..accept Shaleback Hooves##7186 |goto Malgrave 2189,4009,-930
 	step
 		.' Around this area:
 		.kill Red Shaleback Bull##415882
@@ -348,11 +361,11 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		..accept Sweet, Sweet Cactus Apples##7185 |goto 1656,3747,-953
 	step
 		.' Around this area:
-		.kill Fruitful Cactus##1862906
+		.kill Fruitful Cactus##1862906+
 		.' Bash Fruitful Cactus to collect Cactus Apples |q Sweet, Sweet Cactus Apples##7185/1 |goto Malgrave 1715,3592,-925
 		.click Sandswept Roan##1872630
-		.kill Blightwing Circler##1758198
-		.' Press _T_ to kill Sandswept Roan to attract and kill Blightwing vulcarrion |q Vulcarrion Problems##7184/1 |goto 1686,3587,-926
+		.kill Blightwing Circler##1758198+
+		.' Press _T_ to kill Sandswept Roan to attract and kill Blightwing vulcarrion |q Vulcarrion Problems##7184/2 |goto 1686,3587,-926
 	step
 		.talk Game Hunter Joresh##280562
 		..turnin Sweet, Sweet Cactus Apples##7185 |goto Malgrave 1656,3748,-953
@@ -362,8 +375,8 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 	step
 		.click Chompacabra Mound##281961
 		.' Plant explosives inside Chompacabra Mounds |q Hit 'Em Where They Live##7188/1 |goto Malgrave 1528,3598,-925
-		.kill Grizzled Chomper##1413139
-		.kill Bloodthirsty Chompling##1838164
+		.kill Grizzled Chomper##1413139+
+		.kill Bloodthirsty Chompling##1838164+
 		.' Kill Chompacabras |q Stomping Chompacabra##7187/1 |goto 1469,3593,-924
 	step
 		.talk Game Hunter Joresh##280562
@@ -379,8 +392,8 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 	step
 		.click Roughback Grazer##1922959
 		.' Press _T_ to use the "Friendmaker" tazer on Roughback Grazers |q Get Along Little Dawngrazer##7191/1 |goto Malgrave 2352,4155,-890
-		.kill Snapjaw Mauler##1931140
-		.kill Snapjaw Prowler##1931335
+		.kill Snapjaw Mauler##1931140+
+		.kill Snapjaw Prowler##1931335+
 		.' Kill Snapjaw Girrok |q Defending the Herd##7189/1 |goto 2386,4145,-894
 	step
 		.kill Sunbeak Striker##1926872
@@ -392,13 +405,13 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		..turnin Can't Make an Omelet Without Eggs##7190 |goto 2242,4188,-905
 		..turnin Get Along Little Dawngrazer##7191 |goto 2242,4188,-905
 	step
-		.' Follow the path around |goto Malgrave 2722,4219,-904
+		.' _Follow the path_ around |goto Malgrave 2722,4219,-904 < 10
 		.click Burned Journal##278217
 		..accept The Burned Journal##7192 |goto Malgrave 2950,4173,-898
 	step
 		.click Singed Page##1914775
 		.' Collect any Singed Pages in the immediate area in Bleachbone Gulley |tip Don't worry about getting enough the complete the quest, just grab any that are nearby. |goto Malgrave 2831,4137,-887
-		|confirm
+		|confirm |q 7192
 	step
 		.' Check on Shaman Arokya |q Making the Rounds##7146/2 |goto Malgrave 3061,4252,-881
 	step
@@ -406,8 +419,8 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		..accept Rocks Fall, Everyone Dies##7143 |goto 3061,4253,-881
 		..accept Rocks on the March##7144 |goto 3061,4253,-881
 	step
-		.kill Rockshell Blitzer##1936506
-		.kill Rockshell Skitter##1792465
+		.kill Rockshell Blitzer##1936506+
+		.kill Rockshell Skitter##1792465+
 		.' Kill Rockshell spikehordes |q Rocks on the March##7144/1 |goto 3175,4289,-865
 		.kill Sandstone##1881699
 		.click Dead Lopp##1968351
@@ -428,7 +441,7 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 	step
 		.click Singed Page##1914775
 		.' Collect any Singed Pages in the immediate area in Bleachbone Gulley |tip Don't worry about getting enough the complete the quest, just grab any that are nearby. |goto Malgrave 2831,4137,-887
-		|confirm
+		|confirm |q 7192
 	step
 		.' Check on Treasure Hunter Pallavi |q Making the Rounds##7146/3 |goto Malgrave 3309,4508,-808
 	step
@@ -441,10 +454,10 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		.talk Treasure Hunter Agni##280602
 		..accept Laying the Loaders Low##7169 |goto 3310,4510,-808
 	step
-		.kill Darkspur Loader##1830431
-		.kill Darkspur Supervisor##1888561
-		.kill Darkspur Dockhand##1923701
-		.kill Darkspur Mechanic##1940868
+		.kill Darkspur Loader##1830431+
+		.kill Darkspur Supervisor##1888561+
+		.kill Darkspur Dockhand##1923701+
+		.kill Darkspur Mechanic##1940868+
 		.' Kill Darkspur Laborers |q Laying the Loaders Low##7169/1 |goto Malgrave 3255,4548,-807
 		.click Mining Explosive##1931097
 		.' Collect Mining Explosives |q Operation: Drivebreaker##7147/1 |goto 3247,4553,-805
@@ -459,8 +472,7 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		..turnin Operation: Drivebreaker##7147
 		..accept Lucido's Last Nap##7148
 	step
-		.kill 1 Carmine Lucido##1953903
-		.' Kill Carmine Lucido |q Lucido's Last Nap##7148/4 |goto Malgrave 3076,4577,-809
+		.kill 1 Carmine Lucido##1953903 |q Lucido's Last Nap##7148/4 |goto Malgrave 3076,4577,-809
 	step
 		.talk Treasure Hunter Pallavi##280609
 		..turnin Lucido's Last Nap##7148 |goto Malgrave 3311,4508,-808
@@ -496,7 +508,7 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		.click Treasure Pile##284550
 		.' Place a Lopp Homing Beacon at the second Treasure Pile |q Anything That Isn't Nailed Down!##7151/2 |goto Malgrave 2802,4249,-812
 	step
-		.' Jump up here |goto Malgrave 2824,4238,-809
+		.' _Jump up_ here |goto Malgrave 2824,4238,-809
 		.click Karaoke Song Book##282541
 		..accept Darkspur Karaoke##7154 |goto 2820,4230,-803
 	step
@@ -517,7 +529,7 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		'Press _C_ to use your communicator:
 		..accept Green with Concern##7230 |goto Malgrave 2977,4543,-807
 	step
-		.' Go down the green set of stairs |goto 2969,4558,-811
+		.' _Go down_ the green set of stairs |goto 2969,4558,-811 < 10
 		.' Find Exo-Lab X1-BB |q Green with Concern##7230/1 |goto 2961,4568,-837
 	step
 		'Press _C_ to use your communicator:
@@ -527,12 +539,12 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		.click Eldan Fuel Rod##280754
 		..accept Eldan Power Source##7155 |goto 2928,4480,-999
 	step
-		.' Go through the doorway |goto 2881,4482,-999
+		.' Go _through the doorway_ |goto 2881,4482,-999 < 10
 		.click Eldan Fuel Rod Alpha##280720
 		.' Activate Eldan Fuel Rod Alpha |q Eldan Power Source##7155/1 |goto Malgrave 2756,4433,-1008
 	step
-		.' Go back to the main room |goto 2816,4482,-1007
-		.' Go through the door |goto Malgrave 3039,4482,-998
+		.' _Go back_ to the main room |goto 2816,4482,-1007 < 10
+		.' Go _through the door_ |goto Malgrave 3039,4482,-998 < 10
 		.click Eldan Fuel Rod Beta##280735
 		.' Activate Eldan Fuel Rod Beta |q Eldan Power Source##7155/2 |goto Malgrave 3162,4440,-1007
 	step
@@ -540,25 +552,25 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		..turnin Eldan Power Source##7155
 	step
 		.' All around Exo-Lab X1-BB:
-		.kill Eldan Interrogator##2235081
-		.kill Eldan Executioner##2214563
-		.kill Eldan Defense Construct##2198767
-		.kill Eldan Exterminator##2224111
+		.kill Eldan Interrogator##2235081+
+		.kill Eldan Executioner##2214563+
+		.kill Eldan Defense Construct##2198767+
+		.kill Eldan Exterminator##2224111+
 		.' Destroy Eldan constructs |q Eldan Deconstruction##7156/1 |goto Malgrave 3010,4466,-999
 	step
 		'Press _C_ to use your communicator:
 		..turnin Eldan Deconstruction##7156
 		..accept Finishing the Job##7157
 	step
-		.' Go through the doorway |goto Malgrave 2959,4419,-998
+		.' Go _through the doorway_ |goto Malgrave 2959,4419,-998 < 10
 		.kill 1 Facility X1-BB Administrator##2233194
 		.' Destroy Facility X1-BB Administrator |q Finishing the Job##7157/1 |goto Malgrave 2960,4320,-991
 	step
 		'Press _C_ to use your communicator:
 		..turnin Finishing the Job##7157
 	step
-		.' Leave Exo-Lab X1-BB |goto Malgrave 2960,4516,-993
-		.' Go up the green stairs |goto Malgrave 2955,4576,-834
+		.' _Leave Exo-Lab X1-BB_ |goto Malgrave 2960,4516,-993 < 10
+		.' Go _up the green stairs_ |goto Malgrave 2955,4576,-834 < 10
 		.click Singed Page##1914775
 		.' Collect any remaining Singed Pages |q The Burned Journal##7192/1 |goto Malgrave 2831,4137,-887
 	step
@@ -572,7 +584,7 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		..accept They Got What We Need##7417
 	step
 		.talk Shinysand Oasis Taxi Kiosk##276331
-		.' Take a taxi to Area 77 |q They Got What We Need##7417/1 |goto 1591,4146,-972
+		.' _Take a taxi to Area 77_ |q They Got What We Need##7417/1 |goto 1591,4146,-972
 	step
 		.talk Safety and Security Supervisor##265241
 		..turnin They Got What We Need##7417 |goto Malgrave 1647,2882,-820
@@ -604,7 +616,7 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 	step
 		.click Transmat Terminal##280531
 		.' Set _Area 77_ Transmat Terminal as your Recall |goto 1647,2945,-815
-		|confirm
+		|confirm |q 7420
 	step
 		.talk Safety and Security Supervisor##265241
 		..turnin Checks and Measures##7420 |goto 1647,2882,-820
@@ -613,7 +625,7 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		.talk Product Research Analyst##284340
 		..accept A Deadly Demographic##8562 |goto 1639,2874,-820
 	step
-		.' Cross the bridge |goto 1643,2770,-838
+		.' _Cross the bridge_ |goto 1643,2770,-838 < 10
 		.talk Product Research Assistant##284362
 		..turnin A Deadly Demographic##8562 |goto Malgrave 1644,2630,-838
 		..accept Captured Clones##7395 |goto 1644,2630,-838
@@ -656,7 +668,7 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		'Press _C_ to use your communicator:
 		..accept The Late Delivery##7399 |goto Malgrave 2050,2774,-826
 	step
-		.' Kill Dreadfang |q Daddy Long Legs##7398/1 |goto 2040,2602,-815
+		.kill 1 Dreadfang##685570 |q Daddy Long Legs##7398/1 |goto 2040,2602,-815
 	step
 		'Press _C_ to use your communicator:
 		..turnin Daddy Long Legs##7398
@@ -667,7 +679,7 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		.talk PSPN Associate Producer##286266
 		..turnin Prepping the Broadcast##7422 |goto Malgrave 1407,2443,-831
 	step
-		.' Go up the dirt path |goto Malgrave 1460,2894,-904
+		.' Go _up the dirt path_ |goto Malgrave 1460,2894,-904
 		.talk Shardspire Foreman##265495
 		..turnin A Hiccup in Harvesting##7421 |goto Malgrave 1433,2955,-890
 		..accept Labor Issues##7423 |goto 1433,2955,-890
@@ -679,10 +691,10 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		..accept Highbed Samples##7425 |goto Malgrave 1455,2896,-903
 	step
 		.' All around this area:
-		.kill Creekwater Primordial##2430400
+		.kill Creekwater Primordial##2430400+
 		.' Kill Creekwater Primordials |q Up the Creek, Ready for Battle##7424/1 |goto 1429,2822,-902
-		.kill Moisture Sapper##2408335
-		.kill Dew Grabber##2456449
+		.kill Moisture Sapper##2408335+
+		.kill Dew Grabber##2456449+
 		.' Kill Moisture Sappers and Dew Grabbers |q Up the Creek, Ready for Battle##7424/2 |goto 1460,2864,-904
 		.click Protostar Minebot##2432659
 		.' Teleport malfunctioning Protostar Minebots |q Labor Issues##7423/1 |goto 1454,2884,-903
@@ -712,14 +724,11 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		..accept Eco-Terrorism##7428 |goto 1367,3092,-967
 		..accept Small Parts Hazard##7430 |goto 1367,3092,-967
 	step
-		'Press _C_ to use your communicator:
-		..accept An Unexpected Enemy##9070
-	step
 		.' All around this area:
-		.kill Sandthorne Malverine##266636
+		.kill Sandthorne Malverine##266636+
 		.' Collect Malverine Fangs from Sandthorne Malverines |q Small Parts Hazard##7430/1 |goto 1223,3136,-964
-		.kill Sandthorne Leafblade##266674
-		.kill Sandthorne Reaper##267043
+		.kill Sandthorne Leafblade##266674+
+		.kill Sandthorne Reaper##267043+
 		.' Kill Sandthorne eco-terrorists |q Eco-Terrorism##7428/1 |goto 1195,3154,-964
 		.click Timed Explosive##265303
 		.' Disarm the Timed Explosives |q An Explosive Situation##7427/1 |goto 1198,3152,-963
@@ -746,9 +755,8 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		..turnin Workers' Compensation##7433
 		..accept Upstairs Management##7432
 	step
-		.' Follow the path back around |goto 1403,3166,-968
-		.' Take the ramps up |goto 1434,3096,-967
-		.' Jump into one of the floating blue crystals in this area
+		.' Take the _ramps up_ |goto 1434,3096,-967
+		.' _Jump into_ one of the floating blue crystals in this area
 		'Press _C_ to use your communicator:
 		..accept A Purer Form##7434 |goto 1533,3236,-946
 	step
@@ -756,7 +764,7 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		.' _Jump up_ onto the first platform |goto 1529,3243,-946
 		.' _Jump_ to the second platform |goto 1534,3242,-899
 		.' _Continue up_ to the third platform |goto 1538,3214,-882
-		.' _Double-jump straight up_ to get to the fourth platform goto 1549,3210,-854
+		.' _Double-jump straight up_ to get to the fourth platform |goto 1549,3210,-854
 		.' _Jump up_ to the last platform |goto 1559,3190,-835
 		.' Use loftite crystals to reach the floating rock plateau |q Upstairs Management##7432/1 |goto 1582,3144,-822
 	step
@@ -767,8 +775,8 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		'Press _C_ to use your communicator:
 		..turnin A Purer Form##7434
 	step
-		.' Jump into one of the floating blue loftite crystals and then jump off this high platform
-		|confirm
+		.' Jump into one of the floating blue loftite crystals to get the _Loftite Aura_ buff and then jump off this high platform
+		|confirm |q 7432
 	step
 		.talk Chief Mineralogist##265460
 		..turnin Upstairs Management##7432 |goto Malgrave 1365,3088,-967
@@ -792,9 +800,9 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		.click Scourwind Shambler##277036
 		.click Scourwind Herald##277092
 		.' Press _T_ to serve subpoenas to Falkrin and Murgh |q You've Been Served!##7402/1 |goto 2519,3072,-825
-		.kill Scourwind Mudrunner##276901
-		.kill Scourwind Shambler##277036
-		.kill Scourwind Herald##277092
+		.kill Scourwind Mudrunner##276901+
+		.kill Scourwind Shambler##277036+
+		.kill Scourwind Herald##277092+
 		.' Kill Scourwind Falkrin and Murgh |q Cause and Effect##7400/1 |goto 2516,3068,-825
 	step
 		'Press _C_ to use your communicator:
@@ -825,8 +833,8 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		'Press _C_ to use your communicator:
 		..turnin Evidence Gathering Techniques##7407
 	step
-		.kill Scourwind Stormspeaker##434299
-		.kill Scourwind Challenger##434298
+		.kill Scourwind Stormspeaker##434299+
+		.kill Scourwind Challenger##434298+
 		.' Kill Scourwind Falkrin |q Perps Everywhere!##7406/1 |goto 2143,3120,-766
 		.click Falkrin Egg##285320
 		.' Press _T_ to roast Falkrin Eggs with the Lopp Egg Cooker |q Over Easy##7405/1 |goto 2143,3241,-762
@@ -844,15 +852,15 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		..accept Casual Desecration##7410 |goto 2086,3232,-760
 	step
 		.' Click and replace Scourwind Banners as you follow this path |goto 2104,3256,-763
-		.' Continue following the path around to get to the very top of Scourwind Peak
+		.' _Continue following the path around_ to get to the very top of Scourwind Peak
 		.' Ride Dust Devil tornadoes as you go |q Windy Things##7652/2 |goto 1812,3381,-775
 	step
 		.' Found all around Scourwind Peak:
-		.kill Crackling Stormgust##2305297
-		.kill Roaring Stormgust##2406055
+		.kill Crackling Stormgust##2305297+
+		.kill Roaring Stormgust##2406055+
 		.' Destroy Crackling Stormgusts |q Windy Things##7652/1 |goto 1927,3058,-697
-		.kill Scourwind Priestess##2302397
-		.click Scourwind Priestess##2302397
+		.kill Scourwind Priestess##2302397+
+		.click Scourwind Priestess##2302397+
 		.' Press _T_ to burn the bodies of Scourwind Priestesses |q Burn the Brides##7411/1 |goto 1928,3060,-697
 		.click Scourwind Feather Banner##284768
 		.' Replace Scourwind Banners |q Casual Desecration##7410/1 |goto Malgrave 2010,3202,-676
@@ -870,8 +878,8 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 		'Press _C_ to use your communicator:
 		..turnin The Sound of Judgment##7412
 	step
-		.' Follow this path to the top of Scourwind Peak |goto 1942,3219,-670
-		.' Continue up this dirt path |goto Malgrave 1790,3257,-565
+		.' _Follow this path_ to the top of Scourwind Peak |goto Malgrave 1942,3219,-670 < 10
+		.' _Continue up_ this dirt path |goto 1789,3259,-604 < 10
 		.' Reach the summit of Scourwind Peak |q A Windy Ascent##7408/1 |goto 1837,3154,-384
 	step
 		'Press _C_ to use your communicator:
@@ -889,4 +897,156 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 	step
 		.talk Whirlygig##284350
 		..turnin What Goes Up...##7414 |goto Malgrave 1662,2916,-819
+	step
+		.click Area 77 Taxi Kiosk##280558 |goto Malgrave 1684,2835,-820 < 10
+		.' _Travel_ to the Shinysands Oasis |goto 1592,4149,-972 < 20
+		.' _Follow this road_ northeast |goto 1786,4037,-955 < 10
+		.click Flamedancer Scroll##290631
+		..accept Scrolls of Flamedancer Lore##7380 |goto Malgrave 2556,3928,-870
+	step
+		.kill Flamedancer Zealot##14063652+
+		.kill Flamedancer Guardian##13957478+
+		.kill Flamedancer War-Blazer##14034463+
+		.' Collect Flamedancer Scrolls from Flamedancer Pell |q Scrolls of Flamedancer Lore##7380/1 |goto Malgrave 2644,3903,-868
+	step
+		'Press _C_ to use your communicator:
+		..turnin Scrolls of Flamedancer Lore##7380
+	step
+		.click Broken Protostar Cart##263529
+		..accept Patch Job##7393 |goto Malgrave 2736,3461,-853
+	step
+		.talk Adomo##263683
+		..accept Down with the Sweetness##7391 |goto 2726,3390,-850
+		..accept Stinging Reminder##7392 |goto 2726,3390,-850
+	step
+		.click Glob of Honey##13228843
+		.' Collect Buzzbing Honey from Globs of Honey |q Down with the Sweetness##7391/1 |goto Malgrave 2731,3431,-851
+		.click Mechanical Debris##13581495
+		.' Collect Spare Parts from Mechanical Debris |q Patch Job##7393/1 |goto 2667,3409,-855
+	step
+		.kill Sandswarm Doomsting##13927872+
+		.kill Sandswarm Impaler##14367400+
+		.kill Sandswarm Stalker##14230173+
+		.' Kill Sandswarm buzzbings |q Stinging Reminder##7392/1 |goto 2683,3500,-861
+	step
+		.click Broken Protostar Cart##263529
+		..turnin Patch Job##7393 |goto Malgrave 2735,3458,-854
+	step
+		.talk Adomo##263683
+		..turnin Down with the Sweetness##7391 |goto 2726,3390,-849
+		..turnin Stinging Reminder##7392 |goto 2726,3390,-849
+	step
+		.talk Flame-Watcher##290635
+		..accept Illumination and Epiphany##7370 |goto 3057,3382,-828
+	step
+		.click Sacred Fire##290659
+		.' Stare into the Sacred Fires |q Illumination and Epiphany##7370/1 |count 25 |goto 2953,3502,-851
+		.click Sacred Fire##290660
+		.' Stare into the Sacred Fires |q Illumination and Epiphany##7370/1 |count 50 |goto 2865,3495,-849
+		.click Sacred Fire##290665
+		.' Stare into the Sacred Fires |q Illumination and Epiphany##7370/1 |count 75 |goto 2842,3559,-851
+		.click Sacred Fire##290664
+		.' Stare into the Sacred Fires |q Illumination and Epiphany##7370/1 |goto 2895,3627,-852
+	step
+		'Press _C_ to use your communicator:
+		..turnin Illumination and Epiphany##7370
+		..accept Heresy Cubed##7372
+	step
+		.click Deactivated Probe##290657
+		.' Investigate the head-shaped idol |q Heresy Cubed##7372/1 |goto Malgrave 2985,3682,-843
+		.' Survive the attacking Probes! |q Heresy Cubed##7372/2 |goto 2985,3682,-843
+	step
+		'Press _C_ to use your communicator:
+		..turnin Heresy Cubed##7372
+		..accept Divine Retribution##7371
+	step
+		'Press _C_ to use your communicator:
+		..accept Combing the Archives##7373 |goto 2953,3670,-847
+	step
+		'Press _C_ to use your communicator:
+		..accept Prisoners of the Cube##7382 |goto 2833,3815,-870
+	step
+		.click Flamedancer Terminal##290656
+		.' Access the first Flamedancer Terminal |q Combing the Archives##7373/1 |goto 2662,3797,-870
+	step
+		.click Flamedancer Cage##263279
+		.' Free prisoners from Flamedancer Cages |q Prisoners of the Cube##7382/1 |goto 2683,3824,-870
+	step
+		'Press _C_ to use your communicator:
+		..turnin Prisoners of the Cube##7382
+	step
+		.click Flamedancer Terminal##290653
+		.' Access the second Flamedancer Terminal |q Combing the Archives##7373/2 |goto Malgrave 2597,3904,-874
+		.click Flamedancer Terminal##290652
+		.' Access the third Flamedancer Terminal |q Combing the Archives##7373/3 |goto Malgrave 2681,3998,-873
+		.click Flamedancer Terminal##290650
+		.' Access the fourth Flamedancer Terminal |q Combing the Archives##7373/4 |goto 2784,3902,-868
+		.click Flamedancer Mainframe##290649
+		.' Hack the Flamedancer Mainframe |q Combing the Archives##7373/5 |goto 2677,3873,-869
+	step
+		'Press _C_ to use your communicator:
+		..turnin Combing the Archives##7373
+		..accept Augmetic Evidence##7383
+	step
+		.kill Flamedancer War-Blazer##13042030+
+		.kill Flamedancer Acolyte##12172866+
+		.kill Flamedancer Guardian##14252473+
+		.kill Flamedancer Zealot##14317517+
+		.' Kill Flamedancer Pell |q Divine Retribution##7371/1 |goto 2650,3876,-869
+	step
+		'Press _C_ to use your communicator:
+		..turnin Divine Retribution##7371
+		..accept Crushing the Pyre-Callers##7374
+	step
+		.kill Augmented Stonebound##14133929+
+		.kill Augmented Sandwisp Crawler##14276430+
+		.kill Enraged Augmented Bucktooth##14592935+
+		.kill Augmented Sandswarm Stalker##13533131+
+		.' Collect Augmetic Components from Augmented creatures |q Augmetic Evidence##7383/1 |goto Malgrave 2546,3723,-883
+	step
+		'Press _C_ to use your communicator:
+		..turnin Augmetic Evidence##7383
+	step
+		.' _Cross_ the bridge |goto Malgrave 2530,3789,-874 < 10
+		.kill Devout Flamedancer Pyre-Caller##14222997+
+		.' Kill Flamedancer Pyre-Callers |q Crushing the Pyre-Callers##7374/1 |goto 2420,3652,-863
+	step
+		'Press _C_ to use your communicator:
+		..turnin Crushing the Pyre-Callers##7374
+		..accept A Great Discovery##7375
+	step
+		.click Unstable Ground##290638
+		.' Locate the Elder Cube's hiding place |q A Great Discovery##7375/1 |goto 2233,3764,-868
+	step
+		'Press _C_ to use your communicator:
+		..turnin A Great Discovery##7375
+		..accept A Race Against Time##7376
+	step
+		.talk Augmented Human##262172
+		..accept Defenders of the Cube##7384 |goto Malgrave 117,191,-10
+	step
+		.' Locate Artemis Zin |q A Race Against Time##7376/1 |goto Malgrave 69,123,-10
+		.' _Go through_ the doorway |goto Malgrave 16,58,1 < 10
+		.' Catch up to Artemis Zin |q A Race Against Time##7376/2 |goto Malgrave 17,-9,-1
+		.' Defeat Kevo |q A Race Against Time##7376/3 |goto Malgrave 17,-7,-1
+		.' Learn the fate of the Elder Cube |q A Race Against Time##7376/4 |goto Malgrave 16,-4,-1
+	step
+		'Press _C_ to use your communicator:
+		..turnin A Race Against Time##7376
+		..accept The Long Road Home##7378
+	step
+		.kill Elder Cube Guardian##262167+
+		.kill Elder Neutralization Module##262157+
+		.kill Elder Cube Protector##262163+
+		.' Destroy Eldan constructs |q Defenders of the Cube##7384/1 |goto Malgrave 16,124,-1
+	step
+		'Press _C_ to use your communicator:
+		..turnin Defenders of the Cube##7384
+	step
+		'Press the icon on the bottom right of your action bar to:
+		.' Recall to _Area 77_ - Transmat
+		|confirm |q 7378
+	step
+		.talk Dorian Walker##290663
+		..turnin The Long Road Home##7378 |goto Malgrave 1659,2864,-820
 ]])

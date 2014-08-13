@@ -83,9 +83,13 @@ ZGV:RegisterGuide("Exiles\\Northern Wilds (3-6)",
 		.' Kill yeti |q Reporting for Duty##3480/2 |goto 4190,-5384,-726
 		|only Granok
 	step
-		.' Jump into the burning wreckage |goto 4196,-5590,-746
+		.' _Jump into_ the burning wreckage |goto NorthernWilds 4196,-5590,-746
 		.talk Nooks Barkbiter##262948
-		.' Rescue Trapped Survivors |q From the Wreckage##3479/1 |goto NorthernWilds 4194,-5586,-746
+		..accept Wreckage Refuge##8961 |goto 4209,-5593,-747
+	step
+		.click Nooks' Warm Brew##262947
+		.' Get Nooks' buff |goto NorthernWilds 4205,-5592,-747
+		|confirm |q 3480 |q 3479
 	step
 		.talk Deadeye Brightland##263109
 		..turnin From the Wreckage##3479 |goto NorthernWilds 4185,-5695,-723 |only Human, Mordesh, Aurin
@@ -107,8 +111,7 @@ ZGV:RegisterGuide("Exiles\\Northern Wilds (3-6)",
 	step
 		.' _Go through_ the mechanical door |goto 4112,-5897,-686
 		.click Primal Disruptor##262314
-		.' _Turn in_ Finding the Primal Disruptor |goto 4115,-5931,-690
-		|confirm
+		..accept Finding the Primal Disruptor##8960 |goto 4115,-5931,-690
 	step
 		.' _Go back down_ the stairs |goto NorthernWilds 4157,-5801,-702
 		.' _Re-enter_ the tower |goto 4154,-5716,-722

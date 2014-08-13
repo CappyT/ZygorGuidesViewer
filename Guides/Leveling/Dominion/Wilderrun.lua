@@ -1026,7 +1026,6 @@ ZGV:RegisterGuide("Dominion\\Wilderrun (35-41)",
 		.talk Freebot Socket##269575
 		..accept Calming the Storm##7771 |goto 2451,-4788,-774
 	step
-		.click Freebot Miner##565082
 		.' Run into Freebot Miners to free them
 		.' Rescue cycloned Freebot Miners |q Calming the Storm##7771/2 |goto Wilderrun 2401,-4855,-772
 	step
@@ -1035,7 +1034,7 @@ ZGV:RegisterGuide("Dominion\\Wilderrun (35-41)",
 		.' _Head across_ the second bridge |goto 2595,-5100,-767 < 10
 		.' _Walk across_ this bridge |goto 2685,-4979,-774 < 10
 		.' _Go down_ the path and across the bridge |goto 2712,-4816,-774 < 10
-		.' _Walk up_ the pile of bones and jump into the Primal Air Anomaly
+		.' _Walk up_ the pile of bones and jump into the Primal Air Anomaly |goto 2802,-4997,-798
 		.' Collect a Heart of Air from the Primal Air Anomaly |q Heartbreaker##7770/3 |goto 2793,-4992,-791
 	step
 		.' Around this area and along the previous bridges:
