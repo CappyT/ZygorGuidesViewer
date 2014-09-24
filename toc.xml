@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Addon Author="Zygor" APIVersion="9" Name="ZygorGuidesViewer" Description="" Version="1.0.10049"><!-- version gets doctored.-->
+<Addon Author="Zygor" APIVersion="9" Name="ZygorGuidesViewer" Description="" Version="1.0.10244"><!-- version gets doctored.-->
     <Script Name="Localization\Main.lua"/>
     <Script Name="Localization\Core_US.lua"/>
     <Form Name="ZygorGuidesViewer.xml"/>

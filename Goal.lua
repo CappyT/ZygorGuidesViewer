@@ -255,30 +255,6 @@ GOALTYPES['mission'] = {
 	icon = "StepIcons:Step",
 }
 
-GOALTYPES['discovermission'] = {
-	parse = function(self,params,step,data)
-		self.mission,self.missionid, self.missionobjtxt,self.missionobjnum = ParseMission(params)
-		if not self.missionid then return "no missionid in parameter" end
-	end,
-	iscomplete = function(self)
-		local mstatus = ZGV.Lib:GetMissionStatus(self.missionid)
-		return mstatus~="unknown" or mstatus == "completed"
-	end,
-	icon = "StepIcons:Step",
-}
-
-GOALTYPES['startmission'] = {
-	parse = function(self,params,step,data)
-		self.mission,self.missionid, self.missionobjtxt,self.missionobjnum = ParseMission(params)
-		if not self.missionid then return "no missionid in parameter" end
-	end,
-	iscomplete = function(self)
-		local mstatus = ZGV.Lib:GetMissionStatus(self.missionid)
-		return mstatus=="started" or mstatus == "completed"
-	end,
-	icon = "StepIcons:Step",
-}
-
 
 GOALTYPES['_item'] = {
 	parse = function(self,params)
@@ -897,17 +873,6 @@ function Goal:GetText()
 		base = L["stepgoal_wayshrine".._done]
 		data = COLOR_NPC(self.wayshrine)
 
-	elseif self.action=="discovermission" then
-		base = L["stepgoal_discovermission".._done]
-		data = COLOR_QUEST(L["questtitle"]:format(self.mission or "?mission?"))
-	elseif self.action=="startmission" then
-		base = L["stepgoal_startmission".._done]
-		data = COLOR_QUEST(L["questtitle"]:format(self.mission or "?mission?"))
-	elseif self.action=="mission" then
-		base = L["stepgoal_mission".._done]
-		data = COLOR_QUEST(L["questtitle"]:format(self.mission or "?mission?"))
-
-
 	elseif self.action=="goto" then
 		--local curZone = GetMapName()
 		--local mapname = ZGV.Pointer.Zones[self.map] and ZGV.Pointer.Zones[self.map].name or self.map or curZone.."(?)"
@@ -957,11 +922,6 @@ function Goal:GetText()
 			text = base:format(data)
 		end
 	end
-
-	if not ZGV.db.char.guide_showmission and self.missionid then
-		text = L['mission_disable'] .." ".. text
-	end
-
 
 	if text=="?" and GOALTYPE.gettext then
 		text = GOALTYPE.gettext(self)
@@ -1163,17 +1123,12 @@ function Goal:IsCompleteCheck()
 	end
 
 
-	if self.missionid and self.action~="discovermission" and self.action~="startmission" then
+	if self.missionid then
 	repeat
 
 		local mstatus = ZGV.Lib:GetMissionStatus(self.missionid)
 
 		if mstatus=="completed" then return true,true,nil,"mission completed" end
-
-		if not ZGV.db.char.guide_showmission == true then
-			return false,false, nil,"missions disabled"
-		end
-
 		if mstatus=="unknown" then 
 			if self.future then break end
 			return false,false, nil,"mission state unknown"

@@ -184,7 +184,7 @@ ZGV:RegisterGuide("Exiles\\Whitevale (23-29)",
 	step
 		'_Follow_ the ramp up |goto Whitevale 5195,-1273,-892 < 10
 		.kill 1 Silversnout Patriarch##568007
-		.' Save Bernie the Barfly |q ... But You Can't Hide##5258/2
+		.' Save Bernie the Barfly |q ... But You Can't Hide##5258/2 |goto Whitevale 5269,-1260,-880
 	step
 		'_Leave_ the cave |goto Whitevale 5196,-1171,-895 < 10
 		.talk "Money Baggs" Tragg##291925 |tip He's at the top of the hill in the house.
@@ -1188,7 +1188,7 @@ ZGV:RegisterGuide("Exiles\\Whitevale (23-29)",
 		..accept The Rending of Belle##5932 |goto 2293,462,-1030
 	step
 		.click Beckoning Hand##274150
-		.accept The Beckoning Hand##5934
+		.accept The Beckoning Hand##5934 |goto Whitevale 2296,325,-1040  //Added Coordinates
 	step
 		.collect 1 X-D12 Origin Data##14771
 		.' Use the X-D12 Origin Data in your bags |use X-D12 Origin Data##14771

@@ -81,9 +81,9 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		.talk Engineer Giba##272173
 		..accept Explosive Mammodin##5444 |goto -5445,-1098,-966
 	step
-	 	.talk Engineer Biba##272125 |q Explosive Mammodin##5444/Speak with Engineer Biba to take control of a mammodin##1 |goto -5446,-1088,-967
+	 	.talk Engineer Biba##272125 |q Explosive Mammodin##5444/Speak with Engineer Biba to take control of a mammodin##1 |goto Deradune -5446,-1088,-967
 		'Control the Mammodin to explode near poachers in this area
-		.' Kill Poachers in Bloodfire Savannah |q Explosive Mammodin##5444/Kill Poachers in Bloodfire Savannah##2 |goto -5446,-1090,-967
+		.' Kill Poachers in Bloodfire Savannah |q Explosive Mammodin##5444/Kill Poachers in Bloodfire Savannah##2 |goto -5274,-1109,-949
 	step
 		'Press _C_ to open your Communitcator:
 		..accept Eaten!##3297
@@ -107,9 +107,6 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		.' Use the Genetic Performance Tracker in your inventory |use Genetic Performance Tracker##16109
 		..accept Tracking Genetic Performance##5601 |goto -5446,-1341,-956
 	step
-		.talk Game Hunter Joresh##934700
-		..accept Totem Raider##3179 |goto Deradune -5401,-1168,-964
-	step
 		.kill Whitepaw Pouncer##6417387+
 		.kill Gnarlfoot Brute##5887404+
 		.kill Whitepaw Slasher##5737965+
@@ -118,10 +115,6 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		'Press _C_ to open your Communitcator:
 		..turnin Bloodrush##3165
 		..accept Scent of Blood##3167
-	step
-		.click Elaborate Moodie Totem##287856 |tip They are all around this area
-		.' Press _F_ quickly until you collect the totem
-		.' Collect Elaborate Moodie Totems |q Totem Raider##3179/Collect Elaborate Moodie Totems##2 |goto Deradune -5475,-1365,-949
 	step
 		'Press _C_ to open your Communitcator:
 		..accept Tamolo's Necromojo##3304 |goto -5604,-1496,-945
@@ -144,9 +137,6 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 	step
 		.talk Bloodshaman Akilos##274826
 		..turnin The Staff and the Shaman##5799 |goto Deradune -5575,-698,-978
-	step
-		.talk Hunt Mistress Kivia##271659
-		..turnin Totem Raider##3179 |goto -5646,-705,-975
 	step
 		.talk Researcher Zeelo##286554
 		..turnin Tracking Genetic Performance##5601 |goto -5628,-626,-973
@@ -209,7 +199,7 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 	step
 		.kill 1 Shadeleaf Mystic##756977 |tip They are all around this area.
 		.kill 1 Shadeleaf Novice##6084880
-		.get 1 Aurin Datachron##6048
+		.' Press _I_ and click the _Aurin Datachron_ in your inventory
 		..accept The Aurin Enclave##3171 |goto Deradune -5269,-717,-979
 	step
 		.kill 1 Ullana Shadeleaf##955848 |q The Aurin Enclave##3171/Kill Ullana Shadeleaf##1 |goto Deradune -5187,-487,-985
@@ -252,16 +242,13 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		'Press _C_ to open your Communicator:
 		..turnin Surface to Air##6334
 	step
-		.' Follow the road down the path |goto -5655,-118,-980 < 10
+		.' Follow the road _down the path_ |goto -5655,-118,-980 < 10
 		..accept Communications Blackout##3162 |goto Deradune -5665,-36,-998
 	step
 		.kill Jagged Rock Brawler##1001517+
 		.kill Jagged Rock Officer##6046036+
 		.kill Jagged Rock Swordsman##6408821+
 		.' Kill Jagged Rock Mercenaries |q Soften Them Up##5606/Kill Jagged Rock Mercenaries##1 |goto -5780,14,-1000
-		.get 1 Jagged Rock Cage Key##42365
-		.use Jagged Rock Cage Key##42365
-		..accept Maintaining One's Honor##3166
 	step
 		'Press _C_ to open your Communicator:
 		..turnin Soften Them Up##5606
@@ -281,7 +268,7 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		.' Steal Explosive Charges from Crates |q Cornered Prey##3160/Steal Explosive Charges from Crates##1 |goto -5796,16,-999
 	step
 		.click Ship Engine##286374 
-		.' Plant Explosive Charges on the Engines |q Cornered Prey##3160/Plant Explosive Charges on the Engines##3 |count 50 |goto -5703,114,-999
+		.' Plant Explosive Charges on the Engines |q Cornered Prey##3160/Plant Explosive Charges on the Engines##3 |count 1 |goto -5703,114,-999
 		.click Ship Cockpit##286179 
 		.' Plant an Explosive Charge in the cockpit |q Cornered Prey##3160/Plant an Explosive Charge in the cockpit##4 |goto -5688,121,-996
 		.click Ship Engine##286374 
@@ -293,11 +280,14 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		'Press _C_ to open your Communicator:
 		..turnin Cornered Prey##3160
 	step
+		.' Press _I_ and click the _Jagged Rock Cage Key_ in your inventory
+		..accept Maintaining One's Honor##3166
+	step
 		.' _Enter_ the Cave |goto Deradune -5654,78,-1001 < 10
 		..accept What's Mine is Mine##5608 |goto Deradune -5628,86,-1002
 	step
-		.' Follow the path through the cave |goto Deradune -5507,99,-1002 < 10
-		.' Continue through the cave |goto -5488,68,-1003 < 10
+		.' Follow the path _through the cave_ |goto Deradune -5507,99,-1002 < 10
+		.' _Continue through_ the cave |goto -5488,68,-1003 < 10
 		.click Mercenary Prison Cage##286952 
 		.' Free Firewalker Jarrok |q Maintaining One's Honor##3166/Free Firewalker Jarrok##1 |goto Deradune -5405,57,-994
 	step
@@ -320,12 +310,12 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		..turnin What's Mine is Mine##5608
 	step
 		'Press the icon on the bottom right of your action bar to:
-		.' Recall - Transmat |goto Deradune -5599,-782,-983 < 100 |c |noway |q A Captive Audience##3163
+		.' Recall - Transmat |goto Deradune -5599,-782,-983 < 100 |c |noway |q 3163
 	step
 		.talk Elder Torvak##271978
 		..turnin Maintaining One's Honor##3166 |goto Deradune -5624,-778,-983
 	step
-		.' Enter the Bloodfire Clanhall |goto -5661,-676,-973 < 10
+		.' Enter the _Bloodfire Clanhall_ |goto -5661,-676,-973 < 10
 		.' Witness Clanlord Makaza's Judgment |q A Captive Audience##3163/Witness Clanlord Makaza's Judgment##1 |goto Deradune -5742,-727,-967
 		.' Listen to Clanlord Makaza |q A Captive Audience##3163/Listen to Clanlord Makaza##2
 	step
@@ -341,7 +331,7 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 	step
 		.click Feralplain Collective Taxi Kiosk##286918
 		.' Get the _Feralplain Collective_ flight point |goto -5120,-1531,-945
-		|confirm
+		|confirm |q 3506
 	step
 		.talk Overseer Tongo##292399
 		..turnin Feralplain Collective##3506 |goto Deradune -5073,-1543,-949
@@ -351,7 +341,7 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 	step
 		.click Transmat Terminal##283551
 		' Click _Yes_ to set _Feralplain Collective_ as your Recall Point |goto Deradune -4990,-1544,-941
-		|confirm
+		|confirm |q 5692
 	step
 		.talk Scientist Twilo##292106
 		..turnin Terminite Containment##5692 |goto Deradune -5177,-1807,-936
@@ -432,7 +422,8 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		..accept Terminated!##5696
 	step
 		.' Activate the Eldan Power Controller |q Terminated!##5696/Activate the Eldan Power Controller##1 |goto -4852,-1848,-1201 
-		.' Fight off waves of Terminites |q Terminated!##5696/Fight off waves of Terminites##2 |goto -4852,-1848,-1201 |tip Press _T_ to use your Flamethrower.
+		.' Fight off waves of Terminites |q Terminated!##5696/Fight off waves of Terminites##2 |goto -4852,-1848,-1201
+		.' Press _T_ to use your Flamethrower
 	step
 		.click Eldan Fail-Safe##270950 
 		.' Activate the Eldan Fail-Safe |q Terminated!##5696/Activate the Eldan Fail-Safe##3 |goto -4829,-1827,-1200
@@ -445,9 +436,9 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		.' _Continue_ on the way out |goto Deradune 1294 -5026,-1824,-1208 < 10
 		.' _Teleport_ out |goto Deradune 1293 -5027,-1995,-1198 < 10
 		.' _Leave_ the Exo-Lab 79 |goto Deradune -5064,-1910,-959 < 10
-		.' _Enter the termite cave |goto 1774 -5316,-1675,-958
-		.' Go to the Terminite Mound Containing Exo-Lab 78 |q Mitey Infestation##5758/1 |goto -5329,-1703,-968
-		.' Enter Exo-Lab 78 |q Mitey Infestation##5758/2 |goto -5357,-1785,-1002
+		.' _Enter_ the termite cave |goto Deradune 1774 -5316,-1675,-958 < 10
+		.' Go to the Terminite Mound Containing Exo-Lab 78 |q Mitey Infestation##5758/1 |goto Deradune -5329,-1703,-968
+		.' Enter Exo-Lab 78 |q Mitey Infestation##5758/2 |goto Deradune -5357,-1785,-1002
 	step
 		'Press _C_ to open your Communicator:
 		..accept Caught in a Web##5766
@@ -490,7 +481,7 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		..turnin Small Modifications##5625
 		..accept The Carnivorizor##5626
 	step
-		.click Carnivorous Dawngrazer##6035795
+		.click Gentle Dawngrazer##1494517
 		.' Press _T_ to use the Carnivorizor on Gentle Dawngrazers |q The Carnivorizor##5626/1 |goto Deradune -4814,-1314,-912
 	step
 		.talk Supervisor Renla##269872
@@ -538,8 +529,8 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		..accept Diplomatic Preparations##5510 |goto -4719,-1553,-911
 	step
 		.click Transmat Terminal##283551
-		.' Click _Yes_ to set this Terminal as your Recall Point |goto Deradune -4703,-1523,-911
-		|confirm
+		.' Click _Yes_ to set _Tall Rock Point_ as your Recall Point |goto Deradune -4703,-1523,-911
+		|confirm |q 5628
 	step
 		.kill Stonetusk Earthshaker##4063692
 		.' Collect a Mammodin Horn |q Diplomatic Preparations##5510/3 |goto Deradune -4593,-1532,-922
@@ -556,10 +547,10 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		.kill 1 Experiment 878##4417395 |q Huge Success!##5628/2 |goto Deradune -4487,-1271,-932
 	step
 		'Press _C_ to open your Communicator:
-		..turnin Huge Success!##5628 |goto -4482,-1274,-932
+		..turnin Huge Success!##5628
 	step
 		'Press the icon on the bottom right of your action bar to:
-		.' Recall to Tall Rock Point - Transmat |goto Deradune -4702,-1522,-911 < 100 |c |noway
+		.' Recall to Tall Rock Point - Transmat |goto Deradune -4702,-1522,-911 < 100 |c |noway |q 5510
 	step
 		.talk Emissary Autarka##270727
 		..turnin Diplomatic Preparations##5510 |goto Deradune -4719,-1552,-911
@@ -581,11 +572,11 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		.talk Mondo Zax##292411
 		..accept Innovative Methods##5514 |goto -4710,-1548,-911
 	step
-		' Head up the moutain path |goto Deradune -4628,-1619,-908 < 10
+		' _Head up_ the moutain path |goto Deradune -4628,-1619,-908 < 10
 		.click Emissary Autarka's Head##269934
 		..turnin Rescue the Emissaries##5512 |goto Deradune -4638,-1710,-862
 		..accept Autarka's Response##5517 |goto -4638,-1710,-862
-		..accept Picking up the Pieces ##5519 |goto Deradune -4638,-1709,-862
+		..accept Picking up the Pieces##5519 |goto Deradune -4638,-1709,-862
 	step
 		'Press _C_ to open your Communicator:
 		..accept Demoralize Them##5520 |goto -4631,-1708,-864
@@ -596,15 +587,10 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		.click Falkrin Hut##270096
 		.' Press _T_ to call Orbital Strikes on the Falkrin Huts |q Innovative Methods##5514/1 |count 16 |goto -4556,-1706,-855
 	step
-		.kill 1 Bloodtalon Warden##4229146+ |tip Kill them as you go.
-		.' Kill Bloodtalon Falkrin |q Autarka's Response##5517/1
 		.click Mechari Arms##4296298
-		.' Collect the missing Mechari Arms |q Picking up the Pieces ##5519/3 |goto -4486,-1624,-855
+		.' Collect the missing Mechari Arms |q Picking up the Pieces##5519/3 |goto -4486,-1624,-855
 	step
 		.kill 1 Warmonger Murali##4488000|q Challenge the Strongest##5513/2 |goto -4496,-1605,-855
-	step
-		'Press _C_ to open your Communicator:
-		..turnin Autarka's Response##5517
 	step
 		'Press _C_ to open your Communicator:
 		..accept Primal Air Energies##5521 |goto -4570,-1804,-858
@@ -624,9 +610,12 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		.kill 1 Crusher Zhong##4532935 |q Challenge the Strongest##5513/3 |goto -4312,-1724,-872
 	step
 		.click Mechari Legs##4535359
-		.' Collect the missing Mechari Legs |q Picking up the Pieces ##5519/2 |goto -4378,-1743,-862
+		.' Collect the missing Mechari Legs |q Picking up the Pieces##5519/2 |goto -4378,-1743,-862
 	step
 		.kill 1 Keeper Akhin##4551911 |q Challenge the Strongest##5513/1 |goto -4587,-2040,-860
+	step
+		'Press _C_ to open your Communicator:
+		..turnin Challenge the Strongest##5513
 	step
 		.click Falkrin Hut##270129
 		.' Call Orbital Strikes on the Falkrin Huts |q Innovative Methods##5514/1 |count 33 |goto -4588,-2040,-861
@@ -635,7 +624,7 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		.' Call Orbital Strikes on the Falkrin Huts |q Innovative Methods##5514/1 |count 50 |goto -4675,-1980,-864
 	step
 		.click Mechari Torso##4360568
-		.' Collect the missing Mechari Torso |q Picking up the Pieces ##5519/1 |goto -4649,-1919,-863
+		.' Collect the missing Mechari Torso |q Picking up the Pieces##5519/1 |goto -4649,-1919,-863
 	step
 		.click Falkrin Hut##270114
 		.' Call Orbital Strikes on the Falkrin Huts |q Innovative Methods##5514/1 |count 66 |goto -4660,-1893,-864
@@ -646,11 +635,20 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		.click Falkrin Hut##270097
 		.' Call Orbital Strikes on the Falkrin Huts |q Innovative Methods##5514/1 |goto -4694,-1852,-862
 	step
+		.' All around Bloodtalon Perch:
+		.kill 1 Bloodtalon Warden##1935227+
+		.kill 1 Bloodtalon Horncaller##1932726+
+		.kill 1 Bloodtalon Windweaver##1932118+
+		.kill 1 Bloodtalon Slicer##1931980+
+		.' Kill Bloodtalon Falkrin |q Autarka's Response##5517/1 |goto Deradune -4657,-1928,-864
+		.click Bloodtalon Totem##269999
+		.' Destroy Bloodtalon Totems |q Demoralize Them##5520/1 |goto Deradune -4657,-1928,-864
+	step
 		'Press _C_ to open your Communicator:
-		..turnin Demoralize Them##5520 |goto -4660,-1916,-861
-		..turnin Challenge the Strongest##5513 |goto -4660,-1916,-861
-		..turnin Innovative Methods##5514 |goto -4660,-1916,-861
-		..accept Secrets of the Falkrin##5515 |goto -4660,-1916,-861
+		..turnin Demoralize Them##5520
+		..turnin Innovative Methods##5514
+		..turnin Autarka's Response##5517
+		..accept Secrets of the Falkrin##5515
 	step
 		.' _Go up_ the ramp and through the gate |goto -4516,-1894,-849 < 10
 		.' Get to Bloodtalon Tower |q Secrets of the Falkrin##5515/1 |goto -4492,-1933,-838
@@ -658,13 +656,13 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 	step
 		.kill 1 Bride Vultura##4091463 |q Secrets of the Falkrin##5515/3 |goto Deradune 1371 -4257,-1947,-727
 	step
-		'_Follow_ the path |goto -4338,-1934,-727 < 10
+		'_Enter_ the teleporter |goto -4338,-1934,-727 < 10
 		.' _Continue_ on the path |goto -4499,-1927,-841 < 10
 		.click Emissary Autarka's Head##270162
 		..turnin Picking up the Pieces##5519 |goto -4638,-1710,-862
 	step
 		'Press the icon on the bottom right of your action bar to:
-		.' Recall to Tall Rock Point - Transmat |goto Deradune -4702,-1522,-911 < 100 |c |noway
+		.' Recall to Tall Rock Point - Transmat |goto Deradune -4702,-1522,-911 < 100 |c |noway |q 5515
 	step
 		.talk Clanlord Makaza##292410
 		..turnin Secrets of the Falkrin##5515 |goto -4717,-1553,-911
@@ -720,12 +718,12 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		.click Aurin Portal##268808
 		.' Destroy the Aurin Portal |q The Guardian of the Grove##5650/2 |goto -4346,-958,-934
 	step
-		.talk Researcher Zamm##271177
-		.' Rescue Researcher Zamm |q Zamm in a Jam##5688/2 |goto -4396,-1021,-932
-	step
 		'Press _C_ to open your Communicator:
 		..turnin The Guardian of the Grove##5650
 		..accept Conservation in the Basin##9067
+	step
+		.talk Researcher Zamm##271177
+		.' Rescue Researcher Zamm |q Zamm in a Jam##5688/2 |goto -4396,-1021,-932
 	step
 		.talk Agent Lex##287016
 		..turnin Wildwood Terraformer##5634 |goto Deradune -4617,-1064,-942
@@ -738,7 +736,7 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 	step
 		.talk Conservationist Caius##291390
 		..turnin Conservation in the Basin##9067 |goto -4670,-431,-971
-		..accept Conservation Efforts##5881 |goto -4670,-431,-971'
+		..accept Conservation Efforts##5881 |goto -4670,-431,-971
 	step
 		'Press _T_ to shock Prowlers 
 		.click Plumclaw Prowler##4810415+
@@ -759,8 +757,8 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		.' Recover Subject A43K's tracking chip |q Lost Mammodin##5911/2 |goto -4816,-381,-960
 	step
 		'Press _C_ to open your Communicator:
-		..turnin Lost Mammodin##5911 |goto -4796,-401,-960
-		..accept Delivering the Bad News##5914 |goto -4796,-401,-960
+		..turnin Lost Mammodin##5911
+		..accept Delivering the Bad News##5914
 	step
 		.talk Biologist Ari##291391
 		..turnin A Shocking Solution##5924 |goto Deradune -4683,-436,-970
@@ -779,21 +777,24 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		.' Examine a Rusthoof Corpse |q Delivering the Bad News##5914/5 |goto -4615,-44,-965 |tip These are marked as an orange cog on your minimap.
 	step
 		'Press _C_ to open your Communicator:
-		..turnin Delivering the Bad News##5914 |goto -4615,-44,-965
-		..accept Poacher Hunt##5915 |goto -4615,-44,-965
+		..turnin Delivering the Bad News##5914
+		..accept Poacher Hunt##5915
 	step
 		.' Locate the Grimvoid Marauder Camp |q Poacher Hunt##5915/1 |goto Deradune -4743,252,-950
-		..accept Hunters Become Hunted##5921 |goto -4743,252,-950
+	step
+		'Press _C_ to open your Communicator:
+		..turnin Poacher Hunt##5915
+		..accept Hunters Become Hunted##5921
 	step
 		.click Fuel Drum##4731399
 		..accept Up in Flames##6052 |goto -4754,231,-952
 	step
 		'All around this area:
 		.click Fuel Drum##4731399
-		'Ignite Fuel Drums |q Up in Flames##6052/1 |goto -4778,252,-951
+		.' Ignite Fuel Drums |q Up in Flames##6052/1 |goto -4778,252,-951
 	step
 		.click Grimvoid Communications Relay##291364
-		.' Disable the Grimvoid Communications Relays |q Hunters Become Hunted##5921/1 |count 50 |goto -4825,308,-949
+		.' Disable the Grimvoid Communications Relays |q Hunters Become Hunted##5921/1 |count 1 |goto -4825,308,-949
 		.click Grimvoid Enforcer##4441631
 		.' Disable the Grimvoid Communications Relays |q Hunters Become Hunted##5921/1 |goto -4774,371,-951
 	step
@@ -822,10 +823,14 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		'Head through the gates and _up the path_ |goto -4842,-236,-950 < 10
 		.click Transmat Terminal##283551
 		.' Click _Yes_ to set _Endless Vigil_ as your Recall Point |goto -4946,-137,-934
-		|confirm
+		|confirm |q 3622
 	step
 		.talk Agent Vivax##287341
 		..accept An Uninviting Situation##5622 |goto -4867,-155,-938
+	step
+		.click Endless Vigil Taxi Kiosk##286774
+		.' Get the _Endless Vigil_ taxi point |goto Deradune -4900,-89,-931
+		|confirm |q 5622
 	step
 		.talk Scientist Gim##287396
 		..accept Emergency Support##5916 |goto -4990,-157,-936
@@ -859,8 +864,9 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		.' Kill all the mobs that appear |tip Stay inside the yellow circle that spawns.
 		.' Complete holdout |q A Meeting in Darkness##5925/3 |goto -5348,16,-940
 	step
-		..turnin A Meeting in Darkness##5925 |goto -5349,15,-940
-		..accept Righteous Fury##5926 |goto -5349,15,-940
+		'Press _C_ to open your Communicator:
+		..turnin A Meeting in Darkness##5925
+		..accept Righteous Fury##5926
 	step
 		.click Stolen Draken Bone##4922299
 		.' Retrieve Stolen Draken Bones |q Collecting Bones##3655/1 |goto Deradune -5221,141,-952
@@ -880,13 +886,11 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		.kill Witchwake Cutter##640335+
 		.kill Witchwake Finder##640291+
 		.' Kill Witchwake Moodies |q Trespassers Will Be Violated##5940/1 |goto Deradune -5174,195,-951
-		.click Stolen Draken Bone##4842016
-		.' Retrieve Stolen Draken Bones |q Collecting Bones##3655/1 |goto -5132,237,-947
 	step
 		'Press _C_ to open your Communicator:
-		..turnin Righteous Fury##5926 |goto -5197,-114,-937
-		..accept A Violent End##5927 |goto -5197,-114,-937
-		..turnin Trespassers Will Be Violated##5940 |goto -5197,-114,-937
+		..turnin Righteous Fury##5926
+		..accept A Violent End##5927
+		..turnin Trespassers Will Be Violated##5940
 	step
 		.click Draken Resting Place##291526
 		.' Return Bones to Draken Resting Place |q Collecting Bones##3655/2 |goto Deradune -5136,-144,-933
@@ -894,8 +898,9 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		.talk Cairnguard Drakuz##291428
 		..turnin Collecting Bones##3655 |goto -5131,-151,-933
 	step
-		.talk DRED Tech Farlo##287388
 		.' Find the Royal Collegium expedition in Leviathan's Rest |q Emergency Support##5916/1 |goto Deradune -5071,-70,-967
+	step
+		.talk DRED Tech Farlo##287388
 		..turnin Emergency Support##5916 |goto -5071,-70,-967
 		..accept Stick It to Them!##3651 |goto -5071,-70,-967
 	step
@@ -937,14 +942,17 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		..turnin Swallowed Supplies##5988
 		..accept Unlocking the Gate##5920
 	step
+		.click Hand##291475
+		..accept No Good Deed...##5941 |goto Deradune -5031,56,-980
+	step
 		'Press _T_ to:
 		.' Scan for the first exo-lab access key |q Unlocking the Gate##5920/1 |goto -5081,130,-979
 		'Press _T_ to:
 		.' Scan for the second exo-lab access key |q Unlocking the Gate##5920/2 |goto -4993,60,-971
 		'Press _T_ to:
 		.' Scan for the third exo-lab access key |q Unlocking the Gate##5920/3 |goto -4935,197,-968
+		.' _Follow_ the energy signature trail |q Unlocking the Gate##5920/4 |goto -4906,316,-993
 	step
-		'_Follow_ the energy signature trail |q Unlocking the Gate##5920/4 |goto -4906,316,-993
 		.talk Artemis Zin##5278424
 		..turnin Unlocking the Gate##5920 |goto -4906,316,-993
 		..accept Meet Me Inside##6033 |goto -4906,316,-993
@@ -1022,7 +1030,7 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		.kill High Clanlord Zhur the Risen##570026
 		.' Defeat High Clanlord Zhur the Risen |q A Violent End##5927/2 |goto -5218,449,-978
 	step
-		'_Run up_ and to exit the cave |goto -5108,490,-974 < 10
+		'_Run up_ to exit the cave |goto -5108,490,-974 < 10
 		.' _Exit_ the cave |goto -5037,343,-943 < 10
 		.talk Cairnguard Drakuz##291368
 		..turnin A Violent End##5927 |goto -5129,-151,-932
@@ -1054,7 +1062,7 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 	step
 		.click Transmat Terminal##286155
 		.' Click _Yes_ to set _Camp Firewalker_ as your Recall point |goto Deradune -4388,-607,-968
-		|confirm
+		|confirm |q 6045
 	step
 		.click Dominion Medical Kit##291571
 		.' Locate the first clue |q Hunting the Mercenary##6045/1 |goto Deradune -4187,-464,-940
@@ -1091,7 +1099,7 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		..turnin The Root of Treachery##6047
 	step
 		'Press the icon on the bottom right of your action bar to:
-		.' Recall to Camp Firewalker Point - Transmat |goto Deradune -4388,-607,-968 < 100 |c |noway |q 5515
+		.' Recall to Camp Firewalker Point - Transmat |goto Deradune -4388,-607,-968 < 100 |c |noway |q 5622
 //Illium and Level 15 Quests
 	step
 		'_Run up_ the path in the mountain |goto -4383,-654,-962 < 10

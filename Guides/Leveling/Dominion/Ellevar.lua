@@ -380,9 +380,8 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 	step
 		'_Climb_ up the side of the hill |goto Ellevar -2737,-2765,-728 < 30
 		.click The Highborn: Sovereignty Unveiled##275911
+		.' Kill the enemies that attack in waves
 		.' Find "The Highborn: Sovereignty Unveiled" |q Lost In The Woods##6890/3 |goto -2752,-2729,-731
-		.' Stay close to the _Yellow Circle_ and fight the spiders that spawn
-		.kill Webwood Spitter##828096+, Webwood Pincher##692916+, Webwood Skitter##828737+
 	step
 		.kill Webwood Cocoon##630029+
 		.' Rescue Radiant Soldiers from Webwood Cocoons |q Out For Lunch##6887/1 |goto Ellevar -2536,-2777,-737
@@ -411,6 +410,10 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.talk Agent Varac##276010
 		..accept A Bad Snog##6598 |goto Ellevar -2514,-2971,-762
 	step
+		.click Mistymurk Camp Taxi Kiosk##286770
+		.' Get the _Mistymurk Shore_ taxi point |goto Ellevar -2551,-3029,-770
+		|confirm |q 6598
+	step
 		'_IMPORTANT_ Click these in order: _4_, _2_, _5_, _1_, then _3_
 		.click EDP Station 4##286609
 		.' Recalibrate the E.D.P. Station _number 4_ |goto Ellevar -2571,-2935,-765 < 10
@@ -421,7 +424,8 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.click EDP Station 1##276006
 		.' Recalibrate the E.D.P. Station _number 1_ |goto Ellevar -2475,-2977,-765 < 10
 		.click EDP Station 3##276007
-		.' Recalibrate the E.D.P. Station _number 3_ |q Bug Zapper##6891/1 |goto -2536,-2901,-768
+		.' Recalibrate the E.D.P. Station _number 3_ |goto -2536,-2901,-768
+		.' Recalibrate the E.D.P. Stations |q Bug Zapper##6891/1
 	step
 		.talk Nerissa Artan##276023
 		..turnin Bug Zapper##6891 |goto Ellevar -2516,-2931,-765
@@ -435,8 +439,9 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 	step
 		'_Head into_ the cave and follow the path left |goto Ellevar -2426,-2470,-697 < 10
 		.click Webwood Larva##762767
-		.' Retrieve Webwood Larvae |q Egg-Septional Coordination##6893/1 |goto -2382,-2498,-697 |tip Watch the buff above your health bar until you have 2-3 eggs. The more you have the harder it is to balance.
-		.' Use the controls to not drop the eggs as you _return to this spot_ |goto Ellevar -2512,-2647,-697
+		.' Gather Webwood Larvae |goto -2382,-2498,-697 |tip Watch the buff above your health bar until you have 2-3 eggs. The more you have the harder it is to balance.
+		.' Use the controls to not drop the eggs as you _return to the cave entrance_ |goto Ellevar -2512,-2647,-697
+		.' Retrieve Webwood Larvae |q Egg-Septional Coordination##6893/1
 	step
 		.talk Webwood Taskmaster##276021
 		..turnin Egg-Septional Coordination##6893 |goto -2509,-2649,-697
@@ -462,16 +467,22 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		..turnin Raving Ravenok##6597 |goto -2480,-2939,-764
 	step
 		.talk Lowland Chick##286277
-		..accept Unnatural Selection##6575 |goto -2913,-3051,-815
+		..accept Unnatural Selection##6918 |goto -2913,-3051,-815
 	step
 		.' Kill Snoglugs |q Unnatural Selection##6918/1 |goto Ellevar -2910,-3055,-817
+		.click Spotted Splorg##286242
 		.' Collect Spotted Splorg |q Unnatural Selection##6918/2 |goto -2746,-2992,-789
+	step
+		.talk Calliope Rose##286230
 		.' Speak with Calliope Rose |q Unnatural Selection##6918/3 |goto -2954,-2829,-766
+	step
+		.click Lowland Chick##286265
 		.' Press _T_ to:
 		.' Feed Chick Veggie Mash |q Unnatural Selection##6918/4 |goto -2910,-3055,-817
 		.' Feed Chick Snoglugs |q Unnatural Selection##6918/5 |goto -2910,-3055,-817
 		.' Feed Chick Splotted Splorg |q Unnatural Selection##6918/6 |goto -2910,-3055,-817
 	step
+		.click Lowland Chick##286265
 		..turnin Unnatural Selection##6918 |goto Ellevar -2912,-3050,-816
 	step
 		.kill Mistymurk Slimer##772281+
@@ -491,7 +502,6 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.talk Scientist Hrezz##286340
 		..accept Security Protocol##6914 |goto -2950,-2826,-766
 	step
-		'Run to the Data Cube
 		.' Find Radek's Datacube |q The Datacube Tells All##6910/1 |goto Ellevar -3115,-2923,-790
 	step
 		.click Irradiated Bio-Mech Minerals##850418 |tip These are mostly on the ground around this structure.
@@ -566,7 +576,7 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.talk Maxinux##286338
 		..accept Power It Up##6917 |goto Ellevar -2936,-2834,-767
 	step
-		.click Bio-Mech Power Pylon##275817+ |tip You can find more on the ground all around this area.
+		.click Bio-Mech Power Pylon##275817+ |tip You can find more on the ground all around this area. They may be marked as an orange cog on your mini maap.
 		.' Activate the Bio-Mech Power Pylons |q Power It Up##6917/1 |goto Ellevar -2990,-2918,-771
 	step
 		'Press _C_ to open your Communicator:
@@ -579,7 +589,7 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		'_Follow_ Calidor and protect him |goto -2897,-2570,-751 < 10
 		.' Escort Calidor as he explores |q Deciphering the Unknown##6878/1 |goto Ellevar -2924,-2488,-750
 	step
-		.' Escort Calidor as he explores |q Deciphering the Unknown##6878/1 |goto Ellevar -2912,-2484,-749
+		.' Enter the Recombination Complex |q Deciphering the Unknown##6878/2 |goto Ellevar -2912,-2484,-749
 	step
 		.talk Calidor Antevian##275522
 		..turnin Deciphering the Unknown##6878 |goto Ellevar -2944,-2604,-857
@@ -634,13 +644,13 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.kill AH47 Augmentor##274724+, Augmented Spider##896486+
 		.' Kill the Augmented creature |q Fade from Black##6880/4 |goto -3048,-2382,-852
 	step
-		'Press _C_ to open your Communicator:
-		..turnin Keep Them Separated##6884
-	step
 		.kill AH47 Augmentor##995080+
 		.' Destroy AH47 Augmentors |q Keep Them Separated##6884/1
 	step
-		'_Step into_ the green portal |goto Ellevar -2942,-2321,-851
+		'Press _C_ to open your Communicator:
+		..turnin Keep Them Separated##6884
+	step
+		'_Step into_ the green portal |goto Ellevar -2942,-2321,-851 < 10
 		.talk Xenoanalyst Derenia##275506
 		..accept Mine Control##7047 |goto -3117,-2428,-945
 	step
@@ -699,7 +709,6 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.click Exit Teleporter Panel##286185
 		.' Activate the Exit Teleporter Panel |q Blinding Light##6882/3 |goto Ellevar -3004,-2435,-1082
 	step
-		'Enter the portal
 		.' Leave the Recombination Chamber |q Blinding Light##6882/4 |goto Ellevar -3018,-2441,-1080
 	step
 		'Press _C_ to open your Communicator: 
@@ -712,6 +721,7 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.talk Toric Antevian##276529
 		..turnin Shimmer of Hope##6883 |goto Ellevar -2414,-3532,-779
 	step
+		.' _Enter_ the building |goto Ellevar -2468,-3558,-787 < 10
 		.talk Lord Horacos##290691
 		..accept The Infamous Corrigan Doon##6664 |goto Ellevar -2447,-3576,-786
 	step
@@ -770,9 +780,15 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.click Emergency Supply Kit##280515
 		..accept Scaring the Scavengers##6616 |goto Ellevar -2034,-3781,-738
 	step
-		'Follow the path into the wooded area
 		.click Corpse##290471
 		.' Identify the bodies |q Identifying the Deceased##6617/1 |goto Ellevar -2005,-3817,-734
+	step
+		'Press _T_ to call Corrigan Doom
+		.talk Corrigan Doom
+		..turnin Identifying the Deceased##6617 |goto Ellevar -1998,-3826,-733
+		..accept Copperworth Village##6644 |goto Ellevar -2009,-3829,-728
+		.' If you cannot call Corrigan, click here to locate him |goto -2347,-3479,-770
+	step
 		.click Longsnout Scavenger##1714229
 		'Press _T_ to:
 		.' Frighten away Longsnout Scavengers |q Scaring the Scavengers##6616/1 |goto -2004,-3817,-734
@@ -784,7 +800,7 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.' If you cannot call Corrigan, click here to locate him |goto -2347,-3479,-770
 	step
 		'Press _C_ to open your Communicator:
-		..turnin Scaring the Scavengers##6616 |goto Ellevar -1998,-3826,-733
+		..turnin Scaring the Scavengers##6616
 	step
 		'Enter the Copperworth General Store |q Copperworth Village##6644/1 |goto Ellevar -1795,-3820,-735
 		.kill Tideborn Shellback##1934617+
@@ -856,7 +872,7 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 	step
 		'Press _C_ to open your Communicator:
 		..turnin Unidentified Flying Object##6634
-		..accept Dead End##6635 |goto -1121,-3783,-749 |goto -1121,-3783,-749
+		..accept Dead End##6635
 	step
 		.kill Slenderskin Crawler##1794973+, Slenderskin Implementer##1795846+, Slenderskin Shredder##1792035+, Slenderskin Slicer##1874881
 		.' Kill Ikthian forces |q Dead End##6635/1 |goto Ellevar -1100,-3747,-746
@@ -876,15 +892,15 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.click Ikthian Biological Experiment##289893
 		.' Destroy the Ikthian Biological Experiments |q Out of Your Depth##6637/3 |goto Ellevar -838,-3600,-641
 	step
+		'Press _C_ to use your Communicator:
+		..turnin Out of Your Depth##6637
+	step
 		.kill Slenderskin Slicer##1661221+, Slenderskin Sentinel##1791980+, Shaleshell Spineclaw##1797072+
 		.' Kill Slenderskin Ikthians |q Know Your Enemy##6638/1 |goto -813,-3535,-638
 	step
 		'Press _C_ to open your Communicator:
 		..turnin Know Your Enemy##6638
-	step
-		'Press _C_ to open your Communicator:
 		..accept Advanced Science##6640
-		..accept Out of Your Depth##6637
 	step
 		.click Data Center: Biology##289875
 		.' Download Biology Data |q Advanced Science##6640/1 |goto Ellevar -780,-3487,-641
@@ -892,9 +908,6 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		'_Follow_ the cave around the corner |goto Ellevar -723,-3385,-641 < 20
 		.click Crate of Eldan Technology##289776
 		..accept The Collectors##6639 |goto -664,-3403,-641
-	step
-		'Press _C_ to open your Communicator:
-		..turnin The Collectors##6639
 	step
 		'Press _C_ to open your Communicator:
 		..accept Restore Default Settings##6647 |goto -664,-3403,-641
@@ -905,7 +918,10 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.click Dismantled Eldan Component##1883840
 		.' Collect Dismantled Eldan Technology |q The Collectors##6639/1 |goto Ellevar -621,-3441,-642
 	step
-		'_Continue_ along the caves path |goto Ellevar -551,-3524,-641 < 10
+		'Press _C_ to open your Communicator:
+		..turnin The Collectors##6639
+	step
+		'_Continue_ along the cave's path |goto Ellevar -551,-3524,-641 < 10
 		.click Slenderskin Implementer##1734285
 		.' Download Ikthian Data |q Advanced Science##6640/3 |goto -507,-3628,-659
 	step
@@ -921,7 +937,7 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 	step
 		'Press _C_ to open your Communicator:
 		..turnin Advanced Science##6640
-		..accept A Narrow Escape##6641 |goto Ellevar -610,-3629,-656
+		..accept A Narrow Escape##6641
 	step
 		'_Follow_ the route in the cave |goto -494,-3568,-656 < 10
 		.click Ikthian Transport Controls##289844
@@ -937,10 +953,8 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 	step
 		.click Darkfang Den##279979
 		.' Set Charges at Darkfang Dens |q Blown Up with Darkfangs##6654/1 |count 33 |goto Ellevar -1726,-3407,-704
-	step
 		.click Darkfang Den##290098
 		.' Set Charges at Darkfang Dens |q Blown Up with Darkfangs##6654/1 |count 66 |goto -1778,-3442,-712
-	step
 		.click Darkfang Den##279980
 		.' Set Charges at Darkfang Dens |q Blown Up with Darkfangs##6654/1 |goto Ellevar -1723,-3477,-708
 	step
@@ -995,7 +1009,7 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.' Gather Branches from Toxic Stumpkins |q Scientific Method##6650/2 |goto Ellevar -2096,-3293,-736
 	step
 		.click Darkfang Prowler##2030947+, Darkfang Alpha##1745327+, Darkfang Hunter##1992729+
-		.' Apply the Toxicity Analyzer to Darkfang Dagun |q Scientific Method##6650/3
+		.' Press _T_ to apply the Toxicity Analyzer to Darkfang Dagun |q Scientific Method##6650/3
 		.kill Darkfang Prowler##1928144+, Darkfang Hunter##2039646
 		.' Kill Darkfang Dagun |q Quarantine Enforcement##6806/1 |goto Ellevar -2096,-3293,-736
 	step

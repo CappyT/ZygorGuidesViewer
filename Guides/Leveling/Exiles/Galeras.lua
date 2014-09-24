@@ -54,7 +54,7 @@ ZGV:RegisterGuide("Exiles\\Galeras (15-23)",
 		.talk Junior Scientist Barkberry##286376
 		.' Speak with Junior Scientist Barkberry |q Sim Core: A Remarkable Discovery##8834/1 |goto 4407,-2098,-838
 	step
-		.' _Step into_ the teleporter. |goto Galeras 4397,-2096,-835 < 2
+		.' _Step into_ the teleporter. |goto Galeras 4397,-2096,-835 < 5
 		.talk Technician Kagger##286385
 		.' Speak with Technician Kagger |q Sim Core: A Remarkable Discovery##8834/2 |goto Thayd 4390,-2105,-955
 	step
@@ -129,7 +129,7 @@ ZGV:RegisterGuide("Exiles\\Galeras (15-23)",
 		.talk Matthias Black##269006
 		..turnin Power Restoration##4955 |goto 4543,-2442,-828
 	step
-		' _Go up_ the sramp here. |goto 4599,-2408,-835 < 10
+		' _Go up_ the ramp here. |goto 4599,-2408,-835 < 10  //sramp to ramp
 		.talk Daniel Bronson##270554
 		..accept Anti-Air Support##4761 |goto 4584,-2465,-795
 	step
@@ -1005,7 +1005,7 @@ ZGV:RegisterGuide("Exiles\\Galeras (15-23)",
 		.kill 1 Air Tome-Binder##1998185
 		.' Collect the Tome of Air |q Trilogy of the Pell##5255/1 |goto 5668,-1928,-1004
 		.kill 1 Summoning Tome-Binder##2004770
-		.' Collect the Tome of Air |q Trilogy of the Pell##5255/1 |goto 5673,-2010,-1012
+		.' Collect the Tome of Summoning |q Trilogy of the Pell##5255/3 |goto 5673,-2010,-1012  //Fixed Collect
 	step
 		.' _Follow the road_ |goto 5504,-2058,-1012 <10
 		.talk Alchemist Adair##290260

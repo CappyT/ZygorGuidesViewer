@@ -94,8 +94,8 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		.' Deliver Dealer Rakon's Crate |q Citizen Concerns##3751/6 |goto -2500,-1855,-881
 	step
 		'Press _C_ to open your Communicator:
-		..turnin Citizen Concerns##3751 |goto -2500,-1855,-881
-		..accept Gruesome Secrets##5630 |goto -2500,-1855,-881
+		..turnin Citizen Concerns##3751
+		..accept Gruesome Secrets##5630
 	step
 		'Meet Agent Marcus |q Gruesome Secrets##5630/1 |goto -2662,-1734,-881
 		.click Plagued Hycrest Guard##281976
@@ -117,8 +117,9 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 	step
 		.talk Governor Aluviel##282128
 		..turnin The Truth Comes Out##3753 |goto -2483,-1850,-929
+	step
 		'Press _C_ to open your Communicator:
-		..accept Deadly Samples##5640 |goto -2483,-1850,-929
+		..accept Deadly Samples##5640
 	step
 		'_Exit_ the Interrogation Center |goto -2506,-1831,-924 < 2
 		.' _Leave_ the house |goto -2370,-1963,-865 < 5
@@ -335,7 +336,7 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		..turnin Tools, Not Toys!##5554 |goto Auroria -2362,-1167,-918
 	step
 		.talk Director Kalea##283031
-		..turnin The Alpha Assassination ##5555 |goto Auroria -2374,-1168,-918
+		..turnin The Alpha Assassination##5555 |goto Auroria -2374,-1168,-918
 	step
 		.talk Hermit Bilvus##283041
 		..turnin The Hermit's Rotgut##5550 |goto -2382,-1171,-919
@@ -409,7 +410,7 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		.' Collect information from Poxbrew Scouts |q The Poxbrew Enclave##5616/1 |goto -2102,-1738,-898
 	step
 		.click Poxbrew Enclave Entrance##283351
-		.' Use Access Code 5440 to enter the Poxbrew Enclave |q The Poxbrew Enclave##5616/2 |goto -2026,-1700,-883
+		.' Use Access Code _5440_ to enter the Poxbrew Enclave |q The Poxbrew Enclave##5616/2 |goto -2026,-1700,-883
 	step
 		'Press _C_ to open your Communicator:
 		..turnin The Poxbrew Enclave##5616
@@ -451,7 +452,7 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		.' Destroy Black Hoods Alchemy Supplies |q Denial of Resources##5619/1 |goto -2107,-1615,-1003 |tip These appear as an orange cog on your minimap.
 	step
 		'Press _C_ to open your Communicator:
-		..turnin Denial of Resources##5619 |goto -2107,-1615,-1003
+		..turnin Denial of Resources##5619
 	step
 		'Press the icon on the bottom right of your action bar to:
 		.' Recall to Hycrest Point - Transmat |goto -4388,-607,-968 < 100 |c |noway |q 5621
@@ -466,7 +467,6 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		.talk Production Facility Manager##277280
 		..turnin Production Problems##3899 |goto -2089,-2044,-875 |or
 		..turnin Production Problems##3899 |goto -2089,-2044,-875 |or
-
 		..accept The Red Tape of Courage##5955 |goto -2089,-2044,-875
 	step
 		.talk Hot Beverage Requisitions##277385
@@ -537,12 +537,12 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		..accept Cuboar Whitewash##3932 |goto -2068,-2010,-877
 	step
 		.click Cubig Farms Taxi Kiosk##290955
-		.' Get the _Cubig Pens_ flight point |goto Auroria -1944,-2015,-879
-		|confirm
+		.' Get the _Cubig Pens_ taxi point |goto Auroria -1944,-2015,-879
+		|confirm |q 3932
 	step
 		.click Transmat Terminal##272208
 		.' Click _Yes_ to set _Cubig Farm_ as your Recall point |goto Auroria -1908,-2039,-882
-		|confirm
+		|confirm |q 3932
 	step
 		.talk Protostar Assistant Manager##277386
 		..turnin Here a Minute Ago##5944 |goto Auroria -1830,-2139,-890
@@ -596,9 +596,6 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		' _Leave_ the cave |goto -1692,-2303,-904 < 10
 		.talk Angry Regurgitated Buzzbing##1653357
 		..turnin Leader of the Pack##5971 |goto -1841,-2260,-867
-	step
-		.' Press the icon on the bottom right of your action bar to:
-		.' Recall to Cubig Farm Point - Transmat |goto -1909,-2044,-882 < 100 |c |noway |q 5515
 	step
 		.talk Production Facility Manager##277280
 		..turnin Life Found a Way##6046 |goto -2085,-2042,-875
@@ -715,6 +712,10 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		.talk Protostar Staff Recovery Specialist##273189
 		..turnin Another Successful Procedure##3947 |goto -1525,-2030,-918
 	step
+		.click Transmat Terminal##271707 |goto Auroria -1606,-2029,-920
+		.' Press _Yes_ to set the _Honeyworks Headquarters_ as your Recall Point
+		|confirm |q 6029
+	step
 		.' _Run up_ the hill |goto Auroria -1376,-2122,-910 < 10
 		.' _Follow_ the wooden stairs up |goto -1348,-2236,-865 < 5
 		.talk Honeyworks Extraction Lead##276116
@@ -744,6 +745,7 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		..turnin Buzzbing Onslaught##5980
 	step
 		.kill 1 Honeyhive Guardian##1750736+
+		.kill 1 Honeyhive Harvester##6950309+
 		.' Kill Honeyhive Buzzbings |q Honeyhive Defenders##5928/1 |goto -1277,-2308,-886
 	step
 		'Press _C_ to open your Communicator:
@@ -865,7 +867,10 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		..turnin Extreme Prejudice##6010
 		..accept Invasion Averted##6051
 	step
-		' _Jump down_ and follow the path down the hill |goto Auroria -1134,-2426,-790 < 20
+		.' Use the skill on the bottom right of your screen to:
+		.' Recall to the Protostar Honeyworks HQ
+		|confirm |q 6051
+	step
 		.talk Guard Captain Terentius##273166
 		..turnin Invasion Averted##6051 |goto Auroria -1558,-2043,-916
 	step
@@ -873,17 +878,18 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		..accept Reporting In##6559
 	step
 		.click Protostar Hycrest Dispatcher##275914
-		.' Use the Protostar Hycrest Dispatcher to travel to Hyrcrest and speak with Govenor Aluviel |goto Auroria -1565,-2038,-917
+		.' Use the Protostar Hycrest Dispatcher to travel to Hyrcrest and speak with Govenor Aluviel |goto Auroria -1565,-2038,-917 < 3
 		.talk Governor Aluviel##286719
-		..turnin Reporting In##6559 |goto -2598,-1924,-864
-		..accept Flying South for the War##6562 |goto -2598,-1924,-864
+		..turnin Reporting In##6559 |goto Auroria -2480,-1837,-879
+		..accept Flying South for the War##6562 |goto Auroria -2480,-1837,-879
+		.' Click here and check this spot if Governor Aluviel is not at the above location |goto -2598,-1924,-864
 	step
 		.click Dominion Escort Ship##1887012
 		.' Board the Dominion Escort Ship |q Flying South for the War##6562/1 |goto -2474,-1961,-876
 	step
 		.click Gildgrass Taxi Kiosk##290954
-		.' Get the _Gildgrass Airfield_ flight point |goto Auroria -2206,-839,-905
-		|confirm
+		.' Get the _Gildgrass Airfield_ taxi point |goto Auroria -2206,-839,-905
+		|confirm |q 6562
 	step
 		.talk Aviator Ralyus##268181
 		..turnin Flying South for the War##6562 |goto -2181,-806,-905
@@ -908,7 +914,7 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 	step
 		.click Transmat Terminal##272208
 		.' Click _Yes_ to set _Gildgrass Manor_ as your Recall point |goto -1983,-990,-892
-		|confirm
+		|confirm |q 6324
 	step
 		.talk Lord Syrus##268182
 		..turnin Defenses Offline##6324 |goto Auroria -1959,-943,-894
@@ -932,11 +938,11 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		.' Boot up a Projectionbot |q Dominion Reserves##6440/1 |goto -2060,-926,-905
 	step
 		.click Dominion Corporal##265477
-		.' Press _1_ to create a projection of the Dominion Corporal |q Dominion Reserves##6440/2 |goto -2062,-926,-904
+		.' Press _1_ to create a projection of the Dominion Corporal |q Dominion Reserves##6440/2 |goto Auroria -1971,-984,-891
 		.click Dominion Field Medic##265483
-		.' Press _1_ to create a projection of the Dominion Field Medic |q Dominion Reserves##6440/3 |goto -2062,-926,-904
+		.' Press _1_ to create a projection of the Dominion Field Medic |q Dominion Reserves##6440/3 |goto -2062,-1013,-910
 		.click Reserve Defender##265436
-		.' Press _1_ to create projections of Reserve Defenders |q Dominion Reserves##6440/4 |goto -2062,-926,-904
+		.' Press _1_ to create projections of Reserve Defenders |q Dominion Reserves##6440/4 |goto -2030,-958,-900
 	step
 		.talk Engineer Titani##265474
 		..turnin Dominion Reserves##6440 |goto Auroria -1960,-948,-894
@@ -950,7 +956,7 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		.' Scan a Blackheart Detonator |q Detonator Duplicates##6346/2 |goto Auroria -2061,-928,-904
 	step
 		.' Press _2_ on your hotbar to:
-		.' Use the Blackheart Detonator at the Skeech huts |q Detonator Duplicates##6346/3 |goto -2061,-928,-904
+		.' Use the Blackheart Detonator at the Skeech huts |q Detonator Duplicates##6346/3 |goto -2060,-927,-905
 	step
 		.talk Engineer Titani##265474
 		..turnin Detonator Duplicates##6346 |goto -1960,-948,-894
@@ -1067,7 +1073,7 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 	step
 		.click Transmat Terminal##272208
 		.' Click _Yes_ to set _Collegium Basecamp_ as your Recall point |goto Auroria -1751,-1207,-939
-		|confirm
+		|confirm |q 6245
 	step
 		.click Navigation Control Panel##264113
 		.' Disable Navigation Control Panels |q Loading Zone: No Landing##6245/1 |count 33 |goto -1592,-1128,-924
@@ -1115,7 +1121,7 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		.kill 1 Clugg the Crazed##806271 |q Put Him Down##6315/1 |goto -1592,-945,-957
 	step
 		'Press the icon on the bottom right of your action bar to:
-		.' Recall to Windfall Digsite - Transmat |goto -1751,-1207,-939 < 100 |c |noway |q 5515
+		.' Recall to Windfall Digsite - Transmat |goto -1751,-1207,-939 < 100 |c |noway |q 6421
 	step
 		.' Go to Dig Site One |q Medical Defense##6421/1 |goto Auroria -1768,-1279,-956
 		.talk Researcher Elizabeth##263830
@@ -1172,7 +1178,7 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		.kill 1 XT-9 Servitor##895618+
 		.' Destroy Eldan Constructs |q More Scrap for the Pile##6442/1 |goto -1847,-1224,-957
 		.' Collect Augmented Blood Samples from XT-9 Servitors |q Imprint Identification##6425/1 |goto -1847,-1224,-957
-		.get 1 Eldan Glyph Fragment##20862
+		.' Use the _Eldan Glyph Fragment_ on your inventory
 		..accept Strength of Azrion##7886 |goto -1835,-1243,-957 |use Eldan Glyph Fragment##20862
 	step
 		'Press _C_ to open your Communicator:
@@ -1184,7 +1190,7 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		.' Find and repair the Cracked Eldan Glyph Panel |q Strength of Azrion##7886/1 |goto -1901,-1279,-939
 	step
 		.talk Priestess Severina##263163
-		..turnin Strength of Azrion##7886
+		..turnin Strength of Azrion##7886 |goto -1770,-1199,-940
 		..accept Broken Virtues##7888 |goto -1770,-1199,-940
 	step
 		.talk Researcher Naboom##263528
@@ -1193,6 +1199,8 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 	step
 		.kill XT-9 Protector##1013595+
 		.kill XT-9 Probe##978043+
+		.kill XT-9 Augmentor##7906022+
+		.kill XT-9 Sentinel##7364106+
 		.' Collect the Fragment of Courage from an Eldan Construct |q Broken Virtues##7888/1 |goto Auroria -1782,-1361,-949
 		.' Collect the Fragment of Justice from an Eldan Construct |q Broken Virtues##7888/2 |goto -1782,-1361,-949
 		.' Collect the Fragment of Knowledge from an Eldan Construct |q Broken Virtues##7888/3 |goto -1782,-1361,-949
@@ -1273,11 +1281,11 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 	step
 		.click Transmat Terminal##272208
 		.' Click _Yes_ to set _Fort Glory_ as your Recall point |goto Auroria -1292,-1072,-888
-		|confirm
+		|confirm |q 6716
 	step
 		.click Fort Glory Taxi Kiosk##280742
-		.' Get the _Fort Glory_ flight point |goto -1267,-1035,-889
-		|confirm
+		.' Get the _Fort Glory_ taxi point |goto -1267,-1035,-889
+		|confirm |q 6716
 	step
 		.talk Captain Arkexa##291339
 		.' Speak to Captain Arkexa |q Give me the SitRep##6716/3 |goto -1293,-1018,-889
@@ -1500,7 +1508,7 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 	step
 		.click Mass Inversion Unit##282904
 		.' Pick up the Mass Inversion Unit |goto Auroria -1474,-229,-796 < 5
-		.' Run to the vent here and jump down |goto -1561,-395,-807 < 10 |tip Make sure you are not mounted or you will fall to your death.
+		.' Run to the tower here and jump off |goto -1561,-395,-807 < 10 |tip Make sure you are not mounted or you will fall to your death.
 		.talk Scout Tricus##291334
 		..turnin Fire in the Sky##6714 |goto -1470,-524,-928
 	step
@@ -1511,9 +1519,10 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		..turnin Break of Dawn##6736 |goto Auroria -1725,-555,-922
 		..accept Osun Oversight##6738 |goto -1725,-555,-922
 	step
-		.' Search for soldiers in house |q Osun Oversight##6738/1 |goto Auroria -1745,-585,-924
+		.' Search for soldiers in the house |q Osun Oversight##6738/1 |goto Auroria -1745,-585,-924
 		.' Examine the outpost's artillery |q Osun Oversight##6738/2 |goto -1981,-489,-921
 		.' Search the supply tent for Provisions |q Osun Oversight##6738/3 |goto Auroria -1974,-489,-921
+		.' Examine the Command Tent |q Osun Oversight##6738/4 |goto Auroria -1992,-423,-921
 	step
 		'Press _C_ to open your Communicator:
 		..turnin Osun Oversight##6738
@@ -1531,7 +1540,9 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		..accept Long Shelf Life##6751 |goto -1970,-482,-921
 	step
 		.click Osun Warhammer##1238340
+		.click Osun Warstaff##7023480
 		.' Collect Osun Weapons |q Smoke Signals##6752/1 |goto -1988,-522,-919
+	step
 		.click Fire Pit##292367
 		.' Set fire to the Osun Weapons |q Smoke Signals##6752/2 |goto -1970,-433,-920
 	step
@@ -1614,8 +1625,8 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		..accept Within a Stone's Throw##6771 |goto -2143,-655,-910
 	step
 		.' Search for clues |q Within a Stone's Throw##6771/1 |goto -2325,-749,-917
-		.' Kill Giantcrushers |q Mistakes Do Happen##6783/4 |goto -2199,-711,-912
-		-- Giantcrusher##1486919
+		.kill Giantcrusher##1486919+
+		.' Kill the Giantcrushers  |q Mistakes Do Happen##6783/4 |goto -2199,-711,-912
 	step
 		'Press _C_ to open your Communicator:
 		..turnin Mistakes Do Happen##6783
@@ -1659,12 +1670,12 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 	step
 		'Press _C_ to open your Communicator:
 		..turnin Data Loss##6810
-		..accept Report to Palerock Post##8126 -- |goto -2286,-396,-925
+		..accept Report to Palerock Post##8126
 	step
 		' _Enter the city_ of Illium |goto Illium -2848,-418,-906 < 20
 		.' _Follow_ the path through the city |goto -3068,-565,-906 < 10
-		.click To Artemis Zin's Museum##263643
-		.' _Enter the Museum_ |goto -3473,-760,-891 < 5
+		.click To the New Imperial Museum of Illium##263610
+		.' _Enter the Museum_ |goto Illium -3485,-842,-885 < 5
 		.click Osun Warhammer Display##263652
 		.' Take the hammer to the museum in Illium |q Osun Warhammer##9143/1 |goto -3375,-1687,-1033
 	step
@@ -1676,4 +1687,5 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 		.' _Go up the ramp_ and continue through Illium |goto -3231,-507,-895 < 10
 		.talk Captain Visia##265429
 		.' Speak to Captain Visia |q Report to Palerock Post##8126/1 |goto -3466,-524,-870
+		.' Click _Yes_ to travel to Whitevale |q Report to Palerock Post##8126/2 |goto -3466,-524,-870
 ]])

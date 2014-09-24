@@ -345,7 +345,7 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.' Deactivate Communication Controls |q Tampered Signals##6797/1 |count 50 |goto 1116,-1542,-882
 	step
 		.' _Go down_ the hill |goto Celestion 1082,-1563,-899
-		goto Celestion 1057,-1583,-899
+		.' _Enter_ the hut |goto Celestion 1057,-1583,-899  //Fixed
 		.' Kill Elder Marok |q End of the Elders##6626/1 |goto 1055,-1606,-901
 	step
 		
@@ -461,7 +461,7 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.' Build the Moodie Fear Fetish |q Moodoo Voodoo##6667/3
 	step
 		.click Life Force Anomaly##3886197
-		.' Scan a third Life Force Anomaly |q Bad Vibes##6666/3 |goto Celestion 1783,-2329,-958
+		.' Scan a third Life Force Anomaly |q Bad Vibes##6666/3 |goto Celestion 1744,-2316,-959  //Changed coordinates
 	step
 		.' Press _T_ to:
 		.' Scare Darkloam Moodies by using the Fear Fetish |q Moodoo Voodoo##6667/4 |goto Celestion 1608,-2223,-958 |tip You will have to kill them.
@@ -889,8 +889,7 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.' _Use the teleporter_ to leave the facility |goto 2700,-1459,-1498
 		.' Explore the Essential Access Column |q A Taste of Augmentation##6971/1 |goto 3015,-1656,-987
 	step
-		goto 3046,-1642,-984
-		.' Enter the Essential Reactor Exo-Lab |q A Taste of Augmentation##6971/2
+		.' Enter the Essential Reactor Exo-Lab |q A Taste of Augmentation##6971/2 |goto Celestion 3046,-1642,-984
 	step
 		.' Enter the Essential Reactor Room |q A Taste of Augmentation##6971/3 |goto Celestion 2544,-1640,-1206
 	step
@@ -977,9 +976,19 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.' _Follow_ the path down |goto 3222,-2054,-964
 		.' _Go to_ the camp |goto Celestion 3211,-1901,-984
 		.' _Go through_ the opening |goto 3207,-1849,-978
-
-		.click ICI Datachron##281618
-		.' Plant Surveillance Bugs |q Listen Like Shadows##6989/1 
+		.click ICI Datachron##281591
+		.' Plant Surveillance Bugs |count 71 |q Listen Like Shadows##6989/1 |goto Celestion 3246,-1848,-966
+	step  //Added
+		.click ICI Datachron##281587
+		.' Plant Surveillance Bugs |count 85 |q Listen Like Shadows##6989/1 |goto Celestion 3267,-1804,-960
+	step  //Added Soldier mission
+		.click Captured Operative##3536663
+		.' Rescue Black Hood Operatives |mission RESCUE OP: Black Hood Operatives##1844 |goto Celestion 3271,-1801,-961 |count 6
+		|only Soldier
+	step  //Added
+		.click ICI Datachron##281588
+		.' Plant Surveillance Bugs |count 100 |q Listen Like Shadows##6989/1 |goto Celestion 3320,-1827,-956
+	step  //Added
 		.kill Zeta Equalizer##692673
 		.' Kill ICI Zeta Mechari |q Sum Zero Aggressor##6983/2
 	step
@@ -1010,7 +1019,7 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.' Hack ICI Aegis Interfaces |q Invasive Intelligence##6987/1 |count 50 |goto Celestion 3479,-1733,-969
 	step
 		.click Crate of Eldan Components##281610
-		.' Collect Crates of Eldan Components |q Research and Development##6990/1 |		goto 3501,-1754,-972
+		.' Collect Crates of Eldan Components |q Research and Development##6990/1 |goto 3501,-1754,-972
 		.kill 1 Zeta Cycler##1035340
 		.' Collect Cycler Cores |q Research and Development##6990/2
 	step
@@ -1040,7 +1049,7 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.click ICI Telemetry Display##281700
 		.' Access the ICI Telemetry Display |q Going Out with a Blast##6985/1 |goto Celestion 3442,-1609,-934
 	step
-		.' _Leave the tunnel |goto Celestion 3434,-1682,-934
+		.' _Leave_ the tunnel |goto Celestion 3434,-1682,-934  //Fixed _Leave
 		.' _Jump down_ onto the pipe, then to the groun |goto 3458,-1758,-947
 		.' _Go up_ the tunnel path |goto 3412,-1796,-961
 		.' Get out of ICI Junction Zeta |q Going Out with a Blast##6985/2 |goto 3334,-1832,-957
@@ -1501,7 +1510,7 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.click Thayd Tour Holoprojector##274748
 		.' Find Thayd Tours Holoprojectors |q Thayd Tours##9367/1 |count 2 |goto Thayd 4208,-2455,-815
 	step
-		.' Press _I_ to open your inventory and salvage the _Damaged Protostar Dye Collection. |tip Drag it into the button with circular arrows on the bottom of your inventory panel.
+		.' Press _I_ to open your inventory and salvage the _Damaged Protostar Dye Collection_. |tip Drag it into the button with circular arrows on the bottom of your inventory panel.
 		.' Obtain Plurbinum Dye by salvaging Damaged Protostar Dye Collection |q Chromatic Magnificence##9083/2 |goto 4271,-2445,-815
 	step
 		.talk Protostar Appearance Modificator##270792

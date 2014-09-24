@@ -35,8 +35,6 @@ Options.settings = {
 	{ name="guide_autocomplete", scope="char", ui="checkbox", default=false },
 	{ name="guide_notify", scope="char", ui="checkbox", default=false },
 
-	{ name="guide_showmission", scope="char", ui="checkbox", default=true },
-
 	{ name="arrow_show", scope="char", ui="checkbox", default=true },
 	{ name="arrow_hide", scope="char", ui="checkbox", default=true },
 	{ name="arrow_lock", scope="char", ui="checkbox", default=false },
@@ -175,7 +173,6 @@ function Options:OnConfigure() -- called by wildstar on "configure" button in ad
 	self.wndViewerWindow:FindChild("guide_autocomplete"):SetCheck(ZGV.db.char["guide_autocomplete"]) 
 	self.wndViewerWindow:FindChild("guide_notify"):SetCheck(ZGV.db.char["guide_notify"]) 
 
-	self.wndViewerWindow:FindChild("guide_showmission"):SetCheck(ZGV.db.char["guide_showmission"]) 
 
 
 	self.wndArrowWindow:FindChild("arrow_show"):SetCheck(ZGV.db.char["arrow_show"]) 
@@ -443,11 +440,6 @@ end
 function Options:guide_notify( wndHandler, wndControl, eMouseButton )
 	self:UpdateState(wndHandler)
 end
-
-function Options:guide_showmission( wndHandler, wndControl, eMouseButton )
-	self:UpdateState(wndHandler)
-end
-
 
 
 function Options:arrow_lock( wndHandler, wndControl, eMouseButton )

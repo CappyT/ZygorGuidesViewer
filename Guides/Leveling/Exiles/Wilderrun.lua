@@ -116,7 +116,6 @@ ZGV:RegisterGuide("Exiles\\Wilderrun (35-41)",
 		.' Avoid the red circles as you escape from Exo-Lab Prime |goto DruseraWorldStoryInstance1 -30,-106,-148
 		.' Avoid the red circles as you escape from Exo-Lab Prime |goto DruseraWorldStoryInstance1 -1,-243,-149
 		.' Discover the secrets of Exo-Lab Prime |q Opening Doors##8869/3 |goto Thayd 3955,-2664,-818
-		 |q 8869
 	step
 		.' Go up the ramp and follow the path in Pilgrim's Promenade |goto Thayd 4031,-2647,-801
 		.click Lever##271429

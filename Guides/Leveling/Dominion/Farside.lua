@@ -96,17 +96,16 @@ ZGV:RegisterGuide("Dominion\\Farside (29-35)",
 	step
 		'Run in _between the large rocks_ in this area |goto 1981,-1736,-925 < 10
 		.' Follow the path of Fungal Spores to their source |q Primal Aggression##7865/1 |goto 2121,-1784,-929
-		.' Kill Banespore |q Primal Aggression##7865/2 |goto 2121,-1784,-929
-		-- Banespore##1360861
+		.kill 1 Banespore##1360861 |q Primal Aggression##7865/2 |goto 2121,-1784,-929
 	step
-		.' _Use the green portal_ to teleport up |goto Farside 1985,-1833,-930 < 5
+		.' _Use the green portal_ to teleport up |goto Farside 1985,-1833,-930 < 10
 		.talk Engineer Gezani##263742
 		..turnin Primal Aggression##7865 |goto 1898,-1903,-722
 	step
 		.talk Biologist Memydra##263743
 		..accept Eldan Methodology##7990 |goto 1902,-1898,-722
 	step
-		.' _Use the green portal_ to teleport down |goto 2025,-1864,-714 < 5
+		.' _Use the green portal_ to teleport down |goto 2025,-1864,-714 < 10
 		.talk Artemis Zin##263748
 		..turnin Eldan Methodology##7990 |goto 1760,-1843,-931
 		..accept Terra-Injection##7993 |goto 1760,-1843,-931
@@ -370,9 +369,11 @@ ZGV:RegisterGuide("Dominion\\Farside (29-35)",
 		.' Scan a Blackrock Pummeler or Pelter |q Survival Secrets##7739/1 |goto 4069,-1720,-930
 	step
 		.click Desert Pincer##1764318
+		.' Press _T_ to:
 		.' Scan a Desert Pincer or Snapper |q Survival Secrets##7739/3 |goto Farside 4226,-1678,-916
 	step
 		.click Desert Scavenger##1767509
+		.' Press _T_ to:
 		.' Scan a Desert vulcarrion |q Survival Secrets##7739/4 |goto 4145,-1630,-929
 	step
 		'Press _C_ to open your Communicator:
@@ -427,7 +428,7 @@ ZGV:RegisterGuide("Dominion\\Farside (29-35)",
 		..accept Gathering the Cores##7871 |goto 4169,-1840,-933
 	step
 		'Press _C_ to use your communicator
-		..accept Hostile Denizens##7873 |goto Farside 4254,-1883,-929
+		..accept Hostile Denizens##7873 |goto Farside 4282,-1902,-931
 	step
 		.click Climate Beacon##263491+ |tip These are found all around the Scorched Expanse.
 		.' Take readings from Climate Beacons |q Surveying Hotspots##7869/1 |goto Farside 4488,-1815,-946
@@ -553,7 +554,7 @@ ZGV:RegisterGuide("Dominion\\Farside (29-35)",
 		'Press _C_ to open your Communicator:
 		..turnin Gifts of the Makers##8013
 	step
-		'Head up the dirt path going up this mountain |goto Farside 4690,-1713,-978 < 20
+		'_Head up the dirt path_ going up this mountain |goto Farside 4690,-1713,-978 < 20
 		.' _Go up_ the wooden stairway |goto 4548,-1679,-886 < 10
 		..accept Eliminate the High Priest##8009 |goto 4443,-1573,-815
 		.' _Continue up_ the mountain and as you go:
@@ -786,7 +787,7 @@ ZGV:RegisterGuide("Dominion\\Farside (29-35)",
 		.talk Specialist Vita##510177
 		..accept Secondhand Research##6456 |goto 4481,-7200,-601
 	step
-		.' Take the portal and teleport up |goto Farside 4456,-7208,-597 < 5
+		.' _Take the portal_ and teleport up |goto Farside 4456,-7208,-597 < 5
 		.' Run over the eggs here to prompt this quest |goto Farside 5606,-11980,-460
 		'Press _C_ to open your Communicator:
 		..accept Decontamination Protocol: Sterilize##6461
@@ -1032,8 +1033,8 @@ ZGV:RegisterGuide("Dominion\\Farside (29-35)",
 		..accept Journey to Wilderrun##8852 |goto -3452,-741,-891
 		..accept Opening Doors##8870 |goto -3452,-741,-891 |tip This quest will open when you have reached level 35.
 	step
-		.click To Artemis Zin's Museum##263643
-		.' Enter the Museum |goto -3473,-760,-891 < 5
+		.click To the New Imperial Museum of Illium##263610
+		.' _Enter the Museum_ |goto Illium -3485,-842,-885 < 5
 		.click Primal Matrix Stabilizer Display##263635
 		.' Take the Primal Matrix Stabilizer to the museum in Illium |q Primal Matrix Stabilizer##9144/1 |goto Illium -3382,-1656,-1032
 	step

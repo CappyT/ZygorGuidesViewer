@@ -21,13 +21,30 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 	step
 		.click Palerock Post Taxi Kiosk##270859
 		.' Get the _Palerock Post_ taxi point |goto 1775,-625,-994
-		|confirm
+		|confirm |q 5452
 	step
-		'Around this area:
 		.talk Truthbound Preacher##297315+
-		.' Speak to Truthbound Preachers |q Wolves Among the Flock##5452/1 |goto 1862,-716,-999
+		.' Speak to Truthbound Preachers |q Wolves Among the Flock##5452/1 |count 33 |goto 1885,-770,-997
+	step
 		.click Dominion Defense Generator##266160+
-		.' Activate Dominion Defense Generators |q Strong Defenses##5355/1 |count 1 |goto 1820,-773,-999
+		.' Activate Dominion Defense Generators |q Strong Defenses##5355/1 |count 20 |goto 1820,-773,-999
+	step
+		.click Dominion Defense Generator##266416
+		.' Activate Dominion Defense Generators |q Strong Defenses##5355/1 |count 40 |goto 1877,-682,-999
+	step
+		.click Palerock Post Taxi Kiosk##270968
+		.' Activate Dominion Defense Generators |q Strong Defenses##5355/1 |count 60 |goto 1965,-798,-988
+	step
+		.talk Palerock Post Taxi Kiosk##270968
+		.' Speak to Truthbound Preachers |q Wolves Among the Flock##5452/1 |count 66 |goto 1988,-812,-985
+	step
+		.click Dominion Defense Generator##266426
+		.' Activate Dominion Defense Generators |q Strong Defenses##5355/1 |count 80 |goto 2016,-898,-970
+		.click Dominion Defense Generator##266441
+		.' Activate Dominion Defense Generators |q Strong Defenses##5355/1 |goto 2070,-845,-970
+	step
+		.talk Truthbound Preacher##297423
+		.' Speak to Truthbound Preachers |q Wolves Among the Flock##5452/1 |goto 2068,-810,-965
 	step
 		.talk Major Glacian Aurelius##265005
 		..turnin Report to Palerock Post##8126 |goto 2125,-744,-961
@@ -39,7 +56,7 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 	step
 		.click Transmat Terminal##293884
 		.' Click _Yes_ to set _Palerock Post_ as your Recall point |goto Whitevale 2133,-673,-959
-		|confirm
+		|confirm |q 5452
 	step
 		.' Rendezvous with Acolyte Maros |q Wolves Among the Flock##5452/2 |goto 2029,-761,-961
 	step
@@ -52,8 +69,7 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		'Press _C_ to open your Communicator:
 		..accept Digging for Clues##5369 |goto Whitevale 2288,-662,-977
 	step
-		.' Kill Drill Operator Gridz |q Drill, Interrupted##5356/1 |goto 2301,-631,-980
-		--  Drill Operator Gridz##928896
+		.kill 1 Drill Operator Gridz##928896 |q Drill, Interrupted##5356/1 |goto 2301,-631,-980
 	step
 		.click Ore Sample##951846 |tip Collect these as you go.
 		.click Bomb Plant Loc Alice##265508
@@ -62,8 +78,7 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		.' Destroy the Exile Drill Equipment at Drill Site "Alice" |q Miner Cutoff##5357/1 |count 75 |goto 2295,-639,-980
 		.' Destroy the Exile Drill Equipment at Drill Site "Alice" |q Miner Cutoff##5357/1 |goto 2311,-622,-983
 	step
-		.' Kill Drill Operator Mark |q Drill, Interrupted##5356/2 |goto Whitevale 2459,-495,-1006
-		-- Drill Operator Mark##1211863
+		.kill 1 Drill Operator Mark##1211863 |q Drill, Interrupted##5356/2 |goto Whitevale 2459,-495,-1006
 	step
 		.click Bomb Plant Loc Bertha##265593
 		.' Destroy the Exile Drill Equipment at Drill Site "Bertha" |q Miner Cutoff##5357/2 |count 25 |goto Whitevale 2466,-496,-1005
@@ -71,8 +86,7 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		.' Destroy the Exile Drill Equipment at Drill Site "Bertha" |q Miner Cutoff##5357/2 |count 75 |goto 2494,-480,-1006
 		.' Destroy the Exile Drill Equipment at Drill Site "Bertha" |q Miner Cutoff##5357/2 |goto 2477,-515,-1003
 	step
-		.' Kill Drill Operator Devan |q Drill, Interrupted##5356/3 |goto 2536,-358,-993
-		--  Drill Operator Devan##1219455
+		.kill 1 Drill Operator Devan##1219455 |q Drill, Interrupted##5356/3 |goto 2536,-358,-993
 	step
 		.click Bomb Plant Loc Chuck##265585
 		.' Destroy the Exile Drill Equipment at Drill Site "Chuck" |q Miner Cutoff##5357/3 |count 25 |goto 2531,-369,-995
@@ -80,13 +94,13 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		.' Destroy the Exile Drill Equipment at Drill Site "Chuck" |q Miner Cutoff##5357/3 |count 75 |goto 2532,-360,-994
 		.' Destroy the Exile Drill Equipment at Drill Site "Chuck" |q Miner Cutoff##5357/3 |goto 2546,-362,-993
 	step
-		.click Ore Sample##951846
-		.' Collect Ore Samples |q Digging for Clues##5369/1 |goto 2511,-356,-995
-	step
 		'Press _C_ to open your Communicator:
 		..turnin Miner Cutoff##5357
 		..turnin Drill, Interrupted##5356
 		..accept Missing in Action##5362
+	step
+		.click Ore Sample##951846
+		.' Collect Ore Samples |q Digging for Clues##5369/1 |goto 2511,-356,-995
 	step
 		.' Find Captain Phillip Aurelius |q Missing in Action##5362/1 |goto 2440,-283,-991
 		.click Captain Phillip Aurelius##1239345
@@ -135,8 +149,8 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		..turnin Scrapping the Scramblers##5370
 	step
 		.kill Sunderstone Smasher##1256827+
-		.get 1 Sunderstone Prisoner Key##13393
-		.' Use the Sunderstone Prisoner Key in your Inventory |use Sunderstone Prisoner Key##13393
+		.' Loot a Sunderstone Prisoner Key from a Sunderstone mob
+		.' Use the _Sunderstone Prisoner Key_ in your Inventory |use Sunderstone Prisoner Key##13393
 		..accept Too Important to Die##5361 |goto 2260,-225,-1001
 	step
 		.click Master Scribe Ernust##1222655 |tip He's inside this house.
@@ -147,7 +161,7 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		.click Turret Location Bravo##265206
 		.' Activate Incendiary Turrets |q Burn the Vermin Out##5360/1 |count 50 |goto 2242,-362,-998
 		.click Turret Location Bravo##265206
-		.' Activate Incendiary Turrets |q Burn the Vermin Out##5360/1 |count 75 |goto 2329,-299,-1002
+		.' Activate Incendiary Turrets |q Burn the Vermin Out##5360/1 |count 75 |goto 2291,-314,-998
 		.click Turret Location Bravo##265206
 		.' Activate Incendiary Turrets |q Burn the Vermin Out##5360/1 |goto 2330,-297,-1002
 	step
@@ -162,9 +176,7 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		..turnin The Rebels' Secret Weapon##5363
 		..accept No Granok is That Precise##5371
 	step
-		.kill Rime-Scaled Boulderback##1191156+
-		.' Collect Ice-Crusted Boulderback Hearts from Ice-Crusted Boulderbacks |q Power of a Frozen Heart##5358/1 |goto 2019,-464,-992
-	step
+		.' All around this area:
 		.kill 1 Sunderstone Medic##4034484+
 		.kill 1 Sunderstone Defender##4098561+
 		.kill 1 Sunderstone Rebel##4044723+
@@ -172,7 +184,12 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		.kill 1 Sunderstone Smasher##4102202+
 		.' Kill Sunderstone Exiles |q Too Important to Die##5361/1 |goto Whitevale 2342,-308,-1002
 	step
+		.kill Rime-Scaled Boulderback##1191156+
+		.' Collect Ice-Crusted Boulderback Hearts from Ice-Crusted Boulderbacks |q Power of a Frozen Heart##5358/1 |goto 2019,-464,-992
+	step
 		.click Unacclimated Razortail##1287647
+		.click Unacclimated Jabbit##11284008
+		.click Unacclimated Girrok##14386228
 		.' Press _T_ to:
 		.' Thaw Frozen Animals |q Finding Frozen Fuzzies##5367/1 |goto 2614,-299,-975
 	step
@@ -272,6 +289,8 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		..turnin Data Recovery##5353
 	step
 		.kill Pridianflow Cringer##1906219+
+		.kill Pridianheart Cruxgrower##14874980+
+		.kill Pridianflow Frostformer##15283271+
 		.' Kill Pridianflow and Pridianheart elementals |q Subterranean Grave##5350/1 |goto 3058,-101,-1021
 	step
 		'Press _C_ to open your Communicator:
@@ -280,8 +299,7 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 	step
 		.click Noxinnate the Sludgerager##4302718
 		.' Press _T_ to use your Localized Energy Slick Generator
-		.' Kill Noxinnate the Sludgerager |q Elemental Origins##5352/1 |goto 3057,-106,-1021
-		-- Noxinnate the Sludgerager##1911600
+		.kill 1 Noxinnate the Sludgerager##1911600 |q Elemental Origins##5352/1 |goto 3057,-106,-1021
 	step
 		.click Eldan Elemental Forge Panel##297381
 		.' Access the Eldan Elemental Forge Panel |q Elemental Origins##5352/2 |goto 3075,-52,-1015
@@ -310,6 +328,7 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		..accept Painting a Picture##5373 |goto 3005,-789,-945
 		..accept Painfully Predictable##5376 |goto 3005,-789,-945
 	step
+		.' Use the building's _front entrance_ |goto Whitevale 2706,-949,-950 < 10
 		.click Dusty Vending Machine##264371
 		.' Enter the Black Hoods enclave |q Painting a Picture##5373/1 |goto 2703,-999,-951
 	step
@@ -343,7 +362,7 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		.click Plant Explosive Charge##264680
 		.' Activate Plant Explosive Charges |q A Demonstration of Will##5375/1 |count 75 |goto 2307,-966,-1046
 		.click Plant Explosive Charge##264680
-		.' Activate Plant Explosive Charges |q A Demonstration of Will##5375/1 |count 87 |goto 2307,-966,-1046
+		.' Activate Plant Explosive Charges |q A Demonstration of Will##5375/1 |count 87 |goto 2355,-1017,-1047
 		.click Plant Explosive Charge##264652
 		.' Activate Plant Explosive Charges |q A Demonstration of Will##5375/1 |goto 2329,-1024,-1047
 	step
@@ -356,8 +375,7 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		.kill 1 Blackfrost Sentry##4335326+
 		.' Collect Shatterforce Data Cassettes |q Intel Never Dies##5378/1 |goto 2322,-959,-1048
 	step
-		.' Kll Agent Tibor |q Finish at the Top##5374/1 |goto 2310,-924,-1046
-		-- Agent Tibor##2036076
+		.kill 1 Agent Tibor##2036076 |q Finish at the Top##5374/1 |goto 2310,-924,-1046
 		.click Prison Cage Controls##264739
 		.' Free Colonel Phelan |q Finish at the Top##5374/2 |goto 2326,-901,-1041
 	step
@@ -474,11 +492,11 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 	step
 		.click Wigwalli Taxi Kiosk##270837
 		.' Get the _Wigwalli Village_ flight point |goto 3461,-418,-939
-		|confirm
+		|confirm |q 5570
 	step
 		.click Transmat Terminal##272208
 		.' Click _Yes_ to set _Wigwalli Village_ as your Recall point |goto Whitevale 3448,-400,-942
-		|confirm
+		|confirm |q 5570
 	step
 		.talk Bride Kamala##289634
 		..accept The Complete Guest List##5544 |goto Whitevale 3464,-467,-942
@@ -575,13 +593,13 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 	step
 		.kill 1 Sickly Snoglug##5300426
 		.talk Lopp Groomsman##5391807
-		.' _Click here_ for another spawn point |goto Whitevale 3908,-742,-957
+		.' Find the first Groomsman |q Where Have All the Groomsmen Gone?##5539/3 |count 25 |goto Whitevale 3908,-742,-957
 		.talk Lopp Groomsman##5207818
-		.' _Click here_ for another spawn point |goto 3678,-691,-937
+		.' Find the second Groomsman |q Where Have All the Groomsmen Gone?##5539/6 |count 50 |goto 3678,-691,-937
 		.talk Lopp Groomsman##5404321
-		.' _Click here_ for another spawn point |goto 3678,-846,-921
+		.' Find the third Groomsman |q Where Have All the Groomsmen Gone?##5539/2 |count 75 |goto 3678,-846,-921
 		.talk Lopp Groomsman##3739227
-		.' Find Lopp Groomsman |q Where Have All the Groomsmen Gone?##5539/4 |goto 3801,-546,-927
+		.' Find the final Lopp Groomsman |q Where Have All the Groomsmen Gone?##5539/4 |goto 3801,-546,-927
 	step
 		.talk Best Man Seba##291509
 		..turnin Where Have All the Groomsmen Gone?##5539 |goto Whitevale 3812,-717,-957
@@ -615,10 +633,10 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		..accept The Stolen Engagement Shiny##5542 |goto 3919,-1045,-911
 	step
 		.kill 1 Darkice Queen##5700044
-		.' Reclaim the Lopp Engagement Shiny from the Darkice Queen |q The Stolen Engagement Shiny##5542/1 |goto Whitevale 3921,-1138,-912
+		.' Reclaim the Lopp Engagement Shiny from the Darkice Queen |q The Stolen Engagement Shiny##5542/1 |goto Whitevale 3918,-1156,-912
 	step
 		.click Whitevale Eldan Pylon##291059
-		.' Collect a Eldan Pylon Fragment from the Whitevale Eldan Pylon |q Something Old, New, Eldan, and Blue##5546/4 |goto 4082,-972,-916
+		.' Collect an Eldan Pylon Fragment from the Whitevale Eldan Pylon |q Something Old, New, Eldan, and Blue##5546/4 |goto 4082,-972,-916
 	step
 		.kill 1 Burningblue Dawngrazer##1295957
 		.' Collect a Burningblue Energy Shard from the Burningblue Dawngrazer |q Something Old, New, Eldan, and Blue##5546/5 |goto Whitevale 4090,-979,-916
@@ -626,11 +644,11 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		.kill 1 Burningblue Dawngrazer##5820010
 		.' Get the something old - invisible |q Something Old, New, Eldan, and Blue##5546/2 |goto 4103,-977,-915
 	step
-		.talk Shaman Achal##291150
-		.' Talk to Shaman Achal |q Bountiful Floral Bouquet##5543/2 |goto 3438,-481,-942
-	step
 		.talk Far-Trader Zopa##291151
 		.' Speak to Far-Trader Zopa |q The Lighting of the Lanterns##5545/4 |goto 3498,-511,-938
+	step
+		.talk Shaman Achal##291150
+		.' Talk to Shaman Achal |q Bountiful Floral Bouquet##5543/2 |goto 3438,-481,-942
 	step
 		.talk Bride Kamala##289634
 		..turnin Bountiful Floral Bouquet##5543 |goto 3464,-470,-942
@@ -707,7 +725,7 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		.' Catch Snow Sprouts |q Spring After Sprouts##5585/1 |goto 3454,-261,-942
 	step
 		.talk Kurg-Tender Umeshanu##291729
-		..turnin Spring After Sprouts##5585 |goto 3424,-267,-93
+		..turnin Spring After Sprouts##5585 |goto Whitevale 3423,-268,-937
 	step
 		.click Avanti's Snow Mound##5962678
 		'Press _T_ to: |tip You'll have to do this 3 times.
@@ -731,11 +749,11 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 	step
 		.click Transmat Terminal##272208
 		.' Click _Yes_ to set _Dominion Base_ as your Recall point |goto 3486,179,-960
-		|confirm
+		|confirm |q 5726
 	step
 		.click Outbreak Squirg##5937849
 		.' Grab a Squirg for capture |goto Whitevale 3546,165,-971
-		|confirm
+		|confirm |q 5726
 	step
 		.click Outbreak Squirg##5937849
 		.' Return the captured Squirg to Mondo Zax |q For Science##5726/1 |goto Whitevale 3506,212,-963
@@ -752,6 +770,8 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		.kill 1 Squirg Smasher##6219216 |q Four Deadly Sins##5721/1 |goto Whitevale 3798,82,-974
 	step
 		.kill 1 Squirg Erupter##6074090 |q Four Deadly Sins##5721/2 |goto Whitevale 3861,134,-962
+	step
+		.kill 1 Squirg Stalker##16464541 |q Four Deadly Sins##5721/3 |goto Whitevale 3582,55,-973
 	step
 		'Press _C_ to open your communicator:
 		..turnin Four Deadly Sins##5721
@@ -875,7 +895,7 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		..turnin A Real Fixer-Upper##7332
 	step
 		.click Jetpack of Fallen Soldier##292727 |goto 3640,228,-996 > 5
-		|confirm
+		|confirm |q 5727
 	step
 		.' Equip the Back pack and fly up to the rock in the air here 
 		.' Get to the top of the Terraformer |q Mutually Assured Destruction##5727/1 |goto 3736,212,-917 |tip Press 1 repeatedly to fly with the jetpack.
@@ -920,11 +940,11 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 	step
 		.click Transmat Terminal##272208
 		.' Click _Yes_ to set _Dominion Base_ as your Recall point |goto Whitevale 3050,725,-1027
-		|confirm
+		|confirm |q 5833
 	step
 		.click Prosperity Junction Taxi Kiosk##270986
 		.' Get the _Dominion Base_ Taxi flight point |goto Whitevale 3140,870,-1042
-		|confirm
+		|confirm |q 5833
 	step
 		.kill 1 Silverscale Prober##1516462
 		'Press _C_ to open your communicator:
@@ -943,7 +963,6 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		'All along the river and Calmwater Lake:
 		.click Protostar Fish Collector##275207+
 		.' Reactivate Protostar Fish Collectors |q Minimizing Losses##5834/2 |goto Whitevale 3040,984,-1075
-		.kill Sabotaged Servicebot##866906+
 		.kill Sabotaged Fishbot##959154+
 		.' Collect Salvaged Parts from Sabotaged Fishbots |q Minimizing Losses##5834/1 |goto 3026,952,-1071
 	step
@@ -1015,7 +1034,6 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		..turnin Splitting the Spatial Sea##5894
 		..accept Primal Powers and Triton's Dread##5896
 	step
-		
 		.kill 1 Prime Gillsting##1306821 |q Primal Powers and Triton's Dread##5896/1 |goto Whitevale 4395,1412,-813
 		.kill 1 Silverscale Dreadnaught##1307864 |q Primal Powers and Triton's Dread##5896/2 |goto 4366,1420,-812
 	step
@@ -1030,6 +1048,8 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		'Press _C_ to open your Communicator:
 		..turnin Stirring Interstellar Waves##5898
 		..accept Pathway to Pell##5900
+	step
+		.' Use your Recall ability to return to _Prosperity Junction_ |goto Whitevale 3056,740,-1034 < 50 |c |noway
 	step
 		.talk High Priest Rain-Caller##273281
 		..turnin Pathway to Pell##5900 |goto Whitevale 2662,1211,-1070
@@ -1177,6 +1197,7 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		.kill Modified X426 Probe##2966905+
 		.' Kill Soulcore forces |q Into Augment Facility X426##5823/1 |goto 2330,426,-1030 
 	step
+		.kill Modified X426 Probe##2966905+
 		.collect 1 X-D12 Origin Data##14771
 		.' Use the X-D12 Origin Data in your bags |use X-D12 Origin Data##14771
 		..accept Original Modifications##5935 |goto 2330,426,-1030
@@ -1185,13 +1206,10 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		.' Collect X-D12 Origin Data from X426 Probes |q Original Modifications##5935/1 |goto Whitevale 2315,464,-1030 |tip This quest has been bugged for a while. It is completable if you kill the Probes LAST. Stand with the probes behind you and kill the humanoid mob first, then turn around and kill the probes. They should then drop the Origin Data for the quest.
 	step
 		.click Beckoning Hand##274150
-		.' Turn in The Beckoning Hand |goto Whitevale 2296,326,-1040
-		|confirm
+		.accept The Beckoning Hand##5934 |goto Whitevale 2296,326,-1040
 	step
 		.talk The Caretaker##274036
-		..turnin Into Augment Facility X426##5823 |goto 2441,428,-1038
-	step
-		.talk The Caretaker##274025
+		..turnin Into Augment Facility X426##5823 |goto 2290,464,-1029
 		..accept Indoctrination Denied##5824 |goto 2290,464,-1029
 	step
 		.click Caretaker's Panel Alpha##274046
@@ -1213,8 +1231,7 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		.' Use the Eldan mechanical converter on Reprogrammed Augmentors as you proceed
 	step
 		.' Locate Scientist Bizi |q A Loyal Subject##8109/1 |goto Whitevale 1950,719,-1031
-		.' Kill Purifier Clochron |q A Loyal Subject##8109/2 |goto 1951,712,-1031
-		--Purifier Clochron##2805276
+		.kill 1 Purifier Clochron##2805276 |q A Loyal Subject##8109/2 |goto 1951,712,-1031
 	step
 		.click Prison Force Field Controls##274186
 		.' Deactivate the Prison Force Field Controls |q A Loyal Subject##8109/3 |goto 1950,711,-1031
@@ -1250,6 +1267,8 @@ ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 		.' Take the elevator to Deepfreeze Containment |q Meeting with Metal Maw Prime##5827/1 |goto 2035,344,-971
 	step
 		.' Investigate the Dome Controls |q Meeting with Metal Maw Prime##5827/2 |goto 2005,409,-972
+	step
+		'Press _C_ to open your Communicator:
 		..turnin Meeting with Metal Maw Prime##5827 |goto 2005,409,-972
 		..accept Return to Illium##8768 |goto 2005,409,-972
 	step

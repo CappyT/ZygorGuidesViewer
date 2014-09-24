@@ -133,11 +133,6 @@ function ZygorGuidesViewer:OnDocLoaded()
 			self.Frame:SetStyle("Moveable", not self.db.char.guide_lock)
 		end
 
-		if self.db.char.guide_showmission~=nil then 
-			self.Frame:FindChild("ZGVContainer"):FindChild("ZGVMissionShow"):Show(not self.db.char.guide_showmission)
-			self.Frame:FindChild("ZGVContainer"):FindChild("ZGVMissionBlock"):Show(self.db.char.guide_showmission)
-		end
-
  		self.W = {}
 		setmetatable(self.W,{__index=function(t,k) return self.Frame:FindChild(k) end})
 
@@ -526,16 +521,6 @@ function ZygorGuidesViewer:GuideToggleLock( wndHandler, wndControl, eMouseButton
 	self.Frame:FindChild("ZGVContainer"):FindChild("ZGVUnlockButton"):Show(state)
 	self.db.char.guide_lock = state
 end
-
-function ZygorGuidesViewer:GuideToggleMission( wndHandler, wndControl, eMouseButton )
-	local state = self.db.char.guide_showmission
-	self.Frame:FindChild("ZGVContainer"):FindChild("ZGVMissionShow"):Show(state)
-	self.Frame:FindChild("ZGVContainer"):FindChild("ZGVMissionBlock"):Show(not state)
-	self.db.char.guide_showmission = not state
-	self.Viewer:Update(true)
-end
-
-
 
 function ZygorGuidesViewer:ToggleGuide()
 	if ZGV.db.char.guide_show == true then 

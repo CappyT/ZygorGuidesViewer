@@ -759,7 +759,8 @@ function ZGV:LoadGuideFiles()
 		self:ScheduleLoadGuideFile("Test\\Exile")
 	end
 	self:ScheduleLoadGuideFile("Test\\Test")
-
+	self:ScheduleLoadGuideFile("DominionTest\\LevianBay")
+	self:ScheduleLoadGuideFile("DominionTest\\Elevar")
 	self:Debug("Loading of guide files scheduled: "..#ZGV.ScheduledLoads.." guides queued.")
 	self.ScheduledLoadsTotal = #self.ScheduledLoads
 	self.ScheduledLoadsSuccessful = 0
@@ -779,9 +780,9 @@ function ZGV:RunScheduledGuideLoad()
 	end
 end
 
+--unused now
 function ZGV:LoadGuideFileSet(basefile)
-	local success = self:LoadGuideFile(basefile.."_MASTER") or self:LoadGuideFile(basefile) or self:LoadGuideFile(basefile.."Trial")
-	if success then self:Debug("At least one of "..basefile.." loaded, good.") else self:Debug("NONE of "..basefile.." loaded!!") end
+	return self:LoadGuideFile(basefile.."_MASTER") or self:LoadGuideFile(basefile) or self:LoadGuideFile(basefile.."Trial")
 end
 
 function ZGV:LoadGuideFile(file)
