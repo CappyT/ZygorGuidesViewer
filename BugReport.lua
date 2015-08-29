@@ -94,7 +94,7 @@ function BugReport:OpenBugWindow()
 	end
 
 	bugText = bugText .. "\n\nQuests:"	
-	for qi=0,99 do
+	for qi=0,39 do 		-- Wildstar has a 40 quest limit cap
 		local quest = QuestLib.GetQuest(qi)
 		if quest then
 			local title = quest:GetTitle()
