@@ -727,7 +727,7 @@ ZGV.ScheduledLoads={}
 function ZGV:LoadGuideFiles()
 	self:Debug("Loading guide files...")
 	if ZGV.Utils:IsFaction("Dominion") then
-		self:ScheduleLoadGuideFile("Leveling\\Dominion\\Starting")
+		self:ScheduleLoadGuideFile("Leveling\\Dominion\\TheDestiny")
 		self:ScheduleLoadGuideFile("Leveling\\Dominion\\CrimsonIsle")
 		self:ScheduleLoadGuideFile("Leveling\\Dominion\\LevianBay")
 		self:ScheduleLoadGuideFile("Leveling\\Dominion\\Deradune")
