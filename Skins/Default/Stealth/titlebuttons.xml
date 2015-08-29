@@ -62,6 +62,4 @@
         <Frame Texture="ZygorGuidesViewer\Skins\Default\Stealth\titlebuttons.tga" x0="576" x1="608" x2="608" x3="608" x4="608" x5="608" y0="64" y1="96" y2="96" y3="96" y4="96" y5="96" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
         <Frame Texture="ZygorGuidesViewer\Skins\Default\Stealth\titlebuttons.tga" x0="608" x1="640" x2="640" x3="640" x4="640" x5="640" y0="64" y1="96" y2="96" y3="96" y4="96" y5="96" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
     </Sprite>
-    <AutoButton Name="HelpButton" Texture="ZygorGuidesViewer\Skins\Default\Stealth\titlebuttons.tga" x0="0" x1="32" x2="32" x3="32" x4="32" x5="32" y0="64" y1="96" y2="96" y3="96" y4="96" y5="96" StateBits="1" Direction="Down"/>
-    <AutoIconButton Name="NewIconButton" NormalUnderIcon="" NormalIcon="HelpButtonNormal" NormalOverIcon="" PressedUnderIcon="" PressedIcon="HelpButtonNormal" PressedOverIcon="" FlybyUnderIcon="" FlybyIcon="HelpButtonNormal" FlybyOverIcon="" PressedFlybyUnderIcon="" PressedFlybyIcon="HelpButtonNormal" PressedFlybyOverIcon="" DisabledUnderIcon="" DisabledIcon="HelpButtonNormal" DisabledOverIcon="HelpButtonDisabled"/>
 </Sprites>

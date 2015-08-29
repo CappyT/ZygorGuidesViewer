@@ -593,13 +593,6 @@ function ZygorGuidesViewer:OpenBugWindow()
 	ZGV.BugReport:OpenBugWindow()
 end
 
----------------------------------------------------------------------------------------------------
--- Tutorial Functions
----------------------------------------------------------------------------------------------------
-function ZygorGuidesViewer:OpenTutorialWindow()
-	ZGV.Tutorial:Initialize()
-end
-
 
 
 ----------------- MISC
