@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Addon Author="Zygor" APIVersion="9" Name="ZygorGuidesViewer" Description="" Version="1.0.10244"><!-- version gets doctored.-->
+<Addon Author="Zygor" APIVersion="10" Name="ZygorGuidesViewer" Description="" Version="1.0.10244"><!-- version gets doctored.-->
     <Script Name="Localization\Main.lua"/>
     <Script Name="Localization\Core_US.lua"/>
     <Form Name="ZygorGuidesViewer.xml"/>
@@ -22,19 +22,5 @@
     <Script Name="BugReport.lua"/>
     <Form Name="Tutorial.xml"/>
     <Script Name="Tutorial.lua"/>
-
-    <!-- Guide files now loaded dynamically.
-
-    <Script Name="Guides\Dominion\Dominion_MASTER.lua"/>
-    <Script Name="Guides\Dominion\Dominion.lua"/>
-    <Script Name="Guides\Dominion\DominionTrial.lua"/>
-    <Script Name="Guides\Exiles\Exiles_MASTER.lua"/>
-    <Script Name="Guides\Exiles\Exiles.lua"/>
-    <Script Name="Guides\Exiles\ExilesTrial.lua"/>
-    <Script Name="Guides\Test\Test.lua"/>
-    <Script Name="Guides\Dominion\DominionTest.lua"/>
-
-    -->
-
     <Script Name="Log.lua"/>
 </Addon>
