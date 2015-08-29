@@ -3,244 +3,257 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 	faction="Dominion",
 	startlevel=6,
 	endlevel=15,
-	nextguide="Dominion\\Auroria (15-23)",
+	nextguide="Dominion\\Illium (15)",
+	image="ZygorUIGuides:Ellevar",
+	description="Ellevar is a wild zone in northwest Olyssia, and the area is filled with small scattered villages. Ellevar serves as one of the starting zone for the Dominion, and is controlled mostly by the Vigilant Church.  Ellevar is intended for characters level 6-15."
 	},
-[[
+	[[
 	step
-		.talk Patiria Adecus##287192
-		..accept The Amenities of Lightreach##9165 |goto Ellevar -2527,-3552,-790
+		.talk Artemis Zin##276528 |goto Ellevar -2592,-3587,-790
+		..turnin A Daring Escape##5866
+		..accept First Impressions##6602
 	step
-		'Run to the Mailbox here
-		.' Find the Lightreach Mailbox |q The Amenities of Lightreach##9165/1 |goto Ellevar -2541,-3525,-785
+		.talk Patiria Adecus##287192 |goto Ellevar -2527,-3552,-790
+		..accept The Amenities of Lightreach##9165
 	step
-		.talk Artemis Zin##276528
-		..turnin A Daring Escape##5866 |goto -2587,-3590,-789
-		..accept First Impressions##6602 |goto -2587,-3590,-789
+		.talk Rental Mount Vendor |goto Ellevar -2521,-3621,-797
+		.' Find the Rental Mount Vendor |q The Amenities of Lightreach##9165/4
+		'You can rent a mount for 24 hour playtime
+	step
+		.talk Radiant Legion Guard |goto Ellevar -2591,-3595,-790
+		.' Find the Radiant Legion Guard |q The Amenities of Lightreach##9165/5
 	step
 		.' Find the Lightreach Taxi Kiosk |q The Amenities of Lightreach##9165/2 |goto Ellevar -2599,-3595,-790
-		.' Find the Transmat Terminal |q The Amenities of Lightreach##9165/3 |goto Ellevar -2530,-3421,-765
+		'_Taxi_ locations open automatically now
 	step
-		.click Transmat Terminal##287176
-		.' Click _Yes_ to set _Lightreach Mission_ as your Recall point |goto Ellevar -2529,-3420,-765
-		|confirm |q 9165
+		'Run to the Mailbox here |goto Ellevar -2541,-3525,-785
+		.' Find the Lightreach Mailbox |q The Amenities of Lightreach##9165/1
 	step
-		'_Enter_ the buidling |goto Ellevar -2482,-3469,-762 < 10
-		.talk Pyrius Octavian##278837
-		..accept All In Good Faith##6587 |goto -2471,-3438,-762
+		.click Transmat Terminal |goto Ellevar -2527,-3424,-764
+		.' Find the Transmat Terminal |q The Amenities of Lightreach##9165/3
+		'Click _Yes_ to bind to Lightreach Mission
 	step
-		.talk Toric Antevian##276529
-		..turnin First Impressions##6602 |goto Ellevar -2413,-3533,-781
-		..accept Lightreach Mission##6603 |goto Ellevar -2413,-3533,-781
+		'Press _C_ to open your Communitcator:
+		..turnin The Amenities of Lightreach##9165
 	step
-		.talk Patiria Adecus##287192
-		..turnin The Amenities of Lightreach##9165 |goto Ellevar -2526,-3552,-790
+		.' _Freight Supervisor Lola_ offers a _Shiphand_.  Shiphands are solo instances.  Give good XP, a blue reward, and a random epic drop, and needed to reach level 15.  This one is for level 6 players. |goto Ellevar -2585,-3477,-780
+		|confirm |q 6602
 	step
-		.talk Guardian Villos##276527
-		..accept Heightened Security##6607 |goto -2506,-3639,-800
+		.talk Toric Antevian##276529 |goto Ellevar -2413,-3533,-781
+		..turnin First Impressions##6602
+		..accept Lightreach Mission##6603
 	step
-		.talk Artemis Zin##287081
-		..accept Mysteries from the Lake##6609 |goto Ellevar -2486,-3659,-803
+		.talk Guardian Villos##276527 |goto Ellevar -2506,-3639,-800
+		..accept Heightened Security##6607
 	step
-		.talk Woodworker Lucus##276525
-		..accept Building Up the Mission##6608 |goto Ellevar -2536,-3687,-803
+		.talk Artemis Zin##287081 |goto Ellevar -2486,-3659,-803
+		..accept Mysteries from the Lake##6609
 	step
-		.click Eldan Artifact##493012 |tip It is in the water.
-		.' Collect an Eldan Artifact |q Mysteries from the Lake##6609/1 |goto Ellevar -2426,-3716,-824
+		.talk Woodworker Lucus##276525 |goto Ellevar -2536,-3687,-803
+		..accept Building Up the Mission##6608
 	step
-		.click Dominion Supplies##486496
-		.' Pick up Dominion Supplies |q All In Good Faith##6587/1 |goto Ellevar -2547,-3757,-801
+		.talk Chieftain Aleli##276526 |goto Ellevar -2629,-3768,-794
+		..accept Glitterfur Assistance##6610
 	step
-		.click Lightreach Defense Turret##276594
-		.' Activate the Lightreach Defense Turrets |q Heightened Security##6607/1 |goto Ellevar -2491,-3771,-795
+		.talk Huntmaster Genki##287121 |goto Ellevar -2648,-3770,-793
+		..accept Hunter and Shiny Gatherer##6611
 	step
-		.kill Highland Howler##513041+
-		.' Kill Highland Dagun |q Heightened Security##6607/2 |goto -2462,-3853,-781
+		.click Lightreach Defense Turret##276594 |goto Ellevar -2491,-3771,-795
+		.' Activate the Lightreach Defense Turrets |q Heightened Security##6607/1
 	step
 		.' Head to the Larallen Highlands |q Building Up the Mission##6608/1 |goto Ellevar -2381,-3854,-784
 	step
-		.click Pile of Larallen Wood##425911
-		.' Collect Larallen Wood |q Building Up the Mission##6608/2 |goto Ellevar -2314,-3852,-767
-		.kill Marshgrass Snoglug##502241+
+		.' Kill Highland Dagun |q Heightened Security##6607/2 |goto Ellevar -2462,-3853,-781
+		.' Collect Larallen Wood |q Building Up the Mission##6608/2
 		.' Kill Snoglugs |q Building Up the Mission##6608/3 |goto Ellevar -2314,-3852,-767
+		.' Collect Fine Highland Pelts |q Glitterfur Assistance##6610/1 |goto Ellevar -2601,-3906,-771
+		.' Collect Glitterfur Trinkets |q Hunter and Shiny Gatherer##6611/1
 	step
-		.talk Woodworker Lucus##276525
-		..turnin Building Up the Mission##6608 |goto Ellevar -2534,-3687,-803
-		.' Help Woodworker Lucus |q Lightreach Mission##6603/2 |goto -2534,-3687,-803
+		.'_Jump down_ from here |goto Ellevar -2423,-3751,-787 < 5 |c |q 6609/1
 	step
-		.talk Guardian Villos##276527
-		..turnin Heightened Security##6607 |goto Ellevar -2506,-3639,-800
-		.' Help Guardian Villos |q Lightreach Mission##6603/1 |goto -2506,-3639,-800
+		.click Eldan Artifact##493012  |goto Ellevar -2426,-3716,-824
+		.' Collect an Eldan Artifact |q Mysteries from the Lake##6609/1
 	step
-		.talk Kevo##287082
-		..turnin Mysteries from the Lake##6609 |goto Ellevar -2486,-3657,-803
+		.talk Kevo##287082 |goto Ellevar -2486,-3657,-803
+		..turnin Mysteries from the Lake##6609
 	step
-		.talk Guardian Villos##276667
-		..turnin Lightreach Mission##6603 |goto Ellevar -2506,-3639,-800
-		..accept Vigilance##6604 |goto Ellevar -2506,-3639,-800
+		.talk Woodworker Lucus##276525 |goto Ellevar -2534,-3687,-803
+		..turnin Building Up the Mission##6608
+		.' Help Woodworker Lucus |q Lightreach Mission##6603/2
 	step
-		.' Search around Toric's Command Post |q Vigilance##6604/1 |goto Ellevar -2408,-3524,-781
-		.click Toric's Schedule##287177
-		.' Inspect Toric's schedule |q Vigilance##6604/2 |goto Ellevar -2408,-3524,-781
+		.talk Guardian Villos##276527 |goto Ellevar -2506,-3639,-800
+		..turnin Heightened Security##6607
+		.' Help Guardian Villos |q Lightreach Mission##6603/1
+	step
+		.talk Guardian Villos##276667 |goto Ellevar -2506,-3639,-800
+		..turnin Lightreach Mission##6603
+		..accept Vigilance##6604
+	step
+		.' Search around Toric's Command Post |q Vigilance##6604/1 |goto Ellevar -2425,-3528,-781
+	step
+		' _Small_ bookshelf, book at _right_ |goto Ellevar -2408,-3524,-781
+		.' Inspect Toric's schedule |q Vigilance##6604/2
 	step
 		.' Find and speak with Artemis Zin |q Vigilance##6604/3 |goto Ellevar -2499,-3653,-803
 	step
 		.' Search The Emperor's Blessing |q Vigilance##6604/4 |goto Ellevar -2365,-3514,-774
 	step
-		.kill 1 Cadet Catian##431290
-		.' Break up the fight |q Vigilance##6604/5 |goto -2357,-3505,-773
-		.talk Defender Velio##287172
-		.' Find information on Toric |q Vigilance##6604/6 |goto -2357,-3505,-773
+		'Fight _Cadet Catian_
+		.' Break up the fight |q Vigilance##6604/5
 	step
-		.talk Guardian Villos##276527
-		..turnin Vigilance##6604 |goto Ellevar -2506,-3639,-800
-		..accept Against All Odds##6605 |goto -2506,-3639,-800
-	step
-		.talk Chieftain Aleli##276526
-		..accept Glitterfur Assistance##6610 |goto Ellevar -2629,-3768,-794
-	step
-		.talk Huntmaster Genki##287121
-		..accept Hunter and Shiny Gatherer##6611 |goto -2648,-3770,-793
-	step
-		.talk Toric Antevian##287083
-		..accept Recognition of Faith##6606 |goto Ellevar -2594,-3998,-755
-	step
-		.click Provisions##276612
-		.' Collect the Provisions |q Recognition of Faith##6606/1 |goto Ellevar -2627,-3998,-758
-		.kill Tunnelweb Weaver##572450+
-		.' Fend off enraged wildlife |q Recognition of Faith##6606/2 |goto Ellevar -2629,-3995,-758
-	step
-		.click Pile of Glitterfur Trinkets##488801
-		.' Collect Glitterfur Trinkets |q Hunter and Shiny Gatherer##6611/1 |goto -2601,-3906,-771
-		.click Highland Howler##491705
-		.' Collect Fine Highland Pelts |q Glitterfur Assistance##6610/1 |goto -2601,-3906,-771
-	step
-		.talk Chieftain Aleli##276526
-		..turnin Glitterfur Assistance##6610 |goto Ellevar -2628,-3769,-794
-	step
-		.talk Huntmaster Genki##287121
-		..turnin Hunter and Shiny Gatherer##6611 |goto -2647,-3771,-793
-	step
-		.talk Utsah the Curious##286935
-		..accept No Refunds##6779 |goto Ellevar -2619,-3778,-793
-	step
-		.talk Watti Mozz##576819
-		.' Speak to Watti Mozz |q No Refunds##6779/1 |goto -2611,-3733,-798
-	step
-		'Press _T_ while targeting the red glowing target
-		.' Use Prototype Veggie Cannon 2.0 on the Target |q No Refunds##6779/2 |goto Ellevar -2621,-3723,-799
-		.' Use Prototype Veggie Cannon 3.0 on the Target |q No Refunds##6779/3 |goto Ellevar -2621,-3723,-799
-		.' Use Prototype Veggie Cannon 4.0 on the Target |q No Refunds##6779/4 |goto Ellevar -2621,-3723,-799
-		.' Use Prototype Veggie Cannon 5.0 on the Target |q No Refunds##6779/5 |goto Ellevar -2621,-3723,-799
-	step
-		.talk Utsah the Curious##286935
-		..turnin No Refunds##6779 |goto -2618,-3777,-793
-		..accept Veggie Launcher##6601 |goto -2618,-3777,-793
+		.talk Defender Velio##287172 |goto Ellevar -2357,-3505,-773
+		.' Find information on Toric |q Vigilance##6604/6
 	step
 		'Press _C_ to open your Communicator:
-		..accept A Salvageable Situation##9047 |goto -2486,-3888,-777
+		..turnin Vigilance##6604
+		..accept Against All Odds##6605 |goto Ellevar -2506,-3639,-800
 	step
-		'Press _T_ while targeting the red glowing target
-		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/1 |goto -2473,-3896,-774
+		.talk Toric Antevian##287083 |goto Ellevar -2592,-3995,-754
+		..accept Recognition of Faith##6606
 	step
-		'Press _T_ while targeting the red glowing target
-		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/2 |goto Ellevar -2515,-3872,-785
+		' Click _Provisions_, then defend the area |goto Ellevar -2626,-3997,-757
+		.' Collect the Provisions |q Recognition of Faith##6606/1
+		.' Fend off enraged wildlife |q Recognition of Faith##6606/2
 	step
-		'Press _T_ while targeting the red glowing target
-		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/3 |goto -2552,-3844,-785
+		.talk Chieftain Aleli##276526 |goto Ellevar -2628,-3769,-794
+		..turnin Glitterfur Assistance##6610
 	step
-		'Press _T_ while targeting the red glowing target
-		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/4 |goto -2591,-3819,-786
+		.talk Huntmaster Genki##287121 |goto Ellevar -2647,-3771,-793
+		..turnin Hunter and Shiny Gatherer##6611
 	step
-		'Press _T_ while targeting the red glowing target
-		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/5 |goto -2624,-3783,-793
+		.talk Utsah the Curious##286935 |goto Ellevar -2619,-3778,-793
+		..accept No Refunds##6779
 	step
-		.talk Utsah the Curious##286935
-		..turnin Veggie Launcher##6601 |goto Ellevar -2618,-3778,-793
+		.talk Watti Mozz##5768191 |goto Ellevar -2611,-3733,-798
+		.' Speak to Watti Mozz |q No Refunds##6779/1
 	step
-		.talk Technologist Corvianos##273666
-		..turnin A Salvageable Situation##9047 |goto Ellevar -2591,-3503,-786
-		..accept Breaking It Down##9049 |goto -2591,-3503,-786
+		'Press _T_ while targeting the red glowing area |goto Ellevar -2621,-3723,-799
+		.' Use Prototype Veggie Cannon 2.0 on the Target |q No Refunds##6779/2
+		.' Use Prototype Veggie Cannon 3.0 on the Target |q No Refunds##6779/3
+		.' Use Prototype Veggie Cannon 4.0 on the Target |q No Refunds##6779/4
+		.' Use Prototype Veggie Cannon 5.0 on the Target |q No Refunds##6779/5
 	step
-		'Press _I_ to open your inventory
-		.' Click the Salvage button at the bottom of your inventory |tip It looks like 2 arrows in a circle.
-		.' Click _Next_ until you see _Unusable Crafting Prototype_ then click _Salvage_
-		.' Salvage the Unusable Crafting Prototype to get a Dusty Power Core |q Breaking It Down##9049/1 |goto -2591,-3503,-786
+		.talk Utsah the Curious##286935 |goto Ellevar -2618,-3777,-793
+		..turnin No Refunds##6779
+		..accept Veggie Launcher##6601
 	step
-		.talk Weaponsmith Tirexa##284134
-		..turnin Breaking It Down##9049 |goto Ellevar -2599,-3517,-785
+		'Press _T_ while targeting the red glowing target |goto Ellevar -2473,-3896,-774
+		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/1
 	step
-		.' Meet Toric Antevian |q Recognition of Faith##6606/3 |goto -2412,-3531,-781
-		.talk Toric Antevian##276529
-		..turnin Recognition of Faith##6606 |goto -2412,-3531,-781
+		'Press _T_ while targeting the red glowing target |goto Ellevar -2515,-3872,-785
+		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/2
 	step
-		.talk Guardian Villos##287076
-		..turnin Against All Odds##6605 |goto Ellevar -2414,-3527,-781
+		'Press _T_ while targeting the red glowing target |goto Ellevar -2552,-3844,-785
+		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/3
 	step
-		.talk Elder Brood-Mother##278835
-		..accept Hearts To Grow##6594 |goto -2832,-3535,-816
+		'Press _T_ while targeting the red glowing target |goto Ellevar -2591,-3819,-786
+		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/4
 	step
-		.click Darkwood Fester##598590
+		'Press _T_ while targeting the red glowing target |goto Ellevar -2624,-3783,-793
+		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/5
+	step
+		.talk Utsah the Curious##286935 |goto Ellevar -2618,-3778,-793
+		..turnin Veggie Launcher##6601
+	step
+		.' Meet Toric Antevian |q Recognition of Faith##6606/3 |goto Ellevar -2412,-3531,-781
+	step
+		.talk Toric Antevian##276529 |goto Ellevar -2412,-3531,-781
+		..turnin Recognition of Faith##6606
+		..accept Before the Storm##6807
+	step
+		.talk Guardian Villos##287076 |goto Ellevar -2414,-3527,-781
+		..turnin Against All Odds##6605
+	step
+		.'_Enter_ the buidling |goto Ellevar -2482,-3469,-762 < 10
+		.talk Pyrius Octavian##686250 |goto Ellevar -2471,-3437,-762
+		..turnin Before the Storm##6807
+		..accept All In Good Faith##6587
+	step
+		'Pick _3_ Dominion Supplies |goto Ellevar -2547,-3757,-801
+		.' Pick up Dominion Supplies |q All In Good Faith##6587/1
+	step
+		.talk Elder Wave-Caller##289092 |goto Ellevar -2995,-3472,-817
+		..accept Spirits To Tend##6593
+	step
+		.talk Elder Mist-Dancer##278833 |goto Ellevar -2954,-3506,-821
+		..accept Mouths To Feed##6592
+	step
+		.talk Elder Spirit-Walker##289093 |goto Ellevar -2893,-3487,-820
+		.' Deliver Dominion Supplies to the Elder Spirit-Walker |q All In Good Faith##6587/2
+	step
+		.talk Elder Brood-Mother##278835 |goto Ellevar -2832,-3535,-816
+		..accept Hearts To Grow##6594
+	step
+		'Aim at _Darkwood Fester_, press _T_ to:
+		.' Kick Ball at Darkwood Festers |q Hearts To Grow##6594/1 |goto Ellevar -2810,-3557,-816
+	step
 		'Press _T_ to:
-		.' Kick Ball at Darkwood Festers |q Hearts To Grow##6594/1 |goto -2810,-3557,-816
-	step
-		.click Stormseeker Totem##278693
 		.' Kick Ball at Stormseeker Totem |q Hearts To Grow##6594/2 |goto Ellevar -2816,-3549,-816
 	step
-		.click Primal Water Vessel##599390
 		'Press _T_ to:
 		.' Kick Ball at Primal Water Vessel |q Hearts To Grow##6594/3 |goto Ellevar -2856,-3462,-821 |tip This will spawn a water mob to fight.
 	step
 		'Press _T_ to:
-		.' Kick Ball into Lake Larallen |q Hearts To Grow##6594/4 |goto Ellevar -2834,-3481,-824
+		.' Kick Ball into Lake Larallen |q Hearts To Grow##6594/4 |goto Ellevar -2803,-3520,-822
 	step
-		.click Elder Brood-Mother##278835
 		'Press _T_ to:
 		.' Kick Ball at the Elder Brood-Mother |q Hearts To Grow##6594/5 |goto Ellevar -2832,-3535,-816
 	step
-		.talk Elder Brood-Mother##278835
-		..turnin Hearts To Grow##6594 |goto Ellevar -2832,-3535,-816
-	step
-		.talk Elder Spirit-Walker##289093
-		.' Deliver Dominion Supplies to the Elder Spirit-Walker |q All In Good Faith##6587/2 |goto -2893,-3487,-820
+		.talk Elder Brood-Mother##278835 |goto Ellevar -2832,-3535,-816
+		..turnin Hearts To Grow##6594
 		.' Gain the trust of the Elder Brood-Mother |q All In Good Faith##6587/5
 	step
-		.talk Elder Mist-Dancer##278833
-		..accept Mouths To Feed##6592 |goto Ellevar -2954,-3506,-821
+		' Around the town:
+		.click Primal Water Vessel##584563 |goto Ellevar -2985,-3474,-819
+		.' Summon spirits from Primal Water Vessels |q Spirits To Tend##6593/1
 	step
-		.talk Elder Wave-Caller##289092
-		..accept Spirits To Tend##6593 |goto -2995,-3472,-817
+		.talk Guardian Zelcon##276156 |goto Ellevar -3175,-3671,-794
+		..accept Dangerous Highlands##6582
 	step
-		.click Primal Water Vessel##584563 |tip You can find these all over the town.
-		.' Summon spirits from Primal Water Vessels |q Spirits To Tend##6593/1 |goto Ellevar -2985,-3474,-819
+		.talk Tani Bril##276154 |goto Ellevar -3163,-3676,-794
+		..accept The Tooth that Bites Last##6583
 	step
-		.talk Elder Wave-Caller##289092
-		..turnin Spirits To Tend##6593 |goto -2996,-3473,-816
+		.talk Priestess Trania Lavus##286779 |goto Ellevar -3174,-3690,-793
+		..accept Better Than This##6581
 	step
-		.kill Highland Broadwing##606929+
-		.kill Highland Gribbon##607380+
-		.' Hunt Highland birds |q Mouths To Feed##6592/1 |goto Ellevar -3011,-3731,-817
+		.' Hunt Highland birds |q Mouths To Feed##6592/1 |goto Ellevar -3031,-3721,-817
+		.' Kill the Larallen Highlands Wildlife |q Dangerous Highlands##6582/1
+		'Press _T_ to:
+		.' Use De-Toothing Beam on Larallen Slanks |q The Tooth that Bites Last##6583/1
 	step
-		.talk Elder Mist-Dancer##278833
-		..turnin Mouths To Feed##6592 |goto -2954,-3505,-822
-		.' Gain the trust of the Elder Mist-Dancer |q All In Good Faith##6587/4 |goto -2954,-3505,-822
-	step
-		.talk Elder Spirit-Walker##289053
-		..turnin All In Good Faith##6587 |goto Ellevar -2895,-3487,-820
-		..accept Fair Trade##6588 |goto -2895,-3487,-820
-	step
-		.talk Stormseeker Arcanist##288950 |tip After you talk to him, follow the Lifter and protect it.
-		.' Meet the Stormseeker Arcanist and escort Lifter |q Fair Trade##6588/1 |goto Ellevar -2954,-3685,-820
+		.click Ellevarian Fern##484014 |goto Ellevar -3307,-3739,-790
+		.' Collect Herbs and Vegetables |q Better Than This##6581/1
 	step
 		'Press _C_ to open your Communicator:
-		..turnin Fair Trade##6588 |goto -2543,-3750,-802
-		..accept Treacherous Territory##6589 |goto -2543,-3750,-802
+		..turnin Better Than This##6581
+		..turnin Dangerous Highlands##6582
+		..turnin The Tooth that Bites Last##6583
 	step
-		.talk Poisoned Spirit-Walker##461709
+		.talk Elder Mist-Dancer##278833 |goto Ellevar -2954,-3505,-822
+		..turnin Mouths To Feed##6592
+		.' Gain the trust of the Elder Mist-Dancer |q All In Good Faith##6587/4
+	step
+		.talk Elder Wave-Caller##289092 |goto Ellevar -2996,-3473,-816
+		..turnin Spirits To Tend##6593
+		.' Gain the trust of the Elder Wave-Caller |q All In Good Faith##6587/3
+	step
+		.talk Elder Spirit-Walker##289053 |goto Ellevar -2895,-3487,-820
+		..turnin All In Good Faith##6587
+		..accept Fair Trade##6588
+	step
+		.talk Stormseeker Arcanist##288950  |goto Ellevar -2954,-3685,-820 |tip This starts an escort.
+		.' Meet the Stormseeker Arcanist and escort Lifter |q Fair Trade##6588/1
+	step
+		'Press _C_ to open your Communicator:
+		..turnin Fair Trade##6588 |goto Ellevar -2543,-3750,-802
+		..accept Treacherous Territory##6589
+	step
+		.talk Poisoned Spirit-Walker##461709 |goto Ellevar -2948,-3662,-819
 		.' Defeat the enemies that attack in waves
-		.' Find the Poisoned Spirit-Walker |q Treacherous Territory##6589/1 |goto Ellevar -2948,-3662,-819
+		.' Find the Poisoned Spirit-Walker |q Treacherous Territory##6589/1
 	step
-		.talk Poisoned Spirit-Walker##461709
-		..turnin Treacherous Territory##6589 |goto Ellevar -2949,-3663,-819
+		.talk Poisoned Spirit-Walker##461709 |goto Ellevar -2949,-3663,-819
+		..turnin Treacherous Territory##6589
 		..accept The Cruel and the Credulous##6590
 	step
 		.click Poisoned Stormseeker##668155
@@ -251,398 +264,369 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		..turnin The Cruel and the Credulous##6590
 		..accept The Face of Justice##6591
 	step
-		'Press the icon on the bottom right of your action bar to:
-		.' Recall - Transmat to _Lightreach Mission_ |goto Ellevar -2529,-3420,-765 < 100 |c |noway |q 6591
+		'Press the icon on the bottom left of your action bar to:
+		.' _Recall-Transmat_ to Lightreach Mission |goto Ellevar -2529,-3420,-765 < 10 |c |noway |q 6591
 	step
-		'_Enter_ the large buidling |goto Ellevar -2482,-3471,-762 < 10
+		'Press _C_ to open your Communicator:
+		..accept A Salvageable Situation##9047
+	step
+		.talk Technologist Corvianos##273666 |goto Ellevar -2591,-3503,-786
+		..turnin A Salvageable Situation##9047
+		..accept Breaking It Down##9049
+	step
+		'Press _I_ to open your inventory
+		.' Drag the _Unstable Crafting Prototype_ over the _Salvage_ icon at the bottom of the inventory window|tip It looks like a recycle symbol.
+		.' Salvage the Unusable Crafting Prototype to get a Dusty Power Core |q Breaking It Down##9049/1
+	step
+		.talk Weaponsmith Tirexa##284134 |goto Ellevar -2599,-3517,-785
+		..turnin Breaking It Down##9049
+	step
+		.'_Enter_ the large buidling |goto Ellevar -2482,-3471,-762 < 10 |c |q 6591/1
+	step
 		.click Lightreach Church Cellar Door##278598
-		.' Find Pyrius Octavian |q The Face of Justice##6591/1 |goto -2460,-3398,-762
+		.' Find Pyrius Octavian |q The Face of Justice##6591/1 |goto Ellevar -2460,-3398,-762
 	step
-		.talk Pyrius Octavian##686250
-		.' Confront Pyrius Octavian |q The Face of Justice##6591/2 |goto Ellevar -2462,-3437,-813
-		.kill Pyrius Octavian##686250
-		.' Bring Pyrius Octavian to justice |q The Face of Justice##6591/4 |goto -2463,-3438,-813
+		.talk Pyrius Octavian##686250 |goto Ellevar -2463,-3438,-813
+		.' Confront Pyrius Octavian |q The Face of Justice##6591/2
+		.' Bring Pyrius Octavian to justice |q The Face of Justice##6591/4
 	step
-		.click Lightreach Church Cellar Door##278597
-		.' Exit the church cellar |q The Face of Justice##6591/5 |goto Ellevar -2483,-3422,-808
+		.click Lightreach Church Cellar Door##278597 |goto Ellevar -2483,-3422,-808
+		.' Exit the church cellar |q The Face of Justice##6591/5
 	step
-		.talk Toric Antevian##689788
-		..turnin The Face of Justice##6591 |goto Ellevar -2471,-3444,-762
+		.talk Toric Antevian##689788 |goto Ellevar -2471,-3444,-762
+		..turnin The Face of Justice##6591
 	step
 		.' Press _C_ to open your Communicator:
-		..accept A Healing Hand##6575 |goto -2471,-3444,-762
+		..accept A Healing Hand##6575
 	step
 		'_Cross_ the bridge and follow the road west |goto Ellevar -2544,-3761,-801 < 15
-		.' Approach Guardian Zelcon |q A Healing Hand##6575/1 |goto Ellevar -3175,-3671,-794
+		.click Stabby's Map |goto Ellevar -3016,-3958,-815
+		..turnin The Weight of Victory##6600
 	step
-		.talk Guardian Zelcon##276156
-		..accept Dangerous Highlands##6582 |goto -3175,-3671,-794
+		.click Mistclaw's Fresh Kill##286936 |goto Ellevar -3024,-3803,-816
+		..accept Tracking Mistclaw##6584 |tip Item spawn at random around area.  Look map for quest symbol.
 	step
-		.talk Tani Bril##276154
-		..accept The Tooth that Bites Last##6583 |goto Ellevar -3163,-3676,-794
-	step
-		.talk Priestess Trania Lavus##286779
-		..accept Better Than This##6581 |goto -3174,-3690,-793
-	step
-		.click Mistclaw's Fresh Kill##286936
-		..accept Tracking Mistclaw##6584 |goto Ellevar -3299,-3785,-788
-	step
-		.' Follow the mist trail |q Tracking Mistclaw##6584/1 |goto -3301,-3948,-774
-		.kill 1 Mistclaw##698239 |q Tracking Mistclaw##6584/2 |goto -3301,-3948,-774
+		.' Follow the mist trail |q Tracking Mistclaw##6584/1 |goto Ellevar -3301,-3948,-774
+		.kill 1 Mistclaw##698239 |q Tracking Mistclaw##6584/2
 	step
 		'Press _C_ to open your Communicator:
 		..turnin Tracking Mistclaw##6584
 	step
-		.click Larallen Slank##487805
-		'Press _T_ to:
-		.' Use De-Toothing Beam on Larallen Slanks |q The Tooth that Bites Last##6583/1 |goto Ellevar -3283,-3761,-791
+		.' Approach Guardian Zelcon |q A Healing Hand##6575/1 |goto Ellevar -3175,-3671,-794
+	step
 		.click Injured Radiant Guard##567969
 		.' Heal Injured Radiant Guards  |q A Healing Hand##6575/2 |goto Ellevar -3273,-3730,-794
 		.click Terrestrial Aquashroom##538184
-		.click Ellevarian Fern##484014
-		.' Collect Herbs and Vegetables |q Better Than This##6581/1 |goto Ellevar -3307,-3739,-790
 	step
-		'Press _C_ to open your Communicator:
-		..turnin Better Than This##6581
+		.talk Guardian Zelcon##276156 |goto Ellevar -3176,-3671,-794
+		..turnin A Healing Hand##6575
+		..accept The Storm's Power##6576
+		..accept Unfortunate Force##6577
 	step
-		.kill Highland Oxian##703279+
-		.kill Highland Calf##703163+
-		.' Kill the Larallen Highlands Wildlife |q Dangerous Highlands##6582/1 |goto Ellevar -3272,-3758,-793
+		.talk Tani Bril##276154 |goto Ellevar -3163,-3676,-793
+		..accept More than Clay Jars##6580
 	step
-		'Press _C_ to open your Communicator:
-		..turnin Dangerous Highlands##6582
+		.talk Priestess Trania Lavus##286779 |goto Ellevar -3174,-3690,-793
+		..accept Fragments are Better than Nothing##6579
 	step
-		.talk Tani Bril##276154
-		..turnin The Tooth that Bites Last##6583 |goto Ellevar -3162,-3676,-794
+		.talk Shrine of the Masters##276421 |goto Ellevar -3141,-3396,-817
+		..accept Shrine of the Masters##6599
 	step
-		.talk Guardian Zelcon##276156
-		..turnin A Healing Hand##6575 |goto -3176,-3671,-794
-		..accept The Storm's Power##6576 |goto -3176,-3671,-794
-		..accept Unfortunate Force##6577 |goto -3176,-3671,-794
-	step
-		.talk Tani Bril##276154
-		..accept More than Clay Jars##6580 |goto Ellevar -3163,-3676,-793
-	step
-		.talk Priestess Trania Lavus##286779
-		..accept Fragments are Better than Nothing##6579 |goto -3174,-3690,-793
-	step
-		.talk Shrine of the Masters##276421
-		..accept Shrine of the Masters##6599 |goto Ellevar -3141,-3396,-817
-	step
-		.click Primal Phylax Jar##683894
-		.' Destroy Primal Phylax Jars |q More than Clay Jars##6580/1 |goto Ellevar -3361,-3653,-793
-		.kill 1 Stormseeker Drone##724672
-		.' Collect Eldan Tech Fragments from Stormseeker Drones |q Fragments are Better than Nothing##6579/1 |goto Ellevar -3240,-3451,-806
-		.kill Stormseeker Tome-Binder##682698+
-		.' Kill Stormseeker Pell |q Unfortunate Force##6577/1 |goto Ellevar -3240,-3451,-806
+		' Around the area:  |goto Ellevar -3240,-3451,-806
+		.' Destroy Primal Phylax Jars |q More than Clay Jars##6580/1
+		.' Kill Stormseeker Pell |q Unfortunate Force##6577/1
+		.' Collect Eldan Tech Fragments from Stormseeker Drones |q Fragments are Better than Nothing##6579/1
 	step
 		'Press _C_ to open Communicator:
 		..turnin More than Clay Jars##6580
 		..turnin Unfortunate Force##6577
 		..turnin Fragments are Better than Nothing##6579
 	step
-		.click Primal Storm Emitter##276433
-		.' Disable Primal Storm Emitters |q The Storm's Power##6576/1 |goto Ellevar -3342,-3299,-786
+		.click Primal Storm Emitter##276433 |goto Ellevar -3342,-3299,-786
+		.' Disable Primal Storm Emitters |q The Storm's Power##6576/1
 	step
 		'Press _C_ to open your Communicator:
 		..turnin The Storm's Power##6576
 		..accept The Wrath of the High Priest##6578
 	step
-		'_Go up_ the dirt hill here |goto Ellevar -3609,-3231,-744 < 10
-		.kill 1 Stormseeker High-Priest##694198
+		.'_Go up_ the dirt hill here |goto Ellevar -3609,-3231,-744 < 10 |c |q 6578/1
+	step
 		.' Kill the Stormseeker High-Priest |q The Wrath of the High Priest##6578/1 |goto Ellevar -3440,-3429,-760
 	step
-		'Press _C_ to open your Communicator:
+		.' _Recall-Transmat_ to Lightreach Mission |goto Ellevar -2529,-3420,-765 < 10 |c |noway |q 6578
+	step
+		.talk Toric Antevian##287083 |goto Ellevar -2414,-3532,-779
 		..turnin The Wrath of the High Priest##6578
 		..accept Priority One Distress Call##7110
 	step
-		'Press the icon on the bottom right of your action bar to:
-		.' Recall - Transmat to _Lightreach Mission_ |goto Ellevar -2529,-3420,-765 < 100 |c |noway |q 7110
+		'Press _C_ to open your Communicator:
+		..accept [Dungeon] Protogames Preparations##9764 |tip No need to complete dungeon to get epic weapon
 	step
-		.' Travel to Mistymurk Camp |q Priority One Distress Call##7110/1 |goto Ellevar -2597,-2975,-772
+		.talk Protogames Recruiter |goto Ellevar -2520,-3687,-802
+		..turnin [Dungeon] Protogames Preparations##9764
 	step
-		.talk Nerissa Artan##276023
-		..turnin Priority One Distress Call##7110 |goto -2516,-2931,-765
-		..accept Out For Lunch##6887 |goto -2516,-2931,-765
+		.' Travel to Mistymurk Camp |tip You can use Taxi |q Priority One Distress Call##7110/1 |goto Ellevar -2597,-2975,-772
 	step
-		.talk Ringo Hax##276022
-		..accept Kill Them All... for Science##6888 |goto Ellevar -2513,-2932,-765
-		..accept Pincer Business##6892 |goto -2513,-2932,-765
+		.talk Nerissa Artan##276023 |goto Ellevar -2516,-2931,-765
+		..turnin Priority One Distress Call##7110
+		..accept Out For Lunch##6887
 	step
-		.click The Highborn: Eldan Dreams##275922
-		..accept Lost In The Woods##6890 |goto Ellevar -2426,-2837,-726
+		.talk Ringo Hax##276022 |goto Ellevar -2513,-2932,-765
+		..accept Kill Them All... for Science##6888
+		..accept Pincer Business##6892
 	step
-		.click The Highborn: Seduction of Honor##275913
-		.' Find "The Highborn: Seduction of Honor" |q Lost In The Woods##6890/1 |goto Ellevar -2504,-2795,-735
+		.click The Highborn: Eldan Dreams##275922 |goto Ellevar -2426,-2837,-726
+		..accept Lost In The Woods##6890
 	step
-		.click The Highborn: Lust for Power##286493
-		.' Find "The Highborn: Lust for Power" |q Lost In The Woods##6890/2 |goto Ellevar -2599,-2729,-735
+		.click The Highborn: Seduction of Honor##275913 |goto Ellevar -2504,-2795,-735
+		.' Find "The Highborn: Seduction of Honor" |q Lost In The Woods##6890/1
 	step
-		'_Climb_ up the side of the hill |goto Ellevar -2737,-2765,-728 < 30
-		.click The Highborn: Sovereignty Unveiled##275911
+		.click The Highborn: Lust for Power##286493 |goto Ellevar -2599,-2729,-735
+		.' Find "The Highborn: Lust for Power" |q Lost In The Woods##6890/2
+	step
+		.'_Climb_ up the side of the hill |goto Ellevar -2737,-2765,-728 < 30 |c |q 6890/3
+	step
+		.click The Highborn: Sovereignty Unveiled##275911 |goto Ellevar -2752,-2729,-731
 		.' Kill the enemies that attack in waves
-		.' Find "The Highborn: Sovereignty Unveiled" |q Lost In The Woods##6890/3 |goto -2752,-2729,-731
+		.' Find "The Highborn: Sovereignty Unveiled" |q Lost In The Woods##6890/3
 	step
-		.kill Webwood Cocoon##630029+
-		.' Rescue Radiant Soldiers from Webwood Cocoons |q Out For Lunch##6887/1 |goto Ellevar -2536,-2777,-737
-		.kill Webwood Pincher##713078+ |tip When fighting Pincher's, make sure to let them hit you with their flurry attacks.
-		.' Withstand the spiders' Pincer Flurry attacks |q Pincer Business##6892/1 |goto -2536,-2777,-737
-		.kill Webwood Widow##455240+, Webwood Spitter##713045+
-		.' Collect Webwood Spider Part |q Kill Them All... for Science##6888/1 |goto -2536,-2777,-737
+		'Around this area:  |goto Ellevar -2536,-2777,-737
+		.' Rescue Radiant Soldiers from Webwood Cocoons |q Out For Lunch##6887/1
+		.' Collect Webwood Spider Part |q Kill Them All... for Science##6888/1
+		.' Withstand the spiders' Pincer Flurry attacks |q Pincer Business##6892/1 |tip Kill counts only if Pincer uses flurry attack.
 	step
 		'Press _C_ to open your Communicator:
 		..turnin Pincer Business##6892
 	step
-		.talk Nerissa Artan##276023
-		..turnin Out For Lunch##6887 |goto Ellevar -2516,-2931,-765
-		..turnin Lost In The Woods##6890 |goto -2516,-2931,-765
+		.talk Nerissa Artan##276023 |goto Ellevar -2516,-2931,-765
+		..turnin Out For Lunch##6887
+		..turnin Lost In The Woods##6890
 	step
-		.talk Ringo Hax##276022
-		..turnin Kill Them All... for Science##6888 |goto -2513,-2933,-765
-		..accept Better, Faster, Stronger##6889 |goto -2513,-2933,-765
+		.talk Ringo Hax##276022 |goto Ellevar -2513,-2933,-765
+		..turnin Kill Them All... for Science##6888
+		..accept Better, Faster, Stronger##6889
 	step
-		.talk Nerissa Artan##276023
-		..accept Bug Zapper##6891 |goto -2516,-2931,-765
+		.talk Nerissa Artan##276023 |goto Ellevar -2516,-2931,-765
+		..accept Bug Zapper##6891
 	step
-		.talk Dio##286466
-		..accept Raving Ravenok##6597 |goto -2480,-2939,-764
+		.talk Dio##286466 |goto Ellevar -2480,-2939,-764
+		..accept Raving Ravenok##6597
 	step
-		.talk Agent Varac##276010
-		..accept A Bad Snog##6598 |goto Ellevar -2514,-2971,-762
+		.talk Agent Varac##276010 |goto Ellevar -2514,-2971,-762
+		..accept A Bad Snog##6598
 	step
-		.click Mistymurk Camp Taxi Kiosk##286770
-		.' Get the _Mistymurk Shore_ taxi point |goto Ellevar -2551,-3029,-770
-		|confirm |q 6598
-	step
-		'_IMPORTANT_ Click these in order: _4_, _2_, _5_, _1_, then _3_
-		.click EDP Station 4##286609
+		'_IMPORTANT_ Click these in order: _4_, _2_, _5_, _1_, _3_
 		.' Recalibrate the E.D.P. Station _number 4_ |goto Ellevar -2571,-2935,-765 < 10
-		.click EDP Station 2##276008
 		.' Recalibrate the E.D.P. Station _number 2_ |goto Ellevar -2466,-2924,-764 < 10
-		.click EDP Station 5##276005
 		.' Recalibrate the E.D.P. Station _number 5_ |goto Ellevar -2565,-2975,-766 < 10
-		.click EDP Station 1##276006
 		.' Recalibrate the E.D.P. Station _number 1_ |goto Ellevar -2475,-2977,-765 < 10
-		.click EDP Station 3##276007
-		.' Recalibrate the E.D.P. Station _number 3_ |goto -2536,-2901,-768
+		.' Recalibrate the E.D.P. Station _number 3_ |goto Ellevar -2536,-2901,-768
 		.' Recalibrate the E.D.P. Stations |q Bug Zapper##6891/1
 	step
-		.talk Nerissa Artan##276023
-		..turnin Bug Zapper##6891 |goto Ellevar -2516,-2931,-765
+		.talk Nerissa Artan##276023 |goto Ellevar -2516,-2931,-765
+		..turnin Bug Zapper##6891
 	step
-		.click Spiderbot Controller##275923
-		.' Choose _Yes_ to take control of a Webswood Spiderbot |goto Ellevar -2493,-2933,-765
+		.click Spiderbot Controller##275923 |goto Ellevar -2493,-2933,-765
+		.' Choose _Yes_ to take control of a Webswood Spiderbot
 		.' Activate the Spiderbot Controller |goto Ellevar -2510,-2648,-697 < 50 |c |noway |q 6889
 	step
-		.talk Webwood Taskmaster##276021
-		..accept Egg-Septional Coordination##6893 |goto Ellevar -2510,-2648,-697
+		.talk Webwood Taskmaster##276021 |goto Ellevar -2510,-2648,-697
+		..accept Egg-Septional Coordination##6893
 	step
-		'_Head into_ the cave and follow the path left |goto Ellevar -2426,-2470,-697 < 10
-		.click Webwood Larva##762767
-		.' Gather Webwood Larvae |goto -2382,-2498,-697 |tip Watch the buff above your health bar until you have 2-3 eggs. The more you have the harder it is to balance.
+		.'_Head into_ the cave and follow the path left |goto Ellevar -2426,-2470,-697 < 10 |c |q 6893/1
+	step
+		.' Gather Webwood Larvae |goto Ellevar -2382,-2498,-697 |tip Don't take more than 4 eggs per trip.
 		.' Use the controls to not drop the eggs as you _return to the cave entrance_ |goto Ellevar -2512,-2647,-697
 		.' Retrieve Webwood Larvae |q Egg-Septional Coordination##6893/1
 	step
-		.talk Webwood Taskmaster##276021
-		..turnin Egg-Septional Coordination##6893 |goto -2509,-2649,-697
+		.talk Webwood Taskmaster##276021 |goto Ellevar -2509,-2649,-697
+		..turnin Egg-Septional Coordination##6893
 	step
-		'_Enter_ the cave and turn right |goto Ellevar -2479,-2551,-697 < 10
-		.' Find the Webwood Queen |q Better, Faster, Stronger##6889/2 |goto -2522,-2495,-697
+		.'_Enter_ the cave and turn right |goto Ellevar -2479,-2551,-697 < 10 |c |q 6889/2
 	step
-		.talk Ringo Hax##276022
-		..turnin Better, Faster, Stronger##6889 |goto -2513,-2933,-765
+		.' Find the Webwood Queen |q Better, Faster, Stronger##6889/2 |goto Ellevar -2522,-2495,-697
 	step
-		.talk Nerissa Artan##276023
-		..accept Exciting Discoveries##6908 |goto Ellevar -2515,-2931,-765
+		.talk Ringo Hax##276022 |goto Ellevar -2513,-2933,-765
+		..turnin Better, Faster, Stronger##6889
 	step
-		.click Escaped Ravenok##838457
-		.' Press _T_ to Catch 5 Ravenok |goto Ellevar -2498,-3081,-798 < 20 |tip Watch the buff above your health bar until you have 5 Ravenok Wrangled.
-		.' Catch and return Escaped Ravenok |q Raving Ravenok##6597/1 |goto Ellevar -2482,-2948,-764
+		.talk Nerissa Artan##276023 |goto Ellevar -2515,-2931,-765
+		..accept Exciting Discoveries##6908
+	step
+		' In this area:  |goto Ellevar -2498,-3081,-798 < 20
+		.' Click _Ravenok, then Press _T_ to Catch.  You need 5.
+		.' Catch and return Escaped Ravenok |q Raving Ravenok##6597/1
+		.' Collect Ellevarian Eldan Remnant |q A Bad Snog##6598/1
+	step
+		.talk Agent Varac##276010 |goto Ellevar -2513,-2971,-762
+		..turnin A Bad Snog##6598
 	step
 		.click Bait Rock##275893 |goto Ellevar -2336,-2976,-746
-		.kill Goldy##889230
 		.' Find and subdue Goldy |q Raving Ravenok##6597/2
 	step
-		.talk Dio##286466
-		..turnin Raving Ravenok##6597 |goto -2480,-2939,-764
+		.talk Dio##286466 |goto Ellevar -2480,-2939,-764
+		..turnin Raving Ravenok##6597
 	step
-		.talk Lowland Chick##286277
-		..accept Unnatural Selection##6918 |goto -2913,-3051,-815
+		.talk Lowland Chick##286277 |goto Ellevar -2913,-3051,-815
+		..accept Unnatural Selection##6918
 	step
 		.' Kill Snoglugs |q Unnatural Selection##6918/1 |goto Ellevar -2910,-3055,-817
-		.click Spotted Splorg##286242
-		.' Collect Spotted Splorg |q Unnatural Selection##6918/2 |goto -2746,-2992,-789
+		' Click _Spotted Splorg_ on the floor
+		.' Collect Spotted Splorg |q Unnatural Selection##6918/2
 	step
-		.talk Calliope Rose##286230
-		.' Speak with Calliope Rose |q Unnatural Selection##6918/3 |goto -2954,-2829,-766
+		.talk Calliope Rose##286230 |goto Ellevar -2954,-2829,-766
+		.' Speak with Calliope Rose |q Unnatural Selection##6918/3
 	step
-		.click Lowland Chick##286265
-		.' Press _T_ to:
-		.' Feed Chick Veggie Mash |q Unnatural Selection##6918/4 |goto -2910,-3055,-817
-		.' Feed Chick Snoglugs |q Unnatural Selection##6918/5 |goto -2910,-3055,-817
-		.' Feed Chick Splotted Splorg |q Unnatural Selection##6918/6 |goto -2910,-3055,-817
+		.talk Lead Excavator Radek Villius##286341 |goto Ellevar -2944,-2835,-766
+		..turnin Exciting Discoveries##6908
+		..accept The Datacube Tells All##6910
 	step
-		.click Lowland Chick##286265
-		..turnin Unnatural Selection##6918 |goto Ellevar -2912,-3050,-816
+		.talk Sariah Lumentis##275764 |goto Ellevar -2938,-2830,-767
+		..accept Antiquities Below the Soil##6915
 	step
-		.kill Mistymurk Slimer##772281+
-		.kill Murkshore Snoglug##771419+
-		.' Collect Ellevarian Eldan Remnant |q A Bad Snog##6598/1 |goto Ellevar -2716,-3022,-798
+		.talk Scientist Hrezz##286340 |goto Ellevar -2950,-2826,-766
+		..accept Security Protocol##6914
 	step
-		.talk Agent Varac##276010
-		..turnin A Bad Snog##6598 |goto Ellevar -2513,-2971,-762
+		' Click _Lowland Chick_, then press _T_ to:  |goto Ellevar -2910,-3055,-817
+		.' Feed Chick Veggie Mash |q Unnatural Selection##6918/4
+		.' Feed Chick Snoglugs |q Unnatural Selection##6918/5
+		.' Feed Chick Splotted Splorg |q Unnatural Selection##6918/6
 	step
-		.talk Lead Excavator Radek Villius##286341
-		..turnin Exciting Discoveries##6908 |goto Ellevar -2944,-2835,-766
-		..accept The Datacube Tells All##6910 |goto -2944,-2835,-766
-	step
-		.talk Sariah Lumentis##275764
-		..accept Antiquities Below the Soil##6915 |goto Ellevar -2938,-2830,-767
-	step
-		.talk Scientist Hrezz##286340
-		..accept Security Protocol##6914 |goto -2950,-2826,-766
+		.click Lowland Chick##286265 |goto Ellevar -2912,-3050,-816
+		..turnin Unnatural Selection##6918
 	step
 		.' Find Radek's Datacube |q The Datacube Tells All##6910/1 |goto Ellevar -3115,-2923,-790
 	step
 		.click Irradiated Bio-Mech Minerals##850418 |tip These are mostly on the ground around this structure.
-		.' Collect Irradiated Bio-Mech Minerals |q Antiquities Below the Soil##6915/1 |goto -3003,-2893,-770
-		.kill Biomech Sentry##850551+
-		.kill Biomech Enhancer##850282+
-		.kill Biomech Guardian##884354+
+		.' Collect Irradiated Bio-Mech Minerals |q Antiquities Below the Soil##6915/1 |goto Ellevar -3003,-2893,-770
 		.' Collect Inner Hyper-Modular Mechanism from Bio-Mech Constructs |q Security Protocol##6914/1 |goto Ellevar -3025,-2926,-768
 		.' Destroy the Bio-Mech Eldan Constructs |q The Datacube Tells All##6910/2 |goto Ellevar -3018,-2923,-768
 	step
-		.talk Scientist Hrezz##286340
-		..turnin Security Protocol##6914 |goto Ellevar -2951,-2825,-766
+		.talk Lead Excavator Radek Villius##286341 |goto Ellevar -2945,-2836,-766
+		..turnin The Datacube Tells All##6910
+		..accept Creepy Origins##6911
 	step
-		.talk Sariah Lumentis##275764
-		..turnin Antiquities Below the Soil##6915 |goto -2937,-2830,-767
+		.talk Maxinux##286338 |goto Ellevar -2936,-2834,-767
+		..accept Power It Up##6917
 	step
-		.talk Lead Excavator Radek Villius##286341
-		..turnin The Datacube Tells All##6910 |goto -2945,-2836,-766
-		..accept Creepy Origins##6911 |goto -2945,-2836,-766
+		.talk Sariah Lumentis##275764 |goto Ellevar -2937,-2830,-767
+		..turnin Antiquities Below the Soil##6915
 	step
-		.talk Scientist Hrezz##286340
-		..accept Ultrasonic Barriers##6916 |goto Ellevar -2951,-2825,-766
+		.talk Scientist Hrezz##286340 |goto Ellevar -2951,-2825,-766
+		..turnin Security Protocol##6914
+		..accept Ultrasonic Barriers##6916
 	step
-		.click Territorial Lowland Burrower##918801 |tip You can find them burrowed in the dirt piles around this area.
-		'Press _T_ to:
-		.' Use the Ultrasonic Pulsing Ray on Lowland Canimid |q Ultrasonic Barriers##6916/1 |goto Ellevar -2993,-2927,-773
-		.' Click here for another location to find _Burrowers_ |goto Ellevar -3185,-2926,-766
+		'Around area, do: |goto Ellevar -2993,-2927,-773
+		.' Use the Ultrasonic Pulsing Ray on Lowland Canimid |q Ultrasonic Barriers##6916/1 |tip Step over Dirt Piles, click mob that spawn, press T
+		.' Activate the Bio-Mech Power Pylons |q Power It Up##6917/1
 	step
 		'Press _C_ to open your Communicator:
 		..turnin Ultrasonic Barriers##6916
 	step
+		'Press _C_ to open your Communicator:
+		..turnin Power It Up##6917
+	step
 		.' Find where test subjects were held |q Creepy Origins##6911/1 |goto Ellevar -3083,-3168,-797
-		.click Bio-Transmute Holodisplay##275877
-		.' Inspect the Genetic Amplification Holodisplay |q Creepy Origins##6911/2 |goto Ellevar -3098,-3151,-889
+	step
+		.click Bio-Transmute Holodisplay##275877 |goto Ellevar -3098,-3151,-889
+		.' Inspect the Genetic Amplification Holodisplay |q Creepy Origins##6911/2
+	step
 		.kill Biotransmuted Canimid##937811+, Biotransmuted Spider##935569+, Biotransmuted Buzzbing##937715+
 		.' Kill the attacking Bio-Transmuted creatures |q Creepy Origins##6911/3
 	step
+		'Press _C_ to open your Communicator:
 		..turnin Creepy Origins##6911
 		..accept Lost in Translation##6912
 	step
-		.click Bio-Mech Infosphere##275876
-		.' Find the first Bio-Mech Infosphere Data |q Lost in Translation##6912/1 |goto Ellevar -3097,-3168,-890
+		.click Bio-Mech Infosphere##275876 |goto Ellevar -3097,-3168,-890
+		.' Find the first Bio-Mech Infosphere Data |q Lost in Translation##6912/1
 	step
 		'_Step into_ the green teleporter |goto Ellevar -3097,-3134,-889 < 5
-		.click Bio-Mech Infosphere##275875
-		.' Find the second Bio-Mech Infosphere Data |q Lost in Translation##6912/2 |goto Ellevar -3140,-3003,-787
+		.click Bio-Mech Infosphere##275875 |goto Ellevar -3140,-3003,-787
+		.' Find the second Bio-Mech Infosphere Data |q Lost in Translation##6912/2
 	step
-		.click Bio-Mech Infosphere##286450
-		.' Find the third Bio-Mech Infosphere Data |q Lost in Translation##6912/3 |goto Ellevar -3184,-2996,-771
+		.click Bio-Mech Infosphere##286450 |goto Ellevar -3184,-2996,-771
+		.' Find the third Bio-Mech Infosphere Data |q Lost in Translation##6912/3
 	step
-		.click Bio-Mech Infosphere##275873
-		.' Find the fourth Bio-Mech Infosphere Data |q Lost in Translation##6912/4 |goto Ellevar -3271,-2982,-763
+		.click Bio-Mech Infosphere##275873 |goto Ellevar -3271,-2982,-763
+		.' Find the fourth Bio-Mech Infosphere Data |q Lost in Translation##6912/4
 	step
 		'Press _C_ to open your Communicator:
-		..turnin Lost in Translation##6912 |goto Ellevar -3263,-2984,-763
-		..accept Seeing is Believing##6913 |goto -3263,-2984,-763
+		..turnin Lost in Translation##6912
+		..accept Seeing is Believing##6913
 	step
-		.click Augmentation Apparatus Component##879973
-		.' Collect Augmentation Apparatus Components |q Seeing is Believing##6913/1 |goto Ellevar -3330,-3005,-760
+		.click Augmentation Apparatus Component##879973 |tip Around the floor |goto Ellevar -3330,-3005,-760
+		.' Collect Augmentation Apparatus Components |q Seeing is Believing##6913/1
 	step
-		.click Augmentation Apparatus Component##275864
-		.' Activate the Disabled Augmentation Engine |q Seeing is Believing##6913/2 |goto Ellevar -3447,-2951,-743
+		.click Augmentation Apparatus Component##275864 |goto Ellevar -3447,-2951,-743
+		.' Activate the Disabled Augmentation Engine |q Seeing is Believing##6913/2
 	step
-		.kill 1 Shattercrag the Broken##948901 |q Seeing is Believing##6913/3 |goto Ellevar -3362,-2965,-754
+		.'Kill Shattercrag the Broken |q Seeing is Believing##6913/3 |goto Ellevar -3362,-2965,-754
 	step
-		.talk Lead Excavator Radek Villius##286341
-		..turnin Seeing is Believing##6913 |goto Ellevar -2944,-2834,-766
+		.talk Lead Excavator Radek Villius##286341 |goto Ellevar -2944,-2834,-766
+		..turnin Seeing is Believing##6913
 	step
 		'Press _C_ to open your Communicator:
 		..accept Path to Ascension##7066
 	step
-		.talk Maxinux##286338
-		..accept Power It Up##6917 |goto Ellevar -2936,-2834,-767
+		.talk Calidor Antevian##275523 |goto Ellevar -2930,-2601,-746
+		..turnin Path to Ascension##7066
+		..accept Deciphering the Unknown##6878
 	step
-		.click Bio-Mech Power Pylon##275817+ |tip You can find more on the ground all around this area. They may be marked as an orange cog on your mini maap.
-		.' Activate the Bio-Mech Power Pylons |q Power It Up##6917/1 |goto Ellevar -2990,-2918,-771
-	step
-		'Press _C_ to open your Communicator:
-		..turnin Power It Up##6917
-	step
-		.talk Calidor Antevian##275523
-		..turnin Path to Ascension##7066 |goto Ellevar -2930,-2601,-746
-		..accept Deciphering the Unknown##6878 |goto -2930,-2601,-746
-	step
-		'_Follow_ Calidor and protect him |goto -2897,-2570,-751 < 10
+		'_Follow_ Calidor and protect him
 		.' Escort Calidor as he explores |q Deciphering the Unknown##6878/1 |goto Ellevar -2924,-2488,-750
 	step
 		.' Enter the Recombination Complex |q Deciphering the Unknown##6878/2 |goto Ellevar -2912,-2484,-749
 	step
-		.talk Calidor Antevian##275522
-		..turnin Deciphering the Unknown##6878 |goto Ellevar -2944,-2604,-857
-		..accept Blackout##6879 |goto -2944,-2604,-857
+		.talk Calidor Antevian##275522 |goto Ellevar -2944,-2604,-857
+		..turnin Deciphering the Unknown##6878
+		..accept Blackout##6879
 	step
-		.talk Xenoarchaeologist Volios##286021
-		..accept Language of the Gods##6885 |goto Ellevar -2960,-2613,-857
+		.talk Xenoarchaeologist Volios##286021 |goto Ellevar -2960,-2613,-857
+		..accept Language of the Gods##6885
 	step
-		.click Decrepit Console##275676
-		.' Inspect the Decrepit Console |q Language of the Gods##6885/1 |goto Ellevar -2962,-2614,-857
+		.click Decrepit Console##275676 |goto Ellevar -2962,-2614,-857
+		.' Inspect the Decrepit Console |q Language of the Gods##6885/1
 	step
-		.click Decrepit Console##275674
-		.' Find the second Decrepit Console |q Language of the Gods##6885/2 |goto Ellevar -2898,-2533,-859
+		.click Decrepit Console##275674 |goto Ellevar -2898,-2533,-859
+		.' Find the second Decrepit Console |q Language of the Gods##6885/2
 	step
-		.click Power Cell##760555
-		.' Collect Power Cells |q Blackout##6879/1 |goto Ellevar -2912,-2537,-859
+		.click Power Cell##760555 |goto Ellevar -2912,-2537,-859
+		.' Collect Power Cells |q Blackout##6879/1
 	step
-		.click Power Rod##275752
-		.' Insert Power Cells into Power Rods |q Blackout##6879/2 |count 1 |goto Ellevar -2900,-2504,-856
+		.click Power Rod##275752 |goto Ellevar -2900,-2504,-856
+		.' Insert Power Cells into Power Rods |q Blackout##6879/2 |count 1
 	step
-		.click Power Rod##275753
-		.' Insert Power Cells into Power Rods |q Blackout##6879/2 |goto -2977,-2504,-856
+		.click Power Rod##275753 |goto Ellevar -2977,-2504,-856
+		.' Insert Power Cells into Power Rods |q Blackout##6879/2
 	step
-		.click Bio-Mech Complex AH47 Main Control##286283
-		.' Activate the Bio-Mech Complex AH47 Main Control |q Blackout##6879/3 |goto Ellevar -2938,-2467,-854
+		.click Bio-Mech Complex AH47 Main Control##286283 |goto Ellevar -2938,-2467,-854
+		.' Activate the Bio-Mech Complex AH47 Main Control |q Blackout##6879/3
 	step
 		'Press _C_ to open your Communicator:
 		..turnin Blackout##6879
 		..accept Fade from Black##6880
 		..accept Keep Them Separated##6884
 	step
-		.talk Xenobiologist Karizi##275505
-		..accept Augmentations for Analysis##7031 |goto Ellevar -2951,-2490,-859
+		.talk Xenobiologist Karizi##275505 |goto Ellevar -2951,-2490,-859
+		..accept Augmentations for Analysis##7031
 	step
 		'_Run through_ the small corridor |goto Ellevar -2908,-2460,-859 < 10
-		.click Decrepit Console##275673
-		.' Find the third Decrepit Console |q Language of the Gods##6885/3 |goto Ellevar -2891,-2325,-855
+		.click Decrepit Console##275673 |goto Ellevar -2891,-2325,-855
+		.' Find the third Decrepit Console |q Language of the Gods##6885/3
 	step
-		'Press _T_ to use your quest ability |tip Make sure to kill the mobs within a short range of this.
-		.kill Augmented Rockside Tunnelclaw##996169+, Augmented Rockside Digclaw##993705+
-		.' Kill Augmented Rockside Digclaws within the Augment Analyzer's radius |q Augmentations for Analysis##7031/1 |goto -2938,-2366,-855
+		'Press _T_ to use your quest ability |tip Kill mobs within the circle.
+		.' Kill Augmented Rockside Digclaws within the Augment Analyzer's radius |q Augmentations for Analysis##7031/1 |goto Ellevar -2938,-2366,-855
 	step
 		'Press _C_ to open your Communicator:
 		..turnin Augmentations for Analysis##7031
 	step
 		.' Find the Augmentation wing of the Recombination Complex |q Fade from Black##6880/1
-		.click Holding Cell Monitor##275701
-		.' Inspect augmentation chambers |q Fade from Black##6880/2 |goto Ellevar -3048,-2381,-852
+		.click Holding Cell Monitor##275701 |goto Ellevar -3048,-2381,-852
+		.' Inspect augmentation chambers |q Fade from Black##6880/2
 	step
-		.click Holding Cell Monitor##275701
-		.' Activate a chamber to release pressure |q Fade from Black##6880/3 |goto -3048,-2382,-852
-		.kill AH47 Augmentor##274724+, Augmented Spider##896486+
-		.' Kill the Augmented creature |q Fade from Black##6880/4 |goto -3048,-2382,-852
+		.click Holding Cell Monitor##275701 |goto Ellevar -3048,-2382,-852
+		.' Activate a chamber to release pressure |q Fade from Black##6880/3
+		.' Kill the Augmented creature |q Fade from Black##6880/4
 	step
 		.kill AH47 Augmentor##995080+
 		.' Destroy AH47 Augmentors |q Keep Them Separated##6884/1
@@ -650,64 +634,71 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		'Press _C_ to open your Communicator:
 		..turnin Keep Them Separated##6884
 	step
-		'_Step into_ the green portal |goto Ellevar -2942,-2321,-851 < 10
-		.talk Xenoanalyst Derenia##275506
-		..accept Mine Control##7047 |goto -3117,-2428,-945
+		.'_Step into_ the green portal |goto Ellevar -2942,-2321,-851 < 10 |c |q 6880
 	step
-		.talk Calidor Antevian##275520
-		..turnin Fade from Black##6880 |goto -3126,-2428,-944
-		..accept An Eerie Eldan Glow##6881 |goto -3126,-2428,-944
+		.talk Xenoanalyst Derenia##275506 |goto Ellevar -3117,-2428,-945
+		..accept Mine Control##7047
 	step
-		.click Eldan Security Mine##275560
-		.' Disarm Eldan Security Mines |q Mine Control##7047/1 |goto Ellevar -3111,-2433,-945
+		.talk Calidor Antevian##275520 |goto Ellevar -3126,-2428,-944
+		..turnin Fade from Black##6880
+		..accept An Eerie Eldan Glow##6881
 	step
-		.talk Xenoanalyst Derenia##275506
-		..turnin Mine Control##7047 |goto Ellevar -3117,-2428,-945
+		.click Eldan Security Mine##275560 |goto Ellevar -3111,-2433,-945
+		.' Disarm Eldan Security Mines |q Mine Control##7047/1
 	step
-		.click Decrepit Console##286184
-		.' Find the fourth Decrepit Console |q Language of the Gods##6885/4 |goto Ellevar -3111,-2473,-944
+		.talk Xenoanalyst Derenia##275506 |goto Ellevar -3117,-2428,-945
+		..turnin Mine Control##7047
 	step
-		'_Go through_ the doorway and down the hall |goto Ellevar -3015,-2437,-943 < 20 |tip Try to avoid the mines on the ground.
-		.' Find the Prototype Recombination Wing |q An Eerie Eldan Glow##6881/1 |goto -2909,-2512,-952
+		.click Decrepit Console##286184 |goto Ellevar -3111,-2473,-944
+		.' Find the fourth Decrepit Console |q Language of the Gods##6885/4
 	step
-		.kill 1 AH47 Augmentor##1026215
+		.'_Go through_ the doorway and down the hall |goto Ellevar -3015,-2437,-943 < 20 |c |q 6881/1 |tip Try to avoid the mines on the ground.
+	step
+		.' Find the Prototype Recombination Wing |q An Eerie Eldan Glow##6881/1 |goto Ellevar -2909,-2512,-952
+	step
 		.' Kill an AH47 Augmentor and take its Capturing Device |q An Eerie Eldan Glow##6881/2 |goto Ellevar -2913,-2553,-953
 	step
-		.click Stray Rockside Digger##1023941
-		.' Press _T_ to:
+		' Click _Stray Rockside Digger_, press _T_ to:
 		.' Use the Capturing Device on Stray Canimid |q An Eerie Eldan Glow##6881/3 |goto Ellevar -2914,-2560,-953
-		.click Recombination Prototype Controls##275682 |tip You need to have a Canimid attached to you to activate this.
-		.' Activate the Prototype Recombination Chamber |q An Eerie Eldan Glow##6881/4 |goto Ellevar -2932,-2560,-953
 	step
-		.kill 1 Recombinated Canimid##1086838 |q An Eerie Eldan Glow##6881/5 |goto Ellevar -2942,-2562,-951
+		.click Recombination Prototype Controls##275682 |tip You need to have a Canimid attached to you to activate this.  |goto Ellevar -2932,-2560,-953
+		.' Activate the Prototype Recombination Chamber |q An Eerie Eldan Glow##6881/4
 	step
-		.click Decrepit Console##286186
-		.' Find the fifth Decrepit Console |q Language of the Gods##6885/5 |goto Ellevar -2887,-2604,-953
+		.' Kill the Recombinated Canimid |q An Eerie Eldan Glow##6881/5 |goto Ellevar -2942,-2562,-951
 	step
-		'_Go through_ the doorway and follow the hallway to the left |goto Ellevar -2910,-2503,-952 < 20
-		.' _Keep following_ the hall through this doorway |goto -2849,-2439,-961 < 20
-		.' _Enter_ the doorway |goto Ellevar -2810,-2388,-961 < 20
-		.click Decrepit Console##286187
-		.talk Calidor Antevian##275518
-		..turnin An Eerie Eldan Glow##6881 |goto -2807,-2362,-961
-		..accept Blinding Light##6882 |goto -2807,-2365,-961
+		.click Decrepit Console##286186 |goto Ellevar -2887,-2604,-953
+		.' Find the fifth Decrepit Console |q Language of the Gods##6885/5
 	step
-		.' Find the sixth Decrepit Console |q Language of the Gods##6885/6 |goto Ellevar -2786,-2343,-962
+		.'_Go through_ the doorway and follow the hallway to the left |goto Ellevar -2910,-2503,-952 < 20 |c |q 6885/6
+	step
+		.' _Keep following_ the hall through this doorway |goto Ellevar -2849,-2439,-961 < 20 |c |q 6885/6
+	step
+		.' _Enter_ the doorway |goto Ellevar -2810,-2388,-961 < 20 |c |q 6885/6
+	step
+		.click Decrepit Console##286187 |goto Ellevar -2786,-2343,-962
+		.' Find the sixth Decrepit Console |q Language of the Gods##6885/6
 	step
 		'Press _C_ to open your Communicator:
 		..turnin Language of the Gods##6885
 	step
+		.talk Calidor Antevian##275518 |goto Ellevar -2807,-2365,-961
+		..turnin An Eerie Eldan Glow##6881
+		..accept Blinding Light##6882
+	step
 		.' Enter the Recombination Chamber |q Blinding Light##6882/1 |goto Ellevar -2810,-2351,-956
 	step
-		'_Go through_ the door and follow the hallway |goto Ellevar -2932,-2452,-1081 < 15
-		'_Enter_ the large open room |goto -2871,-2486,-1090 < 15
-		.kill 1 Calidor Antevian##1029429
-		.' Stop Calidor Antevian |q Blinding Light##6882/2 |goto -2911,-2533,-1092
+		.'_Go through_ the door and follow the hallway |goto Ellevar -2932,-2452,-1081 < 15 |c |q 6882/2
 	step
-		'_Go back_ through the doorway into the hallway |goto Ellevar -2871,-2487,-1090 < 15
-		.' _Continue_ into the open room |goto -2933,-2452,-1081 < 15
-		.click Exit Teleporter Panel##286185
-		.' Activate the Exit Teleporter Panel |q Blinding Light##6882/3 |goto Ellevar -3004,-2435,-1082
+		.'_Enter_ the large open room |goto Ellevar -2871,-2486,-1090 < 15 |c |q 6882/2
+	step
+		.' Stop Calidor Antevian |q Blinding Light##6882/2 |goto Ellevar -2911,-2533,-1092
+	step
+		.'_Go back_ through the doorway into the hallway |goto Ellevar -2871,-2487,-1090 < 15 |c |q 6882/3
+	step
+		.' _Continue_ into the open room |goto Ellevar -2933,-2452,-1081 < 15 |c |q 6882/3
+	step
+		.click Exit Teleporter Panel##286185 |goto Ellevar -3004,-2435,-1082
+		.' Activate the Exit Teleporter Panel |q Blinding Light##6882/3
 	step
 		.' Leave the Recombination Chamber |q Blinding Light##6882/4 |goto Ellevar -3018,-2441,-1080
 	step
@@ -715,89 +706,185 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		..turnin Blinding Light##6882
 		..accept Shimmer of Hope##6883
 	step
-		'Press the icon on the bottom right of your action bar to:
-		.' Recall - Transmat to _Lightreach Mission_ |goto Ellevar -2529,-3420,-765 < 100 |c |noway |q 6883
+		'Press the icon on the bottom left of your action bar to:
+		.' _Recall-Transmat_ to Lightreach Mission |goto Ellevar -2529,-3420,-765 < 10 |c |noway |q 6883
 	step
-		.talk Toric Antevian##276529
-		..turnin Shimmer of Hope##6883 |goto Ellevar -2414,-3532,-779
+		.talk Toric Antevian##276529 |goto Ellevar -2414,-3532,-779
+		..turnin Shimmer of Hope##6883
 	step
-		.' _Enter_ the building |goto Ellevar -2468,-3558,-787 < 10
-		.talk Lord Horacos##290691
+		'Press _C_ to open your Communicator:
 		..accept The Infamous Corrigan Doon##6664 |goto Ellevar -2447,-3576,-786
 	step
-		.talk Corrigan Doon##290692 |tip He's inside this small bar.
-		..turnin The Infamous Corrigan Doon##6664 |goto Ellevar -2346,-3479,-770
-		..accept Sobering Up##6612 |goto -2346,-3479,-770
+		.talk Corrigan Doon##290692 |goto Ellevar -2346,-3479,-770
+		..turnin The Infamous Corrigan Doon##6664
+		..accept Sobering Up##6612
 	step
-		'_Enter_ the large building |goto Ellevar -2481,-3467,-762 < 20
-		.click Prayer Wine##1099475
-		.' Acquire a bottle of Prayer Wine |q Sobering Up##6612/3 |goto -2460,-3441,-762
+		.'_Enter_ the large building |goto Ellevar -2481,-3467,-762 < 20 |c |q 6612/3
 	step
-		.click Nap Nap Juice##1099181
-		.' Collect a bottle of Nap Nap Juice |q Sobering Up##6612/1 |goto Ellevar -2570,-3489,-781
+		.click Prayer Wine##1099475 |goto Ellevar -2460,-3441,-762
+		.' Acquire a bottle of Prayer Wine |q Sobering Up##6612/3
 	step
-		'_Enter_ the small house |goto Ellevar -2564,-3559,-794 < 10
-		.talk Vern Virius##276675
-		.' Buy a bottle of Oxian Oil |q Sobering Up##6612/2 |goto Ellevar -2581,-3557,-792 |tip He sells this under the GENERAL tab at the bottom of his list.
+		.click Nap Nap Juice##1099181 |goto Ellevar -2570,-3489,-781
+		.' Collect a bottle of Nap Nap Juice |q Sobering Up##6612/1 | tip Is right next to the shiphand
 	step
-		.click Mix-O-Matic##290500
-		.' Mix the ingredients in the Mix-O-Matic |q Sobering Up##6612/4 |goto Ellevar -2348,-3483,-770
+		.'_Enter_ the small house |goto Ellevar -2564,-3559,-794 < 10 |c |q 6612/2
 	step
-		.click Boil-O-Matic##280335
-		.' Heat the concoction in the Boil-O-Matic |q Sobering Up##6612/5 |goto Ellevar -2347,-3485,-770
+		.talk Vern Virius##276675 |goto Ellevar -2581,-3557,-792
+		.' Buy a bottle of Oxian Oil |q Sobering Up##6612/2 |tip Is sold under the GENERAL tab at the bottom.
 	step
-		.talk Corrigan Doon##290692
-		..turnin Sobering Up##6612 |goto Ellevar -2347,-3479,-770
-		..accept Locating the Crash Site##6613 |goto -2347,-3479,-770
+		.click Mix-O-Matic##290500 |goto Ellevar -2348,-3483,-770
+		.' Mix the ingredients in the Mix-O-Matic |q Sobering Up##6612/4
 	step
-		.talk Adalno##280517
-		..accept Ravenok Menace##6615 |goto Ellevar -2345,-3482,-770
+		.click Boil-O-Matic##280335 |goto Ellevar -2347,-3485,-770
+		.' Heat the concoction in the Boil-O-Matic |q Sobering Up##6612/5
 	step
+		.talk Corrigan Doon##290692 |goto Ellevar -2347,-3479,-770
+		..turnin Sobering Up##6612
+		..accept Locating the Crash Site##6613
+	step
+		.talk Adalno##280517 |goto Ellevar -2345,-3482,-770
+		..accept Ravenok Menace##6615
+	step
+		.talk Radiant Warden Vezir##290438 |goto Ellevar -2256,-3241,-745
+		..accept A Vigilant Defense##6648
+	step
+		.talk Radiant Medic Vacuna##280269 |goto Ellevar -2231,-3238,-743
+		.' Check on Radiant Medic Vacuna |q A Vigilant Defense##6648/1
+	step
+		.click Rescue Flare##280045 |goto Ellevar -2192,-3229,-735
+		.' Light the Rescue Flare |q A Vigilant Defense##6648/2
+	step
+		' Fight the waves of enemies |goto Ellevar -2192,-3228,-735
+		.' Defend the Vigilant Heart Outpost |q A Vigilant Defense##6648/3
+	step
+		.talk Radiant Warden Vezir##290438 |goto Ellevar -2255,-3241,-729
+		..turnin A Vigilant Defense##6648
+		..accept Into the Woods##6649
+	step
+		'Press _C_ to open your Communicator:
+		..accept Quarantine Enforcement##6806
+	step
+		.talk Radiant Scout Callidan##290165 |goto Ellevar -2202,-3120,-739
+		.' Find Radiant Scout Callidan |q Into the Woods##6649/1
+	step
+		.talk Farmer Horato##290436 |goto Ellevar -2219,-2955,-729
+		..accept Baiting the Giant##6656 |tip He walks around this road
+	step
+		.click Radiant Guard Maxima##290167 |goto Ellevar -2158,-2995,-717
+		.' Find Radiant Guard Maxima |q Into the Woods##6649/2
+	step
+		.click Oxian Holostation##279985 |goto Ellevar -2041,-2905,-663
+		.' Activate the Oxian Holostation |q Baiting the Giant##6656/1
+		.' Kill Raedon the Ox Snatcher |q Baiting the Giant##6656/2
+	step
+		'Press _C_ to open your Communicator:
+		..turnin Baiting the Giant##6656
+	step
+		.talk Radiant Scout Bagum##290166 |goto Ellevar -2066,-3071,-718
+		.' Find Radiant Scout Bagum |q Into the Woods##6649/3
+	step
+		.' Find Professor Cornelius |q Into the Woods##6649/4 |goto Ellevar -1932,-3217,-720
+		.talk Professor Cornelius##280037 |goto Ellevar -1932,-3217,-720
+		..turnin Into the Woods##6649
+		..accept Scientific Method##6650
+	step
+		.click Bloated Darkspire Slank##290150+ |goto Ellevar -1932,-3208,-723
+		.' Inspect Bloated Darkspire Slanks |q Scientific Method##6650/1
+	step
+		.' Gather Branches from Toxic Stumpkins |q Scientific Method##6650/2 |goto Ellevar -2096,-3293,-736
+	step
+		.click Darkfang Prowler##2030947+, Darkfang Alpha##1745327+, Darkfang Hunter##1992729+
+		.' Press _T_ to apply the Toxicity Analyzer to Darkfang Dagun |q Scientific Method##6650/3 |tip If you keep some distance you can reaply on same target without agrro
+	step
+		.kill Darkfang Prowler##1928144+, Darkfang Hunter##2039646
+		.' Kill Darkfang Dagun |q Quarantine Enforcement##6806/1 |goto Ellevar -2096,-3293,-736
+	step
+		'Press _C_ to open your Communicator:
+		..turnin Quarantine Enforcement##6806
+		..turnin Scientific Method##6650
+		..accept Prisoner to the Mordesh##6778
+	step
+		.' Find Professor Cornelius |q Prisoner to the Mordesh##6778/1 |goto Ellevar -1711,-3195,-699
+		.kill Darkpool Shadowdagger##1893806+, Darkpool Gunslinger##1782761+
+		.' Kill Darkpool Mordesh and find the Access Code |q Prisoner to the Mordesh##6778/2 |goto Ellevar -1704,-3202,-698
+	step
+		' Click _Security Panel_ and enter code _2657_
+		.' Deactivate Professor Cornelius' Prison Cage |q Prisoner to the Mordesh##6778/3 |goto Ellevar -1715,-3191,-699
+	step
+		.talk Professor Cornelius##280275 |goto Ellevar -1717,-3196,-699
+		..turnin Prisoner to the Mordesh##6778
+		..accept Planned Fallout##6652
+	step
+		.click Darkpool Poison Tank##280012
+		.' Rig Poison Tanks to explode |q Planned Fallout##6652/1 |goto Ellevar -1717,-3232,-697
+	step
+		'_Walk onto_ the wooden platform |goto Ellevar -1771,-3173,-700 < 10
+		.click Darkpool Poison Vent##290123
+		.' Sabotage the vents |q Planned Fallout##6652/2 |goto Ellevar -1752,-3159,-693
+	step
+		'Press _C_ to open your Communicator:
+		..turnin Planned Fallout##6652
+		..accept The Antidote##6653
+	step
+		.' Kill Viralist Zarkin |q The Antidote##6653/1 |goto Ellevar -1702,-3132,-692
+	step
+		.talk Merchant Sani##280271 |goto Ellevar -1682,-3415,-692
+		..accept Blown Up with Darkfangs##6654
+	step
+		.click Darkfang Den##279979 |goto Ellevar -1726,-3407,-704
+		.' Set Charges at Darkfang Dens |q Blown Up with Darkfangs##6654/1 |count 33
+		.click Darkfang Den##290098 |goto Ellevar -1778,-3442,-712
+		.' Set Charges at Darkfang Dens |q Blown Up with Darkfangs##6654/1 |count 66
+		.click Darkfang Den##279980 |goto Ellevar -1723,-3477,-708
+		.' Set Charges at Darkfang Dens |q Blown Up with Darkfangs##6654/1
+	step
+		.talk Merchant Sani##280271
+		..turnin Blown Up with Darkfangs##6654
+	step
+		.talk Professor Cornelius##280263 |goto Ellevar -1925,-3227,-718
+		.' Meet Professor Cornelius at his camp |q The Antidote##6653/2
+	step
+		'_Pick up the potion before you leave tent_
+		.click Combustive Potion##1807508 |goto Ellevar -1927,-3231,-718 |c
+	step
+		.talk Doctor Matrine Flovus##290427 |goto Ellevar -2253,-3256,-744
+		.' Give Professor Cornelius' Cure to Doctor Matrine Flovus |q The Antidote##6653/3
+	step
+		.talk Radiant Warden Vezir##290438 |goto Ellevar -2257,-3241,-745
+		..turnin The Antidote##6653
+	step
+		' If need to sell use the Transmat to town
 		.' Locate the first signal |q Locating the Crash Site##6613/1 |goto Ellevar -2178,-3411,-737
-		.click Port Engine Scrap##280334
-		.' Examine the Port Engine Scrap |q Locating the Crash Site##6613/2 |goto Ellevar -2178,-3411,-737 |tip Kill Bleakwings as you do this quest.
+		.' Examine the Port Engine Scrap |q Locating the Crash Site##6613/2 |tip Kill Bleakwings as you do this quest.
 	step
-		.' Locate the second signal |q Locating the Crash Site##6613/3 |goto -2151,-3607,-746
-		.click Aft Stabilizer##280333
-		.' Examine the Aft Stabilizer Scrap |q Locating the Crash Site##6613/4 |goto -2151,-3607,-746 |tip Kill Bleakwings as you do this quest.
+		.' Locate the second signal |q Locating the Crash Site##6613/3 |goto Ellevar -2151,-3607,-746
+		.' Examine the Aft Stabilizer Scrap |q Locating the Crash Site##6613/4 |tip Kill Bleakwings as you do this quest.
 	step
 		.kill Bleakwing Charger##1776350+, Bleakwing Razorbeak##1903368+
-		.' Kill Bleakwing ravenok |q Ravenok Menace##6615/1 |goto -2093,-3643,-743
+		.' Kill Bleakwing ravenok |q Ravenok Menace##6615/1 |goto Ellevar -2093,-3643,-743
 	step
 		'Press _C_ to open your Communicator:
 		..turnin Ravenok Menace##6615
 	step
 		.' Locate the third signal |q Locating the Crash Site##6613/5 |goto Ellevar -2054,-3768,-744
-		.click Sensor Array##290492
-		.' Examine the Sensor Array Scrap |q Locating the Crash Site##6613/6 |goto -2054,-3768,-744 |tip Kill Bleakwings as you do this quest.
+		.' Examine the Sensor Array Scrap |q Locating the Crash Site##6613/6 |tip Kill Bleakwings as you do this quest.
 	step
 		'Press _T_ to call Corrigan Doom
-		.talk Corrigan Doom
+		.talk Corrigan Doom |goto Ellevar -2347,-3479,-770
 		..turnin Locating the Crash Site##6613
 		..accept Identifying the Deceased##6617
-		.' If you cannot call him, click here to locate him |goto -2347,-3479,-770
 	step
-		.click Emergency Supply Kit##280515
-		..accept Scaring the Scavengers##6616 |goto Ellevar -2034,-3781,-738
+		.click Emergency Supply Kit##280515 |goto Ellevar -2034,-3781,-738
+		..accept Scaring the Scavengers##6616
 	step
-		.click Corpse##290471
 		.' Identify the bodies |q Identifying the Deceased##6617/1 |goto Ellevar -2005,-3817,-734
+		' Press _T_ to:
+		.' Frighten away Longsnout Scavengers |q Scaring the Scavengers##6616/1 |goto Ellevar -2004,-3817,-734
 	step
-		'Press _T_ to call Corrigan Doom
-		.talk Corrigan Doom
-		..turnin Identifying the Deceased##6617 |goto Ellevar -1998,-3826,-733
-		..accept Copperworth Village##6644 |goto Ellevar -2009,-3829,-728
-		.' If you cannot call Corrigan, click here to locate him |goto -2347,-3479,-770
-	step
-		.click Longsnout Scavenger##1714229
-		'Press _T_ to:
-		.' Frighten away Longsnout Scavengers |q Scaring the Scavengers##6616/1 |goto -2004,-3817,-734
-	step
-		'Press _T_ to call Corrigan Doom
-		.talk Corrigan Doom
-		..turnin Identifying the Deceased##6617 |goto Ellevar -1998,-3826,-733
-		..accept Copperworth Village##6644 |goto Ellevar -2009,-3829,-728
-		.' If you cannot call Corrigan, click here to locate him |goto -2347,-3479,-770
+		'Press _T_ to call Corrigan Doom (need correct coords)
+		.talk Corrigan Doom |goto Ellevar -1998,-3826,-733
+		..turnin Identifying the Deceased##6617
+		..accept Copperworth Village##6644
 	step
 		'Press _C_ to open your Communicator:
 		..turnin Scaring the Scavengers##6616
@@ -805,68 +892,72 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		'Enter the Copperworth General Store |q Copperworth Village##6644/1 |goto Ellevar -1795,-3820,-735
 		.kill Tideborn Shellback##1934617+
 	step
-		.click Doorbell##290459
-		.' Ring the doorbell at the Western House |q Copperworth Village##6644/2 |goto Ellevar -1861,-3793,-737
+		.click Doorbell##290459 |goto Ellevar -1861,-3793,-737
+		.' Ring the doorbell at the Western House |q Copperworth Village##6644/2
 	step
-		.click Doorbell##290460
-		.' Ring the doorbell at the Northern House |q Copperworth Village##6644/3 |goto Ellevar -1842,-3848,-730
+		.click Doorbell##290460 |goto Ellevar -1842,-3848,-730
+		.' Ring the doorbell at the Northern House |q Copperworth Village##6644/3
 	step
-		'Search the Northern Farm |q Copperworth Village##6644/4 |goto Ellevar -1762,-4031,-707
-		.talk Ellie the Unhinged##290689
-		.' Speak with Ellie the Unhinged |q Copperworth Village##6644/5 |goto -1762,-4031,-707
+		'Search the Northern Farm |q Copperworth Village##6644/4
+		.talk Ellie the Unhinged##290689 |goto Ellevar -1762,-4031,-707
+		.' Speak with Ellie the Unhinged |q Copperworth Village##6644/5
 	step
-		.' Kill a mob in this area
+		.' _Go up_ this way |goto Ellevar -1918,-4084,-675 < 15 |c |q 6644/6
+	step
 		'Press _C_ to open your Communicator:
-		..accept An Act of Aggression##6737 |goto Ellevar -1876,-4080,-686
+		..accept An Act of Aggression##6737
 	step
 		'Investigate the Tower |q Copperworth Village##6644/6 |goto Ellevar -1986,-4166,-651
-		.talk Corrigan Doon##290688
-		..turnin Copperworth Village##6644 |goto -1986,-4166,-651
-		..accept Rescue at Tideborn Station##6681 |goto Ellevar -1986,-4166,-651
+	step
+		.talk Corrigan Doon##290688 |goto Ellevar -1986,-4166,-651
+		..turnin Copperworth Village##6644
+		..accept Rescue at Tideborn Station##6681
 	step
 		.click Ikthian Stasis Generator##280313
-		.' Disable stasis generators |q Rescue at Tideborn Station##6681/1 |goto -2003,-4144,-654
+		.' Disable stasis generators |q Rescue at Tideborn Station##6681/1 |goto Ellevar -2003,-4144,-654
 	step
-		.talk Corrigan Doon##290688
-		..turnin Rescue at Tideborn Station##6681 |goto Ellevar -1986,-4166,-651
-		..accept Knock Knock##6734 |goto -1986,-4166,-651
+		.talk Corrigan Doon##290688 |goto Ellevar -1986,-4166,-651
+		..turnin Rescue at Tideborn Station##6681
+		..accept Knock Knock##6734
 	step
-		.click Eldan Door##280297
-		.' Enter the Eldan Tower |q Knock Knock##6734/1 |goto Ellevar -1986,-4168,-651 |tip Enter the door and use the green portal.
+		' Click _Eldan Door_ and step on green teleporter
+		.' Enter the Eldan Tower |q Knock Knock##6734/1 |goto Ellevar -1986,-4168,-651
 	step
-		.kill 1 Cortex Prime Whitewater##262155 |q Knock Knock##6734/2 |goto Ellevar -2,-49,0
+		.' Kill Cortex Prime Whitewater |q Knock Knock##6734/2 |goto Ellevar -2,-49,0
 	step
-		.talk Corrigan Doon##262156
-		..turnin Knock Knock##6734 |goto ... 0,-41,0
-		..accept Tall Tales##6632  |goto ... 0,-41,0
+		.talk Corrigan Doon##262156 |goto ... 0,-41,0
+		..turnin Knock Knock##6734
+		..accept Tall Tales##6632
 	step
-		'Take the _green portal_ out |goto ... 0,-13,2 < 5
+		.' Take the _green portal_ out |goto ... 0,-13,2 < 5 |c |q 6632
+	step
 		.kill Tideborn Researcher##1896880+, Tideborn Wavefin##1896490+, Tideborn Shellback##1898328+
 		.' Kill Tideborn forces |q An Act of Aggression##6737/1 |goto Ellevar -1976,-4134,-656
 	step
 		'Press _C_ to opne your Communicator:
 		..turnin An Act of Aggression##6737
 	step
-		'_Cross through_ the path towards town |goto Ellevar -1708,-3787,-731 < 30
-		.talk Agent Cognosa##279829
-		..turnin Tall Tales##6632 |goto Ellevar -1538,-3869,-729
-		..accept Ikthian Insights##6636 |goto -1538,-3869,-729
+		.'_Cross through_ the path towards town |goto Ellevar -1708,-3787,-731 < 30 |c |q 6632
 	step
-		.click Crashed Ikthian Ship##289927
-		.' Access the Crashed Ship |q Ikthian Insights##6636/1 |goto Ellevar -1440,-3901,-724
+		.talk Agent Cognosa##279829 |goto Ellevar -1538,-3869,-729
+		..turnin Tall Tales##6632
+		..accept Ikthian Insights##6636
 	step
-		.kill Slenderskin Abductor##1819828+
-		.' Kill Slenderskin Ikthian to obtain Genetic Sample |q Ikthian Insights##6636/2 |goto Ellevar -1379,-3829,-743
+		.click Crashed Ikthian Ship##289927 |goto Ellevar -1440,-3901,-724
+		.' Access the Crashed Ship |q Ikthian Insights##6636/1
 	step
-		.click Crashed Ikthian Ship##289927
-		.' Obtain data from the Crashed Ship |q Ikthian Insights##6636/3 |goto Ellevar -1440,-3901,-724
+		' Kill _Slenderskin_ mobs around for drop |goto Ellevar -1379,-3829,-743
+		.' Kill Slenderskin Ikthian to obtain Genetic Sample |q Ikthian Insights##6636/2
 	step
-		.talk Agent Cognosa##279829
-		..turnin Ikthian Insights##6636 |goto Ellevar -1538,-3869,-729
-		..accept Unidentified Flying Object##6634 |goto -1538,-3869,-729
+		.click Crashed Ikthian Ship##289927 |goto Ellevar -1440,-3901,-724
+		.' Obtain data from the Crashed Ship |q Ikthian Insights##6636/3
 	step
-		.click Ikthian Transport Controls##279817
-		.' Hijack a Transport Disc |q Unidentified Flying Object##6634/1 |goto Ellevar -1420,-3815,-737
+		.talk Agent Cognosa##279829 |goto Ellevar -1538,-3869,-729
+		..turnin Ikthian Insights##6636
+		..accept Unidentified Flying Object##6634
+	step
+		.click Ikthian Transport Controls##279817 |goto Ellevar -1420,-3815,-737
+		.' Hijack a Transport Disc |q Unidentified Flying Object##6634/1
 	step
 		.' Infiltrate the Ikthian Base |q Unidentified Flying Object##6634/2 |goto Ellevar -1126,-3776,-748
 	step
@@ -877,43 +968,46 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.kill Slenderskin Crawler##1794973+, Slenderskin Implementer##1795846+, Slenderskin Shredder##1792035+, Slenderskin Slicer##1874881
 		.' Kill Ikthian forces |q Dead End##6635/1 |goto Ellevar -1100,-3747,-746
 	step
-		.click Ikthian Transport Controls##289931
-		.' Access the Transport Disc Controls |q Dead End##6635/2 |goto Ellevar -1124,-3567,-740
+		.click Ikthian Transport Controls##289931 |goto Ellevar -1124,-3567,-740
+		.' Access the Transport Disc Controls |q Dead End##6635/2
 	step
 		'Press _C_ to open your Communicator:
 		..turnin Dead End##6635
-		..accept Out of Your Depth##6637|goto Ellevar -1017,-3427,-635
-		..accept Know Your Enemy##6638 |goto Ellevar -1017,-3427,-635
+		..accept Out of Your Depth##6637
+		..accept Know Your Enemy##6638
 	step
-		.' Enter the Diluvian Depths |q Out of Your Depth##6637/1 |goto -929,-3426,-642
-		.click Ikthian Hologram Projector##289891
-		.' Activate the Ikthian Hologram Projector |q Out of Your Depth##6637/2 |goto -775,-3479,-640
+		' As soon you reach _Level 14_ you will receive a call for _Illium Awaits_.  You will accept it.
+		.' Enter the Diluvian Depths |q Out of Your Depth##6637/1 |goto Ellevar -929,-3426,-642
 	step
+		.click Ikthian Hologram Projector##289891 |goto Ellevar -779,-3476,-641
+		.' Activate the Ikthian Hologram Projector |q Out of Your Depth##6637/2
+	step
+		' _Go Left_ and kill _Slenderskin_ mobs as you go
 		.click Ikthian Biological Experiment##289893
 		.' Destroy the Ikthian Biological Experiments |q Out of Your Depth##6637/3 |goto Ellevar -838,-3600,-641
 	step
 		'Press _C_ to use your Communicator:
 		..turnin Out of Your Depth##6637
 	step
-		.kill Slenderskin Slicer##1661221+, Slenderskin Sentinel##1791980+, Shaleshell Spineclaw##1797072+
-		.' Kill Slenderskin Ikthians |q Know Your Enemy##6638/1 |goto -813,-3535,-638
+		' _Go Right_ now and kill _Slenderskin_ mobs as you go
+		.' Kill Slenderskin Ikthians |q Know Your Enemy##6638/1 |goto Ellevar -761,-3435,-638
 	step
 		'Press _C_ to open your Communicator:
 		..turnin Know Your Enemy##6638
 		..accept Advanced Science##6640
 	step
-		.click Data Center: Biology##289875
-		.' Download Biology Data |q Advanced Science##6640/1 |goto Ellevar -780,-3487,-641
+		.click Data Center: Biology##289875 |goto Ellevar -780,-3487,-641
+		.' Download Biology Data |q Advanced Science##6640/1
 	step
 		'_Follow_ the cave around the corner |goto Ellevar -723,-3385,-641 < 20
-		.click Crate of Eldan Technology##289776
-		..accept The Collectors##6639 |goto -664,-3403,-641
+		.click Crate of Eldan Technology##289776 |goto Ellevar -664,-3403,-641
+		..accept The Collectors##6639
 	step
 		'Press _C_ to open your Communicator:
-		..accept Restore Default Settings##6647 |goto -664,-3403,-641
+		..accept Restore Default Settings##6647 |goto Ellevar -664,-3403,-641
 	step
-		.click Data Center: Eldan Tech##279753
-		.' Download Eldan Data |q Advanced Science##6640/2 |goto Ellevar -617,-3473,-641
+		.click Data Center: Eldan Tech##279753 |goto Ellevar -617,-3473,-641
+		.' Download Eldan Data |q Advanced Science##6640/2
 	step
 		.click Dismantled Eldan Component##1883840
 		.' Collect Dismantled Eldan Technology |q The Collectors##6639/1 |goto Ellevar -621,-3441,-642
@@ -921,166 +1015,57 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		'Press _C_ to open your Communicator:
 		..turnin The Collectors##6639
 	step
-		'_Continue_ along the cave's path |goto Ellevar -551,-3524,-641 < 10
-		.click Slenderskin Implementer##1734285
-		.' Download Ikthian Data |q Advanced Science##6640/3 |goto -507,-3628,-659
+		.'_Continue_ along the cave's path |goto Ellevar -551,-3524,-641 < 10 |c |q 6640/3
 	step
-		.click Hijacked Eldan Probe##1805419
-		'Press _T_ to:
+		.click Slenderskin Implementer##1734285 |goto Ellevar -507,-3628,-659
+		.' Download Ikthian Data |q Advanced Science##6640/3
+	step
+		' Click _Hijacked Eldan Probe_, press _T_ to:
 		.' Reset Hijacked Eldan Probes |q Restore Default Settings##6647/1 |goto Ellevar -616,-3615,-659
 	step
 		'Pess _C_ to open your Communicator:
 		..turnin Restore Default Settings##6647
 	step
-		.kill 1 Cortex Breachscale##1888420
 		.' Defeat Cortex Breachscale |q Advanced Science##6640/5 |goto Ellevar -612,-3633,-654
 	step
+		' If doing Path missions: _Don't turn_ until you complete your _Path_ mission here
 		'Press _C_ to open your Communicator:
 		..turnin Advanced Science##6640
 		..accept A Narrow Escape##6641
 	step
-		'_Follow_ the route in the cave |goto -494,-3568,-656 < 10
-		.click Ikthian Transport Controls##289844
-		.' Hijack the Ikthian Transport Controls |q A Narrow Escape##6641/2 |goto -564,-3504,-640
-		.' Exit the cave |q A Narrow Escape##6641/1 |goto Ellevar -974,-3428,-624
+		.'_Follow_ the route in the cave |goto Ellevar -494,-3568,-656 < 10 |c |q 6641/1
 	step
-		.talk Agent Cognosa##279646
-		..turnin A Narrow Escape##6641 |goto Ellevar -1561,-3609,-724
-		..accept A Repugnant Position##7597 |goto -1561,-3609,-724
+		.click Ikthian Transport Controls##289844 |goto Ellevar -564,-3504,-640
+		.' Hijack the Ikthian Transport Controls |q A Narrow Escape##6641/2
+		.' Exit the cave |q A Narrow Escape##6641/1
 	step
-		.talk Merchant Sani##280271
-		..accept Blown Up with Darkfangs##6654 |goto -1682,-3415,-692
-	step
-		.click Darkfang Den##279979
-		.' Set Charges at Darkfang Dens |q Blown Up with Darkfangs##6654/1 |count 33 |goto Ellevar -1726,-3407,-704
-		.click Darkfang Den##290098
-		.' Set Charges at Darkfang Dens |q Blown Up with Darkfangs##6654/1 |count 66 |goto -1778,-3442,-712
-		.click Darkfang Den##279980
-		.' Set Charges at Darkfang Dens |q Blown Up with Darkfangs##6654/1 |goto Ellevar -1723,-3477,-708
-	step
-		.talk Merchant Sani##280271
-		..turnin Blown Up with Darkfangs##6654 |goto Ellevar -1683,-3414,-692
-		..accept Delayed Delivery##6814 |goto -1683,-3414,-692
-	step
-		.click Stormseeker Tech-Tome##287836
-		..accept Stormseeker Tech-Tome##9092 |goto Ellevar -2024,-3274,-726
-	step
-		.talk Science Officer Wingo##280270
-		..turnin Delayed Delivery##6814 |goto Ellevar -2264,-3236,-745
-	step
-		.talk Radiant Warden Vezir##290438
-		..accept A Vigilant Defense##6648 |goto Ellevar -2256,-3241,-745
-	step
-		.talk Radiant Medic Vacuna##280269
-		.' Check on Radiant Medic Vacuna |q A Vigilant Defense##6648/1 |goto Ellevar -2231,-3238,-743
-	step
-		.click Rescue Flare##280045
-		.' Light the Rescue Flare |q A Vigilant Defense##6648/2 |goto Ellevar -2192,-3229,-735
-	step
-		.kill Injured Radiant Defender##1975068+
-		.' Stay close to the _Yellow Circle_
-		.' Defend the Vigilant Heart Outpost |q A Vigilant Defense##6648/3 |goto -2192,-3228,-735
-	step
-		.talk Radiant Warden Vezir##290438
-		..turnin A Vigilant Defense##6648 |goto Ellevar -2255,-3241,-745
-		..accept Into the Woods##6649 |goto -2255,-3241,-745
+		.talk Agent Cognosa##279646 |goto Ellevar -1561,-3609,-724
+		..turnin A Narrow Escape##6641
+		..accept To the City of Illium##9877
 	step
 		'Press _C_ to open your Communicator:
-		..accept Quarantine Enforcement##6806 |goto -2255,-3241,-745
+		..accept Illium Awaits##9878 |tip You get this when reach level 14
 	step
-		.talk Radiant Scout Callidan##290165
-		.' Find Radiant Scout Callidan |q Into the Woods##6649/1 |goto Ellevar -2202,-3120,-739
+		'Press the icon on the bottom left of your action bar to:
+		.' _Recall-Transmat_ to Lightreach Mission |goto Ellevar -2529,-3420,-765 < 10 |c |noway |q 9877
 	step
-		.click Radiant Guard Maxima##290167
-		.' Find Radiant Guard Maxima |q Into the Woods##6649/2 |goto Ellevar -2158,-2995,-717
+		.talk Captain Milo
+		..accept Shiphand: The Steady Traveler##8989 | goto Ellevar -2374,-3391,-771
 	step
-		.talk Radiant Scout Bagum##290166
-		.' Find Radiant Scout Bagum |q Into the Woods##6649/3 |goto Ellevar -2066,-3071,-718
+		' Click _Transport to Steady Traveler_ ladder, then click _Yes_, _Normal_ and _Enter_
+		.' Use the Transport Ship to reach the Steady Traveler |q Shiphand: The Steady Traveler##8989/1 |goto Ellevar -2375,-3385,-770
 	step
-		.' Find Professor Cornelius |q Into the Woods##6649/4 |goto Ellevar -1932,-3217,-720
-		.talk Professor Cornelius##280037
-		..turnin Into the Woods##6649 |goto -1932,-3217,-720
-		..accept Scientific Method##6650 |goto -1932,-3217,-720
+		' Talk to _Captain Milo_ and follow his instructions
+		.' Save Outpost M-13 |q Shiphand: The Steady Traveler##8989/2
 	step
-		.click Bloated Darkspire Slank##290150+
-		.' Inspect Bloated Darkspire Slanks |q Scientific Method##6650/1 |goto Ellevar -1932,-3208,-723
+		' Leave cave and head to ship
+		.talk Captain Milo
+		..turnin Shiphand: The Steady Traveler##8989
 	step
-		.kill Toxic Stumpkin##1602956+
-		.' Gather Branches from Toxic Stumpkins |q Scientific Method##6650/2 |goto Ellevar -2096,-3293,-736
+		.click Mistymurk Camp Taxi| goto Ellevar -2551,-3028,-770
+		.' Use the Mistymurk Camp Taxi Kiosk to travel to Illium |q To the City of Illium##9877/1
 	step
-		.click Darkfang Prowler##2030947+, Darkfang Alpha##1745327+, Darkfang Hunter##1992729+
-		.' Press _T_ to apply the Toxicity Analyzer to Darkfang Dagun |q Scientific Method##6650/3
-		.kill Darkfang Prowler##1928144+, Darkfang Hunter##2039646
-		.' Kill Darkfang Dagun |q Quarantine Enforcement##6806/1 |goto Ellevar -2096,-3293,-736
-	step
-		'Press _C_ to open your Communicator:
-		..turnin Quarantine Enforcement##6806
-		..turnin Scientific Method##6650
-		..accept Prisoner to the Mordesh##6778 |goto Ellevar -2079,-3278,-733
-	step
-		.' Find Professor Cornelius |q Prisoner to the Mordesh##6778/1 |goto Ellevar -1711,-3195,-699
-		.kill Darkpool Shadowdagger##1893806+, Darkpool Gunslinger##1782761+
-		.' Kill Darkpool Mordesh and find the Access Code |q Prisoner to the Mordesh##6778/2 |goto -1704,-3202,-698
-	step
-		.click Security Panel##279948 |tip Use code 2657. If this does not work, look in your inventory under quest items for help.
-		.' Deactivate Professor Cornelius' Prison Cage |q Prisoner to the Mordesh##6778/3 |goto -1715,-3191,-699
-	step
-		.talk Professor Cornelius##280275
-		..turnin Prisoner to the Mordesh##6778 |goto Ellevar -1717,-3196,-699
-		..accept Planned Fallout##6652 |goto -1717,-3196,-699
-	step
-		.click Darkpool Poison Tank##280012
-		.' Rig Poison Tanks to explode |q Planned Fallout##6652/1 |goto Ellevar -1717,-3232,-697
-	step
-		'_Walk onto_ the wooden platform |goto -1771,-3173,-700 < 10
-		.click Darkpool Poison Vent##290123
-		.' Sabotage the vents |q Planned Fallout##6652/2 |goto -1752,-3159,-693
-	step
-		'Press _C_ to open your Communicator:
-		..turnin Planned Fallout##6652
-		..accept The Antidote##6653
-	step
-		.kill 1 Viralist Zarkin##1962681 |q The Antidote##6653/1 |goto Ellevar -1702,-3132,-692
-	step
-		.talk Professor Cornelius##280263
-		.' Meet Professor Cornelius at his camp |q The Antidote##6653/2 |goto Ellevar -1925,-3227,-718
-	step	
-		'_Make sure to pick up the potion before you leave the tent_
-		.click Combustive Potion##1807508 |goto Ellevar -1927,-3231,-718 |c
-		.talk Doctor Matrine Flovus##290427
-		.' Give Professor Cornelius' Cure to Doctor Matrine Flovus |q The Antidote##6653/3 |goto -2253,-3256,-744
-	step
-		.talk Radiant Warden Vezir##290438
-		..turnin The Antidote##6653 |goto Ellevar -2257,-3241,-745
-	step
-		'_Run along_ the road going out of town |goto Ellevar -2317,-3167,-752 < 30
-		.talk Farmer Horato##290436
-		..accept Baiting the Giant##6656 |goto -2227,-2960,-731
-	step
-		'_Run up_ the grove in the hill |goto Ellevar -2117,-2869,-683 < 20
-		.click Oxian Holostation##279985
-		.' Activate the Oxian Holostation |q Baiting the Giant##6656/1 |goto -2041,-2905,-663
-		.kill 1 Raedon the Ox Snatcher##2206031 |q Baiting the Giant##6656/2 |goto -2041,-2905,-663
-	step
-		'Press _C_ to open your Communicator:
-		..turnin Baiting the Giant##6656 |goto Ellevar -2048,-2908,-667
-	step
-		'_Follow_ the dirt road |goto Ellevar -2180,-2845,-707 < 20
-		.' _Go through_ the doorway and follow the road |goto -2083,-2691,-716 < 20
-		.' _Cross_ the bridge and head down the path |goto Auroria -2018,-2435,-788 < 20
-		.' _Enter_ the city |goto -2300,-1988,-869 < 20
-		.talk Agent Marcus##281167
-		.' Speak with Agent Marcus |q A Repugnant Position##7597/1 |goto -2440,-1934,-879
-	step
-		.talk Governor Aluviel##286706
-		.' Speak with Governor Aluviel |q A Repugnant Position##7597/2 |goto Auroria -2598,-1924,-864
-	step
-		'Press _C_ to open your Communicator:
-		..turnin A Repugnant Position##7597
-		..accept Citizen Concerns##3751
-	step
-		'_Exit_ the gates |goto Auroria -2559,-1865,-874 < 10
-		.talk Farmer Titus##286629
-		..accept From the Shadows##5665 |goto Auroria -2548,-1557,-931
-		..accept Keeping an Eye Out##5666 |goto -2548,-1557,-931
-]])
+		.talk Tour Guide Aexa##2193 |goto Illium -3363,-674,-890
+		..turnin To the City of Illium##9877
+	]]
+)

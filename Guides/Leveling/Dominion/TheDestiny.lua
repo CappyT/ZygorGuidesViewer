@@ -209,7 +209,7 @@ ZGV:RegisterGuide("Dominion\\The Destiny (1-3)",
 		.' _Enter_ the Granok Simulation training room |q (Un)Safety Protocols##7013/1 |goto DominionArkShipTutorialCryogenics -856,-1204,-32
 	step
 		'Click _Maintenance Switch_ to spawn a ramp |goto DominionArkShipTutorialCryogenics -838,-1208,-36
-		.click Holochamber Surveillance Camera  |goto DominionArkShipTutorialCryogenics -817,-1194,-19
+		.click Holochamber Surveillance Camera  |goto DominionArkShipTutorialCryogenics -813,-1194,-20
 		.' Click Holochamber Surveillance Camera |mission OPERATIONS: Eyes Ever Watching##3154 | count 1
 		|only Explorer
 	step
@@ -224,6 +224,7 @@ ZGV:RegisterGuide("Dominion\\The Destiny (1-3)",
 		.' Arm the Primal Fusion Device |q (Un)Safety Protocols##7013/3 |tip Run away after you click to avoid damage.
 	step
 		.' _Run out_ of the Simulator |goto DominionArkShipTutorialCryogenics -853,-1206,-32 < 10
+		.' Click _ASSASINATION: Avra Darkos (Soldier Mission)_ (optional)|tip These consoles will give you Soldier missions around the world |goto DominionArkShipTutorialCryogenics -944,-1156,-33 |only Soldier
 		.' _Enter_ the Mordesh Simulation training room |q (Un)Safety Protocols##7013/4 |goto DominionArkShipTutorialCryogenics -850,-1063,-32
 	step
 		'Click _Maintenance Switch_ to spawn a ramp |goto DominionArkShipTutorialCryogenics -839,-1067,-34
@@ -238,13 +239,15 @@ ZGV:RegisterGuide("Dominion\\The Destiny (1-3)",
 		.' Scan "Fresh" Remains |mission ANALYSIS: Trust, but Verify##3150 |count 50 |goto DominionArkShipTutorialCryogenics -805,-1049,-36
 		|only Scientist
 	step
+		.' Kill Avra Darkos |mission ASSASSINATION: Avra Darkos##3144 |goto DominionArkShipTutorialCryogenics -868,-1006,-38
+		|only Soldier
+	step
 		'Press _C_ to open your Communitcator:
 		..turnin (Un)Safety Protocols##7013
 		..accept Busting Skulls, Burning Trees##7017
 	step
 		.' _Run out_ of the Simulator |goto DominionArkShipTutorialCryogenics -853,-1067,-32 < 10 |c |q 7017/1
 	step
-		.'On your way click _ASSASINATION: Avra Darkos (Soldier Mission)_ (optional)|tip These consoles will give you Soldier missions around the world |goto DominionArkShipTutorialCryogenics -944,-1156,-33 |only Soldier
 		.' _Enter_ the Exile Simulation training room |q Busting Skulls, Burning Trees##7017/1 |goto DominionArkShipTutorialCryogenics -988,-1210,-32
 	step
 		.click Eviction Notice |goto DominionArkShipTutorialCryogenics -999,-1259,-33
@@ -264,7 +267,6 @@ ZGV:RegisterGuide("Dominion\\The Destiny (1-3)",
 	step
 		.' _Run out_ of the Simulator |goto DominionArkShipTutorialCryogenics -986,-1209,-32 < 10 |c |q 7017/3
 	step
-		.' Kill Avra Darkos |mission ASSASSINATION: Avra Darkos##3144 |goto DominionArkShipTutorialCryogenics -1069,-1138,-29 |only Soldier
 		.' Enter the Aurin Simulation training room |q Busting Skulls, Burning Trees##7017/3 |goto DominionArkShipTutorialCryogenics -988,-1064,-32
 	step
 		'Climb tree from here |goto DominionArkShipTutorialCryogenics -1028,-1026,-33
@@ -279,10 +281,10 @@ ZGV:RegisterGuide("Dominion\\The Destiny (1-3)",
 		.' Incinerate 2 Saplings with your flamethrower |q Busting Skulls, Burning Trees##7017/4 |goto DominionArkShipTutorialCryogenics -1007,-1030,-35
 	step
 		.click RESCUE OP: Simulation Scientists |tip This is a holdout mission.  You have to defend position against waves of mobs. |goto DominionArkShipTutorialCryogenics -1070,-1039,-33
-		.'Defend the Simulation Scientist while they gather samples |mission RESCUE OP: Simulation Scientists##3149 |goto DominionArkShipTutorialCryogenics -1070,-1039,-33
+		.'Defend the Simulation Scientist while they gather samples |mission RESCUE OP: Simulation Scientists##3149 |goto DominionArkShipTutorialCryogenics -1070,-1043,-34
 		|only Soldier
 	step
-		.' _Run out_ of the Simulator |goto DominionArkShipTutorialCryogenics -987,-1065,-32 < 10 |c |q 7017
+		.' _Run out_ of the Simulator |goto DominionArkShipTutorialCryogenics -985,-1066,-32 < 10 |c |q 7017
 	step
 		.talk Kezrek Warbringer##262745 |goto DominionArkShipTutorialCryogenics -931,-1132,-33
 		..turnin Busting Skulls, Burning Trees##7017

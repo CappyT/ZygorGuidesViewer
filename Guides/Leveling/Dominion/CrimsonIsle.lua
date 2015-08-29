@@ -4,41 +4,32 @@ ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 	startlevel=3,
 	endlevel=6,
 	nextguide="Dominion\\Deradune (6-15)",
+	image="ZygorUIGuides:CrimsonIsle", 
+	description="The Crimson Isle is a flat island currently under investigation by The Dominion. It is the primary starting place for Draken and Chua. It is suited for characters level 3-6."
 	},
 	[[
-//HUMAN
+//DRAKEN breadcumb
 	step
-		.click Departures Terminal: Mondo's Beachhead##262433
-		.' Travel to Nexus - Crimson Isle |q Called to Stormcaller Landing##7057/3 |goto DominionArkShipTutorialCryogenics -691,841,81
-		|only Human
-	step
-		.talk Lieutenant Ticus##262272
-		..turnin Called to Stormcaller Landing##7057 |goto CrimsonIsle -8256,-241,-995
-		..accept Welcome to Crimson Isle##9127 |goto -8256,-241,-995
-		|only Human
-	step
-		.talk Mondo Zax##262276
-		..turnin Welcome to Crimson Isle##9127 |goto CrimsonIsle -8231,-231,-994
-		|only Human
-//DRAKEN
-	step
-		.click Departures Terminal: Savage Coast##262429
-		.' Travel to Nexus - Crimson Isle |q Savage Coast Savagery##7060/2 |goto DominionArkShipTutorialCryogenics -690,958,81
+		' _If you skipped_ the Arkship tutorial, click _>_ to skip this step
+		.click Departures Terminal: Savage Coast##262429 |goto DominionArkShipTutorialCryogenics -690,958,81
+		.' Travel to Nexus - Crimson Isle |q Savage Coast Savagery##7060/2
 		|only Draken
 	step
-		.talk Scout Naharra##262269
-		..turnin Savage Coast Savagery##7060 |goto CrimsonIsle -7663,46,-993
-		..accept Welcome to Crimson Isle##9134 |goto CrimsonIsle -7663,46,-993
+		' _If you skipped_ the Arkship tutorial, click _>_ to skip this step
+		.talk Scout Naharra##262269 |goto CrimsonIsle -7663,46,-993
+		..turnin Savage Coast Savagery##7060
+		..accept Welcome to Crimson Isle##9134
 		|only Draken
 	step
-		.talk Drezkar the Gorefang##262280
-		..turnin Welcome to Crimson Isle##9134 |goto -7661,14,-992
-		..accept Blood in the Sand##5595 |goto -7661,14,-992
+		.talk Drezkar the Gorefang##262280 |goto CrimsonIsle -7661,14,-992
+		..turnin Welcome to Crimson Isle##9134
+		..accept Blood in the Sand##5595
+		'Tutorial skippers, click _>_ after obtaining the quest
 		|only Draken
 	step
-		.click Exile Mine##350392+ |tip They are all around the ground in this area.
-		.' Disarm Exile Mines |q Blood in the Sand##5595/Disarm Exile Mines##1 |goto CrimsonIsle -7629,-36,-987
-		.' Kill Scrab Striker |q Blood in the Sand##5595/Kill Scrab Strikers##2
+		' Around the area: |goto CrimsonIsle -7629,-36,-987
+		.' Disarm Exile Mines |q Blood in the Sand##5595/1
+		.' Kill Scrab Striker |q Blood in the Sand##5595/2
 		|only Draken
 	step
 		'Press _C_ to open your Communitcator:
@@ -47,284 +38,259 @@ ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 		|only Draken
 	step
 		'Press _C_ to open your Communitcator:
-		..accept Stasis, Interrupted##8856 |goto -7676,-249,-960
+		..accept Stasis, Interrupted##8856 |goto CrimsonIsle -7676,-249,-960
 		|only Draken
 	step
-		.click Megatech Battlebot##362868 
-		.' Disable the Power Regulators |q Seizing Power##5575/Disable the Power Regulators##2 |count 1 |goto -7742,-325,-948
-		.click Power Regulator##263134 
-		.' Disable the Power Regulators |q Seizing Power##5575/Disable the Power Regulators##2 |count 2 |goto -7835,-373,-945
-		.click Power Regulator##262872 
-		.' Disable the Power Regulators |q Seizing Power##5575/Disable the Power Regulators##2 |goto -7709,-400,-944
+		.click Power Regulator##262805 |goto CrimsonIsle -7742,-325,-948
+		.' Disable the Power Regulators |q Seizing Power##5575/2 |count 33
+	step
+		.click Power Regulator##263134 |goto CrimsonIsle -7835,-373,-945
+		.' Disable the Power Regulators |q Seizing Power##5575/2 |count 66
+	step
+		.click Power Regulator##262872 |goto CrimsonIsle -7709,-400,-944
+		.' Disable the Power Regulators |q Seizing Power##5575/2
+		|only Draken
+	step
+		.' _Jump_ through the suspended soldiers |goto CrimsonIsle -7852,-349,-948
+		.' Free Dominion Soldiers |q Stasis, Interrupted##8856/1
+		.' Kill Megatech Battlebots |q Stasis, Interrupted##8856/2
 		|only Draken
 	step
 		'Press _C_ to open your Communitcator:
 		..turnin Seizing Power##5575
-		|only Draken
-	step
-		'All around this area:
-		.' Jump up through the suspended soldiers
-		.' Free Dominion Soldiers |q Stasis, Interrupted##8856/Free Dominion Soldiers##1 |goto -7852,-349,-948
-		.' Kill Megatech Battlebots |q Stasis, Interrupted##8856/Destroy Megatech Battlebots##2 |goto -7852,-349,-948
+		..turnin Stasis, Interrupted##8856
 		|only Draken
 	step
 		'Press _C_ to open your Communitcator:
-		..turnin Stasis, Interrupted##8856
 		..accept Introduction to the Zax##7036
 		..turnin Introduction to the Zax##7036
 		..accept Forward March##5814
 		|only Draken
-//CHUA
+//CHUA breadcumb
 	step
-		.click Departures Terminal: Mondo's Beachhead##265961 
-		.' Travel to Nexus - Crimson Isle |q Mondo's Beachhead##7059/Travel to Nexus - Crimson Isle##2 |goto DominionArkShipTutorialCryogenics -691,841,81
+		' _If you skipped_ the Arkship tutorial, click _>_ to skip this step
+		.click Departures Terminal: Mondo's Beachhead##265961 |goto DominionArkShipTutorialCryogenics -691,841,81
+		.' Travel to Nexus - Crimson Isle |q Mondo's Beachhead##7059/2
 		|only Chua
 	step
-		.talk Engineer Zric##262270
-		..turnin Mondo's Beachhead##7059 |goto -8256,-241,-995
-		..accept Welcome to Crimson Isle##9132 |goto -8256,-241,-995
+		' _If you skipped_ the Arkship tutorial, click _>_ to skip this step
+		.talk Engineer Zric##262270 |goto CrimsonIsle -8256,-241,-995
+		..turnin Mondo's Beachhead##7059
+		..accept Welcome to Crimson Isle##9132
 		|only Chua
-	step
-		.talk Mondo Zax##262276
-		..turnin Welcome to Crimson Isle##9132 |goto CrimsonIsle -8231,-231,-994
-		|only Chua
-	step
-		.talk Mondo Zax##262276
-		..accept Mind the Mines, Scrap the Scrab##5593 |goto CrimsonIsle -8231,-232,-994
-		|only Chua, Human
-	step
-		.click Exile Mine##356409+ |tip They are all around the ground in this area.
-		.' Disarm Exile Mines |q Mind the Mines, Scrap the Scrab##5593/Disarm Exile Mines##1 |goto CrimsonIsle -8183,-172,-998
-		.' Kill Scrab Strikers |q Mind the Mines, Scrap the Scrab##5593/2
-		|only Chua, Human
-	step
-		'Press _C_ to open your Communitcator:
-		..turnin Mind the Mines, Scrap the Scrab##5593
-		..accept Powering Down##5573
-		|only Chua, Human
-	step
-		'Press _C_ to open your Communitcator:
-		..accept Stasis, Interrupted##8855 |goto CrimsonIsle -7898,-307,-957
-		|only Chua, Human
-	step
-		'All around this area:
-		.' _Jump up_ through the suspended soldiers
-		.' Free Dominion Soldiers |q Stasis, Interrupted##8855/Free Dominion Soldiers##1 |goto -7854,-348,-948
-		.' Kill Megatech Battlebots |q Stasis, Interrupted##8855/Destroy Megatech Battlebots##2
-		|only Chua, Human
-	step
-		'Press _C_ to open your Communitcator:
-		..turnin Stasis, Interrupted##8855
-		|only Chua, Human
-	step
-		.click Power Regulator##262805 
-		.' Disable the Power Regulators |q Powering Down##5573/Disable the Power Regulators##2 |count 1 |goto CrimsonIsle -7835,-373,-945
-		.click Power Regulator##263134 
-		.' Disable the Power Regulators |q Powering Down##5573/Disable the Power Regulators##2 |count 2 |goto CrimsonIsle -7743,-325,-948
-		.click Power Regulator##262872 
-		.' Disable the Power Regulators |q Powering Down##5573/Disable the Power Regulators##2 |goto CrimsonIsle -7709,-400,-944
-		|only Chua, Human
-//MECHARI
-	step
-		.talk Chancellor Juro Takigurian##262653 
-		.' Speak to the hologram of Chancellor Juro Takigurian |q Mysteries of the Eldan##9556/Speak to the hologram of Chancellor Juro Takigurian##1 |goto DominionArkShipTutorialCryogenics -809,649,81
-		|only Mechari
-	step
-		.click Hologram Control Panel##262650
-		.' Activate the Hologram Control Panel |q Mysteries of the Eldan##9556/2 |goto DominionArkShipTutorialCryogenics -808,637,81
-		|only Mechari
-	step
-		'Press _C_ to open your Communitcator:
-		..turnin Mysteries of the Eldan##9556
-		..accept Jagged Cove##7058
-		|only Mechari
-	step
-		.talk Agent Lex##262658
-		.' Speak with Agent Lex |q Jagged Cove##7058/1 |goto DominionArkShipTutorialCryogenics -706,590,81
-		|only Mechari
-	step
-		.' _Go through_ the door |goto -754,713,81
-		.' _Pass through_ the second door |goto -752,819,82
-		.click Departures Terminal: Mondo's Beachhead##262432
-		.' Click _Yes_ to travel to The Crimson Isle |q Jagged Cove##7058/3 |goto -691,840,81
-		|only Mechari
-	step
-		.talk Agent Infivan##262271
-		..turnin Jagged Cove##7058 |goto CrimsonIsle -8257,-241,-995
-		..accept Welcome to Crimson Isle##9131 |goto -8257,-241,-995
-		|only Mechari
-	step
-		.talk Mondo Zax##262276
-		..turnin Welcome to Crimson Isle##9131 |goto -8232,-232,-994
-		..accept Mind the Mines, Scrap the Scrab##5593 |goto -8232,-232,-994
-		|only Mechari
-	step
-		.click Exile Mine##356409+ |tip They are all around the ground in this area.
-		.' Disarm Exile Mines |q Mind the Mines, Scrap the Scrab##5593/Disarm Exile Mines##1 |goto -8183,-172,-998
-		.' Kill Scrab Strikers |q Mind the Mines, Scrap the Scrab##5593/Kill Scrab Strikers##2
-		|only Mechari
-	step
-		'Press _C_ to open your Communitcator:
-		..turnin Mind the Mines, Scrap the Scrab##5593
-		..accept Powering Down##5573
 
-//ALL RACE CONTINUES CRIMSON ISLE
+//HUMAN breadcumb
 	step
-		.' Find the Megatech Shield Generator |q Powering Down##5573/1 |goto -7924,-288,-961
+		' _If you skipped_ the Arkship tutorial, click _>_ to skip this step
+		.click Departures Terminal: Mondo's Beachhead##262433 |goto DominionArkShipTutorialCryogenics -691,841,81
+		.' Travel to Nexus - Crimson Isle |q Called to Stormcaller Landing##7057/3
+		|only Human
+	step
+		' _If you skipped_ the Arkship tutorial, click _>_ to skip this step
+		.talk Lieutenant Ticus##262272 |goto CrimsonIsle -8256,-241,-995
+		..turnin Called to Stormcaller Landing##7057
+		..accept Welcome to Crimson Isle##9127
+		|only Human
+
+//MECHARI breadcumb
+	step
+		' _If you skipped_ the Arkship tutorial, click _>_ to skip this step
+		.click Departures Terminal: Mondo's Beachhead##262433 |goto DominionArkShipTutorialCryogenics -691,841,81
+		.' Travel to Nexus - Crimson Isle |q Jagged Cove##7058/3
+		|only Mechari
+	step
+		' _If you skipped_ the Arkship tutorial, click _>_ to skip this step
+		.talk Agent Infivan##262271 |goto CrimsonIsle -8257,-241,-995
+		..turnin Jagged Cove##7058
+		..accept Welcome to Crimson Isle##9131
+		|only Mechari
+
+//SHARED by CHUA, HUMAN, MECHARI
+	step
+		.talk Mondo Zax##262276 |goto CrimsonIsle -8231,-231,-994
+		..turnin Welcome to Crimson Isle##9132 |only Chua
+		..turnin Welcome to Crimson Isle##9127 |only Human
+		..turnin Welcome to Crimson Isle##9131 |only Mechari
+		..accept Mind the Mines, Scrap the Scrab##5593
+		'Tutorial skippers, click _>_ after obtaining the quest
+		|only Chua, Human, Mechari
+	step
+		' Around the area: |goto CrimsonIsle -8183,-172,-998
+		.' Disarm Exile Mines |q Mind the Mines, Scrap the Scrab##5593/1
+		.' Kill Scrab Strikers |q Mind the Mines, Scrap the Scrab##5593/2
+		|only Chua, Human, Mechari
 	step
 		'Press _C_ to open your Communitcator:
-		..accept Stasis, Interrupted##8855 |goto CrimsonIsle -7924,-287,-962
+		..turnin Mind the Mines, Scrap the Scrab##5593
+		..accept Powering Down##5573
+		|only Chua, Human, Mechari
 	step
-		.click Dominion Soldier##263242
-		.' Free Dominion Soldiers in this area by jumping into them |q Stasis, Interrupted##8855/1 |goto -7854,-349,-947
+		'Press _C_ to open your Communitcator:
+		..accept Stasis, Interrupted##8855 |goto CrimsonIsle CrimsonIsle -7898,-307,-957
+		|only Chua, Human, Mechari
 	step
-		.click Power Regulator##262874
-		.' Disable the Power Regulators |q Powering Down##5573/2 |count 1 |goto -7834,-372,-945
-		.click Power Regulator##262807
-		.' Disable the Power Regulators |q Powering Down##5573/2 |count 2 |goto -7743,-325,-948
-		.click Power Regulator##263136
-		.' Disable the Power Regulators |q Powering Down##5573/2 |goto -7709,-401,-943
+		.' _Jump_ through the suspended soldiers |goto CrimsonIsle -7854,-348,-948
+		.' Free Dominion Soldiers |q Stasis, Interrupted##8855/1
+		.' Kill Megatech Battlebots |q Stasis, Interrupted##8855/2
+		|only Chua, Human, Mechari
+	step
+		.click Power Regulator##262805 |goto CrimsonIsle -7835,-373,-945
+		.' Disable the Power Regulators |q Powering Down##5573/2 |count 33
+	step
+		.click Power Regulator##263134 |goto CrimsonIsle -7743,-325,-948
+		.' Disable the Power Regulators |q Powering Down##5573/2 |count 66
+	step
+		.click Power Regulator##262872 |goto CrimsonIsle -7709,-400,-944
+		.' Disable the Power Regulators |q Powering Down##5573/2
+		|only Chua, Human, Mechari
 	step
 		'Press _C_ to open your Communitcator:
 		..turnin Powering Down##5573
-	step
-		.kill 1 Megatech Battlebot##262601
-		.' Destroy Megatech Battlebots |q Stasis, Interrupted##8855/2 |goto CrimsonIsle -7704,-363,-946
-	step
-		'Press _C_ to open your Communitcator:
 		..turnin Stasis, Interrupted##8855
 		..accept Forward March##5814
+		|only Chua, Human, Mechari
+
+//ALL RACE CONTINUES CRIMSON ISLE
 	step
-		.click Strange Dirt Pile##263281
-		..accept Spatial Anomaly##5684 |goto CrimsonIsle -7663,-456,-942
+		.click Strange Dirt Pile##263281 |goto CrimsonIsle -7663,-452,-942 < 5
+		..accept Spatial Anomaly##5684
 	step
-		.' _Run into_ the Green Glowing Orb |goto -7709,-508,-932 < 5 |tip This will enable you to jump very high.
-		.' _Jump up_ the rocks to this point |goto -7690,-602,-864 < 10
-		.talk Researcher Zum##263279
-		..turnin Spatial Anomaly ##5684 |goto -7690,-602,-864
+		.' _Run into_ the Green Glowing Orb |goto CrimsonIsle -7709,-508,-932 < 5 |tip This will enable you to jump very high. |c |q 5684
 	step
-		.talk Mondo Zax##262281
-		..turnin Forward March##5814 |goto CrimsonIsle -7666,-672,-943
-		..accept Ordnance Recovery##5596 |goto CrimsonIsle -7666,-672,-943
+		.' _Jump up_ the rocks to this point |goto CrimsonIsle -7690,-602,-864 < 10 |c |q 5684
 	step
-		.talk Arachnologist Borango##262296
-		..accept Venomous Intent##5584 |goto CrimsonIsle -7343,-628,-996
+		.talk Researcher Zum##263279 |goto CrimsonIsle -7690,-602,-864
+		..turnin Spatial Anomaly##5684
 	step
-		.click Trapped Assistant##264034 |tip They look like people wrapped in spider silk, all around this area.
-		.' Rescue the Trapped Assistants |q Venomous Intent##5584/Rescue the Trapped Assistants##1 |goto CrimsonIsle -7362,-473,-989
+		.talk Mondo Zax##262281 |goto CrimsonIsle -7667,-673,-943
+		..turnin Forward March##5814
+		..accept Ordnance Recovery##5596
+	step
+		.' Find the blimp crash site|q Ordinance Recovery##5596/1 |goto CrimsonIsle -7412,-668,-996
+	step
+		.talk Arachnologist Borango##262296 |goto CrimsonIsle -7343,-628,-996
+		..accept Venomous Intent##5584
+	step
+		.click Trapped Assistant##264034 |tip Look like people wrapped in silk
+		.' Rescue the Trapped Assistants |q Venomous Intent##5584/1 |goto CrimsonIsle -7362,-473,-989
 		.kill Venombite Spider##265440+ 
-		.' Collect Venombite Fangs |q Venomous Intent##5584/Collect Venombite Fangs##2
+		.' Collect Venombite Fangs |q Venomous Intent##5584/2
 	step
-		.kill 1 Venombite Spider Queen##340773
+		.kill 1 Venombite Spider Queen##340773 |goto CrimsonIsle -7277,-446,-992
 		.collect 1 Spider Queen's Mandibles##14241
 		.' Use the Spider Queen's Mandible in your inventory |use Spider Queen's Mandibles##14241
-		..accept The Royal Maw##5728 |goto CrimsonIsle -7277,-446,-992
+		..accept The Royal Maw##5728
 	step
-		.talk Arachnologist Borango##262296
-		..turnin Venomous Intent##5584 |goto CrimsonIsle -7343,-628,-996
-		..turnin The Royal Maw##5728 |goto CrimsonIsle -7343,-628,-996
+		.talk Arachnologist Borango##262296 |goto CrimsonIsle -7339,-626,-995
+		..turnin Venomous Intent##5584
+		..turnin The Royal Maw##5728
 	step
 		.click Dominion Demolitions Expert##263321 
-		.' Search for Dead Dominion Demolitions Experts |q Ordnance Recovery##5596/Search for Dead Dominion Demolitions Experts##2 |goto CrimsonIsle -7329,-680,-990
+		.' Search for Dead Dominion Demolitions Experts |q Ordnance Recovery##5596/2 |goto CrimsonIsle -7329,-680,-990
 	step
 		'Press _C_ to open your Communitcator:
 		..turnin Ordnance Recovery##5596
 		..accept Dregs and Thieves##5597
 	step
-		.talk Roasting Chua##263295
-		..accept Fire and Brimstone##5609 |goto CrimsonIsle -7335,-890,-992
+		.talk Roasting Chua##263295 |goto CrimsonIsle -7098,-876,-993
+		..accept Fire and Brimstone##5609
 	step
-		.kill Scarhide Chief##284781+
-		.kill Scarhide Raider##285430+
-		.kill Scarhide Farstriker##285251+
-		.click Chua Explosives##267308 |tip They are in the rubble all around this area.
-		.' Retrieve Chua Explosives |q Dregs and Thieves##5597/Retrieve Chua Explosives##1 |goto -7281,-861,-992
-		.click Dreg Tent##263302
-		.' Burn Dreg Tents |q Fire and Brimstone##5609/Burn Dreg Tents##1 |goto -7281,-861,-992
-		.' Kill Scarhide Dreg Forces |q Fire and Brimstone##5609/2 |goto CrimsonIsle -7157,-874,-996
+		'Around the area, click _Explosives_ and _Tents_: |goto CrimsonIsle -7281,-861,-992
+		.' Retrieve Chua Explosives |q Dregs and Thieves##5597/1
+		.' Burn Dreg Tents |q Fire and Brimstone##5609/1
+		.' Kill Scarhide Dreg Forces |q Fire and Brimstone##5609/2
 	step
 		'Press _C_ to open your Communitcator:
 		..turnin Dregs and Thieves##5597	
 		..turnin Fire and Brimstone##5609
 		..accept Tactical Demolitions##5604
 	step
-		.click Bloated Oxian Corpse##263264
-		..accept It Smells Worse on the Inside##6232 |goto CrimsonIsle -7476,-842,-985
+		.click Bloated Oxian Corpse##263264 |goto CrimsonIsle -7476,-842,-985
+		..accept It Smells Worse on the Inside##6232
 	step
-		.kill 1 Dreg Abomination##289616
+		.kill 1 Dreg Abomination##289616 |goto CrimsonIsle -7509,-806,-978
 		.collect Abomination's Skull##14007
 		.' Use the Abomination's Skull |use Abomination's Skull##14007
-		..accept Dreg Mutations##5610 |goto -7509,-806,-978
+		..accept Dreg Mutations##5610
 	step
-		.talk Mondo Zax##262288
-		..turnin Dreg Mutations##5610 |goto -7489,-830,-981
+		.talk Mondo Zax##262288 |goto CrimsonIsle -7489,-830,-981
+		..turnin Dreg Mutations##5610
 	step
-		.' Follow this _road up_ the hill |goto -7317,-1132,-973 < 10
-		.' _Continue up_ the wooden ramp |goto -7383,-1108,-945 < 10
-		.click Exile Anti-Air Cannon##263442 
-		.' Destroy the Exile Anti-Air Cannon |q Tactical Demolitions##5604/Destroy the Exile Anti-Air Cannons##1 |count 33 |goto -7349,-1085,-937
-		.click Exile Anti-Air Cannon##263442 
-		.' Destroy the Exile Anti-Air Cannon |q Tactical Demolitions##5604/Destroy the Exile Anti-Air Cannons##1 |count 66 |goto -7442,-1077,-955
+		.' Follow this _road up_ the hill |goto CrimsonIsle -7317,-1132,-973 < 10 |c |q 5604/1
 	step
-		.' _Go up_ the wooden ramp |goto -7404,-1155,-948
-		.click Exile Anti-Air Cannon##263307 
-		.' Destroy the Exile Anti-Air Cannon |q Tactical Demolitions##5604/Destroy the Exile Anti-Air Cannons##1 |goto -7380,-1147,-932
+		.' _Continue up_ the wooden ramp |goto CrimsonIsle -7383,-1108,-945 < 5 |c |q 5604/1
+	step
+		.click Exile Anti-Air Cannon##263442 |goto CrimsonIsle -7349,-1085,-937
+		.' Destroy the Exile Anti-Air Cannon |q Tactical Demolitions##5604/1 |count 33
+	step
+		.click Exile Anti-Air Cannon##263442 |goto CrimsonIsle -7442,-1077,-955
+		.' Destroy the Exile Anti-Air Cannon |q Tactical Demolitions##5604/1 |count 66
+	step
+		.' _Go up_ the wooden ramp |goto CrimsonIsle -7404,-1155,-948 < 5 |c |q 5604/1
+	step
+		.click Exile Anti-Air Cannon##263307 |goto CrimsonIsle -7380,-1147,-932
+		.' Destroy the Exile Anti-Air Cannon |q Tactical Demolitions##5604/1
 	step
 		'Press _C_ to open your Communitcator:
 		..turnin Tactical Demolitions##5604
 		..accept Moving Up##5623
 	step
-		.click Megatech Tactical Interface##263355
-		..accept Data Grab##5582 |goto -7404,-1188,-952
+		.'_Jump down_ here | goto CrimsonIsle -7392,-1176,-932 < 5 |c |q 5623
 	step
-		.click Megatech Terminal##263374 
-		.' Access Megatech Terminal |q Data Grab##5582/Access Megatech Terminals##1 |count 50 |goto -7469,-1259,-954
-		.click Megatech Terminal##263341
-		.' Access Megatech Terminal |q Data Grab##5582/Access Megatech Terminals##1 |goto -7502,-1164,-953
+		.click Megatech Tactical Interface##263355 |goto CrimsonIsle -7404,-1188,-952
+		..accept Data Grab##5582
+	step
+		.click Megatech Terminal##263341 |goto CrimsonIsle -7502,-1164,-953
+		.' Access Megatech Terminal |q Data Grab##5582/1 |count 50
+	step
+		.click Megatech Terminal##263374 |goto CrimsonIsle -7469,-1259,-954
+		.' Access Megatech Terminal |q Data Grab##5582/1
 	step
 		'Press _C_ to open your Communitcator:
 		..turnin Data Grab##5582
 	step
-		.talk Mondo Zax##262292
-		..turnin Moving Up##5623 |goto CrimsonIsle -7583,-1292,-954
+		.talk Mondo Zax##262292 |goto CrimsonIsle -7583,-1292,-954
+		..turnin Moving Up##5623
 	step
-		.talk Kezrek Warbringer##262291
-		..accept Enforced Radio Silence##5580 |goto -7588,-1301,-955
-		..accept Heavy Armor##5583 |goto -7588,-1301,-955
+		.talk Kezrek Warbringer##262291 |goto CrimsonIsle -7585,-1299,-954
+		..accept Enforced Radio Silence##5580
+		..accept Heavy Armor##5583
 	step
-		.' Follow the _ramp up_ |goto -7616,-1368,-954
-		.' Sabotage the Tower Controls |q Enforced Radio Silence##5580/Sabotage the Tower Controls##1 |count 1 |goto -7597,-1357,-942
+		.' Follow the _ramp up_ |goto CrimsonIsle -7616,-1368,-954 |c |q 5580/1
 	step
-		.click Vindicator Tank##299901 
-		.' Sabotage Exile Tanks |q Heavy Armor##5583/Sabotage Exile Tanks##1 |count 1 |goto -7647,-1387,-956
+		.' Sabotage the Tower Controls |q Enforced Radio Silence##5580/1 |count 50 |goto CrimsonIsle -7597,-1357,-942
 	step
-		.' _Run up_ the ramp |goto CrimsonIsle -7709,-1391,-948
-		.click Tower Controls##263470 
-		.' Sabotage the Tower Controls |q Enforced Radio Silence##5580/Sabotage the Tower Controls##1 |goto -7701,-1412,-934
+		.click Vindicator Tank##299901 |goto CrimsonIsle -7647,-1387,-956
+		.' Sabotage Exile Tanks |q Heavy Armor##5583/1 |count 50
+	step
+		.' Follow the _big ramp up_ |goto CrimsonIsle -7709,-1391,-948 < 10 |c |q 5580/1
+	step
+		.' Sabotage the Tower Controls |q Enforced Radio Silence##5580/1 |goto CrimsonIsle -7701,-1412,-934
 	step
 		'Press _C_ to open your Communitcator:
 		..turnin Enforced Radio Silence##5580
 	step
-		.click Hellfire Tank##303587 
-		.' Sabotage Exile Tanks |q Heavy Armor##5583/Sabotage Exile Tanks##1 |goto -7768,-1341,-951
+		.click Hellfire Tank##303587 |goto CrimsonIsle -7768,-1341,-951
+		.' Sabotage Exile Tanks |q Heavy Armor##5583/1
 	step
-		.kill Megatech Scientist##337342+
-		.kill Megatech Gunner##337343+
-		.kill Megatech Trooper##262610+
+		' Kill _Megatech Scientist_, _Gunner_, and _Trooper_
 		.' Kill Megatech Troopers and Bots |q Heavy Armor##5583/2 |goto CrimsonIsle -7750,-1345,-951
 	step
 		'Press _C_ to open your Communitcator:
 		..turnin Heavy Armor##5583
 		..accept Last Resistance##5594
 	step
-		'_Go up_ the ramp |goto CrimsonIsle -7832,-1430,-942
-		.click Warbot Fuel##304277 
-		.' Stay here and fight the waves of enemies
-		.' Sabotage the Warbot Fuel and Kill Megatech Warbot |q Last Resistance##5594/Sabotage the Warbot Fuel and Kill Megatech Warbot##1 |goto CrimsonIsle -7958,-1348,-942
+		'_Go up_ the ramp |goto CrimsonIsle -7832,-1430,-942 < 10 |c |q 5594/1
+	step
+		.click Warbot Fuel##304277 |goto CrimsonIsle -7956,-1349,-941
+		' Fight waves of enemies and Warbot
+		.' Sabotage the Warbot Fuel and Kill Megatech Warbot |q Last Resistance##5594/1
 	step
 		.click Control Panel##263441 
-		.' Activate the Control Panel |q Last Resistance##5594/Activate the Control Panel##2 |goto -7992,-1363,-936
+		.' Activate the Control Panel |q Last Resistance##5594/2 |goto CrimsonIsle -7990,-1361,-935 < 5
 	step
-		.click Ship Controls##263440 
-		.' Launch the Transport Ship |q Last Resistance##5594/Launch the Transport Ship##3 |goto -8023,-1275,-921
-]])
+		.click Ship Controls##263440
+		'Click _Yes_ to launch the transport to Deradune
+		.' Launch the Transport Ship |q Last Resistance##5594/3 |goto CrimsonIsle -8023,-1275,-921
+	]]
+)

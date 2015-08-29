@@ -4,56 +4,68 @@
         <Frame Texture="ZygorGuidesViewer\Images\guide.tga" x0="0" x1="15" x2="15" x3="400" x4="400" x5="400" y0="0" y1="0" y2="0" y3="0" y4="400" y5="400" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
     </Sprite>
 
-		 <Sprite Name="TutorialExiles" Cycle="1">
+	<Sprite Name="TutorialExiles" Cycle="1">
         <Frame Texture="ZygorGuidesViewer\Images\tutorial_exiles.tga" x0="0" x1="15" x2="15" x3="400" x4="400" x5="400" y0="0" y1="0" y2="0" y3="0" y4="400" y5="400" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
-		</Sprite>
+	</Sprite>
 
-		<Sprite Name="TheDestiny" Cycle="1">
+	<Sprite Name="TheDestiny" Cycle="1">
         <Frame Texture="ZygorGuidesViewer\Images\the_destiny.tga" x0="0" x1="15" x2="15" x3="400" x4="400" x5="400" y0="0" y1="0" y2="0" y3="0" y4="400" y5="400" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
-		</Sprite>
+	</Sprite>
 
-	    <Sprite Name="NorthernWilds" Cycle="1">
+	<Sprite Name="NorthernWilds" Cycle="1">
         <Frame Texture="ZygorGuidesViewer\Images\northern_wilds.tga" x0="0" x1="15" x2="15" x3="400" x4="400" x5="400" y0="0" y1="0" y2="0" y3="0" y4="400" y5="400" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
-		</Sprite>
+	</Sprite>
 
-	    <Sprite Name="Algoroc" Cycle="1">
+	<Sprite Name="Algoroc" Cycle="1">
         <Frame Texture="ZygorGuidesViewer\Images\algoroc.tga" x0="0" x1="15" x2="15" x3="400" x4="400" x5="400" y0="0" y1="0" y2="0" y3="0" y4="400" y5="400" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
-		</Sprite>
+	</Sprite>
 
-	    <Sprite Name="Galeras" Cycle="1">
+	<Sprite Name="Galeras" Cycle="1">
         <Frame Texture="ZygorGuidesViewer\Images\galeras.tga" x0="0" x1="15" x2="15" x3="400" x4="400" x5="400" y0="0" y1="0" y2="0" y3="0" y4="400" y5="400" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
-		</Sprite>
+	</Sprite>
 
-	    <Sprite Name="Whitevale" Cycle="1">
+	<Sprite Name="Whitevale" Cycle="1">
         <Frame Texture="ZygorGuidesViewer\Images\whitevale.tga" x0="0" x1="15" x2="15" x3="400" x4="400" x5="400" y0="0" y1="0" y2="0" y3="0" y4="400" y5="400" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
-		</Sprite>
+	</Sprite>
 
-	    <Sprite Name="Farside" Cycle="1">
+	<Sprite Name="Farside" Cycle="1">
         <Frame Texture="ZygorGuidesViewer\Images\farside.tga" x0="0" x1="15" x2="15" x3="400" x4="400" x5="400" y0="0" y1="0" y2="0" y3="0" y4="400" y5="400" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
-		</Sprite>
+	</Sprite>
 
-		<Sprite Name="Wilderrun" Cycle="1">
+	<Sprite Name="Wilderrun" Cycle="1">
         <Frame Texture="ZygorGuidesViewer\Images\wilderrun.tga" x0="0" x1="15" x2="15" x3="400" x4="400" x5="400" y0="0" y1="0" y2="0" y3="0" y4="400" y5="400" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
-		</Sprite>
+	</Sprite>
 
-		<Sprite Name="Malgrave" Cycle="1">
+	<Sprite Name="Malgrave" Cycle="1">
         <Frame Texture="ZygorGuidesViewer\Images\malgrave.tga" x0="0" x1="15" x2="15" x3="400" x4="400" x5="400" y0="0" y1="0" y2="0" y3="0" y4="400" y5="400" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
-		</Sprite>
+	</Sprite>
 
-		<Sprite Name="Grimvault" Cycle="1">
+	<Sprite Name="Grimvault" Cycle="1">
         <Frame Texture="ZygorGuidesViewer\Images\grimvault.tga" x0="0" x1="15" x2="15" x3="400" x4="400" x5="400" y0="0" y1="0" y2="0" y3="0" y4="400" y5="400" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
-		</Sprite>
+	</Sprite>
 	
-		<Sprite Name="CrimsonIsle" Cycle="1">
+	<Sprite Name="CrimsonIsle" Cycle="1">
         <Frame Texture="ZygorGuidesViewer\Images\crimson_isle.tga" x0="0" x1="15" x2="15" x3="400" x4="400" x5="400" y0="0" y1="0" y2="0" y3="0" y4="400" y5="400" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
-		</Sprite>
+	</Sprite>
 
-		<Sprite Name="Deradune" Cycle="1">
+	<Sprite Name="Deradune" Cycle="1">
         <Frame Texture="ZygorGuidesViewer\Images\deradune.tga" x0="0" x1="15" x2="15" x3="400" x4="400" x5="400" y0="0" y1="0" y2="0" y3="0" y4="400" y5="400" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
-		</Sprite>
+	</Sprite>
 
-		<Sprite Name="Auroria" Cycle="1">
+	<Sprite Name="LevianBay" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Images\levian_bay.tga" x0="0" x1="15" x2="15" x3="400" x4="400" x5="400" y0="0" y1="0" y2="0" y3="0" y4="400" y5="400" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+	</Sprite>
+
+	<Sprite Name="Ellevar" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Images\ellevar.tga" x0="0" x1="15" x2="15" x3="400" x4="400" x5="400" y0="0" y1="0" y2="0" y3="0" y4="400" y5="400" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+	</Sprite>
+
+	<Sprite Name="Illium" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Images\illium.tga" x0="0" x1="15" x2="15" x3="400" x4="400" x5="400" y0="0" y1="0" y2="0" y3="0" y4="400" y5="400" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+	</Sprite>
+
+	<Sprite Name="Auroria" Cycle="1">
         <Frame Texture="ZygorGuidesViewer\Images\auroria.tga" x0="0" x1="15" x2="15" x3="400" x4="400" x5="400" y0="0" y1="0" y2="0" y3="0" y4="400" y5="400" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
-		</Sprite>
+	</Sprite>
 
 </Sprites>
