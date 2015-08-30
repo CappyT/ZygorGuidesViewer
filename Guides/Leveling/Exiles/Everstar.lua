@@ -1,14 +1,14 @@
 if not ZGV then return end
-
 ZGV:RegisterGuide("Exiles\\Everstar Grove (3-6)",
 	{
-		faction="Exiles",
-		startlevel=3,
-		endlevel=6,
-		nextguide="Exiles\\Celestion (6-15)",
-		image="ZygorUIGuides:EverstarGrove",
-		description="Everstar Grove is a zone in northern Alizar in WildStar. Everstar Grove is a beginner zone for The Exiles, and is suited for characters level 3-6. ",
-	},[[
+	faction="Exiles",
+	startlevel=3,
+	endlevel=6,
+	nextguide="Exiles\\Celestion (6-15)",
+	image="ZygorUIGuides:EverstarGrove",
+	description="Everstar Grove is a zone in northern Alizar in WildStar. Everstar Grove is a beginner zone for The Exiles, and is suited for characters level 3-6. ",
+	},
+	[[
 	step
 		.' _Go through_ the doorway into the long hallway |goto ExileArkShipTutorial -998,812,83
 		.' _Leave_ the long hallway |goto ExileArkShipTutorial -998,729,85
@@ -283,4 +283,5 @@ ZGV:RegisterGuide("Exiles\\Everstar Grove (3-6)",
 	step
 		.click Portal to Celestion##262907
 		.' Take the portal to Celestion |q The Path to Celestion##6844/1 |goto EverstarGrove 651,-3291,-958
-]])
+	]]
+)

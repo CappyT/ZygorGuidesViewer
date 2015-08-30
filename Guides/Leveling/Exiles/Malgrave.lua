@@ -1,11 +1,14 @@
+if not ZGV then return end
 ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
-		{faction="Exiles",
-		nextguide="Exiles\\Grimvault (46-50)",
-		image="ZygorUIGuides:Malgrave", 
-		description="Malgrave is a zone in southern Isigrol in WildStar. It is a sparse dry desert filled with bandits, rampaging elementals, and ancient Eldan ruins. Malgrave is a contested zone, and is intended for players level 40-46. There is also a Post-Cap Playspace intended for level 50 characters in the northern part of the zone.",
-		startlevel=41,
-		endlevel=46,
-		},[[
+	{
+	faction="Exiles",
+	startlevel=41,
+	endlevel=46,
+	nextguide="Exiles\\Grimvault (46-50)",
+	image="ZygorUIGuides:Malgrave", 
+	description="Malgrave is a zone in southern Isigrol in WildStar. It is a sparse dry desert filled with bandits, rampaging elementals, and ancient Eldan ruins. Malgrave is a contested zone, and is intended for players level 40-46. There is also a Post-Cap Playspace intended for level 50 characters in the northern part of the zone.",
+	},
+	[[
 	step
 		'Press _C_ to use your communicator:
 		..accept Journey to Malgrave##8972
@@ -1049,4 +1052,5 @@ ZGV:RegisterGuide("Exiles\\Malgrave (41-46)",
 	step
 		.talk Dorian Walker##290663
 		..turnin The Long Road Home##7378 |goto Malgrave 1659,2864,-820
-]])
+	]]
+)

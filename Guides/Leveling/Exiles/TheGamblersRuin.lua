@@ -1,12 +1,14 @@
+if not ZGV then return end
 ZGV:RegisterGuide("Exiles\\The Gambler's Ruin (1-3)",
 	{
-		faction="Exiles",
-		startlevel=1,
-		endlevel=3,
-		nextguide="Exiles\\Northern Wilds (3-6)",
-		image="ZygorUIGuides:TheGamblersRuin", 
-		description="Northern Wilds is a zone in northern Alizar in WildStar. Northern Wilds is a beginner zone for The Exiles, and is suited for characters level 3-6. "
-	},[[
+	faction="Exiles",
+	startlevel=1,
+	endlevel=3,
+	nextguide="Exiles\\Northern Wilds (3-6)",
+	image="ZygorUIGuides:TheGamblersRuin", 
+	description="Northern Wilds is a zone in northern Alizar in WildStar. Northern Wilds is a beginner zone for The Exiles, and is suited for characters level 3-6. ",
+	},
+	[[
 	step
 		.talk Deadeye Brightland##770555 |goto ExileArkShipTutorial 1510,819,80
 		..accept Cryo Crisis##6735
@@ -324,4 +326,5 @@ ZGV:RegisterGuide("Exiles\\The Gambler's Ruin (1-3)",
 		.'You can choose your next destination:
 		.' Click here to continue to _Northern Wilds_ |nextguide Exiles\\Northern Wilds (3-6)
 		.' Click here to continue to _Everstar Groove_ |nextguide Exiles\\Everstar Grove (3-6)
-]])
+	]]
+)

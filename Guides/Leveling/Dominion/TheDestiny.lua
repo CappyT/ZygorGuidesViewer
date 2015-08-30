@@ -1,3 +1,4 @@
+if not ZGV then return end
 ZGV:RegisterGuide("Dominion\\The Destiny (1-3)",
 	{
 	faction="Dominion",
@@ -5,7 +6,7 @@ ZGV:RegisterGuide("Dominion\\The Destiny (1-3)",
 	endlevel=3,
 	nextguide="Dominion\\Crimson Isle (3-6)",
 	image="ZygorUIGuides:TheDestiny", 
-	description="The Destiny is the Dominion Ark Ship starting area, where players begin their adventure through Nexus. It is suited for characters level 1-3."
+	description="The Destiny is the Dominion Ark Ship starting area, where players begin their adventure through Nexus. It is suited for characters level 1-3.",
 	},
 	[[
 	step

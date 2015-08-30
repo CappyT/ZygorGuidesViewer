@@ -1,13 +1,15 @@
+if not ZGV then return end
 ZGV:RegisterGuide("Exiles\\Whitevale (23-29)",
-		{faction="Exiles",
-		nextguide="Exiles\\Farside (29-35)",
-		image="ZygorUIGuides:Whitevale", 
-		startlevel=23,
-		endlevel=29,
-		description="Whitevale is a zone in central Alizar in WildStar. It is a a frozen wasteland that is under the influence of strange weather-altering technology. Whitevale is also a region suited for levels 25-33."	
-		},[[
+	{
+	faction="Exiles",
+	startlevel=23,
+	endlevel=29,
+	nextguide="Exiles\\Farside (29-35)",
+	image="ZygorUIGuides:Whitevale", 
+	description="Whitevale is a zone in central Alizar in WildStar. It is a a frozen wasteland that is under the influence of strange weather-altering technology. Whitevale is also a region suited for levels 25-33.",
+	},
+	[[
 	step
-		
 		.' Use your Teleport ability to return to _Teleport: Thayd_ |goto Thayd 4260,-2208,-810 < 300
 		.' Take the _elevator up_ |goto Thayd 4314,-1607,-721 < 10
 		.click Talon of Osiric Display##274905
@@ -1260,4 +1262,5 @@ ZGV:RegisterGuide("Exiles\\Whitevale (23-29)",
 	step
 		.talk Lulu Blackbush##275523
 		..turnin Back to Thayd##8767 |goto 4033,-2378,-800
-]])
+	]]
+)

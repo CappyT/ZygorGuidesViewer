@@ -1,11 +1,14 @@
+if not ZGV then return end
 ZGV:RegisterGuide("Exiles\\Algoroc (6-15)",
-		{faction="Exiles",
-		nextguide="Exiles\\Galeras (15-23)",
-		image="ZygorUIGuides:Algoroc", 
-		description="Algoroc is a zone in northern Alizar in WildStar. It is a cold, mountainous region, covered in snow and ice. Algoroc is the staging ground for humans and Granok, and is part of Exile territory. The zone is intended for characters levels 6-14.",
-		startlevel=6,
-		endlevel=15,
-		},[[
+	{
+	faction="Exiles",
+	startlevel=6,
+	endlevel=15,
+	nextguide="Exiles\\Galeras (15-23)",
+	image="ZygorUIGuides:Algoroc", 
+	description="Algoroc is a zone in northern Alizar in WildStar. It is a cold, mountainous region, covered in snow and ice. Algoroc is the staging ground for humans and Granok, and is part of Exile territory. The zone is intended for characters levels 6-14.",
+	},
+	[[
 	step
 		.talk "Dodger"##268576
 		..accept Touring Tremor Ridge##9164 |goto Algoroc 3856,-4525,-1006
@@ -1149,4 +1152,5 @@ ZGV:RegisterGuide("Exiles\\Algoroc (6-15)",
 	step
 		'Press _C_ to use your communicator:
 		..turnin Migrant Mootation##4876
-]])
+	]]
+)

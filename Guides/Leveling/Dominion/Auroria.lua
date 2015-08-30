@@ -1,3 +1,4 @@
+if not ZGV then return end
 ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 	{
 	faction="Dominion",

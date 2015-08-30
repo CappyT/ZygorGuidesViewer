@@ -1,3 +1,4 @@
+if not ZGV then return end
 ZGV:RegisterGuide("Dominion\\Wilderrun (35-41)",
 	{
 	faction="Dominion",

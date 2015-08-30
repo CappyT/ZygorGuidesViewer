@@ -1,10 +1,13 @@
+if not ZGV then return end
 ZGV:RegisterGuide("Exiles\\Grimvault (46-50)",
-		{faction="Exiles",
-		image="ZygorUIGuides:Grimvault", 
-		description="Grimvault is a zone in central Isigrol in WildStar. It is a contested zone that has been almost entirely taken over by The Strain. It is intended for level 46-50.",
-		startlevel=46,
-		endlevel=50,
-		},[[
+	{
+	faction="Exiles",
+	startlevel=46,
+	endlevel=50,
+	image="ZygorUIGuides:Grimvault", 
+	description="Grimvault is a zone in central Isigrol in WildStar. It is a contested zone that has been almost entirely taken over by The Strain. It is intended for level 46-50.",
+	},
+	[[
 	step
 		'Press _C_ to use your communicator:
 		..accept An Unexpected Enemy##9070
@@ -826,4 +829,5 @@ ZGV:RegisterGuide("Exiles\\Grimvault (46-50)",
 		..turnin Freedom of Information##8988
 	step
 		.' Congratulations, you have completed the Exiles' Leveling Guide!
-]])
+	]]
+)

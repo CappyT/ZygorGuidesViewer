@@ -1,3 +1,4 @@
+if not ZGV then return end
 ZGV:RegisterGuide("Dominion\\Whitevale (23-29)",
 	{
 	faction="Dominion",

@@ -1,13 +1,14 @@
 if not ZGV then return end
-
 ZGV:RegisterGuide("Exiles\\Northern Wilds (3-6)",
-		{faction="Exiles",
-		nextguide="Exiles\\Algoroc (6-15)",
-		image="ZygorUIGuides:NorthernWilds", 
-		description="Northern Wilds is a zone in northern Alizar in WildStar. Northern Wilds is a beginner zone for The Exiles, and is suited for characters level 3-6. ",
-		startlevel=3,
-		endlevel=6,
-		},[[
+	{
+	faction="Exiles",
+	startlevel=3,
+	endlevel=6,
+	nextguide="Exiles\\Algoroc (6-15)",
+	image="ZygorUIGuides:NorthernWilds", 
+	description="Northern Wilds is a zone in northern Alizar in WildStar. Northern Wilds is a beginner zone for The Exiles, and is suited for characters level 3-6. ",
+	},
+	[[
 	step
 		.' _Go through_ the doorway |goto ExileArkShipTutorial -960,590,83
 		.' _Go through_ the doorway into the long hall |goto ExileArkShipTutorial -998,719,83 < 10
@@ -251,4 +252,5 @@ ZGV:RegisterGuide("Exiles\\Northern Wilds (3-6)",
 		.' Go up the ship's ramp |goto 4527,-5172,-701
 		.click Ship Controls##262197
 		.' Activate the ship's controls to depart for Algoroc |q More Important Than Revenge##3963/Activate the Ship Controls##1 |goto 4519,-5165,-695
-]])
+	]]
+)

@@ -1,3 +1,4 @@
+if not ZGV then return end
 ZGV:RegisterGuide("Dominion\\Farside (29-35)",
 	{
 	faction="Dominion",

@@ -1,11 +1,14 @@
+if not ZGV then return end
 ZGV:RegisterGuide("Exiles\\Galeras (15-23)",
-		{faction="Exiles",
-		image="ZygorUIGuides:Galeras", 
-		nextguide="Exiles\\Whitevale (23-29)",
-		description="Galeras is a zone in northeastern Alizar in WildStar. It is a massive wind-swept prairie, and is home to The Exiles' capital, Thayd. Galeras is also a region suited for levels 14-25.",
-		startlevel=15,
-		endlevel=23,
-		},[[
+	{
+	faction="Exiles",
+	startlevel=15,
+	endlevel=23,
+	image="ZygorUIGuides:Galeras", 
+	nextguide="Exiles\\Whitevale (23-29)",
+	description="Galeras is a zone in northeastern Alizar in WildStar. It is a massive wind-swept prairie, and is home to The Exiles' capital, Thayd. Galeras is also a region suited for levels 14-25.",
+	},
+	[[
 	step
 		'Press _C_ to use your communicator:
 		..accept A Sticky Situation##5101 |goto Galeras 4456,-2172,-843
@@ -1373,4 +1376,5 @@ ZGV:RegisterGuide("Exiles\\Galeras (15-23)",
 		.talk Game Hunter Joresh##289048
 		..turnin Exotic Game##4683 |goto Galeras 6025,-2126,-888
 		..turnin One Last Haircut##4938 |goto 6025,-2126,-888
-]])
+	]]
+)

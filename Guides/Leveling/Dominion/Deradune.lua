@@ -1,3 +1,4 @@
+if not ZGV then return end
 ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 	{
 	faction="Dominion",

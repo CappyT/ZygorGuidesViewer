@@ -1,11 +1,14 @@
+if not ZGV then return end
 ZGV:RegisterGuide("Exiles\\Farside (29-35)",
-		{faction="Exiles",
-		nextguide="Exiles\\Wilderrun (35-41)",
-		image="ZygorUIGuides:Farside", 
-		description="Farside is a zone on the Halon moon orbiting Nexus in WildStar. It is a terraformed star, with a large moon base containing two bio-domes, one jungle, the other desert. Farside is the leveling zone for both The Exiles and The Dominion for levels 28-35.",
-		startlevel=29,
-		endlevel=41,
-		},[[
+	{
+	faction="Exiles",
+	startlevel=29,
+	endlevel=41,
+	nextguide="Exiles\\Wilderrun (35-41)",
+	image="ZygorUIGuides:Farside", 
+	description="Farside is a zone on the Halon moon orbiting Nexus in WildStar. It is a terraformed star, with a large moon base containing two bio-domes, one jungle, the other desert. Farside is the leveling zone for both The Exiles and The Dominion for levels 28-35.",
+	},
+	[[
 	step
 		.click Venture Board##275516
 		..accept Venture into Farside!##9462 |goto Thayd 3976,-2348,-789
@@ -906,4 +909,5 @@ ZGV:RegisterGuide("Exiles\\Farside (29-35)",
 	step
 		.click Ship to Walker's Landing##270550
 		.' Click _Yes_ to return to Thayd |q Thayd Into You##6537/2 |goto 4435,-5663,-713
-]])
+	]]
+)

@@ -1,3 +1,4 @@
+if not ZGV then return end
 ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 	{
 	faction="Dominion",

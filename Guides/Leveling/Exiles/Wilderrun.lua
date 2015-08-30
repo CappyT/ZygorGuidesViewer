@@ -1,11 +1,14 @@
+if not ZGV then return end
 ZGV:RegisterGuide("Exiles\\Wilderrun (35-41)",
-		{faction="Exiles",
-		nextguide="Exiles\\Malgrave (41-46)",
-		image="ZygorUIGuides:Wilderrun", 
-		startlevel=35,
-		endlevel=41,
-		description="Wilderrun is a zone in eastern Olyssia in WildStar. It is a a dense jungle that is has been infused with primal life energy. The players will follow Artemis Zin and Dorian Walker as they race to the Everpool, which will grant eternal life. It is best suited for characters level 35-41."	
-		},[[
+	{
+	faction="Exiles",
+	startlevel=35,
+	endlevel=41,
+	nextguide="Exiles\\Malgrave (41-46)",
+	image="ZygorUIGuides:Wilderrun",
+	description="Wilderrun is a zone in eastern Olyssia in WildStar. It is a a dense jungle that is has been infused with primal life energy. The players will follow Artemis Zin and Dorian Walker as they race to the Everpool, which will grant eternal life. It is best suited for characters level 35-41.",
+	},
+	[[
 	step
 		'Press _C_ to use your communicator:
 		..accept Journey to Wilderrun##8843
@@ -1152,4 +1155,5 @@ ZGV:RegisterGuide("Exiles\\Wilderrun (35-41)",
 		.talk Depot Agent Sakiro##266335
 		..turnin The Megadroids##7768 |goto Wilderrun 2463,-4796,-774
 		..accept Crimson Ore Shipment##9468 |goto 2463,-4796,-774
-]])
+	]]
+)

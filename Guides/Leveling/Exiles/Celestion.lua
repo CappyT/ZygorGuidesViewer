@@ -1,13 +1,14 @@
 if not ZGV then return end
-
 ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 	{
-		faction="Exiles",
-		startlevel=6,
-		endlevel=15,
-		nextguide="Exiles\\Galeras (15-23)", 
-		image="ZygorUIGuides:NorthernWilds",
-	},[[
+	faction="Exiles",
+	startlevel=6,
+	endlevel=15,
+	nextguide="Exiles\\Galeras (15-23)", 
+	image="ZygorUIGuides:Celestion",
+	description="Celestion is a zone in northern Alizar in WildStar. It is large forest region, and is a major foothold for The Exiles. Celestion is heavily influenced by the Aurin and Mordesh, and is intended for players levels 6-15.",
+	},
+	[[
 	step
 		.' _Leave_ the cave |goto Celestion 924,-3095,-890
 		.talk Arwick Redleaf##292806
@@ -1590,4 +1591,5 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 	step
 		.' Press _C_ to use your communicator:
 		..turnin Migrant Mootation##4876
-]])	
+	]]
+)	

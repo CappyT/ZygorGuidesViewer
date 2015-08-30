@@ -1,3 +1,4 @@
+if not ZGV then return end
 ZGV:RegisterGuide("Dominion\\Levian Bay (3-6)",
 	{
 	faction="Dominion",
