@@ -30,8 +30,7 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		.click Mailbox##277103 |goto Deradune -5646,-682,-975
 		.' Select the Mailbox |q Bloodfire Village Amenities##9875/3
 	step
-		.talk Merchant Drokari |goto Deradune -5624,-697,-977
-		.' Speak with Merchant Drokari |q Bloodfire Village Amenities##9875/4
+		.talk Merchant Drokari |q Bloodfire Village Amenities##9875/4 |goto Deradune -5624,-697,-977
 		'You can rent a mount for 24 hour playtime
 	step
 		.click Transmat Terminal##284476 |goto Deradune -5599,-781,-983

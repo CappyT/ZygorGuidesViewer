@@ -1,12 +1,11 @@
 if not ZGV then return end
 ZGV:RegisterGuide("Dominion\\Malgrave (41-46)",
-	{
-	faction="Dominion",
-	startlevel=41,
-	endlevel=46,
-	--image="ZygorUIGuides:Malgrave",
-	nextguide="Dominion\\Grimvault (46-50)",
-	description="Malgrave is a dry desert zone located in southern Isigrol. It is best suited for characters level 41-46. "
+	{faction="Dominion",
+		nextguide="Dominion\\Grimvault (46-50)",
+		image="ZygorUIGuides:Malgrave", 
+		description="Malgrave is a zone in southern Isigrol in WildStar. It is a sparse dry desert filled with bandits, rampaging elementals, and ancient Eldan ruins. Malgrave is a contested zone, and is intended for players level 40-46. There is also a Post-Cap Playspace intended for level 50 characters in the northern part of the zone.",
+		startlevel=41,
+		endlevel=46,
 	},[[
 	step
 		'Press _C_ to use your communicator:

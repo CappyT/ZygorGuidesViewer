@@ -3,16 +3,17 @@ if not ZGV then return end
 ZGV:RegisterGuide("Exiles\\Everstar Grove (3-6)",
 	{
 		faction="Exiles",
-		image="ZygorUIGuides:NorthernWilds",
 		startlevel=3,
 		endlevel=6,
+		nextguide="Exiles\\Celestion (6-15)",
+		image="ZygorUIGuides:EverstarGrove",
 		description="Everstar Grove is a zone in northern Alizar in WildStar. Everstar Grove is a beginner zone for The Exiles, and is suited for characters level 3-6. ",
 	},[[
 	step
 		.' _Go through_ the doorway into the long hallway |goto ExileArkShipTutorial -998,812,83
 		.' _Leave_ the long hallway |goto ExileArkShipTutorial -998,729,85
 		.' _Go through_ the doorway Towards the Departure Terminal |goto -961,695,83 	
-		.click Departures Terminal:Everstar Grove##262599
+		.click Departures Terminal:Greenleaf Glade##262599
 		.' Travel to Everstar Grove on Nexus |q Never Thayd Away##6760/3 |goto -920,698,88
 		|only Human 
 	step
@@ -30,37 +31,36 @@ ZGV:RegisterGuide("Exiles\\Everstar Grove (3-6)",
 		.click Departures Terminal:Everstar Grove##262600
 		.' Travel to Everstar Grove on Nexus  |q Base Drop##6759/3 |goto ExileArkShipTutorial -920,698,88
 		|only Granok
-//NEW^^
+//Mordesh
 	step
-		.talk Alchemist Kossvak##263160
-		..turnin The Ravenous Grove##6762 |goto EverstarGrove -285,-2362,-937
+		.talk Alchemist Kossvak##263160 |goto EverstarGrove -285,-2362,-937
+		..turnin The Ravenous Grove##6762
 		..accept Welcome to Everstar Grove##9124
 		|only Mordesh
 	step
-		.talk Lukas Piotrev##263176
-		..turnin Welcome to Everstar Grove##9124 |goto -312,-2344,-942
-		..accept Combating the Contagion##6297 |goto -312,-2344,-942
+		.talk Lukas Piotrev##263176 |goto -312,-2344,-942
+		..turnin Welcome to Everstar Grove##9124
+		..accept Combating the Contagion##6297
 		|only Mordesh
 	step
-		.kill Ravenous Mordesh##442550
 		.' Kill Ravenous Mordesh |q Combating the Contagion##6297/1 |goto EverstarGrove -418,-2355,-951
 		.click Infected Alchemist##436657
 		.' Put Infected Alchemists out of their misery |q Combating the Contagion##6297/2 |goto EverstarGrove -418,-2355,-951
 		|only Mordesh
 	step
-		.talk Scout Frostfield##263162
-		..turnin Never Thayd Away##6760 |goto EverstarGrove -769,-2274,-905
-		..accept Welcome to Everstar Grove##9113 |goto -769,-2274,-905
+		.talk Scout Frostfield##263162 |goto EverstarGrove -769,-2274,-905
+		..turnin Never Thayd Away##6760
+		..accept Welcome to Everstar Grove##9113
 		|only Human
 	step
-		.talk Keeper Shyroot##263161
-		..turnin Everstar Grove##6761 |goto EverstarGrove -769,-2275,-905
+		.talk Keeper Shyroot##263161 |goto EverstarGrove -769,-2275,-905
+		..turnin Everstar Grove##6761
 		..accept Welcome to Everstar Grove##9115
 		|only Aurin
 	step
-		.talk Trooper Takag##263163
-		..turnin Base Drop##6759 |goto EverstarGrove -770,-2274,-905
-		..accept Welcome to Everstar Grove##9072 |goto EverstarGrove -770,-2274,-905
+		.talk Trooper Takag##263163 |goto EverstarGrove -770,-2274,-905
+		..turnin Base Drop##6759
+		..accept Welcome to Everstar Grove##9072
 		|only Granok
 	step
 		.talk Fenra Skytree##263175
@@ -70,8 +70,6 @@ ZGV:RegisterGuide("Exiles\\Everstar Grove (3-6)",
 		..accept Nature's Uprising##6296 |goto EverstarGrove -761,-2274,-905
 		|only Human, Aurin, Granok
 	step
-		.kill Mystwing Shredder##270659
-		.kill Mystwing Boomer##273056
 		.' Kill Mystwing Shredders and Mystwing Boomers |q Nature's Uprising##6296/1 |goto EverstarGrove -774,-2406,-928
 		.click Trapped Mordesh##272816 |tip More of these can be found around the crash site.
 		.' Rescue Exiles from Bramble Traps |q Nature's Uprising##6296/2 |goto EverstarGrove -741,-2506,-942
@@ -118,9 +116,9 @@ ZGV:RegisterGuide("Exiles\\Everstar Grove (3-6)",
 		.talk Tender Choshi##263045
 		.accept Trampled Under Hoof##8978 |goto -511,-3051,-945
 	step
-		.talk Queen Myala Everstar##263179
-		.' Check in with Queen Myala Everstar |q The Arboretum##8804/4 |goto EverstarGrove -516,-3312,-906 |only Human, Aurin, Granok
-		.' Check in with Queen Myala Everstar |q The Arboretum##7499/4 |goto EverstarGrove -516,-3312,-906 |only Mordesh
+		.talk Queen Myala Everstar##263179 |goto EverstarGrove -516,-3312,-906 
+		.' Check in with Queen Myala Everstar |q The Arboretum##8804/4 |only Human, Aurin, Granok
+		.' Check in with Queen Myala Everstar |q The Arboretum##7499/4 |only Mordesh
 	step
 		.talk Victor Lazarin##263178
 		..turnin The Arboretum##8804 |goto EverstarGrove -425,-3268,-893|only Human, Aurin, Granok
@@ -143,22 +141,22 @@ ZGV:RegisterGuide("Exiles\\Everstar Grove (3-6)",
 	step
 		.' Follow the path |goto EverstarGrove -354,-3205,-912 <20
 		.' _Go up_ the hill |goto -379,-3296,-905 <20
-		.talk Victor Lazarin##263178
-		..turnin Root Resuscitation##6301 |goto -425,-3269,-893
-		..accept Waking Elderoot##6302 |goto -425,-3269,-893
+		.talk Victor Lazarin##263178 |goto -425,-3269,-893
+		..turnin Root Resuscitation##6301
+		..accept Waking Elderoot##6302
 	step
 		.click Espernetic Interface##263159
 		.' Access the Espernetic Interface |q Waking Elderoot##6302/1 |goto -397,-3260,-886
 	step
-		.talk Elderoot##263164
-		..turnin Waking Elderoot##6302 |goto EverstarGrove -397,-3260,-886
-		..accept Elderoot's Request##7540 |goto EverstarGrove -397,-3260,-886
+		.talk Elderoot##263164 |goto EverstarGrove -397,-3260,-886
+		..turnin Waking Elderoot##6302
+		..accept Elderoot's Request##7540
 	step
-		.talk Queen Myala Everstar##263173
-		..accept Save the Keepers##6304 |goto EverstarGrove -400,-3262,-886
+		.talk Queen Myala Everstar##263173 |goto EverstarGrove -400,-3262,-886
+		..accept Save the Keepers##6304
 	step
-		.talk Victor Lazarin##263178
-		..accept A Plagued Forest##6303 |goto EverstarGrove -424,-3267,-893
+		.talk Victor Lazarin##263178 |goto EverstarGrove -424,-3267,-893
+		..accept A Plagued Forest##6303
 	step
 		.kill Barkblight Feeder##283576 |tip They are located all around this area.
 		.' Collect Barkblight Glands |q A Plagued Forest##6303/1 |goto EverstarGrove -634,-3701,-949
@@ -217,15 +215,16 @@ ZGV:RegisterGuide("Exiles\\Everstar Grove (3-6)",
 	step
 		.' _Follow_ the path |goto -429,-3287,-900 <15
 	step
-		.talk Victor Lazarin##263179
-		..turnin A Lurking Threat##6309 |goto EverstarGrove -423,-3267,-893
+		.talk Victor Lazarin##263179 |goto EverstarGrove -423,-3267,-893
+		..turnin A Lurking Threat##6309
 	step
-		.talk Elderoot##263164
-		..turnin Elderoot's Request##7540 |goto -396,-3259,-886
-		..accept Everything You Ever Wanted to Know##8784 |goto -396,-3259,-886	step
-		.talk Queen Myala Everstar##263171
-		..turnin Everything You Ever Wanted to Know##8784 |goto EverstarGrove -516,-3312,-906
-		..accept Taking the Offensive##6335 |goto -516,-3312,-906
+		.talk Elderoot##263164 |goto -396,-3259,-886
+		..turnin Elderoot's Request##7540
+		..accept Everything You Ever Wanted to Know##8784
+	step
+		.talk Queen Myala Everstar##263171 |goto EverstarGrove -516,-3312,-906
+		..turnin Everything You Ever Wanted to Know##8784
+		..accept Taking the Offensive##6335
 	step
 		.talk Vengeful Mender##263165
 		..accept By the Throat##7539 |goto EverstarGrove -367,-3393,-910
@@ -233,12 +232,16 @@ ZGV:RegisterGuide("Exiles\\Everstar Grove (3-6)",
 		.click Elderoot Seed##285092 |tip They can be found around this area.
 		.' Collect Elderoot Seeds |q By the Throat##7539/1 |goto -228,-3512,-919
 	step
-		.talk Arwick Redleaf##263177
-		..turnin Taking the Offensive##6335 |goto EverstarGrove -115,-3472,-927
-		..accept Arwick's Revenge##6310 |goto EverstarGrove -115,-3472,-927
+		.talk Arwick Redleaf##263177 |goto EverstarGrove -115,-3472,-927
+		..turnin Taking the Offensive##6335
+		..accept Arwick's Revenge##6310
 	step
 		.talk Victor Lazarin##263172
 		..accept No Escape##6311 |goto -113,-3476,-927
+	step
+		'This is an auto complete quest
+		.talk Firestorm Scout  |goto 163,-3427,-920
+		..turnin For the Glory of the Dominion##8977
 	step
 		.click Firestorm Assault Deforester##262870
 		.' Deactivate Firestorm Assault Deforesters |q By the Throat##7539/2 |count 33 |goto EverstarGrove 244,-3476,-945
@@ -254,8 +257,8 @@ ZGV:RegisterGuide("Exiles\\Everstar Grove (3-6)",
 		.' Kill Firestorm forces |q Arwick's Revenge##6310/1 |goto EverstarGrove 409,-3473,-947
 	step
 		.' Press _C_ to use your Communicator:
-		..turnin By the Throat##7539
 		..turnin Arwick's Revenge##6310
+		..turnin By the Throat##7539
 		..accept Dominion's Demise##6312
 	step
 		.click Firestorm Drilldozer##262938

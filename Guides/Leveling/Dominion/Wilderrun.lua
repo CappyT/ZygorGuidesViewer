@@ -5,7 +5,7 @@ ZGV:RegisterGuide("Dominion\\Wilderrun (35-41)",
 	endlevel=41,
 	nextguide="Dominion\\Malgrave (41-46)",
 	image="ZygorUIGuides:Wilderrun", 
-	description="Wilderrun is a dense jungle zone infused with primal life energy, and home to the legendary Everpool. It is best suited for characters level 35-41. "
+	description="Wilderrun is a dense jungle zone infused with primal life energy. The players will follow Artemis Zin and Dorian Walker as they race to the Everpool, which will grant eternal life. It is best suited for characters level 35-41. "
 	},
 	[[
 	step

@@ -135,8 +135,8 @@ ZGV:RegisterGuide("Dominion\\The Destiny (1-3)",
 	step
 		' _Run up_ the stairs |goto DominionArkShipTutorialCryogenics -281,-17,-1 < 10 |c |q 7009/1
 	step
-		' Press _G_ to invoke Scanbot
-		.' Scan Antevian Tribute Display |mission ANALYSIS: Not-so-Humble Beginnings##3147 |count 25 |goto DominionArkShipTutorialCryogenics -303,-13,7
+		'Click _Antevian Tribute Display_, press _G_ to:
+		.' Scan _Antevian Tribute Display_ |mission ANALYSIS: Not-so-Humble Beginnings##3147 |count 25 |goto DominionArkShipTutorialCryogenics -303,-13,7
 		|only Scientist
 	step
 		.' _Jump_ to the glass roof here |goto DominionArkShipTutorialCryogenics -308,-29,6 < 10 |c |q 7009/1
@@ -146,22 +146,22 @@ ZGV:RegisterGuide("Dominion\\The Destiny (1-3)",
 	step
 		.' _Jump_ to the platform |goto DominionArkShipTutorialCryogenics -288,-53,6 < 5
 	step
-		' Press _G_ to invoke Scanbot
-		.' Scan Zax Tribute Display |mission ANALYSIS: Not-so-Humble Beginnings##3147 |count 50 |goto DominionArkShipTutorialCryogenics -294,-65,7
+		'Click _Zax Tribute Display_, press _G_ to:
+		.' Scan _Zax Tribute Display_ |mission ANALYSIS: Not-so-Humble Beginnings##3147 |count 50 |goto DominionArkShipTutorialCryogenics -294,-65,7
 		|only Scientist
 	step
 		.click TALES: Embrace Your Destiny!##262814 |goto DominionArkShipTutorialCryogenics -257,-108,6
 		.' Compile a collection of TALES FROM BEYOND THE FRINGE! |q Knowledge is Everywhere##7009/1 |count 2
 	step
-		' Press _G_ to invoke Scanbot
-		.' Scan Kezrek Warbringer Display |mission ANALYSIS: Not-so-Humble Beginnings##3147 |count 75 |goto DominionArkShipTutorialCryogenics -232,-106,7
+		'Click _Kezrek Warbringer Display_, press _G_ to:
+		.' Scan _Kezrek Warbringer Display_ |mission ANALYSIS: Not-so-Humble Beginnings##3147 |count 75 |goto DominionArkShipTutorialCryogenics -232,-106,7
 		|only Scientist
 	step
 		.click Galactic Explorer's Handbook##262817 |goto DominionArkShipTutorialCryogenics -235,-77,6
 		.' Find the Galactic Explorer's Handbook |q Knowledge is Everywhere##7009/2
 	step
-		' Press _G_ to invoke Scanbot
-		.' Scan Axis Pheydra Tribute Display |mission ANALYSIS: Not-so-Humble Beginnings##3147 |goto DominionArkShipTutorialCryogenics -233,-64,7
+		'Click _Axis Pheydra Tribute Display_, press _G_ to:
+		.' Scan _Axis Pheydra Tribute Display_ |mission ANALYSIS: Not-so-Humble Beginnings##3147 |goto DominionArkShipTutorialCryogenics -233,-64,7
 		|only Scientist
 	step
 		'_Scientists_ can find hidden Datacubes and lore in the world |only Scientist
@@ -210,36 +210,41 @@ ZGV:RegisterGuide("Dominion\\The Destiny (1-3)",
 	step
 		'Click _Maintenance Switch_ to spawn a ramp |goto DominionArkShipTutorialCryogenics -838,-1208,-36
 		.click Holochamber Surveillance Camera  |goto DominionArkShipTutorialCryogenics -813,-1194,-20
-		.' Click Holochamber Surveillance Camera |mission OPERATIONS: Eyes Ever Watching##3154 | count 1
+		.' Click _Holochamber Surveillance Camera_ |mission OPERATIONS: Eyes Ever Watching##3154 | count 1
 		|only Explorer
 	step
 		' Kill 2 _Granok_ holograms
 		.' Kill Greyneck Granok holograms |q (Un)Safety Protocols##7013/2 |goto DominionArkShipTutorialCryogenics -799,-1259,-37
 	step
-		' Press _G_ to invoke Scanbot |goto DominionArkShipTutorialCryogenics -304,-17,7
-		.' Scan Medical Refrigerator |mission ANALYSIS: Trust, but Verify##3150  |count 25 |goto DominionArkShipTutorialCryogenics -801,-1266,-36
+		'Click _Medical Refrigerator_, press _G_ to: |goto DominionArkShipTutorialCryogenics -304,-17,7
+		.' Scan _Medical Refrigerator_ |mission ANALYSIS: Trust, but Verify##3150  |count 25 |goto DominionArkShipTutorialCryogenics -801,-1266,-36
 		|only Scientist
 	step
 		.click Primal Fusion Device##262744 |goto DominionArkShipTutorialCryogenics -781,-1278,-31
 		.' Arm the Primal Fusion Device |q (Un)Safety Protocols##7013/3 |tip Run away after you click to avoid damage.
 	step
 		.' _Run out_ of the Simulator |goto DominionArkShipTutorialCryogenics -853,-1206,-32 < 10
-		.' Click _ASSASINATION: Avra Darkos (Soldier Mission)_ (optional)|tip These consoles will give you Soldier missions around the world |goto DominionArkShipTutorialCryogenics -944,-1156,-33 |only Soldier
+		.' Click _ASSASINATION: Avra Darkos (Soldier Mission)_ (optional)|tip These consoles will give you Soldier missions around the world |goto DominionArkShipTutorialCryogenics -944,-1156,-33
 		.' _Enter_ the Mordesh Simulation training room |q (Un)Safety Protocols##7013/4 |goto DominionArkShipTutorialCryogenics -850,-1063,-32
+		 |only Soldier
+	step
+		.' _Run out_ of the Simulator |goto DominionArkShipTutorialCryogenics -853,-1206,-32 < 10
+		.' _Enter_ the Mordesh Simulation training room |q (Un)Safety Protocols##7013/4 |goto DominionArkShipTutorialCryogenics -850,-1063,-32
+		|only Explorer, Scientist, Settler
 	step
 		'Click _Maintenance Switch_ to spawn a ramp |goto DominionArkShipTutorialCryogenics -839,-1067,-34
 		.click Holochamber Surveillance Camera |goto DominionArkShipTutorialCryogenics -816,-1079,-26
-		.' Click Holochamber Surveillance Camera |mission OPERATIONS: Eyes Ever Watching##3154 | count 2
+		.' Click _Holochamber Surveillance Camera_ |mission OPERATIONS: Eyes Ever Watching##3154 | count 2
 		|only Explorer
 	step
 		.click Failed Recruit##354358
 		.' Collect Failed Trainee IDs from Failed Recruits |q (Un)Safety Protocols##7013/5 |goto DominionArkShipTutorialCryogenics -802,-1024,-40
 	step
-		' Press _G_ to invoke Scanbot |goto DominionArkShipTutorialCryogenics -805,-1049,-36
-		.' Scan "Fresh" Remains |mission ANALYSIS: Trust, but Verify##3150 |count 50 |goto DominionArkShipTutorialCryogenics -805,-1049,-36
+		'Click _"Fresh" Remains_, press _G_ to: |goto DominionArkShipTutorialCryogenics -805,-1049,-36
+		.' Scan _"Fresh" Remains_ |mission ANALYSIS: Trust, but Verify##3150 |count 50 |goto DominionArkShipTutorialCryogenics -805,-1049,-36
 		|only Scientist
 	step
-		.' Kill Avra Darkos |mission ASSASSINATION: Avra Darkos##3144 |goto DominionArkShipTutorialCryogenics -868,-1006,-38
+		.' Kill _Avra Darkos_ |mission ASSASSINATION: Avra Darkos##3144 |goto DominionArkShipTutorialCryogenics -868,-1006,-38
 		|only Soldier
 	step
 		'Press _C_ to open your Communitcator:
@@ -255,14 +260,14 @@ ZGV:RegisterGuide("Dominion\\The Destiny (1-3)",
 	step
 		'Click _Maintenance Switch_ to spawn a ramp |goto DominionArkShipTutorialCryogenics -1000,-1203,-36
 		.click Holochamber Surveillance Camera |goto DominionArkShipTutorialCryogenics -1010,-1197,-25
-		.' Click Holochamber Surveillance Camera |mission OPERATIONS: Eyes Ever Watching##3154 | count 3
+		.' Click _Holochamber Surveillance Camera_ |mission OPERATIONS: Eyes Ever Watching##3154 | count 3
 		|only Explorer
 	step
 		.click Eviction Notice |goto DominionArkShipTutorialCryogenics -1034,-1194,-38
 		.' Evict Exile Bumpkins and Exile Yokels |q Busting Skulls, Burning Trees##7017/2
 	step
-		' Press _G_ to invoke Scanbot |goto DominionArkShipTutorialCryogenics -1068,-1193,-33
-		.' Scan Speaker |mission ANALYSIS: Trust, but Verify##3150 |count 75 |goto DominionArkShipTutorialCryogenics -1068,-1193,-33
+		'Click _Speaker_, press _G_ to: |goto DominionArkShipTutorialCryogenics -1068,-1193,-33
+		.' Scan _Speaker_ |mission ANALYSIS: Trust, but Verify##3150 |count 75 |goto DominionArkShipTutorialCryogenics -1068,-1193,-33
 		|only Scientist
 	step
 		.' _Run out_ of the Simulator |goto DominionArkShipTutorialCryogenics -986,-1209,-32 < 10 |c |q 7017/3
@@ -273,8 +278,8 @@ ZGV:RegisterGuide("Dominion\\The Destiny (1-3)",
 		.' Climb the tree in the Aurin Simulation Room |tip Click checkmark right to I'm Impressed |mission SURVEILLANCE: I'm Impressed##3153 |goto DominionArkShipTutorialCryogenics -1039,-1018,-11
 		|only Explorer
 	step
-		' Press _G_ to invoke Scanbot |goto DominionArkShipTutorialCryogenics -1024,-1040,-35
-		.' Scan Thumper |mission ANALYSIS: Trust, but Verify##3150 |goto DominionArkShipTutorialCryogenics -1024,-1040,-35
+		'Click _Thumper_, press _G_ to: |goto DominionArkShipTutorialCryogenics -1024,-1040,-35
+		.' Scan _Thumper_ |mission ANALYSIS: Trust, but Verify##3150 |goto DominionArkShipTutorialCryogenics -1024,-1040,-35
 		|only Scientist
 	step
 		.click Sapling##1021301
@@ -362,9 +367,9 @@ ZGV:RegisterGuide("Dominion\\The Destiny (1-3)",
 		.' Speak with Kezrek Warbringer |q Savage Coast Savagery##7060/1
 		|only Draken
 	step
-		.' You will be able to continue your adventure in two locations from this point on:
-		.' Click here if you wish to continue to _Crimson Isle_ |nextguide Dominion\\Crimson Isle (3-6)
+		.'You can choose your next destination:
+		.' Click here to continue to _Crimson Isle_ |nextguide Dominion\\Crimson Isle (3-6)
 		.' _Or_
-		.' Click here if you wish to continue to _Levian Bay_ |nextguide Dominion\\Levian Bay (3-6)
+		.' Click here to continue to _Levian Bay_ |nextguide Dominion\\Levian Bay (3-6)
 	]]
 )

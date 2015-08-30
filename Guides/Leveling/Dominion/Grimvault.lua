@@ -1,12 +1,10 @@
 ZGV:RegisterGuide("Dominion\\Grimvault (46-50)",
-	{
-	faction="Dominion",
-	startlevel=46,
-	endlevel=50,
-	--image="ZygorUIGuides:Grimvault", 
-	description="Grimvault is a zone in central Isigrol in WildStar. It is a contested zone that has been almost entirely taken over by The Strain. It is intended for level 46-50."
-	},
-	[[
+	{faction="Dominion",
+		image="ZygorUIGuides:Grimvault", 
+		description="Grimvault is a zone in central Isigrol in WildStar. It is a contested zone that has been almost entirely taken over by The Strain. It is intended for level 46-50.",
+		startlevel=46,
+		endlevel=50,
+	},[[
 	step
 		'Press _C_ to use your communicator:
 		..accept An Unexpected Enemy##9069

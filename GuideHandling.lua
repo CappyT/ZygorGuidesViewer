@@ -743,7 +743,7 @@ function ZGV:LoadGuideFiles()
 
 		self:ScheduleLoadGuideFile("Test\\Dominion")
 	elseif ZGV.Utils:IsFaction("Exiles") then
-		self:ScheduleLoadGuideFile("Leveling\\Exiles\\Tutorial")
+		self:ScheduleLoadGuideFile("Leveling\\Exiles\\TheGamblersRuin")
 		self:ScheduleLoadGuideFile("Leveling\\Exiles\\NorthernWilds")
 		self:ScheduleLoadGuideFile("Leveling\\Exiles\\Everstar")
 		self:ScheduleLoadGuideFile("Leveling\\Exiles\\Algoroc")

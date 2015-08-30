@@ -4,7 +4,7 @@ ZGV:RegisterGuide("Exiles\\Wilderrun (35-41)",
 		image="ZygorUIGuides:Wilderrun", 
 		startlevel=35,
 		endlevel=41,
-		description="Wilderrun is a zone in eastern Olyssia in WildStar. It is a a dense jungle that is has been infused with primal life energy. The players will follow Artemis Zin and Dorian Walker as they race to the Everpool, which will grant eternal life. Wilderrun is a contested zone, and is intended for players level 35-42."	
+		description="Wilderrun is a zone in eastern Olyssia in WildStar. It is a a dense jungle that is has been infused with primal life energy. The players will follow Artemis Zin and Dorian Walker as they race to the Everpool, which will grant eternal life. It is best suited for characters level 35-41."	
 		},[[
 	step
 		'Press _C_ to use your communicator:

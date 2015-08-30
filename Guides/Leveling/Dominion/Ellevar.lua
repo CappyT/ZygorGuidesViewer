@@ -16,8 +16,7 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.talk Patiria Adecus##287192 |goto Ellevar -2527,-3552,-790
 		..accept The Amenities of Lightreach##9165
 	step
-		.talk Rental Mount Vendor |goto Ellevar -2521,-3621,-797
-		.' Find the Rental Mount Vendor |q The Amenities of Lightreach##9165/4
+		.talk Rental Mount Vendor |q The Amenities of Lightreach##9165/4 |goto Ellevar -2521,-3621,-797
 		'You can rent a mount for 24 hour playtime
 	step
 		.talk Radiant Legion Guard |goto Ellevar -2591,-3595,-790
