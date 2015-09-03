@@ -347,6 +347,12 @@ ZGV:RegisterGuide("Dominion\\Deradune (6-15)",
 		' Click _Yes_ to set _Feralplain Collective_ as your Recall Point
 		|confirm |q 5692
 	step
+		.talk Protogames Recruiter |goto Deradune -4989,-1483,-941
+		..accept [Dungeon] Protogames Preparations##9764 |tip No need to complete dungeon for reward
+	step
+		.talk Protogames Recruiter |goto Deradune -4989,-1483,-941
+		..turnin [Dungeon] Protogames Preparations##9764
+	step
 		.talk Scientist Twilo##292106 |goto Deradune -5177,-1807,-936
 		..turnin Terminite Containment##5692
 		..accept Turn Up the Heat##5714
