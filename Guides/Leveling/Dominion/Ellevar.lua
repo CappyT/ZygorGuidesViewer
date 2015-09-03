@@ -360,7 +360,7 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		..accept Priority One Distress Call##7110
 	step
 		'Press _C_ to open your Communicator:
-		..accept [Dungeon] Protogames Preparations##9764 |tip No need to complete dungeon to get epic weapon
+		..accept [Dungeon] Protogames Preparations##9764 |tip No need to complete dungeon for reward
 	step
 		.talk Protogames Recruiter |goto Ellevar -2520,-3687,-802
 		..turnin [Dungeon] Protogames Preparations##9764
