@@ -740,8 +740,6 @@ function ZGV:LoadGuideFiles()
 		self:ScheduleLoadGuideFile("Leveling\\Dominion\\Malgrave")
 		self:ScheduleLoadGuideFile("Leveling\\Dominion\\Grimvault")
 		self:ScheduleLoadGuideFile("Dailies\\DominionDailies")
-
-		self:ScheduleLoadGuideFile("Test\\Dominion")
 	elseif ZGV.Utils:IsFaction("Exiles") then
 		self:ScheduleLoadGuideFile("Leveling\\Exiles\\TheGamblersRuin")
 		self:ScheduleLoadGuideFile("Leveling\\Exiles\\NorthernWilds")
@@ -756,12 +754,7 @@ function ZGV:LoadGuideFiles()
 		self:ScheduleLoadGuideFile("Leveling\\Exiles\\Grimvault")
 		self:ScheduleLoadGuideFile("Leveling\\Exiles\\Dailies")
 		self:ScheduleLoadGuideFile("Dailies\\ExilesDailies")
-
-		self:ScheduleLoadGuideFile("Test\\Exile")
 	end
-	self:ScheduleLoadGuideFile("Test\\Test")
-	self:ScheduleLoadGuideFile("DominionTest\\LevianBay")
-	self:ScheduleLoadGuideFile("DominionTest\\Elevar")
 	self:Debug("Loading of guide files scheduled: "..#ZGV.ScheduledLoads.." guides queued.")
 	self.ScheduledLoadsTotal = #self.ScheduledLoads
 	self.ScheduledLoadsSuccessful = 0
