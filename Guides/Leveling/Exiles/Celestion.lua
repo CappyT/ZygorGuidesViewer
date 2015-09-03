@@ -11,10 +11,10 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 	[[
 	step
 		.' _Leave_ the cave |goto Celestion 924,-3095,-890
-		.talk Arwick Redleaf##292806
-		..turnin The Path to Celestion##6844 |goto 1028,-3054,-907
-		..accept Reclaiming Greenbough##6670 |goto 1028,-3054,-907
-		..accept A Fiery Escape##6671 |goto 1028,-3054,-907
+		.talk Arwick Redleaf##292806 |goto 1028,-3054,-907
+		..turnin The Path to Celestion##6844
+		..accept Reclaiming Greenbough##6670
+		..accept A Fiery Escape##6671
 	step
 		.talk Yalum Soulbark##284785
 		..accept From the Ashes of Greenbough##6675 |goto Celestion 1058,-3080,-906
@@ -52,7 +52,7 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.' _Go down_ the path |goto Celestion 1199,-3102,-913
 		.click Trapped Aurin##6268829
 		.' Rescue Trapped Aurin |q A Fiery Escape##6671/2 |goto 1176,-3082,-934
-	step  //Step
+	step
 		.' _Go up_ the ramp |goto 1192,-3097,-921
 		.' _Exit_ the tree |goto 1198,-3086,-910 <15
 		.' Press _T_ to:
@@ -111,6 +111,7 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.' Press _C_ to use your Communicator:
 		..turnin Greenbough Guardian##6672
 		..accept Firefighting##6673
+		..turnin From the Ashes of Greenbough##6675
 	step
 		.click Fire Suppressor##6171007
 		.' Steal a Dominion Fire Suppressor |q Firefighting##6673/1 |goto Celestion 1564,-3146,-871
@@ -144,16 +145,13 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.' Collect Greenbark Chlorospores from Greenbark creatures |q Flower Brigade##6679/1 |goto Celestion 1301,-2571,-948
 		.' Hunt an animal near an Aurin Hunter |q The Protectors of Celestion##8860/1 |tip Keep an eye on the _"Hunter Varann Proximity"_ on the top left of the screen.
 	step
-		.' Press _C_ to use your Communicator:
-		..accept A Salvageable Situation##9036 |goto Celestion 1349,-2679,-927
-	step
 		.talk Venra Dewflower##284797
 		..turnin Flower Brigade##6679 |goto Celestion 1234,-2571,-949
 	step
 		.' _Cross_ the bridge |goto Celestion 1178,-2504,-941
-		.talk Arwick Redleaf##284803
-		..turnin Journey to Woodhaven##6805 |goto 1098,-2447,-951
-		..accept Sanctuary Enshrined##6618 |goto 1098,-2447,-951
+		.talk Arwick Redleaf##284803 |goto 1098,-2447,-951
+		..turnin Journey to Woodhaven##6805
+		..accept Sanctuary Enshrined##6618
 	step
 		.talk Tender Kaiya##284301
 		.' Talk to Tender Kaiya |q Sanctuary Enshrined##6618/1 |goto Celestion 1107,-2423,-950
@@ -162,29 +160,26 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		..accept Touring Woodhaven##9087 |goto Celestion 1094,-2472,-950
 	step
 		.click Woodhaven Mailbox##275273
-		.' Open the Woodhaven Mailbox |q Touring Woodhaven##9087/1 |goto 1101,-2440,-951
+		.' Open the Woodhaven Mailbox |q Touring Woodhaven##9087/2 |goto 1101,-2440,-951
 	step
 		.click Woodhaven Taxi Kiosk##270820
-		.' Use the Woodhaven Taxi Stand |q Touring Woodhaven##9087/2 |goto 1111,-2491,-944
+		.' Use the Woodhaven Taxi Stand |q Touring Woodhaven##9087/3 |goto 1111,-2491,-944
+	step
+		.talk Merchant Cliffgale |q Touring Woodhaven##9087/4 |goto 1084,-2454,-950
+		'You can rent a mount for 24 hour playtime
 	step
 		.click Transmat Terminal##275393
-		.' Select the Transmat Terminal |q Touring Woodhaven##9087/3 |goto 1067,-2481,-950
+		.' Select the Transmat Terminal |q Touring Woodhaven##9087/5 |goto 1067,-2481,-950
 	step
-		.talk Rogum##284794
-		..turnin Touring Woodhaven##9087 |goto 1093,-2472,-950
+		.' Click _Yes_ to set _Woodhaven_ as your Recall point |goto Celestion 1066,-2484,-950
+		|confirm
 	step
-		.talk Weaponsmith Redfire##275179
-		..turnin A Salvageable Situation##9036 |goto Celestion 1091,-2478,-951
-		..accept Breaking it Down##9035 |goto Celestion 1091,-2478,-951
+		.talk Woodhaven Guard
+		.' Get directions from a Woodhaven Guard |q Touring Woodhaven##9087/6 |goto 1103,-2447,-951
+		'He walks around the road
 	step
-		.' Press _"I"_ to open you inventory
-		.' Salvage the Unusable Crafting Prototype to get a Dusty Power Core |q Breaking it Down##9035/1
-	step
-		.talk Supplier Whispwick Moonsong##275387
-		..turnin Breaking it Down##9035 |goto Celestion 1086,-2477,-951
-	step
-		.talk Serra Nightbright##292803
-		..accept Nature's Nightlight##6680 |goto Celestion 1025,-2406,-949
+		.talk Rogum##284794 |goto 1093,-2472,-950
+		..turnin Touring Woodhaven##9087
 	step
 		.talk Provisioner Grayfur##275383
 		..turnin The Protectors of Celestion##8860 |goto 1027,-2404,-948
@@ -192,37 +187,42 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.click Western Spirit Protector##284303
 		.' Help Kaiya bind with the Western Spirit Protector |q Sanctuary Enshrined##6618/4 |goto Celestion 928,-2458,-950 |tip Kill the attackers that come.
 	step
-		.' _Jump_ onto the giant mushrooms to launch through the air in order to reach the Firefly clouds 
-		.' Collect Fireflies by jumping through them |q Nature's Nightlight##6680/1 |goto Celestion 756,-2474,-928
-	step
-		.' Press _C_ to use your Communicator:
-		..turnin Nature's Nightlight##6680
-	step
 		.click Southern Spirit Protector##284304
 		.' Help Kaiya bind with the Southern Spirit Protector |q Sanctuary Enshrined##6618/3 |goto 1078,-2297,-954 |tip Kill the attackers that come.
 	step
 		.click Eastern Spirit Protector##284305
 		.' Help Kaiya bind with the Eastern Spirit Protector |q Sanctuary Enshrined##6618/2 |goto Celestion 1227,-2437,-949 |tip Kill the attackers that come.
 	step
-		.talk Arwick Redleaf##284803
-		..turnin Sanctuary Enshrined##6618 |goto Celestion 1100,-2446,-951
-		..accept The Watcher's Way##6619 |goto Celestion 1100,-2446,-951
-	step
-
-		step
-		.click Transmat Terminal##265407
-		.' Click _Yes_ to set _Woodhaven_ as your Recall point |goto Celestion 1066,-2484,-950
-		|confirm
+		.talk Arwick Redleaf##284803 |goto Celestion 1100,-2446,-951
+		'The Watcher's Way may require Comm answer
+		..turnin Sanctuary Enshrined##6618
+		..accept Predators and Prey##6620
+		..accept The Watcher's Way##6619
 	step
 		.' _Cross_ the river |goto Celestion 870,-2275,-957
-		.talk Watcher Yalesh Sageroot##284806
-		.' Find Watcher Yalesh Sageroot |q The Watcher's Way##6619/1 |goto 771,-2202,-941
+		.talk Watcher Yalesh Sageroot##284806 |goto Celestion 774,-2201,-941
+		.' Find Watcher Yalesh Sageroot |q The Watcher's Way##6619/1
+		..accept A Heralded Horn##6628
 	step
-		.' Press _T_ to:
-		.' Commune with Watcher Yalesh Sageroot |q The Watcher's Way##6619/2 |goto Celestion 771,-2202,-941
- 	step
-		.talk Watcher Yalesh Sageroot##284806
-		..accept A Heralded Horn##6628 |goto Celestion 770,-2202,-941
+		.'Click _Watcher Yalesh Sageroot_, press _T_ to:
+		.' Commune with Watcher Yalesh Sageroot |q The Watcher's Way##6619/2 |goto Celestion 774,-2201,-941
+	step
+		.' Press _C_ to use your Communicator:
+		..turnin The Watcher's Way##6619 |goto 1105,-2374,-952
+	step
+		.talk Serra Nightbright##292803
+		..accept Nature's Nightlight##6680 |goto Celestion 767,-2204,-941
+	step
+		.' _Leave_ the passage |goto Celestion 655,-2309,-914
+		.' _Go up_ the hill |goto 712,-2389,-915
+		.click Primal Matrix##6657608
+		.' Retrieve the Primal Matrix |q A Heralded Horn##6628/2 |goto 670,-2583,-913
+	step
+		.' _Jump_ onto the giant mushrooms to launch through the air in order to reach the Firefly clouds 
+		.' Collect Fireflies by jumping through them |q Nature's Nightlight##6680/1 |goto Celestion 756,-2474,-928
+	step
+		.' Press _C_ to use your Communicator:
+		..turnin Nature's Nightlight##6680
 	step
 		.click Clarionberry Limb##6500405
 		.' Gather Clarionberry Bark |q A Heralded Horn##6628/1 |goto Celestion 805,-2284,-943 |tip They are located around vegetation in the area.
@@ -232,43 +232,31 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.kill Lightkeeper##5929002
 		.' Harvest Lightkeeper's Horn |q A Heralded Horn##6628/3 |goto 604,-2249,-917
 	step
-		.' _Leave_ the passage |goto Celestion 655,-2309,-914
-		.' _Go up_ the hill |goto 712,-2389,-915
-		.click Primal Matrix##6657608
-		.' Retrieve the Primal Matrix |q A Heralded Horn##6628/2 |goto 670,-2583,-913
-	step
-		.' Use the mushroom to _jump up_ the large hill |goto Celestion 675,-2556,-870
-		.' _Go down_ the path |goto 680,-2413,-897
-		.talk Watcher Yalesh Sageroot##284806
-		..turnin A Heralded Horn##6628 |goto 771,-2201,-941
-		..accept Watcher's Warning##6629 |goto 771,-2201,-941
+		.talk Watcher Yalesh Sageroot##284806 |goto Celestion 774,-2201,-941
+		..turnin A Heralded Horn##6628
+		..accept Watcher's Warning##6629
 	step
 		.' _Follow the path_ along the mountain |goto Celestion 881,-2138,-957
 		.' _Go to_ the right fork in the road |goto 902,-2008,-944
 		.' Press _T_ to:
 		.' Awaken hypnotized Dawngrazers and Jabbits |q Watcher's Warning##6629/1 |goto Celestion 815,-1965,-942
-		.kill  Dazeroot Hiveguard##3178654, Enhanced Dazeroot Hiveguard##6650452
 		.' Kill Dazeroot buzzbings |q Watcher's Warning##6629/2 |goto Celestion 815,-1965,-942
 	step
 		.' Press _C_ to use your Communicator:
 		..turnin Watcher's Warning##6629
 	step
-		.' _Follow_ the path |goto Celestion 917,-2067,-950
-		.' _Cross_ the water |goto 944,-2317,-955
-		.talk Arwick Redleaf##284802
-		..turnin The Watcher's Way##6619 |goto 1105,-2374,-952
-		..accept Predators and Prey##6620 |goto 1105,-2374,-952
-	step
 		.talk Viralist Katoff##292811 |q Predators and Prey##6620/1 |goto Celestion 1286,-2361,-950
 	step
 		.talk Viralist Katoff##292811
-		..accept Composing a Toxoid##6624 |goto Celestion 1286,-2361,-950
 		..accept Flush the Ambush##6625 |goto Celestion 1286,-2361,-950
 	step
-		.talk Professor Papovich##284791
-		..accept Stitched Together##6623 |goto Celestion 1290,-2338,-949
-	step
 		.' _Go along_ the path |goto Celestion 1306,-2227,-944
+		.' Press _C_ to use your Communicator:
+		..accept Composing a Toxoid##6624 |goto Celestion 1309,-2067,-917
+	step
+		.' Press _C_ to use your Communicator:
+		..accept A Salvageable Situation##9036 |goto Celestion 1349,-2679,-927
+	step
 		.' Press _T_ on Suspicious Bushes to:
 		.' Use Decloaking Grenades to search Suspicious Bushes |q Flush the Ambush##6625/1 |goto Celestion 1299,-2013,-902 |tip They are all around this area.
 		.click Suspicious Bush##6182808
@@ -282,18 +270,17 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 	step
 		.' Press _T_ to Inject Bonerazer Draken with Bloodbane Toxoid
 		.' Collect Draken Blood Samples |q Composing a Toxoid##6624/1 |	goto 1287,-1849,-904
-		.kill Bonerazer Bloodspiller##6916402, Bonerazer Bloodmauler##6511664, Bonerazer Firewalker##6861247
 		.' Kill Bonerazer Draken |q Predators and Prey##6620/4 |goto Celestion 1283,-1813,-898
 	step
 		.click Bonerazer Cage##284277
 		.' Open Bonerazer Cages |q Predators and Prey##6620/3 |count 25 |goto Celestion 1309,-1846,-901
 		.click Weapon Rack##284260
-		.' Destroy Weapon Racks |q Tools of the Trade##6621/1 |count 10 |goto Celestion 1315,-1870,-904 |tip Collect Aurin Remains as you make your way through the area.
+		.' Destroy Weapon Racks |q Tools of the Trade##6621/1 |count 10 |goto Celestion 1315,-1870,-904 |tip Collect Aurin Remains as you go.
 	step
 		.click Bonerazer Cage##284277
 		.' Open Bonerazer Cages |q Predators and Prey##6620/3 |count 50 |goto 1267,-1832,-900
 		.click Weapon Rack##284260
-		.' Destroy Weapon Racks |q Tools of the Trade##6621/1 |count 23 |goto Celestion 1266,-1843,-902 |tip Collect Aurin Remains as you make your way through the area.
+		.' Destroy Weapon Racks |q Tools of the Trade##6621/1 |count 23 |goto Celestion 1266,-1843,-902 |tip Collect Aurin Remains as you go.
 	step
 		.click Weapon Rack##284260
 		.' Destroy Weapon Racks |q Tools of the Trade##6621/1 |count 36 |goto 1254,-1804,-895
@@ -301,40 +288,44 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.click Bonerazer Cage##284277
 		.' Open Bonerazer Cages |q Predators and Prey##6620/3 |count 75 |goto Celestion 1277,-1760,-891
 		.click Weapon Rack##284260
-		.' Destroy Weapon Racks |q Tools of the Trade##6621/1 |count 49 |goto Celestion 1279,-1750,-889 |tip Collect Aurin Remains as you make your way through the area.
+		.' Destroy Weapon Racks |q Tools of the Trade##6621/1 |count 49 |goto Celestion 1279,-1750,-889 |tip Collect Aurin Remains as you go.
 	step
 		.click Bonerazer Cage##284277
 		.' Open Bonerazer Cages |q Predators and Prey##6620/3 |goto 1336,-1714,-888 
 		.click Weapon Rack##284260
-		.' Destroy Weapon Racks |q Tools of the Trade##6621/1 |count 62 |goto 1282,-1753,-890 |goto Celestion 1313,-1719,-887 |tip Collect Aurin Remains as you make your way through the area.
+		.' Destroy Weapon Racks |q Tools of the Trade##6621/1 |count 62 |goto 1282,-1753,-890 |goto Celestion 1313,-1719,-887 |tip Collect Aurin Remains as you go.
+	step
+		.' Press _T_ to Inject Bonerazer Draken with Bloodbane Toxid
+		.' Inject Bonerazer Draken with Bloodbane Toxoid |q Composing a Toxoid##6624/2 |goto Celestion 1233,-1529,-892
 	step
 		.' Press _C_ to use your Communicator:
 		..turnin Predators and Prey##6620
 	step
 		.click Weapon Rack##284260
-		.' Destroy Weapon Racks |q Tools of the Trade##6621/1 |count 75 |goto Celestion 1422,-1708,-886 |tip Collect Aurin Remains as you make your way through the area.
+		.' Destroy Weapon Racks |q Tools of the Trade##6621/1 |count 75 |goto Celestion 1422,-1708,-886 |tip Collect Aurin Remains as you go.
 	step
 		.click Weapon Rack##284260
-		.' Destroy Weapon Racks |q Tools of the Trade##6621/1 |count 87 |goto Celestion 1415,-1614,-876 |tip Collect Aurin Remains as you make your way through the area.
+		.' Destroy Weapon Racks |q Tools of the Trade##6621/1 |count 87 |goto Celestion 1415,-1614,-876 |tip Collect Aurin Remains as you go.
 	step
 		.click Weapon Rack##284260
-		.' Destroy Weapon Racks |q Tools of the Trade##6621/1 |goto Celestion 1358,-1591,-870 |tip Collect Aurin Remains as you make your way through the area.
+		.' Destroy Weapon Racks |q Tools of the Trade##6621/1 |goto Celestion 1358,-1591,-870 |tip Collect Aurin Remains as you go.
 	step
 		.' Press _C_ to use your Communicator:
 		..turnin Tools of the Trade##6621
 		..accept End of the Elders##6626
 	step
 		.' Press _C_ to use your Communicator:
-		..accept Tampered Signals##6797
-	step
-		.click Bonerazer Huntstalker##3304717, Bonerazer Bloodmauler##3324231
-		.' Press _T_ to Inject Bonerazer Draken with Bloodbane Toxid
-		.' Inject Bonerazer Draken with Bloodbane Toxoid |q Composing a Toxoid##6624/2 |goto Celestion 1233,-1529,-892
-		.click Aurin Remains##1086927
-		.' Collect Aurin Body Parts |q Stitched Together##6623/1
+		..turnin Composing a Toxoid##6624
 	step
 		.' Press _C_ to use your Communicator:
-		..turnin Composing a Toxoid##6624
+		..accept Tampered Signals##6797
+	step
+		.' Follow the road and go here |goto Celestion 1321,-1613,-871
+		.' Press _C_ to use your Communicator:
+		..accept Stitched Together##6623
+	step
+		.click Aurin Remains##1086927
+		.' Collect Aurin Body Parts |q Stitched Together##6623/1
 	step
 		.' _Go up_ the ramp |goto Celestion 1213,-1474,-891
 		.click Communication Controls##284125
@@ -349,7 +340,6 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.' _Enter_ the hut |goto Celestion 1057,-1583,-899  //Fixed
 		.' Kill Elder Marok |q End of the Elders##6626/1 |goto 1055,-1606,-901
 	step
-		
 		.' _Follow_ the path up |goto 980,-1523,-899
 		.click Communication Controls##284123
 		.' Deactivate Communication Controls |q Tampered Signals##6797/1 |count 75 |goto 1010,-1485,-886
@@ -375,15 +365,20 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 	step
 		.' Press _C_ to use your Communicator:
 		..turnin Preyfinder's Demise##6622
-	step
-		.' _Go down_ the path |goto 1029,-1483,-907
-		.' _Follow_ the path up |goto 1223,-1536,-894
-		.' _Go through_ the archway |goto 1325,-1608,-871
-		.' Press _C_ to use your Communicator:
-		..accept A Visit to the Doctor##6659 |goto 1360,-1599,-872
+		..accept A Visit to the Doctor##6659
 	step
 		'Press the icon on the bottom right of your action bar to:
 		.' Recall to Woodhaven - Transmat |goto 1065,-2487,-949 < 100 |c |noway |q 6623
+	step
+		.talk Weaponsmith Redfire##275179 |goto Celestion 1091,-2478,-951
+		..turnin A Salvageable Situation##9036
+		..accept Breaking it Down##9035
+	step
+		.' Press _"I"_ to open you inventory
+		.' Salvage the Unusable Crafting Prototype to get a Dusty Power Core |q Breaking it Down##9035/1
+	step
+		.talk Supplier Whispwick Moonsong##275387
+		..turnin Breaking it Down##9035 |goto Celestion 1086,-2477,-951
 	step
 		.click Recombinator##284185
 		.' Activate the Recombinator |q Stitched Together##6623/3 |goto Celestion 1281,-2341,-949
@@ -395,7 +390,7 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.' _Travel through_ the hills |goto 1417,-2109,-928
 		.' _Go up_ the large hill |goto 1536,-2005,-926
 		.talk Fenosh Nightfern##284808
-		..accept Moodoo Voodoo##6667 |goto 1631,-1963,-921
+		..accept Moodoo Voodoo##6667 |goto 1642,-1993,-936
 	step
 		.talk Physician Boravic##292853
 		..turnin A Visit to the Doctor##6659 |goto Celestion 1666,-1858,-911
@@ -417,16 +412,12 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.' Press _T_ to:
 		.' Cut a Moodie Test Subject |q Information Extraction##6660/4 |goto Celestion 1689,-1868,-912
 	step
-		.talk Physician Boravic##292853
-		..turnin Information Extraction##6660 |goto Celestion 1666,-1858,-911
-		..accept Moodie Necropsy##6661 |goto 1666,-1858,-911
+		.talk Physician Boravic##292853 |goto Celestion 1666,-1858,-911
+		..turnin Information Extraction##6660
+		..accept Moodie Necropsy##6661
 	step
 		.talk Mesmerist Ozliam##292849
 		..accept Science Lesson##6668 |goto 1675,-1921,-914
-	step
-		.talk Alchemist Vinkov##2848095
-		..accept Bad Vibes##6666 |goto 1680,-1943,-916
-//Search Vegging Out and possibly place it here
 	step
 		.click Ozliam's Body Scanner##283943
 		.' Activate the Body Scanner |q Science Lesson##6668/1 |goto Celestion 1677,-1920,-914
@@ -435,7 +426,7 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.' Collect Ozliam's Tissue Sample |q Science Lesson##6668/2 |goto Celestion 1686,-1923,-914
 	step
 		.click Ozliam's Cloner Console##283946
-		.' Choose _Yes_, you completed a full body scan of the subject to be cloned.
+		.' Choose _Yes_, _Yes_
 		.' Activate Ozliam's Cloner Console |q Science Lesson##6668/3 |goto Celestion 1663,-1927,-914
 	step
 		.click Ozliam's Cloner##283947
@@ -445,8 +436,11 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.talk Mesmerist Ozliam##292849
 		..turnin Science Lesson##6668 |goto Celestion 1672,-1920,-914
 	step
+		.' Press _C_ to use your Communicator:
+		..accept Bad Vibes##6666 |goto Celestion 1581,-2109,-953 <5
+	step
 		.click Life Force Anomaly##3828153
-		.' Scan a Life Force Anomaly |q Bad Vibes##6666/1 |goto Celestion 1582,-2119,-953
+		.' Scan a Life Force Anomaly |q Bad Vibes##6666/1 |goto Celestion 1592,-2146,-957
 	step
 		.kill Darkloam Necroshaman##2839353, Darkloam Shadowroot##2783410, Darkloam Gatherer##3862804
 		.' Collect Shadowroot Wood |q Moodoo Voodoo##6667/2 |goto 1584,-2191,-957
@@ -504,29 +498,26 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		..turnin Grave Robbery##6662
 		..accept Relic Calling##6663
 	step
-		.click Discovery##2744783 |goto Celestion 1660,-2353,-1020
-		.click Enhancement Field Generator##3911895
 		.click Moodie Focus Reliquary##291947
 		.' Summon Life and Death Essence |q Relic Calling##6663/1
-		.kill Summoned Death Essence##3170815
 		.' Defeat the Summoned Death Essence |q Relic Calling##6663/2 |goto 1648,-2362,-1020
 	step
 		.' _Go up_ the ramp |goto Celestion 1692,-2285,-1006
 		.' _Follow_ the path up |goto 1751,-2253,-999
+		.' Press _C_ to use your Communicator:
+		..accept Dance, Moodie, Dance##6669
+	step
 		.' _Exit_ the cave |goto 1841,-2265,-985
 		.' _Go up_ the winding path |goto Celestion 1881,-2250,-974
 		.' _Continue up_ the winding path |goto Celestion 1853,-2326,-959
 		.' _Cross_ the grass |goto Celestion 1771,-2268,-953
-		.' _Go up_ the hill |goto Celestion 1755,-2123,-951
-		.' _Follow the hill up_ to the path |goto 1725,-2004,-956
-		.' _Enter_ the Grimveil Enclave |goto 1722,-1915,-917
-		.talk Physician Boravic##292853
-		..turnin Relic Calling##6663 |goto Celestion 1666,-1857,-911
+		.' Use Moodie drump to dance a beat |q Dance, Moodie, Dance##6669/1 |goto Celestion 1677,-2237,-959
 	step
-		..accept Back to Woodhaven##6627 |goto Celestion 1741,-1796,-902
+		.' Press _C_ to use your Communicator:
+		..turnin Dance, Moodie, Dance##6669
 	step
-		.talk Ashrynn Strongstem##284810
-		..accept Vegging Out##6665 |goto Celestion 1528,-2026,-940
+		.talk Ashrynn Strongstem##284810 |goto Celestion 1528,-2026,-940
+		..accept Vegging Out##6665 |tip If not available here, place after Relic Calling(6663) turn
 	step
 		.click Aurin Transmorph Shroom##291932
 		.' Commune with Aurin Transmorph Shroom |q Vegging Out##6665/1 |goto 1517,-2039,-941
@@ -538,24 +529,26 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.' Rescue the Veggies |q Vegging Out##6665/3
 	step
 		.' _Leave_ Darkloam Hollow |goto Celestion 1585,-2127,-955
-		.talk Ashrynn Strongstem##284810
-		..turnin Vegging Out##6665 |goto 1528,-2027,-940
+		.talk Ashrynn Strongstem##284810 |goto 1528,-2027,-940
+		..turnin Vegging Out##6665
 	step
-		'Press the icon on the bottom right of your action bar to:
-		.' Recall to Woodhaven - Transmat |goto 1065,-2487,-949 < 100 |c |noway |q 6627
+		.' _Go up_ the hill |goto Celestion 1755,-2123,-951
+		.' _Follow the hill up_ to the path |goto 1725,-2004,-956
+		.' _Enter_ the Grimveil Enclave |goto 1722,-1915,-917
+		.talk Physician Boravic##292853
+		..turnin Relic Calling##6663 |goto Celestion 1666,-1857,-911
 	step
-		.talk Arwick Redleaf##284801
-		..turnin Back to Woodhaven##6627 |goto 1106,-2375,-952
-		..accept Wayfarer's Passage##6997 |goto 1106,-2375,-952
+		.talk Messenger Staenn |goto Celestion 1663,-1852,-910
+		..accept Wayfarer's Passage##7055
 	step
 		.click Hoverbike##3134064
-		.' Ride the Hoverbike |q Wayfarer's Passage##6997/1 |goto Celestion 1255,-2346,-949
+		.' Embark on the Hoverbike |q Wayfarer's Passage##7055/1 |goto Celestion 1662,-1847,-910
 	step
-		.' Ride the Hoverbike to its destination |q Wayfarer's Passage##6997/2 |goto Celestion 1983,-1854,-912
+		.' Ride the Hoverbike |q Wayfarer's Passage##7055/2 |goto Celestion 1983,-1854,-912
 	step
 		.' _Go to_ the bridge. |goto Celestion 2040,-1892,-919
 		.talk Chief Chugach##280660
-		..turnin Wayfarer's Passage##6997 |goto 2071,-1923,-915
+		..turnin Wayfarer's Passage##7055 |goto 2071,-1923,-915
 		..accept Gargantuan Tale##6998 |goto 2071,-1923,-915
 	step
 		.' _Go up_ the ramp |goto Celestion 2073,-1951,-909
@@ -570,8 +563,8 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.' _Jump down_ to the ground |goto Celestion 2147,-1982,-923
 		.talk Trader Lukadat##281954 |q Gargantuan Tale##6998/1 |goto Celestion 2147,-1982,-923
 	step
-		.talk Chief Chugach##280660
-		..turnin Gargantuan Tale##6998 |goto Celestion 2071,-1924,-915
+		.talk Chief Chugach##280660 |goto Celestion 2071,-1924,-915
+		..turnin Gargantuan Tale##6998
 		..accept Hijunga Defenses##6999
 		..accept Rowsdower at Stake##7000
 	step
@@ -619,9 +612,9 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 	step
 		.' Enter Tanglemore Den |q Breaking Free##7002/1 |goto Celestion 2096,-1426,-869
 	step
-		.talk Trader Lukadat##280659
-		..accept Swapping Troubles##7003 |goto 2101,-1396,-869
-		..accept Biting Back##7004 |goto 2101,-1396,-869
+		.talk Trader Lukadat##280659 |goto Celestion 2101,-1396,-869
+		..accept Swapping Troubles##7003
+		..accept Biting Back##7004
 	step
 		.click Cargo Lifter##281883
 		.' Take Eggs from the cart |q Swapping Troubles##7003/1 |goto 2104,-1393,-869
@@ -641,20 +634,20 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.click Bone Trap##4083129
 		.' Rescue trapped Lopp |q Breaking Free##7002/2 |goto 2156,-1158,-870 |tip Kill Tanglemore chompacabras as you make your way through the cave.
 	step
-		.click Burgaska Nest##281885
-		.' Place the Eggs back in the Denmother's nests |q Swapping Troubles##7003/2 |goto Celestion 2151,-1154,-870 |tip Kill Tanglemore chompacabras as you make your way through the cave.
+		.talk Treasure Hunter Tuwawi##285767
+		..accept Risky Riches##7005 |goto 2098,-1163,-872
 	step
 		.' Kill Tanglemore chompacabras |q Biting Back##7004/1 |goto Celestion 2119,-1162,-872
+	step
+		.click Burgaska Nest##281885
+		.' Place the Eggs back in the Denmother's nests |q Swapping Troubles##7003/2 |goto Celestion 2151,-1154,-870
+	step	
+		.click Loose Rocks##4058794
+		.' Dig for Shiny Baubles beneath Loose Rocks |q Risky Riches##7005/1 |goto Celestion 2161,-1193,-869
 	step
 		.' Press _C_ to use your Communicator:
 		..turnin Swapping Troubles##7003
 		..turnin Biting Back##7004
-	step
-		.talk Treasure Hunter Tuwawi##285767
-		..accept Risky Riches##7005 |goto 2098,-1163,-872
-	step
-		.click Loose Rocks##4058794
-		.' Dig for Shiny Baubles beneath Loose Rocks |q Risky Riches##7005/1 |goto Celestion 2161,-1193,-869
 	step
 		.talk Treasure Hunter Tuwawi##285767
 		..turnin Risky Riches##7005 |goto Celestion 2100,-1163,-872
@@ -664,8 +657,8 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.' _Leave_ the cave |goto 2098,-1423,-869
 		.' _Follow_ the path |goto 2118,-1644,-895
 		.' _Continue along_ the path |goto 2149,-1765,-916
-		.talk Chief Chugach##280660
-		..turnin Breaking Free##7002 |goto 2071,-1922,-915
+		.talk Chief Chugach##280660 |goto 2071,-1922,-915
+		..turnin Breaking Free##7002
 		..accept On to Sylvan Glade##7006
 	step
 		.talk Kurg Caravan Dealer##281444
@@ -705,13 +698,19 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.click Sylvan Bulb##4064442
 		.' Collect Sylvan Bulbs |q Herbal Remedy##7022/1 |goto 2739,-2639,-927
 	step
+		.talk Protogames Recruiter |goto Celestion 2772,-2296,-929
+		..accept [Dungeon] Protogames Preparations##9763 |tip No need to complete dungeon for reward
+	step
+		.talk Protogames Recruiter |goto Celestion 2772,-2296,-929
+		..turnin [Dungeon] Protogames Preparations##9763
+	step
 		.' _Go up_ the hill |goto Celestion 2799,-2545,-890
 		.' _Go down_ the hill |goto 2800,-2450,-888
 		.' _Cross_ the giant roots |goto Celestion 2741,-2419,-902
 		.' _Enter_ the building |goto 2736,-2445,-899
 		.' _Go down_ the path |goto 2722,-2472,-921
-		.talk Queen Myala Everstar##280653
-		..turnin Herbal Remedy##7022 |goto 2769,-2451,-933
+		.talk Queen Myala Everstar##280653 |goto 2769,-2451,-933
+		..turnin Herbal Remedy##7022
 		..accept Trials of a Matria##7357
 	step
 		.talk Consort Yaenna##280652
@@ -719,15 +718,15 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 	step
 		.' _Go up_ the ramp |goto Celestion 2746,-2475,-933
 		.' _Leave_ the tree |goto 2737,-2446,-899
-		.talk Consort Yaenna##281474
-		..turnin Trials of a Matria##7357 |goto 2670,-2436,-925
+		.talk Consort Yaenna##281474 |goto 2670,-2436,-925
+		..turnin Trials of a Matria##7357
 		..accept Sylvan Test of Spirit##7023
 	step
-		.' Use the abilities on my hotbar:
-		.' _Dig_ when you reach this spot |goto Celestion 2629,-2619,-932
-		.' _Dig_ when you reach this spot |goto 2738,-2628,-926
-		.' _Dig_ when you reach this spot |goto 2840,-2602,-921
-		.' Use the Vind's Tracking Sense |q Sylvan Test of Spirit##7023/1 
+		'Press _1_ to start the Sense
+		.' Press _2_ to _Dig_ in this spot |goto Celestion 2629,-2619,-932
+		.' Press _2_ to _Dig_ in this spot |goto Celestion 2738,-2628,-926
+		.' Press _2_ to _Dig_ in this spot |goto Celestion 2840,-2602,-921
+		.' Use the Vind's Tracking Sense |q Sylvan Test of Spirit##7023/2 
 	step
 		.' Press _C_ to use your Communicator:
 		..turnin Sylvan Test of Spirit##7023
@@ -764,9 +763,9 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.talk Queen Myala Everstar##280653
 		..turnin Sylvan Test of Heart##7025 |goto 2770,-2451,-933
 	step
-		.talk Consort Yaenna##280650
-		..accept Meet the Explorers Union##7590 |goto Celestion 2763,-2457,-934
-		..accept Crowning Ceremony##8759 |goto Celestion 2763,-2457,-934
+		.talk Consort Yaenna##280650 |goto Celestion 2763,-2457,-934
+		..accept Meet the Explorers Union##7590
+		..accept Crowning Ceremony##8759
 	step
 		.' _Go up_ the hill |goto 2746,-2475,-933
 		.' _Leave_ the building |goto 2736,-2445,-899
@@ -803,8 +802,8 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.' _Cross_ the bridge |goto Celestion 2749,-2282,-933
 		.' _Follow the fork in the road_ to the left |goto 2610,-2105,-947
 		.' _Continue_ along the path |goto 2634,-1923,-935
-		.talk Tomas Borgoli##280667
-		..turnin Gather the Crew##6968 |goto 2650,-1664,-954
+		.talk Tomas Borgoli##280667 |goto Celestion 2650,-1664,-954
+		..turnin Gather the Crew##6968
 		..accept Making Contact##6969
 	step
 		.click Display Module##281845
@@ -823,9 +822,12 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 	step
 		.' Return to Camp Viridian |q Making Contact##6969/6 |goto 2809,-1434,-1303
 	step
-		.talk Tomas Borgoli##280667
-		..turnin Making Contact##6969 |goto Celestion 2651,-1664,-954
-		..accept Follow the Data##6970 |goto Celestion 2651,-1664,-954
+		.talk Tomas Borgoli##280667 |goto Celestion 2651,-1664,-954
+		..turnin Making Contact##6969
+		..accept Follow the Data##6970
+	step
+		.talk Scientist Shytail |goto Celestion 2639,-1649,-952
+		..accept Careful Pickings##6973
 	step
 		.' _Follow_ the path back |goto 2613,-1614,-951
 		.' _Continue_ along the path |goto Celestion 2715,-1490,-966
@@ -835,9 +837,6 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.' Follow the path back towards the camp |goto Celestion 2733,-1478,-967
 		.' _Continue_ along the path |goto 2617,-1619,-951
 		.' _Go towards_ the facility |goto 2678,-1676,-955
-		.' Press _C_ to use your Communicator:
-		..accept Careful Pickings##6973 |goto Celestion 2748,-1691,-955
-	step
 		.' _Ride_ the elevator down |goto Celestion 2735,-1653,-955
 		.click GOOP Cannon##280661
 		..accept GOOPed!##6975 |goto 2785,-1665,-987
@@ -845,13 +844,10 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.' Press _C_ to use your Communicator:
 		..accept Of Augmentation and Aggression##6974 |goto Celestion 2853,-1705,-994 |tip You may have to kill a few enemies for this to show up.
 	step
-		.kill N22 Protector##334748
-		.' Press _T_ to:
+		.' Click mobs in area, press _T_ to:
 		.' GOOP Augmented Creatures and Constructs |q GOOPed!##6975/1 |goto Celestion 2981,-1674,-987
-		.' Kill Eldan constructs |q GOOPed!##6975/2 |tip They are all over the area.
-		.click Eldan Artifact##332175
+		.' Kill Eldan constructs |q GOOPed!##6975/2
 		.' Collect Eldan Artifacts |q Careful Pickings##6973/1
-		.kill Augmented Researcher Clone##343605, Augmented Scientist Clone##345694, Augmented Archaeologist Clone##282511, Augmented Celestial Razortusk##282400
 		.' Kill Augmented Aurin and Mordesh |q Of Augmentation and Aggression##6974/1 |goto 2962,-1661,-987
 	step
 		.' Press _C_ to use your Communicator:
@@ -937,6 +933,13 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.' _Jump_ onto the platform |goto Celestion 3228,-1687,-891
 		.' _Follow_ the giant tree root down to the next platform |goto 3197,-1735,-914
 		.' _Cross_ the long walkway |goto 3159,-1848,-931
+		.' Press _C_ to use your Communicator:
+		..accept Covert Communications##7051
+	step
+		//May need a teleport here+ bind
+		.talk Recruiter Emilija
+		..turnin Covert Communications##7051 |goto Celestion 2915,-2349,-928
+	step
 		.' _Jump down_ the hill here |goto 3068,-2044,-940
 		.' _Follow_ the path up goto Celestion 3129,-2287,-940
 		.' _Continue_ along the path |goto Celestion 3188,-2217,-907
@@ -967,7 +970,6 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		..accept Sum Zero Aggressor##6983 |goto Celestion 3201,-2160,-899
 	step
 		.' _Follow_ the path up |goto Celestion 3196,-2129,-898
-		.talk Minebot##285739
 		.' Speak to Marksman Mikhail |q Sum Zero Aggressor##6983/1 |goto 3122,-2079,-861
 	step
 		.talk Operative Viktovich##280669
@@ -1005,6 +1007,7 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		..turnin Sum Zero Aggressor##6983
 		..turnin Listen Like Shadows##6989
 	step
+		.' Go inside cave |goto Celestion 3376,-1810,-954 <5
 		.' Press _C_ to use your Communicator:
 		..accept Invasive Intelligence##6987 |goto Celestion 3372,-1810,-953
 	step
@@ -1088,13 +1091,14 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.' _Enter_ the building |goto 2737,-2446,-899
 		.' _Go down_ the path |goto Celestion 2723,-2473,-921
 		.' Meet with Arwick Redleaf |q A Meeting of Minds##6961/1 |goto 2766,-2460,-933
+		.' Talk with Arwick Redleaf |q A Meeting of Minds##6961/2 |goto 2766,-2460,-933
 	step
 		.' _Go up_ the path |goto Celestion 2748,-2473,-933
 		.' _Exit_ the building |goto Celestion 2737,-2446,-899
 		.' _Follow_ the path |goto 2562,-2477,-936
 		.' _Go up_ the ramp |goto 2466,-2509,-937
-		.talk Arwick Redleaf##1182412
-		..turnin A Meeting of Minds##6961 |goto 2423,-2488,-921
+		.talk Victor Lazarin |goto 2423,-2488,-921
+		..turnin A Meeting of Minds##6961
 		..accept Trespasser##6953
 	step
 		.talk Esora Dawning##278864
@@ -1129,14 +1133,14 @@ ZGV:RegisterGuide("Exiles\\Celestion (6-15)",
 		.kill Mistborn Lifeglider##893129, Mistborn Lifeglider##889834
 		.' Collect samples from Wildlife |q Further Analysis##6957/2 |goto Celestion 2189,-2561,-946
 	step
+		.' Press _T_ to:
+		.' Release a mapjabbit in the Verdant Sanctuary |q Indigenous Mapping##6963/1 |goto 2214,-2483,-938
+	step
 		.kill Torine Liferender##494095, Torine Sentinel##998661, Torine Bladesister##1117473
 		.' Collect blood samples from Torine |q Further Analysis##6957/1 |goto 2117,-2474,-938
 	step
 		.' Press _C_ to use your Communicator:
 		..turnin Further Analysis##6957
-	step
-		.' Press _T_ to:
-		.' Release a mapjabbit in the Verdant Sanctuary |q Indigenous Mapping##6963/1 |goto 2214,-2483,-938
 	step
 		.click Monument to Tresayne##278184
 		.' Investigate the Monument to Tresayne |q Seeking the Source##6955/1 |goto Celestion 2066,-2442,-929
