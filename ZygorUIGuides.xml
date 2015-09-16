@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Sprites>
-    <Sprite Name="Guide1" Cycle="1">
-        <Frame Texture="ZygorGuidesViewer\Images\guide.tga" x0="0" x1="15" x2="15" x3="400" x4="400" x5="400" y0="0" y1="0" y2="0" y3="0" y4="400" y5="400" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    <Sprite Name="CryoAwakening" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Images\pretutorial.tga" x0="0" x1="15" x2="15" x3="400" x4="400" x5="400" y0="0" y1="0" y2="0" y3="0" y4="400" y5="400" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
     </Sprite>
 
 	<Sprite Name="TheGamblersRuin" Cycle="1">
@@ -26,6 +26,10 @@
 
 	<Sprite Name="Celestion" Cycle="1">
         <Frame Texture="ZygorGuidesViewer\Images\celestion.tga" x0="0" x1="15" x2="15" x3="400" x4="400" x5="400" y0="0" y1="0" y2="0" y3="0" y4="400" y5="400" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+	</Sprite>
+
+	<Sprite Name="Thayd" Cycle="1">
+        <Frame Texture="ZygorGuidesViewer\Images\thayd.tga" x0="0" x1="15" x2="15" x3="400" x4="400" x5="400" y0="0" y1="0" y2="0" y3="0" y4="400" y5="400" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
 	</Sprite>
 
 	<Sprite Name="Galeras" Cycle="1">

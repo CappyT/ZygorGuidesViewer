@@ -10,50 +10,42 @@ ZGV:RegisterGuide("Exiles\\Galeras (15-23)",
 	},
 	[[
 	step
-		'Press _C_ to use your communicator:
-		..accept A Sticky Situation##5101 |goto Galeras 4456,-2172,-843
-		..accept Out on a Whim##5183 |goto Galeras 4456,-2172,-843
-	step
-		.' Jump through flying Whimfibers |tip They look like gold orbs floating through the air around this area.  |q Out on a Whim##5183/1 |goto 4547,-2112,-874
-	step
-		'Press _C_ to use your communicator:.
-		..turnin Out on a Whim##5183
-	step
-		.click Sticky Honey##5246304
-		.' Follow the tank, killing the enemies and clicking the honey to remove it.
-		.' Clear the Sticky Honey |q A Sticky Situation##5101/2 |goto Galeras 4588,-2100,-881
-		.' Escort the Exile Tank |q A Sticky Situation##5101/3 |goto 4588,-2114,-880
-	step
-		'Press _C_ to use your communicator:.
-		..turnin A Sticky Situation##5101
-	step
-		.' Go through the doorway and _into Thayd_ |goto Thayd 4281,-2176,-812 < 10
-		.talk Potential Recruit##5703824
-		.' Speak with Potential Recruits |q Unlikely Heroes##4944/1 |count 1 |goto Thayd 4192,-2226,-811
-	step
-		.talk Potential Recruit##6148359
-		.' Speak with Potential Recruits |q Unlikely Heroes##4944/1 |count 2 |goto 4212,-2270,-807
+		.talk Sergeant Renzig##274948 |goto Thayd 4108,-2340,-804
+		..turnin Galeras Deployment##4964
+		..accept Unlikely Heroes##4944
 	step
 		.talk Potential Recruit##6016764
-		.' Speak with Potential Recruits |q Unlikely Heroes##4944/1 |count 3 |goto Thayd 4255,-2284,-804
+		.' Speak with Potential Recruits |q Unlikely Heroes##4944/1 |count 1 |goto Thayd 4254,-2284,-804
+	step
+		.talk Potential Recruit##6148359
+		.' Speak with Potential Recruits |q Unlikely Heroes##4944/1 |count 2 |goto Thayd 4213,-2271,-807
+	step
+		.talk Potential Recruit##5703824
+		.' Speak with Potential Recruits |q Unlikely Heroes##4944/1 |count 3 |goto Thayd 4193,-2229,-811
+	step
+		.' _Leave_ Thayd |goto Thayd 4276,-2175,-811 <10
+		'Press _C_ to open your Communicator:
+		..accept Out on a Whim##5183 |goto Galeras 4296,-2170,-813 <5
 	step
 		.talk Sergeant Renzig##6396735
-		.' Report to Sergeant Renzig. |q Unlikely Heroes##4944/2
-		.click Potential Recruit##4782520
-		.' Press _T_ to use the Roll Call Sheet to muster each recruit. |tip You'll have to select each Recruit individually. |q Unlikely Heroes##4944/4 |goto 4297,-2162,-812
+		.' Report to Sergeant Renzig |q Unlikely Heroes##4944/3 |goto Galeras 4302,-2164,-814
+	step
+		.'Click _Potential Recruit_, press _T_ to:
+		.' Use the Roll Call Sheet to muster recruits |q Unlikely Heroes##4944/4 |tip You'll have to select each Recruit individually. |goto Thayd 4297,-2161,-812
 	step
 		.talk Sergeant Renzig##6396735
-		.' Speak to Sergeant Renzig |q Unlikely Heroes##4944/5 |goto 4300,-2162,-813
+		.' Speak to Sergeant Renzig |q Unlikely Heroes##4944/5 |goto Galeras 4302,-2164,-814
 	step
-		.click Communication Tower##270538
-		.' Signal Kriton's Command Post |q Unlikely Heroes##4944/6 |goto 4348,-2148,-822
+		.talk Communication Tower##270538
+		.' Signal Kriton's Command Post |q Unlikely Heroes##4944/6 |goto Galeras 4347,-2147,-822
 	step
-		'Press _C_ to use your communicator:.
+		'Press _C_ to use your communicator:
 		..turnin Unlikely Heroes##4944
-		..accept Crash Site Chaos##4947
+		..accept Crash Site Caos##4947
 	step
-		.talk Site Supervisor Mercy##263069
+		'Press _C_ to use your communicator:
 		..accept Sim Core: A Remarkable Discovery##8834 |goto 4423,-2105,-833
+	step
 		.talk Junior Scientist Barkberry##286376
 		.' Speak with Junior Scientist Barkberry |q Sim Core: A Remarkable Discovery##8834/1 |goto 4407,-2098,-838
 	step
@@ -62,7 +54,13 @@ ZGV:RegisterGuide("Exiles\\Galeras (15-23)",
 		.' Speak with Technician Kagger |q Sim Core: A Remarkable Discovery##8834/2 |goto Thayd 4390,-2105,-955
 	step
 		.click Sim Core Processor##286384
-		.' Activate the Sim Core Processors |tip There are 3 of these in this room. |q Sim Core: A Remarkable Discovery##8834/3 |goto 4390,-2104,-955
+		.' Activate the Sim Core Processors |count 33 |q Sim Core: A Remarkable Discovery##8834/3 |goto 4390,-2104,-955
+	step
+		.click Sim Core Processor##286384
+		.' Activate the Sim Core Processors |count 66 |q Sim Core: A Remarkable Discovery##8834/3 |goto 4377,-2123,-955
+	step
+		.click Sim Core Processor##286384
+		.' Activate the Sim Core Processors |count 100 |q Sim Core: A Remarkable Discovery##8834/3 |goto 4418,-2124,-955
 	step
 		.click Transimulator Interface##263065
 		.' Activate the Transimulator Interface |q Sim Core: A Remarkable Discovery##8834/4 |goto 4402,-2117,-955
@@ -72,6 +70,23 @@ ZGV:RegisterGuide("Exiles\\Galeras (15-23)",
 		..turnin Sim Core: A Remarkable Discovery##8834 |goto 4399,-2119,-954
 	step
 		'Use the green portal and _teleport out_ |goto Thayd 4398,-2095,-953
+		.' Jump through flying Whimfibers |tip They look like gold orbs floating through the air around this area.  |q Out on a Whim##5183/1 |goto 4391,-2152,-830
+		.' There are more at |goto 4522,-2123,-866 <10
+	step
+		'Press _C_ to use your communicator:.
+		..turnin Out on a Whim##5183
+	step
+		'Press _C_ to use your communicator:
+		..accept A Sticky Situation##5101 |goto Galeras 4522,-2123,-866 <10
+	step
+		.click Sticky Honey##5246304
+		.' Follow the tank, killing the enemies and clicking the honey to remove it.
+		.' Clear the Sticky Honey |q A Sticky Situation##5101/2 |goto Galeras 4588,-2100,-881
+		.' Escort the Exile Tank |q A Sticky Situation##5101/3 |goto 4588,-2114,-880
+	step
+		'Press _C_ to use your communicator:
+		..turnin A Sticky Situation##5101
+	step
 		.click Broken Dominion Spiderbot##274788
 		..accept Dominion Crash Data##5182 |goto 4490,-2232,-851
 	step
@@ -86,9 +101,9 @@ ZGV:RegisterGuide("Exiles\\Galeras (15-23)",
 		'Press _C_ to use your communicator:.
 		..turnin Dominion Crash Data##5182
 	step
-		.talk Daniel Bronson##274796
-		..turnin Crash Site Chaos##4947 |goto 4460,-2322,-832
-		..accept Battlefield Promotion##4967 |goto 4460,-2322,-832
+		.talk Daniel Bronson##274796 |goto 4464,-2320,-832
+		..turnin Crash Site Chaos##4947
+		..accept Battlefield Promotion##4967
 	step
 		.talk Corporal Brooks##269010
 		.' Report to Corporal Brooks |q Battlefield Promotion##4967/1 |goto Galeras 4594,-2345,-848
@@ -109,10 +124,6 @@ ZGV:RegisterGuide("Exiles\\Galeras (15-23)",
 		..accept The Medical Station##4760 |goto 4552,-2431,-832
 	step
 		.' In this medical camp:
-		.click Medspray Dispenser##270580
-		.click Wounded Patient##270623
-		.click Shock Paddles##270574
-		.click Critical Patient##270625
 		.' Use Medspray on Wounded Patients and Shock Paddles on Critical Patients.
 		.' Treat patients at the Medical Station |q The Medical Station##4760/1 |goto 4549,-2419,-832
 	step
@@ -123,7 +134,7 @@ ZGV:RegisterGuide("Exiles\\Galeras (15-23)",
 		..accept Power Restoration##4955 |goto 4542,-2439,-828
 	step
 		.' Click and activate the 3 Generator Consoles.
-		.' Activate the primary Generator Controls |q Power Restoration##4955/1 |goto 4534,-2439,-827
+		.' Activate the primary Generator Controls |q Power Restoration##4955/1 |goto 4533,-2431,-828
 	step
 		.' Activate the secondary Generator Controls |q Power Restoration##4955/2 |goto 4525,-2439,-828
 	step
@@ -153,9 +164,6 @@ ZGV:RegisterGuide("Exiles\\Galeras (15-23)",
 		.' All around this battlefield area:
 		.click Wounded Exile Soldier##6509668
 		.' Provide first aid to Wounded Exile Soldiers |q Helping Hand##4765/1 |goto Galeras 4676,-2505,-848
-		.kill Crimson Sentinel##6393627
-		.kill Crimson Dragoon##6596527
-		.kill Crimson Arbalest##6421188
 		.' Kill Crimson Legion troops |q Breathing Room##5306/1 |goto 4676,-2505,-848
 	step
 		'Press _C_ to use your communicator:.

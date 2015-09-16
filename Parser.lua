@@ -116,6 +116,13 @@ local ConditionEnv = {
 	raceclass = function(raceclass)
 		return ZGV.Utils:RaceClassMatch(raceclass,true)
 	end,
+	minlevel = function(playerlevel)
+		if ZGV.Utils:GetPlayerPreciseLevel() >= playerlevel then
+			return true
+		else
+			return false
+		end
+	end,
 	--[[
 		rep = function(faction)
 			if ZGV:GetReputation(faction).friendship then --dummy proof this.

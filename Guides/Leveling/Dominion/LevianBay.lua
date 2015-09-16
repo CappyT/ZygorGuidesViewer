@@ -9,127 +9,56 @@ ZGV:RegisterGuide("Dominion\\Levian Bay (3-6)",
 	description="Levian Bay is a wild coastal region that graces the shores of one of Nexus's great oceans, and a treasure trove of Eldan history, rare artifacts, and mysterious creatures. Is the starting area for Cassian and Mechari.  It is suited for characters level 3-6."
 	},
 	[[
-//HUMAN breadcumb
 	step
-		' _If you skipped_ the Arkship tutorial, click _>_ to skip this step
-		.click Departures Terminal: Stormcaller Landing##262430 |goto DominionArkShipTutorialCryogenics -696,684,81
-		.' Travel to Nexus - Levian Bay |q Called to Stormcaller Landing##7057/2
-		|only Human
+		.click Departures Terminal: Levian Bay |goto DominionArkShipTutorialCryogenics -701,699,81
+		.' Choose Levian Bay as Nexus landing point |q Ready for the Big Time##7057/4
+		|only if havequest(7057) // will not show for players who skipped arkship
 	step
-		' _If you skipped_ the Arkship tutorial, click _>_ to skip this step
 		.talk Lieutenant Ticus##263628 |goto LevianBay -3836,-6053,-981
-		..turnin Called to Stormcaller Landing##7057
+		..turnin Ready for the Big Time##7057
 		..accept Welcome to Levian Bay##9126
-		|only Human
-
-//DRAKEN breadcumb
-	step
-		' _If you skipped_ the Arkship tutorial, click _>_ to skip this step
-		.click Departures Terminal: Stormcaller Landing##262430 |goto DominionArkShipTutorialCryogenics -695,686,81
-		.' Travel to Nexus - Levian Bay |q Savage Coast Savagery##7060/3
-		|only Draken
-	step
-		' _If you skipped_ the Arkship tutorial, click _>_ to skip this step
-		.talk Scout Naharra##263625 |goto LevianBay -3836,-6054,-981
-		..turnin Savage Coast Savagery##7060
-		..accept Welcome to Levian Bay##9135
-		|only Draken
-
-//CHUA breadcumb
-	step
-		' _If you skipped_ the Arkship tutorial, click _>_ to skip this step
-		.click Departures Terminal: Stormcaller Landing##262430 |goto DominionArkShipTutorialCryogenics -696,684,81
-		.' Travel to Nexus - Levian Bay |q Mondo's Beachhead##7059/3
-		|only Chua
-	step
-		' _If you skipped_ the Arkship tutorial, click _>_ to skip this step
-		.talk Departures Terminal: Stormcaller Landing##262430 |goto LevianBay -3836,-6054,-981
-		..turnin Mondo's Beachhead##7059
-		..accept Welcome to Levian Bay##9133
-		|only Chua
-
-//HUMAN, CHUA, DRAKEN chain
+		|only if completedquest(7018) // will not show for players who skipped arkship
 	step
 		.talk Pilot Icarios##263647 |goto LevianBay -3832,-6064,-980
-		..turnin Welcome to Levian Bay##9133 |only Chua
-		..turnin Welcome to Levian Bay##9135 |only Draken
-		..turnin Welcome to Levian Bay##9126 |only Human
+		..turnin Welcome to Levian Bay##9126 |only if havequest(9126)
 		..accept Lighting the Way##6780
-		.'Tutorial skippers, click _>_ after obtaining the quest
-		|only Chua, Draken, Human
+	step
+		.talk Chancelor Juro Takigurian |goto LevianBay -3823,-6065,-980
+		..turnin The Cube of Knowledge##10140
+	step
+		.talk Explorer Grubozz |goto LevianBay -3826,-6056,-981
+		..turnin The Exploration Society##10089
+		|only Explorer
+	step
+		.talk Scientist Trinix |goto LevianBay -3826,-6056,-981
+		..turnin The Royal Collegium##10084
+		|only Scientist
+	step
+		.talk Settler Decima |goto LevianBay -3826,-6056,-981
+		..turnin The Settlement Authority##10086
+		|only Settler
+	step
+		.talk Soldier Akisa |goto LevianBay -3826,-6056,-981
+		..turnin The Dominion Legions##10087
+		|only Soldier
 	step
 		.click Signal Flare##263820 |goto LevianBay -3794,-6056,-981
 		.' Light the Signal Flares |q Lighting the Way##6780/2 |count 20
-		|only Chua, Draken, Human
 	step
 		.click Eldan Artifact##263787 |goto LevianBay -3711,-6032,-987
 		..accept Eldan Excavation##5858
-		|only Chua, Draken, Human
 	step
 		.click Eldan Artifact##263794
-		.' Recover Eldan Artifacts |q Eldan Excavation##5858/1 |goto LevianBay -3706,-5968,-998
-		|only Chua, Draken, Human
+		.' Recover Eldan Artifacts |q Eldan Excavation##5858/1 |tip Don't touch the clams, is a challenge |goto LevianBay -3706,-5968,-998
 	step
 		.click Signal Flare##263820 |goto LevianBay -3730,-6100,-985
 		.' Light the Signal Flares |q Lighting the Way##6780/2 |count 40
-		|only Chua, Draken, Human
 	step
 		.' Kill Seaspine or Stomrcaller beasts |q Lighting the Way##6780/1 |goto LevianBay -3580,-6126,-976
 		.' Light the Signal Flares |q Lighting the Way##6780/2 |goto LevianBay -3568,-6166,-984
-		|only Chua, Draken, Human
-
-//MECHARI breadcumb
-	step
-		.'_If you skipped_ the Arkship tutorial, click _>_ to skip this step
-		.click Departures Terminal: Jagged Cove##262431 |goto DominionArkShipTutorialCryogenics -684,590,81
-		.' Travel to Nexus - Levian Bay |q Jagged Cove##7058/2
-		|only Mechari
-	step
-		.'_If you skipped_ the Arkship tutorial, click _>_ to skip this step
-		.talk Agent Infivan##263622 |goto LevianBay -3781,-6338,-996
-		..turnin Jagged Cove##7058
-		..accept Welcome to Levian Bay##9130
-		|only Mechari
-	step
-		.talk Pilot Apex##263645 |goto LevianBay -3776,-6312,-996
-		..turnin Welcome to Levian Bay##9130
-		..accept Lighting the Way##5855
-		.'Tutorial skippers, click _>_ after obtaining the quest
-		|only Mechari
-	step
-		.click Signal Flare##263820 |goto LevianBay -3761,-6286,-991
-		.' Light the Signal Flares |q Lighting the Way##5855/2 |count 20
-		|only Mechari
-	step
-		.click Signal Flare##263820 |goto LevianBay -3700,-6271,-984
-		.' Light the Signal Flares |q Lighting the Way##5855/2 |count 40
-		|only Mechari
-	step
-		.click Signal Flare##263820 |goto LevianBay -3669,-6234,-982
-		.' Light the Signal Flares |q Lighting the Way##5855/2 |count 60
-		|only Mechari
-	step
-		.click Signal Flare##263820 |goto LevianBay -3612,-6207,-984
-		.' Light the Signal Flares |q Lighting the Way##5855/2 |count 80
-		|only Mechari
-	step
-		.click Eldan Artifact##263787 |goto LevianBay -3711,-6032,-987
-		..accept Eldan Excavation##5858
-		|only Mechari
-	step
-		.click Eldan Artifact##263794
-		.' Recover Eldan Artifacts |q Eldan Excavation##5858/1 |goto LevianBay -3706,-5968,-998
-		|only Mechari
-	step
-		.' Kill Seaspine or Stomrcaller beasts |q Lighting the Way##5855/1 |goto LevianBay -3580,-6126,-976
-		.' Light the Signal Flares |q Lighting the Way##5855/2 |goto LevianBay -3568,-6166,-983
-		|only Mechari
-
-// ALL Classes chain
 	step
 		.talk Wingman Volaticus##263644 |goto LevianBay -3475,-6116,-978
-		..turnin Lighting the Way##5855 |only Mechari
-		..turnin Lighting the Way##6780 |only Chua, Draken, Human
+		..turnin Lighting the Way##6780
 		..accept Find Artemis Zin##5856
 	step
 		'_Enter_ the small cave |goto LevianBay -3315,-5957,-968 < 10 |c |q 5856/2
@@ -157,6 +86,9 @@ ZGV:RegisterGuide("Dominion\\Levian Bay (3-6)",
 		.talk Analyst Spector##263651 |goto LevianBay -3012,-6082,-961
 		..turnin What Is Dead May Never Spy##6142
 	step
+		.talk Craftmaster Tiberia Marcela |goto LevianBay -3011,-6082,-961
+		..turnin Rune Runedown##10208
+	step
 		.talk Scholar Valensa##263642 |goto LevianBay -3016,-6076,-960
 		..turnin Eldan Excavation##5858
 	step
@@ -164,15 +96,16 @@ ZGV:RegisterGuide("Dominion\\Levian Bay (3-6)",
 		..turnin Find Artemis Zin##5856
 		..accept Eldan Insecurity##5857
 	step
-		.'_Jump down_ and follow the ramp | goto LevianBay -2988,-6049,-974 < 10 |c |q 5857/1
+		'Press _I_ to open your inventory
+		'_Right Click_ shoulders, select _Edit Runes_
+		'Click the Spiral button, select the Rune
+		'Equip the shoulders
+		.'When done _Jump down_ and follow the ramp | goto LevianBay -2988,-6049,-974 < 10 |c |q 5857/1
 	step
-		.click Eldan Terminal##263831 |goto LevianBay -2781,-5968,-1035
+		.click Eldan Terminal##263831 |tip The fire guys on your way give a speed boost |goto LevianBay -2781,-5968,-1035
 		.' Use the Eldan Terminal |q Eldan Insecurity##5857/1
 	step
-		'Press _C_ to open your Communicator:
-		..accept Eldan Insecurity##5857 |goto LevianBay -2770,-5997,-1068
-	step
-		'Either kill 1 _Eldan Defender_ or click _Power Core_
+		'Kill 1 _Eldan Defender_ or click _Power Core_
 		.' Press _C_ to open your Communicator:
 		..accept Rerouting Power##5867 |goto LevianBay -2728,-6010,-1068
 	step
@@ -230,7 +163,7 @@ ZGV:RegisterGuide("Dominion\\Levian Bay (3-6)",
 	step
 		'_Head back_ through the corridor |goto LevianBay -1917,-5985,-1062 < 10 |c |q 5860/1
 	step
-		.' _Continue_ into the round hallway |goto LevianBay -1684,-5986,-1053 < 10 |c |q 5860/1
+		.' _Continue_ into the eastern room |goto LevianBay -1684,-5986,-1053 < 10 |c |q 5860/1
 	step
 		.click Eldan Control Panel
 		.' Release the first Repair Construct |q Automated Repairs##5860/1 |goto LevianBay -1577,-5921,-1062
@@ -241,7 +174,7 @@ ZGV:RegisterGuide("Dominion\\Levian Bay (3-6)",
 		.click Eldan Security Node##263755 |goto LevianBay -1583,-5984,-1062
 		.' Repair the eastern Eldan Security Node |q Seizing Control##5859/3
 	step
-		.'_Continue_ into the southern hallway |goto LevianBay -1768,-5925,-1053 < 10 |c |q 5859/1
+		.'_Continue_ into the southern hallway |goto LevianBay -1768,-5925,-1053 < 10 |c |q 5859/5
 	step
 		.' Repair the Eldan Primary Access Hub |q Seizing Control##5859/5 |goto LevianBay -1766,-5818,-1045
 	step
@@ -321,7 +254,7 @@ ZGV:RegisterGuide("Dominion\\Levian Bay (3-6)",
 		..turnin Unwelcome Guests##5864
 		..accept A Daring Escape##5866 |goto LevianBay -2499,-5074,-998
 	step
-		.' Follow the _path around_ |goto LevianBay -2367,-5040,-981 < 10 |c |q 5866/1
+		.' Follow the _path around_ |goto LevianBay -2367,-5040,-981 < 20 |c |q 5866/1
 	step
 		.click Girrok Vomit##262777 |goto LevianBay -2336,-4952,-953
 		..accept Girrok Ate My Status Report##8964

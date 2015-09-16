@@ -10,6 +10,9 @@ ZGV:RegisterGuide("Dominion\\Auroria (15-23)",
 	},
 	[[
 	step
+		.click Hot Rod to Hycrest | goto Illium -2803, -1409, -921
+		.'Take the Hot Rod to Hycrest |q Auroria Deployment##9905/1
+	step
 		.talk Agent Marcus##281080 |goto Auroria -2548,-1872,-875
 		..turnin Auroria Deployment##9905
 		..accept Citizen Concerns##3751
