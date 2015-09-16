@@ -5,6 +5,8 @@ Zygor's Wildstar Leveling Guide is a software based strategy guide that you can 
 
 This product was discontinued, the code was uploaded to GitHub.  And this is an unofficial update by me, while I work on a new Addon from scratch.
 
+This branch supports game 1.3.x a.k.a Drop 5.
+
 TODO's:
 ------
 
