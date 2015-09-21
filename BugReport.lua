@@ -18,7 +18,7 @@ function BugReport:OpenBugWindow()
 			return
 		end
 	else
-		if self.wndBugReport:IsShown() then self.wndBugReport  :Show(false) return end
+		if self.wndBugReport:IsShown() then self.wndBugReport:Show(false) return end
 		-- has to be like that, otherwise it'd hide the window immediately after creating it
 	end
 
@@ -85,9 +85,9 @@ function BugReport:OpenBugWindow()
 		end
 		bugText = bugText .. "\nCoords: x " .. math.floor(tPos.x) .. ", z " .. math.floor(tPos.z) .. ", y " .. math.floor(tPos.y)
 		
-		local mapDump = GameLib.GetCurrentZoneMap()
+		-- map dump
 		bugText = bugText .. "\n\nMap object: "
-		for k,v in pairs(mapDump) do
+		for k,v in pairs(map) do
 			bugText = bugText .. "\n" .. k .. " - " .. v
 		end
 		
@@ -118,11 +118,10 @@ function BugReport:OpenBugWindow()
 	end
 								
 	self.wndBugReport:FindChild("BugReportContainer"):FindChild("BugInfo"):SetText(bugText)
-	
-	self.wndBugReport:Invoke() -- show the window
 	self.wndBugReport:FindChild("BugReportContainer"):FindChild("BugCopy"):SetActionData(GameLib.CodeEnumConfirmButtonType.CopyToClipboard, bugText and #bugText>0 and bugText  or " ")
+	self.wndBugReport:Show(true) -- show the window
 end
 
-function BugReport:CloseWindow()
-	self.wndBugReport:Show(false)
+function BugReport:CloseBugWindow()
+	self.wndBugReport:Show(false) -- hide the window
 end

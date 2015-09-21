@@ -62,12 +62,9 @@ end
 -- ZgWriter OnLoad
 -----------------------------------------------------------------------------------------------
 function ZygorGuidesViewer:OnLoad()
-	local assetfolder = Apollo.GetAssetFolder() or "Folder\\Unknown"
-	local realname = assetfolder:match("\\([^\\]+)$") or "Name Unknown"
-	ZGV.INFO = Apollo.GetAddonInfo(realname) or {}
-	ZGV.INFO.assetfolder = assetfolder
-	ZGV.INFO.realname = realname
-
+	-- Get some info from the addon
+	ZGV.INFO = Apollo.GetAddonInfo("ZygorGuidesViewer")
+	ZGV.INFO.assetfolder = Apollo.GetAssetFolder()
 
     -- load our form file
 	Apollo.LoadSprites("ZygorUI.xml") 
@@ -593,7 +590,10 @@ function ZygorGuidesViewer:OpenBugWindow()
 	ZGV.BugReport:OpenBugWindow()
 end
 
-
+function ZygorGuidesViewer:BugReportCopyData()
+	-- data is copied automatic by event, we only need to close window
+	ZGV.BugReport:CloseBugWindow()
+end
 
 ----------------- MISC
 
