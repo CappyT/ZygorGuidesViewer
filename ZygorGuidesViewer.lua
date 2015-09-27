@@ -663,10 +663,10 @@ function ZygorGuidesViewer:OnDialog_ShowState(nState, nQuest)
 	-- if not enabled in config, skip any magic
 	if not self.db.char.guide_autoaccept and not self.db.char.guide_autocomplete then return end
 
-	self.PopupAutoacceptTimer = ApolloTimer.Create(6, true, "HideAutoacceptPopup", self)
-	self.PopupAutoacceptTimer:Stop()
-
-	local blacklistedQuests = { -- Housing Bilboard quests
+	local blacklistedQuests = { 
+		[6894] = true, -- All Hail the Queen [GROUP 2+]
+		[8832] = true, -- Larallen Sentinnel [GROUP 2+]
+		-- Housing Bilboard quests
 		[8941] = true,
 		[8942] = true,
 		[8943] = true,
@@ -695,6 +695,8 @@ function ZygorGuidesViewer:OnDialog_ShowState(nState, nQuest)
 	end
 	
 	local tResponseList = DialogSys.GetResponses(nQuestId)
+	if not tResponseList or #tResponseList == 0 then return end
+
 	local responseAccept = nil
 	local responseViewAccept = nil
 	local responseReady = nil
@@ -705,68 +707,32 @@ function ZygorGuidesViewer:OnDialog_ShowState(nState, nQuest)
 	local responseCompleteCount = 0
 	
 	local counter = 0
-	for key, response in pairs(tResponseList) do
+	for key, response in ipairs(tResponseList) do
+		local responseType = response:GetType()
 		counter = counter + 1
-		if response:GetType()==DialogResponse.DialogResponseType_ViewQuestAccept then 
-			responseViewAccept = key
-			responseViewAcceptCount = responseViewAcceptCount + 1
-		elseif response:GetType()==DialogResponse.DialogResponseType_QuestAccept then 
+		if responseType==DialogResponse.DialogResponseType_ViewQuestAccept or responseType==DialogResponse.DialogResponseType_QuestAccept then 
 			responseAccept = key
 			responseAcceptCount = responseAcceptCount + 1
-		elseif response:GetType()==DialogResponse.DialogResponseType_ViewQuestComplete then 
-			responseReady = key
-			responseReadyCount = responseReadyCount + 1
-		elseif response:GetType()==DialogResponse.DialogResponseType_QuestComplete then 
+
+			if self.db.char.guide_autoaccept then
+				tResponseList[responseAccept]:Select()
+			end
+
+		elseif responseType==DialogResponse.DialogResponseType_ViewQuestComplete or responseType==DialogResponse.DialogResponseType_QuestComplete then 
 			responseComplete = key
 			responseCompleteCount = responseCompleteCount + 1
 		end
 	end
 
+	if self.db.char.guide_autocomplete then
+		if ZGV.Frame:FindChild("HiddenBagWindow"):GetTotalEmptyBagSlots() < 0 then
+			if ZGV.db.char.guide_notify then self:SendToChat("No space in inventory, cannot autoselect reward") end
+		elseif responseCompleteCount == 1 then
+			--tResponseList[responseComplete]:Select()
+			tResponseList[1]:Select()
+		end
+	end
 	-- TODO: Add some display for autoreceived quest reward -- most likely nQuest:GetRewardData(), item:GetIcon(), Quest.Quest2RewardType enum
 	-- TODO: Are there quests that can grant unique rewards that player already have?
 	-- TODO: Full inventory? In combat?	
-
-
-	-- if there is more than one way to accept/complete, leave that to player
-	if responseViewAccept and self.db.char.guide_autoaccept then
-		if responseViewAcceptCount == 1 then 
-			-- open next step of quest accept dialog
-			tResponseList[responseViewAccept]:Select()
-		end
-	elseif responseAccept and self.db.char.guide_autoaccept then
-		if responseAcceptCount == 1 then
-			-- accept quest
-			tResponseList[responseAccept]:Select()
-			if ZGV.db.char.guide_notify then self:SendToChat("Accepted quest '" .. nQuest:GetTitle() .. "'") end
-		end
-	elseif responseComplete and self.db.char.guide_autocomplete then
-		if ZGV.Frame:FindChild("HiddenBagWindow"):GetTotalEmptyBagSlots() < 0 then
---			if not Apollo.GetAddon("Inventory").wndMain:IsVisible() then
---				ShowInventory() -- carbine system call
---			end
-			if ZGV.db.char.guide_notify then self:SendToChat("No space in inventory, cannot autoselect reward") end
-		elseif responseCompleteCount == 1 then
-			tResponseList[responseComplete]:Select()
-			local rewardName = tResponseList[responseComplete]:GetText()
-
-			if tResponseList[responseComplete]:GetRewardId() ~= 0 then
-				if nQuest then 
-					if ZGV.db.char.guide_notify then self:SendToChat("Autoselected '"..rewardName.."' as reward for '" .. nQuest:GetTitle() .. "'") end
-				else
-					if ZGV.db.char.guide_notify then self:SendToChat("Autoselected '"..rewardName.."' as reward") end
-				end
-			end
-		else 
-			if ZGV.db.char.guide_notify then self:SendToChat("Please select quest reward") end
-		end
-	elseif responseReady and self.db.char.guide_autocomplete then 
-		if responseReadyCount == 1 then
-			tResponseList[responseReady]:Select()
-			if nQuest then 
-				if ZGV.db.char.guide_notify then self:SendToChat("Turned in quest '" .. nQuest:GetTitle() .. "'") end
-			end
-		else
-			if ZGV.db.char.guide_notify then self:SendToChat("Please select quest to turn in") end
-		end
-	end
 end
