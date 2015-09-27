@@ -96,10 +96,10 @@ ZGV:RegisterGuide("Dominion\\Levian Bay (3-6)",
 		..turnin Find Artemis Zin##5856
 		..accept Eldan Insecurity##5857
 	step
-		'Press _I_ to open your inventory
-		'_Right Click_ shoulders, select _Edit Runes_
-		'Click the Spiral button, select the Rune
-		'Equip the shoulders
+		' Press _I_ to open your inventory
+		' _Ctrl_ + _Right Click_ shoulders, select _Edit Runes_
+		' Click the Spiral button, select the Rune
+		' Equip the shoulders
 		.'When done _Jump down_ and follow the ramp | goto LevianBay -2988,-6049,-974 < 10 |c |q 5857/1
 	step
 		.click Eldan Terminal##263831 |tip The fire guys on your way give a speed boost |goto LevianBay -2781,-5968,-1035
@@ -125,8 +125,8 @@ ZGV:RegisterGuide("Dominion\\Levian Bay (3-6)",
 		.' Collect Power Core Fragments |q Eldan Insecurity##5857/2 |goto LevianBay -2825,-5793,-1068
 	step
 		'Press _C_ to open your Communicator:
-		..turnin Rerouting Power##5867
 		..turnin Eldan Insecurity##5857
+		..turnin Rerouting Power##5867
 		..accept Enter the Station##5868
 	step
 		.click Eldan Terminal##263831 |goto LevianBay -2781,-5968,-1035
@@ -147,23 +147,7 @@ ZGV:RegisterGuide("Dominion\\Levian Bay (3-6)",
 		'Press _C_ to open your Communicator:
 		..accept Automated Repairs##5860 |goto LevianBay -1769,-6009,-1051
 	step
-		'_Go through_ the corridor on the right |goto LevianBay -1850,-5986,-1053 < 10 |c |q 5860/3
-	step
-		.click Eldan Control Panel##263615 |goto LevianBay -1956,-5920,-1062
-		.' Release the third Repair Construct |q Automated Repairs##5860/3
-	step
-		.click Eldan Control Panel##263607 |goto LevianBay -1930,-5893,-1062
-		.' Release the fourth Repair Construct |q Automated Repairs##5860/4
-	step
-		.kill Eldan Protector##262900+, Eldan Defender##262901+, Malfunctioning Security Construct##262898+
-		.'Collect Power Crystals from Eldan Constructs |q Seizing Control##5859/2 |goto LevianBay -1935,-5966,-1061
-	step
-		.click Eldan Security Node##263754 |goto LevianBay -1951,-5986,-1062
-		.' Repair the western Eldan Security Node |q Seizing Control##5859/4
-	step
-		'_Head back_ through the corridor |goto LevianBay -1917,-5985,-1062 < 10 |c |q 5860/1
-	step
-		.' _Continue_ into the eastern room |goto LevianBay -1684,-5986,-1053 < 10 |c |q 5860/1
+		.' _Go through_ the corridor to the left |tip Kill any robot on your way |goto LevianBay -1684,-5986,-1053 < 10 |c |q 5860/1
 	step
 		.click Eldan Control Panel
 		.' Release the first Repair Construct |q Automated Repairs##5860/1 |goto LevianBay -1577,-5921,-1062
@@ -171,8 +155,24 @@ ZGV:RegisterGuide("Dominion\\Levian Bay (3-6)",
 		.click Eldan Control Panel##263602
 		.' Release the second Repair Construct |q Automated Repairs##5860/2 |goto LevianBay -1605,-5892,-1062
 	step
+		.kill Eldan Protector##262900+, Eldan Defender##262901+, Malfunctioning Security Construct##262898+
+		.'Collect Power Crystals from Eldan Constructs |q Seizing Control##5859/2 |tip The mobs around the room
+	step
 		.click Eldan Security Node##263755 |goto LevianBay -1583,-5984,-1062
 		.' Repair the eastern Eldan Security Node |q Seizing Control##5859/3
+	step
+		'_Continue_ into the eastern room  |goto LevianBay -1850,-5986,-1053 < 10 |c |q 5860/3
+	step
+		.click Eldan Control Panel##263615 |goto LevianBay -1956,-5920,-1062
+		.' Release the third Repair Construct |q Automated Repairs##5860/3
+	step
+		.click Eldan Control Panel##263607 |goto LevianBay -1930,-5893,-1062
+		.' Release the fourth Repair Construct |q Automated Repairs##5860/4
+	step
+		.click Eldan Security Node##263754 |goto LevianBay -1951,-5986,-1062
+		.' Repair the western Eldan Security Node |q Seizing Control##5859/4
+	step
+		'_Head back_ through the corridor |goto LevianBay -1917,-5985,-1062 < 10 |c |q 5860/1
 	step
 		.'_Continue_ into the southern hallway |goto LevianBay -1768,-5925,-1053 < 10 |c |q 5859/5
 	step
@@ -180,6 +180,7 @@ ZGV:RegisterGuide("Dominion\\Levian Bay (3-6)",
 	step
 		.' Use the Eldan Teleporter to return to the Elder Vault |q Seizing Control##5859/6 |goto LevianBay -1767,-6019,-1048
 	step
+		// FIXME: Seizing Control didn't turn automatically
 		.talk The Caretaker##263636 |goto LevianBay -2703,-5985,-1326
 		..turnin Seizing Control##5859
 		..turnin Automated Repairs##5860

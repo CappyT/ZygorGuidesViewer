@@ -13,16 +13,16 @@ ZGV:RegisterGuide("Dominion\\The Destiny (1-3)",
 		.talk Axis Pheydra##937722 |goto DominionArkShipTutorialCryogenics 769,16,80
 		..accept Rise and Shine##6992
 	step
-		.' Proceed_ to the reacclimation area |q Rise and Shine##6992/1 |goto DominionArkShipTutorialCryogenics 701,-37,72
+		.' _Proceed_ to the reacclimation area |q Rise and Shine##6992/1 |goto DominionArkShipTutorialCryogenics 701,-37,72
 	step
 		.click Cerebral Scanner
 		.' Use the Cerebral Scanner Console to scan the Apprehensive Citizens' |q Rise and Shine##6992/2 |goto DominionArkShipTutorialCryogenics 706,-77,71
 	step
 		.talk Particularly Suspicious Citizen##943081 |goto DominionArkShipTutorialCryogenics 706,-63,72
-		.' Interrogate Shifty Dominion Citizen |q Rise and Shine##6992/3
+		.' Interrogate the Particularly Suspicious Citizen |q Rise and Shine##6992/3
 	step
-		' Kill 3 Jaillyn's Phantoms
-		.' Kill Jaillyn's Phantoms |q Rise and Shine##6992/4 |goto DominionArkShipTutorialCryogenics 744,-64,72
+		' Kill 3 _Jaillyn's Phantoms_
+		.' Destroy Jaillyn's Phantoms |q Rise and Shine##6992/4 |goto DominionArkShipTutorialCryogenics 744,-64,72
 	step
 		.talk Axis Pheydra##937722
 		.' Speak with Axis Pheydra |q Rise and Shine##6992/5 |goto DominionArkShipTutorialCryogenics 765,-108,80
@@ -38,15 +38,15 @@ ZGV:RegisterGuide("Dominion\\The Destiny (1-3)",
 		.talk Mondo Zax##262927 |goto DominionArkShipTutorialCryogenics 692,-929,87
 		.' Talk to Mondo Zax in his Lab |q Moving Targets##6994/2
 	step
-		.'Click _Cerebral Rehabilitator_ controls |goto DominionArkShipTutorialCryogenics 711,-916,87
+		.' Click _Cerebral Rehabilitator_ controls |goto DominionArkShipTutorialCryogenics 711,-916,87
 		.' Activate the Cerebral Rehabilitator Alpha Controls |q Moving Targets##6994/3
 	step
-		.' Go to the back of lab:  |goto DominionArkShipTutorialCryogenics 613,-929,85 < 10 |c |q 6994/4
+		.' Go to the back of lab:  |goto DominionArkShipTutorialCryogenics 613,-929,85 < 10 |c |q 6994
 	step
-		' Kill 3 Unfortunate Citizens
-		.' _Destroy Unfortunate Citizens_ |q Moving Targets##6994/4
-	step  
-		.' Teleport to Subdeck 77 |q Moving Targets##6994/5 |goto DominionArkShipTutorialCryogenics 564,-954,85
+		' Kill 3 _Unfortunate Citizens_
+		.' Destroy Unfortunate Citizens |q Moving Targets##6994/4
+	step
+		.' Teleport to Subdeck 77 |q Moving Targets##6994/5 |tip Is in the last room |goto DominionArkShipTutorialCryogenics 564,-954,85
 	step
 		.talk Kezrek Warbringer##262763 |goto DominionArkShipTutorialCryogenics -907,-1132,-33
 		..turnin Moving Targets##6994
@@ -57,7 +57,7 @@ ZGV:RegisterGuide("Dominion\\The Destiny (1-3)",
 		.talk Chief Orderly
 		.' Talk to the Chief Orderly |q Misplaced Mordesh##7013/2 |tip This will start a holdout |goto DominionArkShipTutorialCryogenics -794,-1011,-38
 	step
-		.'Defend the Containment Warden from prisoners |q Misplaced Mordesh##7013/3
+		.' Defend the Containment Warden from prisoners |q Misplaced Mordesh##7013/3
 	step
 		.talk Kezrek Warbringer##262763 |goto DominionArkShipTutorialCryogenics -929,-1131,-33
 		..turnin Misplaced Mordesh##7013
@@ -74,11 +74,11 @@ ZGV:RegisterGuide("Dominion\\The Destiny (1-3)",
 	step
 		.' _Enter_ the Arkship Intellicore |q Seizing the Saboteur##7018/1 |goto DominionArkShipTutorialCryogenics -862,-1197,-32
 	step
-		' Kill Psi-Armorer Jaillyn Sweetspur
-		.' _Defeat Psi-Armorer Jaillyn Sweetspur_ |q Seizing the Saboteur##7018/2 |goto DominionArkShipTutorialCryogenics -809,-1251,-37
+		' Kill _Psi-Armorer Jaillyn Sweetspur_
+		.' Defeat Psi-Armorer Jaillyn Sweetspur |q Seizing the Saboteur##7018/2 |goto DominionArkShipTutorialCryogenics -809,-1251,-37
 	step
 		.click Jaillyn Sweetspur
-		.' _Secure the prisoner Jaillyn Sweetspur_ |q Seizing the Saboteur##7018/3 |goto DominionArkShipTutorialCryogenics -810,-1258,-37
+		.' _Secure the prisoner Jaillyn Sweetspur_ |q Seizing the Saboteur##7018/3 |goto DominionArkShipTutorialCryogenics -810,-1258,-37 <30
 	step
 		.' Take teleport to Alexis Pheydra |goto DominionArkShipTutorialCryogenics -786,-1215,-37
 		.talk Alexis Pheydra

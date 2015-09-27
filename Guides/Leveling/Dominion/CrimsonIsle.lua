@@ -84,21 +84,21 @@ ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 		.talk Researcher Zum##263279 |goto CrimsonIsle -7690,-602,-864
 		..turnin Spatial Anomaly##5684
 	step
-		.' _Jump down_ here |goto CrimsonIsle -7689,-603,-865 <15
+		.' _Jump down_. You will get a fall buff
 		.talk Craftmaster Tiberia Marcela |goto CrimsonIsle -7696,-650,-941
 		..turnin Rune Runedown##10208
 	step
-		'Press _I_ to open your inventory
-		'_Right Click_ shoulders, select _Edit Runes_
-		'Click the Spiral button, select the Rune
-		'Equip the shoulders
-		.'When done head to Mondo Sax |goto CrimsonIsle -7682,-658,-943 <5 |c |q 5814
+		' Press _I_ to open your inventory
+		' _Ctrl_ + _Right Click_ shoulders, select _Edit Runes_
+		' Click the Spiral button, select the Rune
+		' Equip the shoulders
+		.'When done head to Mondo Sax |goto CrimsonIsle -7681,-662,-943 <15 |c |q 5814
 	step
 		.talk Mondo Zax##262281 |goto CrimsonIsle -7667,-673,-943
 		..turnin Forward March##5814
 		..accept Ordnance Recovery##5596
 	step
-		.' Find the blimp crash site|q Ordinance Recovery##5596/1 |goto CrimsonIsle -7412,-668,-996
+		.' Find the blimp crash site|q Ordinance Recovery##5596/1 |goto CrimsonIsle -7431,-680,-986 <5
 	step
 		.click Dominion Demolitions Expert##263321 
 		.' Search for Dead Dominion Demolitions Experts |q Ordnance Recovery##5596/2 |goto CrimsonIsle -7329,-680,-990
@@ -148,9 +148,9 @@ ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 		.talk Mondo Zax##262288 |goto CrimsonIsle -7489,-830,-981
 		..turnin Dreg Mutations##5610
 	step
-		.' Follow this _road up_ the hill |goto CrimsonIsle -7317,-1132,-973 < 10 |c |q 5604/1
+		.' Follow this _road up_ the hill |goto CrimsonIsle -7317,-1132,-973 < 10 |c |q 5604
 	step
-		.' _Continue up_ the wooden ramp |goto CrimsonIsle -7383,-1108,-945 < 5 |c |q 5604/1
+		.' _Continue up_ the wooden ramp |goto CrimsonIsle -7379,-1113,-949 <5 |c |q 5604
 	step
 		.click Exile Anti-Air Cannon##263442 |goto CrimsonIsle -7349,-1085,-937
 		.' Destroy the Exile Anti-Air Cannon |q Tactical Demolitions##5604/1 |count 33
@@ -188,14 +188,14 @@ ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 		..accept Enforced Radio Silence##5580
 		..accept Heavy Armor##5583
 	step
-		.' Follow the _ramp up_ |goto CrimsonIsle -7616,-1368,-954 |c |q 5580/1
+		.' Follow the _ramp up_ |goto CrimsonIsle -7616,-1368,-954 |c |q 5580
 	step
 		.' Sabotage the Tower Controls |q Enforced Radio Silence##5580/1 |count 1 |goto CrimsonIsle -7597,-1357,-942
 	step
-		.click Vindicator Tank##299901 |goto CrimsonIsle -7647,-1387,-956
+		.click Vindicator Tank##299901 |goto CrimsonIsle -7647,-1387,-956 <5
 		.' Sabotage Exile Tanks |q Heavy Armor##5583/1 |count 1
 	step
-		.' Follow the _big ramp up_ |goto CrimsonIsle -7709,-1391,-948 < 10 |c |q 5580/1
+		.' Follow the _big ramp up_ |goto CrimsonIsle -7709,-1391,-948 <10 |c |q 5580
 	step
 		.' Sabotage the Tower Controls |q Enforced Radio Silence##5580/1 |goto CrimsonIsle -7701,-1412,-934
 	step
@@ -212,14 +212,14 @@ ZGV:RegisterGuide("Dominion\\Crimson Isle (3-6)",
 		..turnin Heavy Armor##5583
 		..accept Last Resistance##5594
 	step
-		'_Go up_ the ramp |goto CrimsonIsle -7832,-1430,-942 < 10 |c |q 5594/1
+		'_Go up_ the ramp |goto CrimsonIsle -7832,-1430,-942 <10 |c |q 5594
 	step
 		.click Warbot Fuel##304277 |goto CrimsonIsle -7956,-1349,-941
 		' Fight waves of enemies and Warbot
 		.' Sabotage the Warbot Fuel and Kill Megatech Warbot |q Last Resistance##5594/1
 	step
 		.click Control Panel##263441 
-		.' Activate the Control Panel |q Last Resistance##5594/2 |goto CrimsonIsle -7990,-1361,-935 < 5
+		.' Activate the Control Panel |q Last Resistance##5594/2 |goto CrimsonIsle -7990,-1361,-935 <5
 	step
 		.click Ship Controls##263440
 		'Click _Yes_ to launch the transport to Deradune

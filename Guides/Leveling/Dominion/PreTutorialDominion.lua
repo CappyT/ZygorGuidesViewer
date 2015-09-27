@@ -4,7 +4,7 @@ ZGV:RegisterGuide("Dominion\\Cryo Awakening Protocol (1)",
 	faction="Dominion",
 	startlevel=1,
 	endlevel=1,
-	nextguide="Dominion\\DominionArkShipTutorialCryogenics (1-3)",
+	nextguide="Dominion\\The Destiny (1-3)",
 	image="ZygorUIGuides:CryoAwakening", 
 	description="Neural test performed by Noelia to see if you are apt for awakening.  Is a tutorial for players new to MMO."
 	},
@@ -26,6 +26,6 @@ ZGV:RegisterGuide("Dominion\\Cryo Awakening Protocol (1)",
 		..turnin Cryo Awakening Protocol##10108
 	step
 		'Use Spacebar to jump the stairs
-		.' Jump to reach the exit |goto PreTutorialDominion 4088,-231,-22 |c
+		.' Jump to reach the exit |goto PreTutorialDominion 4087,-233,22 |c
 	]]
 )
