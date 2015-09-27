@@ -73,6 +73,52 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.' Collect Fine Highland Pelts |q Glitterfur Assistance##6610/1 |goto Ellevar -2601,-3906,-771
 		.' Collect Glitterfur Trinkets |q Hunter and Shiny Gatherer##6611/1
 	step
+		.talk Huntmaster Genki##287121 |goto Ellevar -2647,-3771,-793
+		..turnin Hunter and Shiny Gatherer##6611
+	step
+		.talk Chieftain Aleli##276526 |goto Ellevar -2628,-3769,-794
+		..turnin Glitterfur Assistance##6610
+	step
+		.talk Utsah the Curious##286935 |goto Ellevar -2619,-3778,-793
+		..accept No Refunds##6779
+	step
+		.talk Watti Mozz##5768191 |goto Ellevar -2611,-3733,-798
+		.' Speak to Watti Mozz |q No Refunds##6779/1
+	step
+		'Press _T_ while targeting the red glowing area |goto Ellevar -2621,-3723,-799
+		.' Use Prototype Veggie Cannon 2.0 on the Target |q No Refunds##6779/2
+	step
+		'Press _T_ while targeting the red glowing area |goto Ellevar -2621,-3723,-799
+		.' Use Prototype Veggie Cannon 3.0 on the Target |q No Refunds##6779/3
+	step
+		'Press _T_ while targeting the red glowing area |goto Ellevar -2621,-3723,-799
+		.' Use Prototype Veggie Cannon 4.0 on the Target |q No Refunds##6779/4
+	step
+		'Press _T_ while targeting the red glowing area |goto Ellevar -2621,-3723,-799
+		.' Use Prototype Veggie Cannon 5.0 on the Target |q No Refunds##6779/5
+	step
+		.talk Utsah the Curious##286935 |goto Ellevar -2618,-3777,-793
+		..turnin No Refunds##6779
+		..accept Veggie Launcher##6601
+	step
+		'Press _T_ while targeting the red glowing target |goto Ellevar -2473,-3896,-774
+		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/1
+	step
+		'Press _T_ while targeting the red glowing target |goto Ellevar -2515,-3872,-785
+		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/2
+	step
+		'Press _T_ while targeting the red glowing target |goto Ellevar -2552,-3844,-785
+		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/3
+	step
+		'Press _T_ while targeting the red glowing target |goto Ellevar -2591,-3819,-786
+		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/4
+	step
+		'Press _T_ while targeting the red glowing target |goto Ellevar -2624,-3783,-793
+		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/5
+	step
+		.talk Utsah the Curious##286935 |goto Ellevar -2618,-3778,-793
+		..turnin Veggie Launcher##6601
+	step
 		.'_Jump down_ from here |goto Ellevar -2423,-3751,-787 <15 |c |q 6609/1
 	step
 		.click Eldan Artifact##493012  |goto Ellevar -2426,-3716,-824
@@ -115,67 +161,9 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		' Click _Provisions_, then defend the area |goto Ellevar -2626,-3997,-757
 		.' Collect the Provisions |q Recognition of Faith##6606/1
 		.' Fend off enraged wildlife |q Recognition of Faith##6606/2
-	step
-		.talk Chieftain Aleli##276526 |goto Ellevar -2628,-3769,-794
-		..turnin Glitterfur Assistance##6610
-	step
-		.talk Huntmaster Genki##287121 |goto Ellevar -2647,-3771,-793
-		..turnin Hunter and Shiny Gatherer##6611
-	step
-		.talk Utsah the Curious##286935 |goto Ellevar -2619,-3778,-793
-		..accept No Refunds##6779
-	step
-		.talk Watti Mozz##5768191 |goto Ellevar -2611,-3733,-798
-		.' Speak to Watti Mozz |q No Refunds##6779/1
-	step
-		'Press _T_ while targeting the red glowing area |goto Ellevar -2621,-3723,-799
-		.' Use Prototype Veggie Cannon 2.0 on the Target |q No Refunds##6779/2
-	stpe
-		'Press _T_ while targeting the red glowing area |goto Ellevar -2621,-3723,-799
-		.' Use Prototype Veggie Cannon 3.0 on the Target |q No Refunds##6779/3
-	step
-		'Press _T_ while targeting the red glowing area |goto Ellevar -2621,-3723,-799
-		.' Use Prototype Veggie Cannon 4.0 on the Target |q No Refunds##6779/4
-	step
-		'Press _T_ while targeting the red glowing area |goto Ellevar -2621,-3723,-799
-		.' Use Prototype Veggie Cannon 5.0 on the Target |q No Refunds##6779/5
-	step
-		.talk Utsah the Curious##286935 |goto Ellevar -2618,-3777,-793
-		..turnin No Refunds##6779
-		..accept Veggie Launcher##6601
-	step
-		'Press _T_ while targeting the red glowing target |goto Ellevar -2473,-3896,-774
-		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/1
-	step
-		'Press _T_ while targeting the red glowing target |goto Ellevar -2515,-3872,-785
-		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/2
-	step
-		'Press _T_ while targeting the red glowing target |goto Ellevar -2552,-3844,-785
-		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/3
-	step
-		'Press _T_ while targeting the red glowing target |goto Ellevar -2591,-3819,-786
-		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/4
-	step
-		'Press _T_ while targeting the red glowing target |goto Ellevar -2624,-3783,-793
-		.' Lure Prized Kurg Bull with cannon-launched veggies |q Veggie Launcher##6601/5
-	step
-		.talk Utsah the Curious##286935 |goto Ellevar -2618,-3778,-793
-		..turnin Veggie Launcher##6601
-	step
-		.'_Go back_ to town | goto Ellevar -2520,-3654,-803 <15
-		'Press _C_ to open your Communicator:
-		..accept A Salvageable Situation##9047
-	step
-		.talk Technologist Corvianos##273666 |goto Ellevar -2591,-3503,-786
-		..turnin A Salvageable Situation##9047
-		..accept Breaking It Down##9049
-	step
-		'Press _I_ to open your inventory
-		.' Drag the _Unstable Crafting Prototype_ over the _Salvage_ icon at the bottom of the inventory window|tip It looks like a recycle symbol.
-		.' Salvage the Unusable Crafting Prototype to get a Dusty Power Core |q Breaking It Down##9049/1
-	step
-		.talk Weaponsmith Tirexa##284134 |goto Ellevar -2599,-3517,-785
-		..turnin Breaking It Down##9049
+	
+
+
 	step
 		.' Meet Toric Antevian |q Recognition of Faith##6606/3 |goto Ellevar -2412,-3531,-781
 	step
@@ -291,7 +279,7 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.' _Go to_ the mountain |goto Ellevar -2899,-3954,-809 <20
 		.' Find Pyrius Octavian |q The Face of Justice##6591/1 |goto Ellevar -2861,-3986,-792 <10
 	step
-		.talk Pyrius Octavian##686250 |goto Ellevar -2810,-4042,-774
+		.talk Pyrius Octavian##686250 |goto Ellevar -2809,-4022,-774
 		.' Confront Pyrius Octavian |q The Face of Justice##6591/2
 		.' Bring Pyrius Octavian to justice |q The Face of Justice##6591/4
 	step
@@ -316,8 +304,8 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 	step
 		.click Injured Radiant Guard##567969
 		.' Heal Injured Radiant Guards |q A Healing Hand##6575/2 |tip You can heal the same guard up to 3 times |goto Ellevar -3273,-3730,-794
-		
 	step
+		// FIXME:  Didn't The Storm didn't got automatically
 		.talk Guardian Zelcon##276156 |goto Ellevar -3176,-3671,-794
 		..turnin A Healing Hand##6575
 		..accept The Storm's Power##6576
@@ -343,19 +331,19 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		..turnin More than Clay Jars##6580
 	step
 		.click Primal Storm Emitter##276433 |goto Ellevar -3302,-3295,-794
-		.' Disable Primal Storm Emitters |q The Storm's Power##6576/1 |count 8 //verify
+		.' Disable Primal Storm Emitters |q The Storm's Power##6576/1 |count 7
 	step
 		.click Primal Storm Emitter##276433 |goto Ellevar -3342,-3299,-786
-		.' Disable Primal Storm Emitters |q The Storm's Power##6576/1 |count 16  //verify
+		.' Disable Primal Storm Emitters |q The Storm's Power##6576/1 |count 15
 	step
 		.click Primal Storm Emitter##276433 |goto Ellevar -3377,-3313,-780
-		.' Disable Primal Storm Emitters |q The Storm's Power##6576/1 |count 24 //verify
+		.' Disable Primal Storm Emitters |q The Storm's Power##6576/1 |count 23
 	step
 		.click Primal Storm Emitter##276433 |goto Ellevar -3410,-3284,-776
-		.' Disable Primal Storm Emitters |q The Storm's Power##6576/1 |count 32  //verify
+		.' Disable Primal Storm Emitters |q The Storm's Power##6576/1 |count 30
 	step
 		.click Primal Storm Emitter##276433 |goto Ellevar -3450,-3271,-773
-		.' Disable Primal Storm Emitters |q The Storm's Power##6576/1 |count 40 //verify
+		.' Disable Primal Storm Emitters |q The Storm's Power##6576/1 |count 38
 	step
 		.click Primal Storm Emitter##276433 |goto Ellevar -3464,-3212,-769
 		.' Disable Primal Storm Emitters |q The Storm's Power##6576/1 |count 46
@@ -385,12 +373,25 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		..turnin The Storm's Power##6576
 		..accept The Wrath of the High Priest##6578
 	step
-		'Press _C_ to open your Communicator:
-		..accept [Dungeon] Protogames Preparations##9764 |tip No need to complete dungeon for reward
-	step
 		.' Kill the Stormseeker High-Priest |q The Wrath of the High Priest##6578/1 |goto Ellevar -3440,-3429,-760
 	step
 		.' _Recall-Transmat_ to Lightreach Mission |goto Ellevar -2529,-3420,-765 < 10 |c |noway |q 6578
+	step
+		'Press _C_ to open your Communicator:
+		..accept A Salvageable Situation##9047
+	step
+		.talk Technologist Corvianos##273666 |goto Ellevar -2591,-3503,-786
+		..turnin A Salvageable Situation##9047
+		..accept Breaking It Down##9049
+	step
+		' Press _I_ to open your inventory
+		' Drag the _Unstable Crafting Prototype_ over the _Salvage_ icon at the bottom of the inventory window|tip It looks like a recycle symbol.
+		.' Salvage the Unusable Crafting Prototype to get a Dusty Power Core |q Breaking It Down##9049/1
+	step
+		.talk Weaponsmith Tirexa##284134 |goto Ellevar -2599,-3517,-785
+		..turnin Breaking It Down##9049
+	
+
 	step
 		'Press _C_ to open your Communicator:
 		..accept Crafting for the Dominion in Ellevar##6856
@@ -404,6 +405,9 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.talk Toric Antevian##287083 |goto Ellevar -2414,-3532,-779
 		..turnin The Wrath of the High Priest##6578
 		..accept Priority One Distress Call##7110
+	step
+		'Press _C_ to open your Communicator:
+		..accept [Dungeon] Protogames Preparations##9764 |tip No need to complete dungeon for reward |only if minlevel(10)
 	step
 		.' Travel to Mistymurk Camp |tip You can use Taxi |q Priority One Distress Call##7110/2 |goto Ellevar -2597,-2975,-772
 	step
@@ -437,6 +441,9 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 	step
 		'Press _C_ to open your Communicator:
 		..turnin Pincer Business##6892
+	step
+		'Press _C_ to open your Communicator:
+		..accept [Dungeon] Protogames Preparations##9764 |tip No need to complete dungeon for reward |only if minlevel(10)
 	step
 		.talk Nerissa Artan##276023 |goto Ellevar -2516,-2931,-765
 		..turnin Out For Lunch##6887
@@ -509,10 +516,6 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.' Collect Ellevarian Eldan Remnant |q A Bad Snog##6598/1
 		|only if havequest(6597) or havequest (6598)
 	step
-		.talk Agent Varac##276010 |goto Ellevar -2513,-2971,-762
-		..turnin A Bad Snog##6598
-		|only if havequest(6598)
-	step
 		.click Bait Rock##275893 |goto Ellevar -2336,-2976,-746
 		.' Find and subdue Goldy |q Raving Ravenok##6597/2
 		|only if havequest(6597)
@@ -520,6 +523,10 @@ ZGV:RegisterGuide("Dominion\\Ellevar (6-15)",
 		.talk Dio##286466 |goto Ellevar -2480,-2939,-764
 		..turnin Raving Ravenok##6597
 		|only if havequest(6597)
+	step
+		.talk Agent Varac##276010 |goto Ellevar -2513,-2971,-762
+		..turnin A Bad Snog##6598
+		|only if havequest(6598)
 	//step
 	//	.talk Lowland Chick##286277 |goto Ellevar -2913,-3051,-815
 	//	..accept Unnatural Selection##6918
